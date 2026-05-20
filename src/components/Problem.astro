@@ -1,0 +1,185 @@
+---
+---
+
+<section class="problem section" id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-text">
+        <span class="section-label animate-in">The Problem</span>
+        <h2 class="section-title animate-in">
+          Your body isn't<br/>one-size-fits-all.
+        </h2>
+        <p class="section-subtitle animate-in">
+          The fitness market is fragmented: passive trackers that collect data without action, 
+          expensive hardware solutions, and generic workout apps that ignore your hormonal cycle.
+        </p>
+        <p class="problem-detail animate-in">
+          Diamo is the <strong>first software-only solution</strong> that connects daily biometric data 
+          with a hormonal performance system and a local community — without requiring expensive wearables.
+        </p>
+      </div>
+      
+      <div class="problem-visual animate-in">
+        <div class="comparison-card">
+          <div class="comparison-side old">
+            <div class="comparison-icon">✕</div>
+            <h4>Without Diamo</h4>
+            <ul>
+              <li>Generic workout plans</li>
+              <li>Ignoring your cycle</li>
+              <li>Training alone at home</li>
+              <li>Expensive hardware required</li>
+              <li>Data without action</li>
+            </ul>
+          </div>
+          <div class="comparison-divider">
+            <div class="comparison-vs">vs</div>
+          </div>
+          <div class="comparison-side new">
+            <div class="comparison-icon">✓</div>
+            <h4>With Diamo</h4>
+            <ul>
+              <li>Cycle-synced training</li>
+              <li>Adapts to your energy</li>
+              <li>Connected community</li>
+              <li>Software-only, no hardware</li>
+              <li>Actionable daily insights</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem {
+    background: var(--white);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .problem-detail {
+    margin-top: var(--space-md);
+    line-height: 1.8;
+  }
+
+  .problem-detail strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .comparison-card {
+    display: flex;
+    background: var(--ivory);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--divider);
+  }
+
+  .comparison-side {
+    flex: 1;
+    padding: var(--space-lg);
+  }
+
+  .comparison-side h4 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+
+  .comparison-side ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .comparison-side ul li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .comparison-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .old .comparison-icon {
+    background: rgba(111, 13, 13, 0.08);
+    color: var(--burgundy);
+  }
+
+  .old ul li::before {
+    content: '—';
+    color: var(--text-muted);
+    font-size: 0.7rem;
+  }
+
+  .new .comparison-icon {
+    background: rgba(141, 198, 166, 0.15);
+    color: var(--sage);
+  }
+
+  .new ul li::before {
+    content: '✦';
+    color: var(--lavender);
+    font-size: 0.6rem;
+  }
+
+  .comparison-divider {
+    width: 1px;
+    background: var(--divider);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .comparison-vs {
+    position: absolute;
+    background: var(--ivory);
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .problem-text .animate-in:nth-child(1) { transition-delay: 0.1s; }
+  .problem-text .animate-in:nth-child(2) { transition-delay: 0.2s; }
+  .problem-text .animate-in:nth-child(3) { transition-delay: 0.3s; }
+  .problem-text .animate-in:nth-child(4) { transition-delay: 0.4s; }
+
+  @media (max-width: 768px) {
+    .problem-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .comparison-card {
+      flex-direction: column;
+    }
+
+    .comparison-divider {
+      width: 100%;
+      height: 1px;
+    }
+  }
+</style>
