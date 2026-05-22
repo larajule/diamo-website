@@ -1,0 +1,341 @@
+---
+---
+
+<div class="modal-overlay" id="waitlist-modal">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-container">
+    <button class="modal-close" id="modal-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    
+    <div class="modal-content">
+      <div class="modal-visual">
+        <div class="modal-logo">d.</div>
+        <div class="modal-glow"></div>
+      </div>
+      
+      <div class="modal-body">
+        <span class="modal-label">Early Access</span>
+        <h2 class="modal-title">Be among the first.</h2>
+        <p class="modal-description">
+          Join our exclusive waitlist and get early access to Diamo 
+          before the official launch. We'll notify you when it's your turn.
+        </p>
+        
+        <form class="modal-form" id="waitlist-form">
+          <div class="input-group">
+            <input 
+              type="email" 
+              id="waitlist-email"
+              class="modal-input" 
+              placeholder="Your email address" 
+              required 
+              autocomplete="email"
+            />
+            <button type="submit" class="modal-submit" id="submit-btn">
+              <span class="submit-text">Join Waitlist</span>
+              <span class="submit-loading" style="display:none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spinner">
+                  <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <p class="modal-privacy">No spam, ever. We respect your privacy.</p>
+        </form>
+        
+        <div class="modal-success" id="modal-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>You're on the list!</h3>
+          <p>We'll reach out when Diamo is ready for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease-out);
+  }
+
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 32, 96, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .modal-container {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    max-width: 520px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0, 32, 96, 0.25);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  .modal-overlay.open .modal-container {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 32, 96, 0.06);
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+  }
+
+  .modal-close:hover {
+    background: rgba(0, 32, 96, 0.12);
+    transform: rotate(90deg);
+  }
+
+  .modal-visual {
+    position: relative;
+    height: 140px;
+    background: linear-gradient(135deg, var(--navy) 0%, #1a3a7a 40%, var(--lavender) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .modal-logo {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+  }
+
+  .modal-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(155, 139, 203, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(30px);
+  }
+
+  .modal-body {
+    padding: var(--space-lg) var(--space-lg) var(--space-xl);
+  }
+
+  .modal-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .modal-title {
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .modal-input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    border: 1.5px solid var(--divider);
+    border-radius: var(--radius-md);
+    background: var(--ivory);
+    color: var(--text-primary);
+    outline: none;
+    transition: all var(--transition-fast);
+  }
+
+  .modal-input:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(0, 32, 96, 0.08);
+  }
+
+  .modal-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .modal-submit {
+    padding: 0.9rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .modal-submit:hover {
+    background: var(--navy-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 32, 96, 0.3);
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .modal-privacy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  .modal-success {
+    text-align: center;
+    padding: var(--space-md) 0;
+  }
+
+  .success-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(141, 198, 166, 0.12);
+    color: var(--sage);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto var(--space-sm);
+  }
+
+  .modal-success h3 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .modal-success p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 520px) {
+    .input-group {
+      flex-direction: column;
+    }
+
+    .modal-body {
+      padding: var(--space-md);
+    }
+  }
+</style>
+
+<script>
+  const modal = document.getElementById('waitlist-modal');
+  const backdrop = document.getElementById('modal-backdrop');
+  const closeBtn = document.getElementById('modal-close');
+  const form = document.getElementById('waitlist-form');
+  const successMsg = document.getElementById('modal-success');
+  const submitBtn = document.getElementById('submit-btn');
+
+  // Open modal from any element with data-open-waitlist or href="#waitlist"
+  document.querySelectorAll('[data-open-waitlist], a[href="#contact"], a[href="#waitlist"]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close modal
+  function closeModal() {
+    modal?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  backdrop?.addEventListener('click', closeModal);
+  closeBtn?.addEventListener('click', closeModal);
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Form submission
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = (document.getElementById('waitlist-email') as HTMLInputElement)?.value;
+    
+    // Show loading
+    const submitText = submitBtn?.querySelector('.submit-text');
+    const submitLoading = submitBtn?.querySelector('.submit-loading');
+    if (submitText) (submitText as HTMLElement).style.display = 'none';
+    if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
+
+    // Simulate submission (replace with real API later)
+    await new Promise(r => setTimeout(r, 1200));
+
+    // Show success
+    if (form) form.style.display = 'none';
+    if (successMsg) successMsg.style.display = 'block';
+
+    console.log('Waitlist signup:', email);
+  });
+</script>

@@ -9,8 +9,8 @@
         Designed to feel<br/>like second nature.
       </h2>
       <p class="section-subtitle animate-in">
-        A clean, intuitive interface that puts your wellbeing first — 
-        every screen crafted with intention.
+        A clean, intuitive interface that puts your wellbeing first. 
+        Every screen crafted with intention.
       </p>
     </div>
     
@@ -23,23 +23,11 @@
         </div>
         <div class="screenshot-info">
           <h4>Home</h4>
-          <p>Your daily dashboard with workouts, cycle rhythm, and community stories</p>
+          <p>Your daily dashboard with workouts, cycle rhythm, and motivational quotes</p>
         </div>
       </div>
       
-      <div class="screenshot-item featured">
-        <div class="phone-wrapper">
-          <div class="mini-phone large">
-            <img src="/screenshots/screen2.png" alt="Diamo App Screen" />
-          </div>
-        </div>
-        <div class="screenshot-info">
-          <h4>Workout</h4>
-          <p>Personalized sessions adapted to your energy and cycle phase</p>
-        </div>
-      </div>
-      
-      <div class="screenshot-item">
+      <div class="screenshot-item elevated">
         <div class="phone-wrapper">
           <div class="mini-phone">
             <img src="/screenshots/calendar.png" alt="Diamo Calendar" />
@@ -47,7 +35,31 @@
         </div>
         <div class="screenshot-info">
           <h4>Calendar</h4>
-          <p>Cycle tracking with daily workout overview and rest day planning</p>
+          <p>Cycle phase tracking with color coded workout types and daily planning</p>
+        </div>
+      </div>
+      
+      <div class="screenshot-item">
+        <div class="phone-wrapper">
+          <div class="mini-phone">
+            <img src="/screenshots/community.png" alt="Diamo Community" />
+          </div>
+        </div>
+        <div class="screenshot-info">
+          <h4>Community</h4>
+          <p>Find local run clubs, studio events, and connect with friends nearby</p>
+        </div>
+      </div>
+      
+      <div class="screenshot-item elevated">
+        <div class="phone-wrapper">
+          <div class="mini-phone">
+            <img src="/screenshots/personal.png" alt="Diamo Personal Profile" />
+          </div>
+        </div>
+        <div class="screenshot-info">
+          <h4>Personal</h4>
+          <p>Your cycle status, activity level, and personalized plan settings</p>
         </div>
       </div>
     </div>
@@ -89,6 +101,14 @@
     transform: translateY(-8px);
   }
 
+  .screenshot-item.elevated {
+    transform: translateY(-16px);
+  }
+
+  .screenshot-item.elevated:hover {
+    transform: translateY(-24px);
+  }
+
   .phone-wrapper {
     position: relative;
   }
@@ -104,28 +124,15 @@
     transition: all var(--transition-base);
   }
 
-  .mini-phone.large {
-    width: 240px;
-    border-radius: 32px;
-    padding: 10px;
-    box-shadow: 
-      0 24px 64px rgba(0, 32, 96, 0.2),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
-  }
-
   .mini-phone img {
     width: 100%;
     border-radius: 22px;
     display: block;
   }
 
-  .mini-phone.large img {
-    border-radius: 24px;
-  }
-
   .screenshot-info {
     text-align: center;
-    max-width: 200px;
+    max-width: 180px;
   }
 
   .screenshot-info h4 {
@@ -137,40 +144,40 @@
   }
 
   .screenshot-info p {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
     line-height: 1.5;
   }
 
-  .featured {
-    transform: translateY(-20px);
-  }
-
-  .featured:hover {
-    transform: translateY(-28px);
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 968px) {
     .screenshots-showcase {
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
     }
 
-    .featured {
+    .screenshot-item.elevated {
       transform: none;
-      order: -1;
     }
 
-    .featured:hover {
+    .screenshot-item.elevated:hover {
       transform: translateY(-8px);
     }
 
     .mini-phone {
-      width: 180px;
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .screenshots-showcase {
+      grid-template-columns: 1fr;
     }
 
-    .mini-phone.large {
-      width: 220px;
+    .mini-phone {
+      width: 200px;
     }
   }
 </style>
