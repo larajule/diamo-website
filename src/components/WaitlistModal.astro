@@ -298,7 +298,7 @@
   const submitBtn = document.getElementById('submit-btn');
 
   // Open modal from any element with data-open-waitlist or href="#waitlist"
-  document.querySelectorAll('[data-open-waitlist], a[href="#contact"], a[href="#waitlist"]').forEach(el => {
+  document.querySelectorAll('[data-open-waitlist], a[href="#waitlist"]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
       modal?.classList.add('open');

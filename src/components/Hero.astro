@@ -258,6 +258,7 @@
     background: var(--soft-black);
     border-radius: 40px;
     padding: 12px;
+    overflow: hidden;
     box-shadow: 
       0 20px 60px rgba(0, 32, 96, 0.25),
       0 0 0 1px rgba(255, 255, 255, 0.1) inset,
@@ -280,6 +281,7 @@
     width: 100%;
     border-radius: 30px;
     display: block;
+    margin-top: -40px;
   }
 
   .hero-glow {
@@ -349,6 +351,10 @@
 
     .phone-frame {
       width: 220px;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 8vw, 3rem);
     }
   }
 </style>

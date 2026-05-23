@@ -151,6 +151,30 @@ const translations = {
     'modal.privacy': 'No spam, ever. We respect your privacy.',
     'modal.success.title': 'You\'re on the list!',
     'modal.success.desc': 'We\'ll reach out when Diamo is ready for you.',
+
+    // Beta Tester Modal
+    'beta-modal.label': 'Beta Tester Program',
+    'beta-modal.title': 'Test Diamo before everyone else.',
+    'beta-modal.description': 'We\'re looking for a small group of women to test Diamo starting July 2026. As a beta tester, you\'ll get free access, shape the product with your feedback, and earn founding member perks at launch.',
+    'beta-modal.name-placeholder': 'Your name',
+    'beta-modal.email-placeholder': 'Your email address',
+    'beta-modal.motivation-placeholder': 'Why do you want to test Diamo? (optional)',
+    'beta-modal.submit': 'Apply as Beta Tester',
+    'beta-modal.privacy': 'Limited spots · Starting July 2026',
+    'beta-modal.success.title': 'Application received!',
+    'beta-modal.success.desc': 'We\'ll review your application and get back to you soon.',
+
+    // Apply Modal
+    'apply-modal.label': 'Join the Team',
+    'apply-modal.title': 'Build something meaningful.',
+    'apply-modal.description': 'Tell us about yourself and why you\'d be a great fit for Diamo. We\'re looking for passionate people who want to reshape women\'s health.',
+    'apply-modal.name-placeholder': 'Your name',
+    'apply-modal.email-placeholder': 'Your email address',
+    'apply-modal.message-placeholder': 'Tell us about you and your motivation',
+    'apply-modal.submit': 'Send Application',
+    'apply-modal.privacy': 'We\'ll get back to you within a few days.',
+    'apply-modal.success.title': 'Application sent!',
+    'apply-modal.success.desc': 'We\'ll review it and reach out to you soon.',
   },
 
   de: {
@@ -304,6 +328,30 @@ const translations = {
     'modal.privacy': 'Kein Spam, versprochen. Wir respektieren deine Privatsphäre.',
     'modal.success.title': 'Du bist auf der Liste!',
     'modal.success.desc': 'Wir melden uns, wenn Diamo für dich bereit ist.',
+
+    // Beta Tester Modal
+    'beta-modal.label': 'Beta-Tester-Programm',
+    'beta-modal.title': 'Teste Diamo vor allen anderen.',
+    'beta-modal.description': 'Wir suchen eine kleine Gruppe von Frauen, die Diamo ab Juli 2026 testen. Als Beta-Testerin erhältst du kostenlosen Zugang, gestaltest das Produkt mit deinem Feedback und sicherst dir Founding-Member-Vorteile zum Launch.',
+    'beta-modal.name-placeholder': 'Dein Name',
+    'beta-modal.email-placeholder': 'Deine E-Mail-Adresse',
+    'beta-modal.motivation-placeholder': 'Warum möchtest du Diamo testen? (optional)',
+    'beta-modal.submit': 'Als Beta-Testerin bewerben',
+    'beta-modal.privacy': 'Begrenzte Plätze · Start Juli 2026',
+    'beta-modal.success.title': 'Bewerbung erhalten!',
+    'beta-modal.success.desc': 'Wir prüfen deine Bewerbung und melden uns bald.',
+
+    // Apply Modal
+    'apply-modal.label': 'Werde Teil des Teams',
+    'apply-modal.title': 'Bau etwas Bedeutsames.',
+    'apply-modal.description': 'Erzähl uns von dir und warum du gut zu Diamo passen würdest. Wir suchen leidenschaftliche Menschen, die Frauengesundheit neu gestalten wollen.',
+    'apply-modal.name-placeholder': 'Dein Name',
+    'apply-modal.email-placeholder': 'Deine E-Mail-Adresse',
+    'apply-modal.message-placeholder': 'Erzähl uns von dir und deiner Motivation',
+    'apply-modal.submit': 'Bewerbung senden',
+    'apply-modal.privacy': 'Wir melden uns innerhalb weniger Tage.',
+    'apply-modal.success.title': 'Bewerbung gesendet!',
+    'apply-modal.success.desc': 'Wir prüfen sie und melden uns bald bei dir.',
   }
 };
 

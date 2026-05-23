@@ -1,0 +1,475 @@
+---
+---
+
+<div class="modal-overlay" id="beta-modal">
+  <div class="modal-backdrop" id="beta-backdrop"></div>
+  <div class="modal-container">
+    <button class="modal-close" id="beta-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    
+    <div class="modal-content">
+      <div class="modal-visual beta-visual">
+        <div class="modal-logo">β</div>
+        <div class="modal-glow"></div>
+      </div>
+      
+      <div class="modal-body">
+        <span class="modal-label" data-i18n="beta-modal.label">Beta Tester Program</span>
+        <h2 class="modal-title" data-i18n="beta-modal.title">Test Diamo before everyone else.</h2>
+        <p class="modal-description" data-i18n="beta-modal.description">
+          We're looking for a small group of women to test Diamo starting July 2026. 
+          As a beta tester, you'll get free access, shape the product with your feedback, 
+          and earn founding member perks at launch.
+        </p>
+        
+        <form class="modal-form" id="beta-form">
+          <div class="beta-fields">
+            <input 
+              type="text" 
+              id="beta-name"
+              class="modal-input" 
+              placeholder="Your name"
+              data-i18n-placeholder="beta-modal.name-placeholder"
+              required 
+            />
+            <input 
+              type="email" 
+              id="beta-email"
+              class="modal-input" 
+              placeholder="Your email address"
+              data-i18n-placeholder="beta-modal.email-placeholder"
+              required 
+              autocomplete="email"
+            />
+            <textarea 
+              id="beta-motivation"
+              class="modal-input modal-textarea" 
+              placeholder="Why do you want to test Diamo? (optional)"
+              data-i18n-placeholder="beta-modal.motivation-placeholder"
+              rows="3"
+            ></textarea>
+          </div>
+          <button type="submit" class="modal-submit beta-submit" id="beta-submit-btn">
+            <span class="submit-text" data-i18n="beta-modal.submit">Apply as Beta Tester</span>
+            <span class="submit-loading" style="display:none;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spinner">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+              </svg>
+            </span>
+          </button>
+          <p class="modal-privacy" data-i18n="beta-modal.privacy">Limited spots · Starting July 2026</p>
+        </form>
+        
+        <div class="modal-success" id="beta-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3 data-i18n="beta-modal.success.title">Application received!</h3>
+          <p data-i18n="beta-modal.success.desc">We'll review your application and get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Apply Modal (for job roles) -->
+<div class="modal-overlay" id="apply-modal">
+  <div class="modal-backdrop" id="apply-backdrop"></div>
+  <div class="modal-container">
+    <button class="modal-close" id="apply-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    
+    <div class="modal-content">
+      <div class="modal-visual apply-visual">
+        <div class="modal-logo">d.</div>
+        <div class="modal-glow"></div>
+      </div>
+      
+      <div class="modal-body">
+        <span class="modal-label" data-i18n="apply-modal.label">Join the Team</span>
+        <h2 class="modal-title" data-i18n="apply-modal.title">Build something meaningful.</h2>
+        <p class="modal-description" data-i18n="apply-modal.description">
+          Tell us about yourself and why you'd be a great fit for Diamo. 
+          We're looking for passionate people who want to reshape women's health.
+        </p>
+        
+        <form class="modal-form" id="apply-form">
+          <div class="beta-fields">
+            <input 
+              type="text" 
+              id="apply-name"
+              class="modal-input" 
+              placeholder="Your name"
+              data-i18n-placeholder="apply-modal.name-placeholder"
+              required 
+            />
+            <input 
+              type="email" 
+              id="apply-email"
+              class="modal-input" 
+              placeholder="Your email address"
+              data-i18n-placeholder="apply-modal.email-placeholder"
+              required 
+              autocomplete="email"
+            />
+            <textarea 
+              id="apply-message"
+              class="modal-input modal-textarea" 
+              placeholder="Tell us about you and your motivation"
+              data-i18n-placeholder="apply-modal.message-placeholder"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="modal-submit apply-submit-btn" id="apply-submit-btn">
+            <span class="submit-text" data-i18n="apply-modal.submit">Send Application</span>
+            <span class="submit-loading" style="display:none;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spinner">
+                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+              </svg>
+            </span>
+          </button>
+          <p class="modal-privacy" data-i18n="apply-modal.privacy">We'll get back to you within a few days.</p>
+        </form>
+        
+        <div class="modal-success" id="apply-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3 data-i18n="apply-modal.success.title">Application sent!</h3>
+          <p data-i18n="apply-modal.success.desc">We'll review it and reach out to you soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease-out);
+  }
+
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 32, 96, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .modal-container {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    max-width: 520px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0, 32, 96, 0.25);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.4s var(--ease-out);
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-overlay.open .modal-container {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 32, 96, 0.06);
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+  }
+
+  .modal-close:hover {
+    background: rgba(0, 32, 96, 0.12);
+    transform: rotate(90deg);
+  }
+
+  .modal-visual {
+    position: relative;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .beta-visual {
+    background: linear-gradient(135deg, var(--sage) 0%, #5a9e7a 40%, var(--navy) 100%);
+  }
+
+  .apply-visual {
+    background: linear-gradient(135deg, var(--lavender) 0%, #7a6ab8 40%, var(--navy) 100%);
+  }
+
+  .modal-logo {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+  }
+
+  .modal-glow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(30px);
+  }
+
+  .modal-body {
+    padding: var(--space-lg) var(--space-lg) var(--space-xl);
+  }
+
+  .modal-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .modal-title {
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .modal-description {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .beta-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-input {
+    width: 100%;
+    padding: 0.85rem 1.1rem;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    border: 1.5px solid var(--divider);
+    border-radius: var(--radius-md);
+    background: var(--ivory);
+    color: var(--text-primary);
+    outline: none;
+    transition: all var(--transition-fast);
+    box-sizing: border-box;
+  }
+
+  .modal-textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+
+  .modal-input:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(0, 32, 96, 0.08);
+  }
+
+  .modal-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .modal-submit {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .modal-submit:hover {
+    background: var(--navy-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 32, 96, 0.3);
+  }
+
+  .spinner {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .modal-privacy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  .modal-success {
+    text-align: center;
+    padding: var(--space-md) 0;
+  }
+
+  .success-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(141, 198, 166, 0.12);
+    color: var(--sage);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto var(--space-sm);
+  }
+
+  .modal-success h3 {
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .modal-success p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 520px) {
+    .modal-body {
+      padding: var(--space-md);
+    }
+  }
+</style>
+
+<script>
+  // Beta Modal
+  const betaModal = document.getElementById('beta-modal');
+  const betaBackdrop = document.getElementById('beta-backdrop');
+  const betaClose = document.getElementById('beta-close');
+  const betaForm = document.getElementById('beta-form');
+  const betaSuccess = document.getElementById('beta-success');
+  const betaSubmitBtn = document.getElementById('beta-submit-btn');
+
+  document.querySelectorAll('[data-open-beta]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      betaModal?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeBetaModal() {
+    betaModal?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  betaBackdrop?.addEventListener('click', closeBetaModal);
+  betaClose?.addEventListener('click', closeBetaModal);
+
+  betaForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitText = betaSubmitBtn?.querySelector('.submit-text');
+    const submitLoading = betaSubmitBtn?.querySelector('.submit-loading');
+    if (submitText) (submitText as HTMLElement).style.display = 'none';
+    if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
+    await new Promise(r => setTimeout(r, 1200));
+    if (betaForm) betaForm.style.display = 'none';
+    if (betaSuccess) betaSuccess.style.display = 'block';
+    console.log('Beta tester signup');
+  });
+
+  // Apply Modal
+  const applyModal = document.getElementById('apply-modal');
+  const applyBackdrop = document.getElementById('apply-backdrop');
+  const applyClose = document.getElementById('apply-close');
+  const applyForm = document.getElementById('apply-form');
+  const applySuccess = document.getElementById('apply-success');
+  const applySubmitBtn = document.getElementById('apply-submit-btn');
+
+  document.querySelectorAll('[data-open-apply]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyModal?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeApplyModal() {
+    applyModal?.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  applyBackdrop?.addEventListener('click', closeApplyModal);
+  applyClose?.addEventListener('click', closeApplyModal);
+
+  applyForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitText = applySubmitBtn?.querySelector('.submit-text');
+    const submitLoading = applySubmitBtn?.querySelector('.submit-loading');
+    if (submitText) (submitText as HTMLElement).style.display = 'none';
+    if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
+    await new Promise(r => setTimeout(r, 1200));
+    if (applyForm) applyForm.style.display = 'none';
+    if (applySuccess) applySuccess.style.display = 'block';
+    console.log('Job application sent');
+  });
+
+  // Close any modal on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeBetaModal();
+      closeApplyModal();
+    }
+  });
+</script>
