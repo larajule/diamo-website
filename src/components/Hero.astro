@@ -56,7 +56,6 @@
     <div class="hero-visual animate-in">
       <div class="phone-mockup">
         <div class="phone-frame">
-          <div class="phone-notch"></div>
           <img src="/screenshots/home-v2.png" alt="Diamo App Home Screen" class="phone-screen" />
         </div>
       </div>
@@ -256,43 +255,16 @@
     position: relative;
     width: 280px;
     background: var(--soft-black);
-    border-radius: 40px;
-    padding: 12px;
-    overflow: hidden;
+    border-radius: 28px;
+    padding: 8px;
     box-shadow: 
-      0 20px 60px rgba(0, 32, 96, 0.25),
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-      0 -2px 6px rgba(255, 255, 255, 0.05) inset;
-  }
-
-  .phone-frame::after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    height: 32px;
-    background: linear-gradient(180deg, var(--soft-black) 50%, transparent 100%);
-    border-radius: 30px 30px 0 0;
-    z-index: 4;
-    pointer-events: none;
-  }
-
-  .phone-notch {
-    position: absolute;
-    top: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 32px;
-    background: var(--soft-black);
-    border-radius: 0 0 20px 20px;
-    z-index: 5;
+      0 16px 48px rgba(0, 32, 96, 0.2),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
   }
 
   .phone-screen {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 22px;
     display: block;
   }
 
