@@ -33,7 +33,8 @@ const {
   <body>
     <slot />
     
-    <script>
+    <script is:inline src="/scripts/i18n.js"></script>
+    <script is:inline>
       // Intersection Observer for scroll animations
       const observer = new IntersectionObserver(
         (entries) => {
@@ -60,6 +61,11 @@ const {
           }
         });
       });
+
+      // Initialize language
+      if (typeof initLanguage === 'function') {
+        initLanguage();
+      }
     </script>
   </body>
 </html>

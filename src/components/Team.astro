@@ -1,92 +1,90 @@
 ---
-const team = [
-  {
-    name: 'Lara Bullemer',
-    role: 'Co-Founder',
-    focus: 'Creative & Growth',
-    image: '/team/lara.png',
-    bio: 'Fokus auf Frauengesundheit in Einklang mit Marketing & Logiken: Medizinische Tiefe (angehende Heilpraktikerin). Kreativ-Direktion: Markenführung auf dem Niveau globaler Lifestyle-Brands (Erfahrung in der Filmbranche & Digital Media Studium). Management-Expertise (BWL Master).',
-    tags: ['Creative Direction', 'Women\'s Health', 'Brand Strategy']
-  },
-  {
-    name: 'Marie Westermann',
-    role: 'Co-Founder',
-    focus: 'Strategy & Operations',
-    image: '/team/marie.png',
-    bio: 'Fokus auf operative Exzellenz und den Aufbau der Community Strukturen. Beratungserfahrung bei Inverto (BCG Company) sowie Investment Know-how bei Coparion. Fachliche Tiefe als lizenzierte Fitness Trainerin mit B-Lizenz.',
-    tags: ['Strategy', 'Operations', 'Fitness']
-  }
-];
-
-const openRoles = [
-  {
-    title: 'Technical Co-Founder',
-    description: 'Build the core community logic and a stable, scalable app architecture. Focus on user interaction and technical scalability.',
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`
-  },
-  {
-    title: 'Co-Founder: Influencerin',
-    description: 'Build an authentic community through social media recommendations. Trust over advertising.',
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>`
-  }
-];
 ---
 
 <section class="team section" id="team">
   <div class="container">
     <div class="team-header">
-      <span class="section-label animate-in">The Team</span>
-      <h2 class="section-title animate-in">
+      <span class="section-label animate-in" data-i18n="team.label">The Team</span>
+      <h2 class="section-title animate-in" data-i18n="team.title">
         Built by women,<br/>for women.
       </h2>
-      <p class="section-subtitle animate-in">
+      <p class="section-subtitle animate-in" data-i18n="team.subtitle">
         A team combining management expertise, fitness science, 
         and creative direction to redefine women's health.
       </p>
     </div>
     
     <div class="team-grid">
-      {team.map((member, i) => (
-        <div class="team-card animate-in" style={`transition-delay: ${0.1 + i * 0.15}s`}>
-          <div class="team-image-wrapper">
-            <img src={member.image} alt={member.name} class="team-image" />
-            <div class="team-image-overlay"></div>
-          </div>
-          <div class="team-info">
-            <h3 class="team-name">{member.name}</h3>
-            <span class="team-role">{member.role}</span>
-            <span class="team-focus">{member.focus}</span>
-            <p class="team-bio">{member.bio}</p>
-            <div class="team-tags">
-              {member.tags.map(tag => (
-                <span class="team-tag">{tag}</span>
-              ))}
-            </div>
+      <div class="team-card animate-in" style="transition-delay: 0.1s">
+        <div class="team-image-wrapper">
+          <img src="/team/lara.png" alt="Lara Bullemer" class="team-image" />
+          <div class="team-image-overlay"></div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Lara Bullemer</h3>
+          <span class="team-role" data-i18n="team.lara.role">Co-Founder</span>
+          <span class="team-focus" data-i18n="team.lara.focus">Creative & Growth</span>
+          <p class="team-bio" data-i18n="team.lara.bio">Focus on women's health aligned with marketing & logic: medical depth (aspiring naturopath). Creative direction at the level of global lifestyle brands (experience in the film industry & digital media studies). Management expertise (MBA).</p>
+          <div class="team-tags">
+            <span class="team-tag" data-i18n="team.lara.t1">Creative Direction</span>
+            <span class="team-tag" data-i18n="team.lara.t2">Women's Health</span>
+            <span class="team-tag" data-i18n="team.lara.t3">Brand Strategy</span>
           </div>
         </div>
-      ))}
+      </div>
+
+      <div class="team-card animate-in" style="transition-delay: 0.25s">
+        <div class="team-image-wrapper">
+          <img src="/team/marie.png" alt="Marie Westermann" class="team-image" />
+          <div class="team-image-overlay"></div>
+        </div>
+        <div class="team-info">
+          <h3 class="team-name">Marie Westermann</h3>
+          <span class="team-role" data-i18n="team.marie.role">Co-Founder</span>
+          <span class="team-focus" data-i18n="team.marie.focus">Strategy & Operations</span>
+          <p class="team-bio" data-i18n="team.marie.bio">Focus on operational excellence and building community structures. Consulting experience at Inverto (BCG Company) and investment know-how at Coparion. Professional depth as a licensed fitness trainer (B-License).</p>
+          <div class="team-tags">
+            <span class="team-tag" data-i18n="team.marie.t1">Strategy</span>
+            <span class="team-tag" data-i18n="team.marie.t2">Operations</span>
+            <span class="team-tag" data-i18n="team.marie.t3">Fitness</span>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="open-roles animate-in">
-      <h3 class="open-roles-title">We're looking for visionaries</h3>
+      <h3 class="open-roles-title" data-i18n="team.hiring.title">We're looking for visionaries</h3>
       <div class="open-roles-grid">
-        {openRoles.map((role, i) => (
-          <div class="role-card" style={`transition-delay: ${0.3 + i * 0.1}s`}>
-            <div class="role-icon">
-              <Fragment set:html={role.icon} />
-            </div>
-            <div class="role-info">
-              <h4 class="role-title">{role.title}</h4>
-              <p class="role-description">{role.description}</p>
-            </div>
-            <a href="#contact" class="role-apply">
-              Apply
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
-              </svg>
-            </a>
+        <div class="role-card" style="transition-delay: 0.3s">
+          <div class="role-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-        ))}
+          <div class="role-info">
+            <h4 class="role-title" data-i18n="team.role1.title">Technical Co-Founder</h4>
+            <p class="role-description" data-i18n="team.role1.desc">Build the core community logic and a stable, scalable app architecture. Focus on user interaction and technical scalability.</p>
+          </div>
+          <a href="#contact" class="role-apply">
+            <span data-i18n="team.role1.cta">Apply</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
+            </svg>
+          </a>
+        </div>
+        <div class="role-card" style="transition-delay: 0.4s">
+          <div class="role-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </div>
+          <div class="role-info">
+            <h4 class="role-title" data-i18n="team.role2.title">Co-Founder: Influencerin</h4>
+            <p class="role-description" data-i18n="team.role2.desc">Build an authentic community through social media recommendations. Trust over advertising.</p>
+          </div>
+          <a href="#contact" class="role-apply">
+            <span data-i18n="team.role2.cta">Apply</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -136,6 +134,7 @@ const openRoles = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform var(--transition-slow);
   }
 
