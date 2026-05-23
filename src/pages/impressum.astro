@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+---
+
+<Layout title="Impressum | Diamo" description="Impressum und rechtliche Informationen von Diamo.">
+  <Navbar />
+  <main>
+    <section class="impressum section">
+      <div class="container">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span data-i18n="impressum.back">Back to Home</span>
+        </a>
+
+        <h1 class="impressum-title">Impressum</h1>
+        
+        <div class="impressum-content">
+          <div class="impressum-section">
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+              Lara Bullemer & Marie Westermann<br/>
+              Diamo<br/>
+              Deimern 5<br/>
+              29614 Soltau<br/>
+              Deutschland
+            </p>
+          </div>
+
+          <div class="impressum-section">
+            <h2>Kontakt</h2>
+            <p>
+              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a>
+            </p>
+          </div>
+
+          <div class="impressum-section">
+            <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+            <p>
+              Lara Bullemer & Marie Westermann<br/>
+              Deimern 5<br/>
+              29614 Soltau
+            </p>
+          </div>
+
+          <div class="impressum-section">
+            <h2>Haftungsausschluss</h2>
+            <h3>Haftung für Inhalte</h3>
+            <p>
+              Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. 
+              Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir 
+              jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG 
+              für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+            </p>
+            
+            <h3>Haftung für Links</h3>
+            <p>
+              Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir 
+              keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine 
+              Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige 
+              Anbieter oder Betreiber der Seiten verantwortlich.
+            </p>
+          </div>
+
+          <div class="impressum-section">
+            <h2>Urheberrecht</h2>
+            <p>
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten 
+              unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, 
+              Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes 
+              bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <WaitlistModal />
+</Layout>
+
+<style>
+  .impressum {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    min-height: 80vh;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--navy);
+  }
+
+  .impressum-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-xl);
+  }
+
+  .impressum-content {
+    max-width: 700px;
+  }
+
+  .impressum-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .impressum-section h2 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+  }
+
+  .impressum-section h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+
+  .impressum-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  .impressum-section a {
+    color: var(--lavender);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .impressum-section a:hover {
+    color: var(--navy);
+  }
+</style>

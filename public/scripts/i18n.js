@@ -8,8 +8,8 @@ const translations = {
     'nav.cta': 'Get Early Access',
 
     // Hero
-    'hero.badge': 'Coming Q3 2026',
-    'hero.title': 'A New Era of<br/>Women\'s Health',
+    'hero.badge': '',
+    'hero.title': 'Diamo — A New Era of<br/>Women\'s Health',
     'hero.description': 'Personalized, cycle synced fitness powered by science. Diamo adapts your workouts to your body\'s unique rhythm. Because your body deserves better than one size fits all.',
     'hero.cta.waitlist': 'Join the Waitlist',
     'hero.cta.features': 'Explore Features',
@@ -40,7 +40,7 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Everything your body<br/>has been asking for.',
+    'features.title': 'Tailored to<br/>your body.',
     'features.subtitle': 'Diamo combines cycle science, adaptive training, and real community into one beautifully designed experience.',
     'features.f1.title': 'Personalized Workouts',
     'features.f1.desc': 'AI powered training plans that adapt daily based on your cycle phase, energy level, stress, and sleep quality.',
@@ -92,8 +92,8 @@ const translations = {
 
     // Team
     'team.label': 'The Team',
-    'team.title': 'Built by women,<br/>for women.',
-    'team.subtitle': 'A team combining management expertise, fitness science, and creative direction to redefine women\'s health.',
+    'team.title': 'By women,<br/>for women.',
+    'team.subtitle': 'A team combining management expertise, medical knowledge, and creativity to redefine women\'s health.',
     'team.lara.role': 'Co-Founder',
     'team.lara.focus': 'Creative & Growth',
     'team.lara.bio': 'Focus on women\'s health aligned with marketing & logic: medical depth (aspiring naturopath). Creative direction at the level of global lifestyle brands (experience in the film industry & digital media studies). Management expertise (MBA).',
@@ -159,9 +159,9 @@ const translations = {
     'nav.cta': 'Frühzugang sichern',
 
     // Hero
-    'hero.badge': 'Kommt Q3 2026',
-    'hero.title': 'Eine neue Ära der<br/>Frauengesundheit',
-    'hero.description': 'Personalisiertes, zyklusbasiertes Fitness, unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an. Weil dein Körper mehr verdient als Einheitsgrößen.',
+    'hero.badge': '',
+    'hero.title': 'Diamo — Eine neue Ära der<br/>Frauengesundheit',
+    'hero.description': 'Personalisiertes, zyklusbasiertes Training — unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an. Weil dein Körper mehr verdient als Einheitsgrößen.',
     'hero.cta.waitlist': 'Auf die Warteliste',
     'hero.cta.features': 'Features entdecken',
     'hero.stat1.value': '4',
@@ -191,8 +191,8 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Alles, wonach dein Körper<br/>gefragt hat.',
-    'features.subtitle': 'Diamo verbindet Zykluswissenschaft, adaptives Training und echte Community zu einem wunderschön gestalteten Erlebnis.',
+    'features.title': 'Zugeschnitten auf<br/>deinen Körper.',
+    'features.subtitle': 'Diamo verbindet Zykluswissenschaft, adaptives Training und echte Community zu einem durchdacht gestalteten Erlebnis.',
     'features.f1.title': 'Personalisierte Workouts',
     'features.f1.desc': 'KI-gestützte Trainingspläne, die sich täglich an deine Zyklusphase, dein Energielevel, Stress und deine Schlafqualität anpassen.',
     'features.f1.t1': 'Kraft',
@@ -243,8 +243,8 @@ const translations = {
 
     // Team
     'team.label': 'Das Team',
-    'team.title': 'Von Frauen gebaut,<br/>für Frauen.',
-    'team.subtitle': 'Ein Team, das Management-Expertise, Sportwissenschaft und kreative Leitung vereint, um Frauengesundheit neu zu definieren.',
+    'team.title': 'Von Frauen<br/>für Frauen.',
+    'team.subtitle': 'Ein Team, das Management-Expertise, medizinisches Wissen und Kreativität vereint, um Frauengesundheit neu zu definieren.',
     'team.lara.role': 'Co-Founderin',
     'team.lara.focus': 'Creative & Growth',
     'team.lara.bio': 'Fokus auf Frauengesundheit in Einklang mit Marketing & Logiken: Medizinische Tiefe (angehende Heilpraktikerin). Kreativ-Direktion: Markenführung auf dem Niveau globaler Lifestyle-Brands (Erfahrung in der Filmbranche & Digital Media Studium). Management-Expertise (BWL Master).',
@@ -267,8 +267,8 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta-Programm',
-    'beta.title': 'Gestalte die Zukunft von<br/>Women\'s Fitness mit.',
-    'beta.description': 'Wir laden eine kleine Gruppe von Frauen ein, Diamo vor dem Launch zu testen. Erhalte frühzeitigen Zugang, teile dein Feedback und hilf uns, etwas zu bauen, das wirklich zu deinem Körper und deinem Leben passt.',
+    'beta.title': 'Gestalte die Zukunft von<br/>Frauen-Fitness mit.',
+    'beta.description': 'Wir laden eine kleine Gruppe von Frauen ein, Diamo vor dem Launch zu testen. Erhalte frühzeitigen Zugang, teile dein Feedback und hilf uns, etwas zu entwickeln, das wirklich zu deinem Körper und deinem Leben passt.',
     'beta.feat1': 'Kostenloser Zugang während der Beta',
     'beta.feat2': 'Direkter Einfluss auf Features',
     'beta.feat3': 'Founding-Member-Vorteile zum Launch',

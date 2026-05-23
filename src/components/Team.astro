@@ -6,11 +6,11 @@
     <div class="team-header">
       <span class="section-label animate-in" data-i18n="team.label">The Team</span>
       <h2 class="section-title animate-in" data-i18n="team.title">
-        Built by women,<br/>for women.
+        By women,<br/>for women.
       </h2>
       <p class="section-subtitle animate-in" data-i18n="team.subtitle">
-        A team combining management expertise, fitness science, 
-        and creative direction to redefine women's health.
+        A team combining management expertise, medical knowledge, 
+        and creativity to redefine women's health.
       </p>
     </div>
     
@@ -126,15 +126,16 @@
 
   .team-image-wrapper {
     position: relative;
-    height: 320px;
+    aspect-ratio: 1;
     overflow: hidden;
+    background: var(--ivory);
   }
 
   .team-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 30%;
     transition: transform var(--transition-slow);
   }
 
@@ -285,7 +286,7 @@
     }
 
     .team-image-wrapper {
-      height: 260px;
+      aspect-ratio: 1;
     }
   }
 </style>
