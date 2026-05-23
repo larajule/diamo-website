@@ -14,7 +14,7 @@ const translations = {
     'hero.cta.waitlist': 'Join the Waitlist',
     'hero.cta.features': 'Explore Features',
     'hero.stat1.value': '4',
-    'hero.stat1.label': 'Training Modules',
+    'hero.stat1.label': 'Training Categories',
     'hero.stat2.value': '100%',
     'hero.stat2.label': 'Cycle Synced',
     'hero.stat3.value': '∞',
@@ -94,7 +94,7 @@ const translations = {
 
     // Team
     'team.label': 'The Team',
-    'team.title': 'By women,<br/>for women.',
+    'team.title': 'Made by women,<br/>for women.',
     'team.subtitle': 'A team combining management expertise, medical knowledge, and creativity to redefine women\'s health.',
     'team.lara.role': 'Co-Founder',
     'team.lara.focus': 'Creative & Growth',
