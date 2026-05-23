@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+---
+
+<Layout title="Datenschutz | Diamo" description="Datenschutzerklärung von Diamo.">
+  <Navbar />
+  <main>
+    <section class="legal section">
+      <div class="container">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <h1 class="legal-title">Datenschutzerklärung</h1>
+        
+        <div class="legal-content">
+          <div class="legal-section">
+            <h2>1. Datenschutz auf einen Blick</h2>
+            <h3>Allgemeine Hinweise</h3>
+            <p>
+              Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
+              personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene 
+              Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>2. Verantwortliche Stelle</h2>
+            <p>
+              Lara Bullemer & Marie Westermann<br/>
+              Deimern 5<br/>
+              29614 Soltau<br/>
+              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a>
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>3. Datenerfassung auf dieser Website</h2>
+            <h3>Wer ist verantwortlich für die Datenerfassung?</h3>
+            <p>
+              Die Datenverarbeitung auf dieser Website erfolgt durch die Websitebetreiber. 
+              Deren Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
+            </p>
+            
+            <h3>Wie erfassen wir Ihre Daten?</h3>
+            <p>
+              Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. 
+              Hierbei kann es sich z.B. um Daten handeln, die Sie in unser Kontaktformular 
+              oder Wartelisten-Formular eingeben (z.B. E-Mail-Adresse).
+            </p>
+            <p>
+              Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme 
+              erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem 
+              oder Uhrzeit des Seitenaufrufs).
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>4. Warteliste / Newsletter</h2>
+            <p>
+              Wenn Sie sich für unsere Warteliste anmelden, wird Ihre E-Mail-Adresse gespeichert, 
+              um Sie über den Launch von Diamo zu informieren. Sie können sich jederzeit von der 
+              Warteliste abmelden, indem Sie uns per E-Mail kontaktieren.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>5. Hosting</h2>
+            <p>
+              Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die 
+              personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den 
+              Servern des Hosters gespeichert. Hierbei kann es sich v.a. um IP-Adressen, 
+              Kontaktanfragen, Meta- und Kommunikationsdaten, Websitezugriffe und sonstige 
+              Daten, die über eine Website generiert werden, handeln.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>6. Ihre Rechte</h2>
+            <p>
+              Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger 
+              und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben 
+              außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. 
+              Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit 
+              an uns wenden.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <WaitlistModal />
+</Layout>
+
+<style>
+  .legal {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    min-height: 80vh;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--navy);
+  }
+
+  .legal-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-xl);
+  }
+
+  .legal-content {
+    max-width: 700px;
+  }
+
+  .legal-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .legal-section h2 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-section h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+
+  .legal-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-section a {
+    color: var(--lavender);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .legal-section a:hover {
+    color: var(--navy);
+  }
+</style>

@@ -9,10 +9,9 @@
   
   <div class="hero-content container">
     <div class="hero-text">
-      
+      <div class="hero-brand animate-in">diamo</div>
       <h1 class="hero-title animate-in" data-i18n="hero.title">
-        Diamo — A New Era of<br/>
-        <span class="hero-accent">Women’s Health</span>
+        A New Era of<br/>Women's Health
       </h1>
       
       <p class="hero-description animate-in" data-i18n="hero.description">
@@ -140,6 +139,16 @@
     border-radius: 50%;
     animation: pulseGlow 2s ease-in-out infinite;
     box-shadow: 0 0 8px rgba(141, 198, 166, 0.5);
+  }
+
+  .hero-brand {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 700;
+    color: var(--lavender);
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    margin-bottom: var(--space-sm);
   }
 
   .hero-title {

@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+---
+
+<Layout title="AGB | Diamo" description="Allgemeine Geschäftsbedingungen von Diamo.">
+  <Navbar />
+  <main>
+    <section class="legal section">
+      <div class="container">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <h1 class="legal-title">Allgemeine Geschäftsbedingungen</h1>
+        
+        <div class="legal-content">
+          <div class="legal-section">
+            <h2>1. Geltungsbereich</h2>
+            <p>
+              Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung der Website 
+              diamo.club und der zukünftigen Diamo App, betrieben von Lara Bullemer & 
+              Marie Westermann, Deimern 5, 29614 Soltau.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>2. Leistungsbeschreibung</h2>
+            <p>
+              Diamo entwickelt eine App für zyklusbasiertes, personalisiertes Fitness-Training 
+              für Frauen. Die Website dient derzeit als Informationsseite und bietet die 
+              Möglichkeit, sich für eine Warteliste / Beta-Programm anzumelden.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>3. Warteliste / Beta-Programm</h2>
+            <p>
+              Die Anmeldung zur Warteliste ist kostenlos und unverbindlich. Mit der 
+              Anmeldung erklären Sie sich einverstanden, per E-Mail über den Launch 
+              und Updates zu Diamo informiert zu werden. Sie können sich jederzeit 
+              von der Warteliste abmelden.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>4. Geistiges Eigentum</h2>
+            <p>
+              Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken, 
+              Logos, Designs) sind urheberrechtlich geschützt und Eigentum von Diamo. 
+              Eine Vervielfältigung oder Verwendung ohne ausdrückliche Genehmigung ist 
+              nicht gestattet.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>5. Haftungsbeschränkung</h2>
+            <p>
+              Die Inhalte dieser Website werden mit größtmöglicher Sorgfalt erstellt. 
+              Der Anbieter übernimmt jedoch keine Gewähr für die Richtigkeit, 
+              Vollständigkeit und Aktualität der bereitgestellten Inhalte.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>6. Änderungen der AGB</h2>
+            <p>
+              Wir behalten uns vor, diese AGB jederzeit zu ändern. Die jeweils aktuelle 
+              Fassung ist auf dieser Website einsehbar.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>7. Anwendbares Recht</h2>
+            <p>
+              Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, 
+              soweit gesetzlich zulässig, Soltau.
+            </p>
+          </div>
+
+          <div class="legal-section">
+            <h2>8. Kontakt</h2>
+            <p>
+              Bei Fragen zu diesen AGB wenden Sie sich bitte an:<br/>
+              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <WaitlistModal />
+</Layout>
+
+<style>
+  .legal {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    min-height: 80vh;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--navy);
+  }
+
+  .legal-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-xl);
+  }
+
+  .legal-content {
+    max-width: 700px;
+  }
+
+  .legal-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .legal-section h2 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-section h3 {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+  }
+
+  .legal-section p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-section a {
+    color: var(--lavender);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .legal-section a:hover {
+    color: var(--navy);
+  }
+</style>

@@ -9,7 +9,7 @@ const translations = {
 
     // Hero
     'hero.badge': '',
-    'hero.title': 'Diamo — A New Era of<br/>Women\'s Health',
+    'hero.title': 'A New Era of<br/>Women\'s Health',
     'hero.description': 'Personalized, cycle synced fitness powered by science. Diamo adapts your workouts to your body\'s unique rhythm. Because your body deserves better than one size fits all.',
     'hero.cta.waitlist': 'Join the Waitlist',
     'hero.cta.features': 'Explore Features',
@@ -160,8 +160,8 @@ const translations = {
 
     // Hero
     'hero.badge': '',
-    'hero.title': 'Diamo — Eine neue Ära der<br/>Frauengesundheit',
-    'hero.description': 'Personalisiertes, zyklusbasiertes Training — unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an. Weil dein Körper mehr verdient als Einheitsgrößen.',
+    'hero.title': 'Eine neue Ära der<br/>Frauengesundheit',
+    'hero.description': 'Personalisiertes, zyklusbasiertes Training, unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an. Weil dein Körper mehr verdient als Einheitsgrößen.',
     'hero.cta.waitlist': 'Auf die Warteliste',
     'hero.cta.features': 'Features entdecken',
     'hero.stat1.value': '4',
