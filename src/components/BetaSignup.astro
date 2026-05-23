@@ -1,0 +1,166 @@
+---
+---
+
+<section class="beta-signup section" id="beta">
+  <div class="container">
+    <div class="beta-card animate-in">
+      <div class="beta-content">
+        <div class="beta-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            <path d="M12 16v-4"/>
+            <path d="M12 8h.01"/>
+          </svg>
+        </div>
+        <span class="beta-label">Beta Program</span>
+        <h2 class="beta-title">
+          Shape the future of<br/>women's fitness.
+        </h2>
+        <p class="beta-description">
+          We're inviting a small group of women to test Diamo before launch. 
+          Get early access, share your feedback, and help us build something 
+          that truly fits your body and your life.
+        </p>
+        <div class="beta-features">
+          <div class="beta-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Free access during beta</span>
+          </div>
+          <div class="beta-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Direct input on features</span>
+          </div>
+          <div class="beta-feature">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Founding member perks at launch</span>
+          </div>
+        </div>
+        <a href="#waitlist" class="btn btn-primary beta-cta" data-open-waitlist>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Join the Beta
+        </a>
+        <p class="beta-note">Limited spots · No commitment · Cancel anytime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .beta-signup {
+    background: linear-gradient(180deg, var(--white) 0%, var(--ivory) 100%);
+  }
+
+  .beta-card {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-2xl) var(--space-xl);
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--divider);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .beta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--navy), var(--lavender), var(--sage));
+  }
+
+  .beta-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-sm);
+    background: rgba(0, 32, 96, 0.05);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+  }
+
+  .beta-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--lavender);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .beta-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+  }
+
+  .beta-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .beta-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .beta-feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .beta-feature svg {
+    color: var(--sage);
+    flex-shrink: 0;
+  }
+
+  .beta-cta {
+    padding: 1rem 2.25rem;
+    font-size: 1rem;
+  }
+
+  .beta-note {
+    margin-top: var(--space-sm);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 768px) {
+    .beta-card {
+      padding: var(--space-xl) var(--space-md);
+    }
+  }
+</style>
