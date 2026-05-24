@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     partytown({
       config: {
+        lib: '/partytown/',
         forward: ['dataLayer.push'],
       },
     }),
