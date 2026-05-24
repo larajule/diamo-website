@@ -9,8 +9,8 @@ const translations = {
 
     // Hero
     'hero.badge': '',
-    'hero.title': 'DIAMO – Cycle-synced workouts & your local fitness community.',
-    'hero.description': 'Personalized, cycle synced fitness powered by science. Diamo adapts your workouts to your body\'s unique rhythm. Because your body deserves better than one size fits all.',
+    'hero.title': 'A new era of women\'s health',
+    'hero.description': 'Personalized, cycle-synced fitness powered by science. Diamo adapts your workouts to your body\'s unique rhythm — and connects you to a real, local community',
     'hero.cta.waitlist': 'Join the Waitlist',
     'hero.cta.features': 'Explore Features',
     'hero.stat1.value': '4',
@@ -22,7 +22,7 @@ const translations = {
 
     // Problem
     'problem.label': 'The Problem',
-    'problem.title': 'No more male standards in training.',
+    'problem.title': 'No more male standards in training',
     'problem.subtitle': 'Most fitness algorithms are based on male biology. DIAMO is different. We adapt your workouts daily to your cycle, your energy, and your daily life.',
     'problem.detail': 'Diamo is the <strong>first software only solution</strong> that connects daily biometric data with a hormonal performance system and a local community. No expensive wearables required.',
     'problem.without': 'Without Diamo',
@@ -40,12 +40,12 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Full performance, completely hardware-free.',
+    'features.title': 'Full performance, completely hardware-free',
     'features.subtitle': 'You don\'t need expensive smartwatches. DIAMO works hardware-free directly on your smartphone.',
 
     // Community
     'community.label': 'Community',
-    'community.title': 'Find your tribe instead of digital isolation.',
+    'community.title': 'Find your tribe instead of digital isolation',
     'community.description': 'Don\'t train alone in front of a screen. We use digital data to curate real, physical encounters in local tribes directly in your city.',
     'features.f1.title': 'Personalized Workouts',
     'features.f1.desc': 'AI powered training plans that adapt daily based on your cycle phase, energy level, stress, and sleep quality.',
@@ -74,7 +74,7 @@ const translations = {
 
     // Screenshots
     'screenshots.label': 'The App',
-    'screenshots.title': 'Designed to feel<br/>like second nature.',
+    'screenshots.title': 'Designed to feel<br/>like second nature',
     'screenshots.subtitle': 'A clean, intuitive interface that puts your wellbeing first. Every screen crafted with intention.',
     'screenshots.home': 'Home',
     'screenshots.home.desc': 'Your daily dashboard with workouts, cycle rhythm, and motivational quotes',
@@ -89,7 +89,7 @@ const translations = {
 
     // How It Works
     'hiw.label': 'How It Works',
-    'hiw.title': 'Three steps to training<br/>in harmony with your body.',
+    'hiw.title': 'Three steps to training<br/>in harmony with your body',
     'hiw.s1.title': 'Tell us about you',
     'hiw.s1.desc': 'A quick onboarding captures your fitness goals, cycle data, energy patterns, and personal preferences to create your unique persona.',
     'hiw.s2.title': 'Get your daily plan',
@@ -99,7 +99,7 @@ const translations = {
 
     // Team
     'team.label': 'The Team',
-    'team.title': 'Made by women,<br/>for women.',
+    'team.title': 'Made by women,<br/>for women',
     'team.subtitle': 'A team combining management expertise, medical knowledge, and creativity to redefine women\'s health.',
     'team.lara.role': 'Co-Founder',
     'team.lara.focus': 'Creative & Growth',
@@ -123,7 +123,7 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta Program',
-    'beta.title': 'Become part of the movement – Apply as a beta tester now!',
+    'beta.title': 'Become part of the movement – Apply as a beta tester now',
     'beta.description': 'We\'re inviting a small group of women to test Diamo before launch. Get early access, share your feedback, and help us build something that truly fits your body and your life.',
     'beta.feat1': 'Free access during beta',
     'beta.feat2': 'Direct input on features',
@@ -149,7 +149,7 @@ const translations = {
 
     // Waitlist Modal
     'modal.label': 'Early Access',
-    'modal.title': 'Be among the first.',
+    'modal.title': 'Be among the first',
     'modal.description': 'Join our exclusive waitlist and get early access to Diamo before the official launch. We\'ll notify you when it\'s your turn.',
     'modal.placeholder': 'Your email address',
     'modal.submit': 'Join Waitlist',
@@ -159,7 +159,7 @@ const translations = {
 
     // Beta Tester Modal
     'beta-modal.label': 'Beta Tester Program',
-    'beta-modal.title': 'Test Diamo before everyone else.',
+    'beta-modal.title': 'Test Diamo before everyone else',
     'beta-modal.description': 'We\'re looking for a small group of women to test Diamo starting July 2026. As a beta tester, you\'ll get free access, shape the product with your feedback, and earn founding member perks at launch.',
     'beta-modal.name-placeholder': 'Your name',
     'beta-modal.email-placeholder': 'Your email address',
@@ -171,7 +171,7 @@ const translations = {
 
     // Apply Modal
     'apply-modal.label': 'Join the Team',
-    'apply-modal.title': 'Build something meaningful.',
+    'apply-modal.title': 'Build something meaningful',
     'apply-modal.description': 'Tell us about yourself and why you\'d be a great fit for Diamo. We\'re looking for passionate people who want to reshape women\'s health.',
     'apply-modal.name-placeholder': 'Your name',
     'apply-modal.email-placeholder': 'Your email address',
@@ -191,8 +191,8 @@ const translations = {
 
     // Hero
     'hero.badge': '',
-    'hero.title': 'DIAMO – Zyklus-synchrone Workouts & deine lokale Fitness-Community.',
-    'hero.description': 'Personalisiertes, zyklusbasiertes Training, unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an. Weil dein Körper mehr verdient als Einheitsgrößen.',
+    'hero.title': 'Eine neue Ära der Frauengesundheit',
+    'hero.description': 'Personalisiertes, zyklusbasiertes Training, unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an — und verbindet dich mit einer echten, lokalen Community',
     'hero.cta.waitlist': 'Auf die Warteliste',
     'hero.cta.features': 'Features entdecken',
     'hero.stat1.value': '4',
@@ -204,7 +204,7 @@ const translations = {
 
     // Problem
     'problem.label': 'Das Problem',
-    'problem.title': 'Schluss mit männlichen Standards im Training.',
+    'problem.title': 'Schluss mit männlichen Standards im Training',
     'problem.subtitle': 'Die meisten Fitness-Algorithmen basieren auf männlicher Biologie. DIAMO ist anders. Wir passen deine Workouts täglich an deinen Zyklus, deine Energie und deinen Alltag an.',
     'problem.detail': 'Diamo ist die <strong>erste reine Software-Lösung</strong>, die tägliche biometrische Daten mit einem hormonellen Leistungssystem und einer lokalen Community verbindet. Keine teuren Wearables nötig.',
     'problem.without': 'Ohne Diamo',
@@ -222,12 +222,12 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Volle Performance, ganz ohne Zusatz-Hardware.',
+    'features.title': 'Volle Performance, ganz ohne Zusatz-Hardware',
     'features.subtitle': 'Du brauchst keine teuren Smartwatches. DIAMO funktioniert hardware-frei direkt über dein Smartphone.',
 
     // Community
     'community.label': 'Die Community',
-    'community.title': 'Finde deinen Tribe statt digitaler Isolation.',
+    'community.title': 'Finde deinen Tribe statt digitaler Isolation',
     'community.description': 'Trainiere nicht mehr allein vor dem Screen. Wir nutzen digitale Daten, um echte, physische Begegnungen in lokalen Tribes direkt in deiner Stadt zu kuratieren.',
     'features.f1.title': 'Personalisierte Workouts',
     'features.f1.desc': 'KI-gestützte Trainingspläne, die sich täglich an deine Zyklusphase, dein Energielevel, Stress und deine Schlafqualität anpassen.',
@@ -256,7 +256,7 @@ const translations = {
 
     // Screenshots
     'screenshots.label': 'Die App',
-    'screenshots.title': 'Designt, um sich<br/>natürlich anzufühlen.',
+    'screenshots.title': 'Designt, um sich<br/>natürlich anzufühlen',
     'screenshots.subtitle': 'Ein klares, intuitives Interface, das dein Wohlbefinden in den Vordergrund stellt. Jeder Screen mit Intention gestaltet.',
     'screenshots.home': 'Home',
     'screenshots.home.desc': 'Dein tägliches Dashboard mit Workouts, Zyklusrhythmus und Motivationssprüchen',
@@ -271,7 +271,7 @@ const translations = {
 
     // How It Works
     'hiw.label': 'So funktioniert\'s',
-    'hiw.title': 'Drei Schritte zum Training<br/>im Einklang mit deinem Körper.',
+    'hiw.title': 'Drei Schritte zum Training<br/>im Einklang mit deinem Körper',
     'hiw.s1.title': 'Erzähl uns von dir',
     'hiw.s1.desc': 'Ein kurzes Onboarding erfasst deine Fitnessziele, Zyklusdaten, Energiemuster und persönliche Vorlieben, um dein einzigartiges Profil zu erstellen.',
     'hiw.s2.title': 'Dein täglicher Plan',
@@ -281,7 +281,7 @@ const translations = {
 
     // Team
     'team.label': 'Das Team',
-    'team.title': 'Von Frauen<br/>für Frauen.',
+    'team.title': 'Von Frauen<br/>für Frauen',
     'team.subtitle': 'Ein Team, das Management-Expertise, medizinisches Wissen und Kreativität vereint, um Frauengesundheit neu zu definieren.',
     'team.lara.role': 'Co-Founderin',
     'team.lara.focus': 'Creative & Growth',

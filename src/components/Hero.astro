@@ -11,17 +11,17 @@
     <div class="hero-text">
       <div class="hero-brand animate-in">diamo</div>
       <h1 class="hero-title animate-in" data-i18n="hero.title">
-        DIAMO – Cycle-synced workouts & your local fitness community.
+        A new era of women's health
       </h1>
       
       <p class="hero-description animate-in" data-i18n="hero.description">
-        Personalized, cycle synced fitness powered by science. Diamo adapts 
-        your workouts to your body's unique rhythm. Because your body 
-        deserves better than one size fits all.
+        Personalized, <span class="usp-highlight">cycle</span>-synced fitness powered by science. 
+        Diamo adapts your workouts to your body's unique rhythm &mdash; and connects 
+        you to a real, local <span class="usp-highlight">community</span>
       </p>
       
       <div class="hero-actions animate-in">
-        <a href="#waitlist" class="btn btn-primary btn-lg" data-open-waitlist>
+        <a href="#waitlist" class="btn btn-primary btn-hero-cta" data-open-waitlist>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 5v14M5 12h14"/>
           </svg>
@@ -180,9 +180,22 @@
     flex-wrap: wrap;
   }
 
-  .btn-lg {
-    padding: 1rem 2.25rem;
-    font-size: 1rem;
+  .btn-hero-cta {
+    padding: 1.15rem 2.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 24px rgba(0, 32, 96, 0.35);
+    letter-spacing: 0.02em;
+  }
+
+  .btn-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 36px rgba(0, 32, 96, 0.45);
+  }
+
+  .usp-highlight {
+    color: var(--navy);
+    font-weight: 700;
   }
 
   .btn-ghost {
@@ -217,7 +230,7 @@
   }
 
   .stat-value {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--navy);
