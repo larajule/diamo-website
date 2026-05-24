@@ -26,10 +26,12 @@
         </p>
         
         <form class="modal-form" id="beta-form">
+          <input type="hidden" name="form_type" value="Beta-Tester" />
           <div class="beta-fields">
             <input 
               type="text" 
               id="beta-name"
+              name="name"
               class="modal-input" 
               placeholder="Your name"
               data-i18n-placeholder="beta-modal.name-placeholder"
@@ -38,6 +40,7 @@
             <input 
               type="email" 
               id="beta-email"
+              name="email"
               class="modal-input" 
               placeholder="Your email address"
               data-i18n-placeholder="beta-modal.email-placeholder"
@@ -46,6 +49,7 @@
             />
             <textarea 
               id="beta-motivation"
+              name="motivation"
               class="modal-input modal-textarea" 
               placeholder="Why do you want to test Diamo? (optional)"
               data-i18n-placeholder="beta-modal.motivation-placeholder"
@@ -60,6 +64,7 @@
               </svg>
             </span>
           </button>
+          <div id="beta-feedback" class="form-feedback"></div>
           <p class="modal-privacy" data-i18n="beta-modal.privacy">Limited spots · Starting July 2026</p>
         </form>
         
@@ -98,10 +103,12 @@
         </p>
         
         <form class="modal-form" id="apply-form">
+          <input type="hidden" name="form_type" value="Bewerbung" />
           <div class="beta-fields">
             <input 
               type="text" 
               id="apply-name"
+              name="name"
               class="modal-input" 
               placeholder="Your name"
               data-i18n-placeholder="apply-modal.name-placeholder"
@@ -110,6 +117,7 @@
             <input 
               type="email" 
               id="apply-email"
+              name="email"
               class="modal-input" 
               placeholder="Your email address"
               data-i18n-placeholder="apply-modal.email-placeholder"
@@ -118,6 +126,7 @@
             />
             <textarea 
               id="apply-message"
+              name="message"
               class="modal-input modal-textarea" 
               placeholder="Tell us about you and your motivation"
               data-i18n-placeholder="apply-modal.message-placeholder"
@@ -133,6 +142,7 @@
               </svg>
             </span>
           </button>
+          <div id="apply-feedback" class="form-feedback"></div>
           <p class="modal-privacy" data-i18n="apply-modal.privacy">We'll get back to you within a few days.</p>
         </form>
         
@@ -390,6 +400,29 @@
       padding: var(--space-md);
     }
   }
+
+  .form-feedback {
+    display: none;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+
+  .form-feedback.feedback-success {
+    display: block;
+    background: rgba(141, 198, 166, 0.12);
+    color: #2d7a4f;
+  }
+
+  .form-feedback.feedback-error {
+    display: block;
+    background: rgba(111, 13, 13, 0.08);
+    color: var(--burgundy);
+  }
 </style>
 
 <script>
@@ -419,14 +452,45 @@
 
   betaForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const feedbackDiv = document.getElementById('beta-feedback');
     const submitText = betaSubmitBtn?.querySelector('.submit-text');
     const submitLoading = betaSubmitBtn?.querySelector('.submit-loading');
     if (submitText) (submitText as HTMLElement).style.display = 'none';
     if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
-    await new Promise(r => setTimeout(r, 1200));
-    if (betaForm) betaForm.style.display = 'none';
-    if (betaSuccess) betaSuccess.style.display = 'block';
-    console.log('Beta tester signup');
+
+    if (feedbackDiv) {
+      feedbackDiv.className = 'form-feedback';
+      feedbackDiv.innerText = '';
+    }
+
+    const formData = new FormData(betaForm as HTMLFormElement);
+
+    try {
+      const response = await fetch('https://diamo.club/anmeldung.php', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+
+      if (response.ok) {
+        if (betaForm) betaForm.style.display = 'none';
+        if (betaSuccess) betaSuccess.style.display = 'block';
+        (betaForm as HTMLFormElement)?.reset();
+      } else {
+        if (feedbackDiv) {
+          feedbackDiv.className = 'form-feedback feedback-error';
+          feedbackDiv.innerText = result.message || 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
+        }
+      }
+    } catch (error) {
+      if (feedbackDiv) {
+        feedbackDiv.className = 'form-feedback feedback-error';
+        feedbackDiv.innerText = 'Netzwerkfehler. Konnte nicht gesendet werden.';
+      }
+    } finally {
+      if (submitText) (submitText as HTMLElement).style.display = '';
+      if (submitLoading) (submitLoading as HTMLElement).style.display = 'none';
+    }
   });
 
   // Apply Modal
@@ -455,14 +519,45 @@
 
   applyForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const feedbackDiv = document.getElementById('apply-feedback');
     const submitText = applySubmitBtn?.querySelector('.submit-text');
     const submitLoading = applySubmitBtn?.querySelector('.submit-loading');
     if (submitText) (submitText as HTMLElement).style.display = 'none';
     if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
-    await new Promise(r => setTimeout(r, 1200));
-    if (applyForm) applyForm.style.display = 'none';
-    if (applySuccess) applySuccess.style.display = 'block';
-    console.log('Job application sent');
+
+    if (feedbackDiv) {
+      feedbackDiv.className = 'form-feedback';
+      feedbackDiv.innerText = '';
+    }
+
+    const formData = new FormData(applyForm as HTMLFormElement);
+
+    try {
+      const response = await fetch('https://diamo.club/anmeldung.php', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+
+      if (response.ok) {
+        if (applyForm) applyForm.style.display = 'none';
+        if (applySuccess) applySuccess.style.display = 'block';
+        (applyForm as HTMLFormElement)?.reset();
+      } else {
+        if (feedbackDiv) {
+          feedbackDiv.className = 'form-feedback feedback-error';
+          feedbackDiv.innerText = result.message || 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
+        }
+      }
+    } catch (error) {
+      if (feedbackDiv) {
+        feedbackDiv.className = 'form-feedback feedback-error';
+        feedbackDiv.innerText = 'Netzwerkfehler. Konnte nicht gesendet werden.';
+      }
+    } finally {
+      if (submitText) (submitText as HTMLElement).style.display = '';
+      if (submitLoading) (submitLoading as HTMLElement).style.display = 'none';
+    }
   });
 
   // Close any modal on Escape

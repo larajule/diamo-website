@@ -1,0 +1,28 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+}
+
+const {
+  title = "DIAMO | Zyklus-synchrone Workouts & Fitness Community",
+  description = "Trainiere im Einklang mit deiner Biologie. DIAMO bietet dir Zyklus-synchrone Workouts und echte Community-Begegnungen in lokalen Tribes. Jetzt Beta-Testerin werden!",
+  keywords = "Zyklusbasiertes Training, Zyklus-synchrone Workouts, Frauen Fitness Community, weibliche Biologie Fitness, hormonbasierte Fitness",
+  ogTitle = "DIAMO | Eine neue Ära der Frauengesundheit",
+  ogDescription = "Vom passiven Tracking zur aktiven Performance. Verbinde dich mit lokalen Tribes und trainiere zyklus-synchron.",
+  ogImage = "https://deinedomain.de/diamo-preview.jpg"
+} = Astro.props;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={ogImage} />
