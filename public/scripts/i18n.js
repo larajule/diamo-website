@@ -153,7 +153,7 @@ const translations = {
     'page.title': 'Diamo | Cycle-Synced Workouts & Fitness Community',
 
     // About Page
-    'about.title': 'We believe fitness should <br/>',
+    'about.title': 'We believe fitness should',
     'about.title.italic': 'work with your body, not against it.',
     'about.story.title': 'Hi, we\'re Marie and Lara',
     'about.story.p1': 'We\'re two women who got tired of following training plans that weren\'t made for us. Plans that don\'t understand why some days we\'re full of energy and other days we just can\'t perform at the same level.',
@@ -359,7 +359,7 @@ const translations = {
     'page.title': 'Diamo | Zyklus-synchrone Workouts & Fitness Community',
 
     // About Page
-    'about.title': 'Wir glauben, Fitness sollte <br/>',
+    'about.title': 'Wir glauben, Fitness sollte',
     'about.title.italic': 'mit deinem K\u00f6rper arbeiten, nicht gegen ihn.',
     'about.story.title': 'Hi, wir sind Marie und Lara',
     'about.story.p1': 'Wir sind zwei Frauen, die es leid waren, nach Trainingspl\u00e4nen zu trainieren, die nicht f\u00fcr uns gemacht waren. Pl\u00e4ne, die nicht verstehen, warum wir an manchen Tagen voller Energie stecken und an anderen einfach nicht die gleiche Leistung abrufen k\u00f6nnen.',

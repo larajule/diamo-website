@@ -10,8 +10,8 @@ import Footer from '../components/Footer.astro';
     <div class="about-container">
       
       <div class="about-hero">
-        <h1 class="about-title" data-i18n="about.title">
-          We believe fitness should <br/>
+        <h1 class="about-title">
+          <span data-i18n="about.title">We believe fitness should</span><br/>
           <span class="about-title-italic" data-i18n="about.title.italic">work with your body, not against it.</span>
         </h1>
         <div class="about-divider"></div>
@@ -52,8 +52,7 @@ import Footer from '../components/Footer.astro';
         <div class="about-team-grid">
           <div class="about-team-card">
             <div class="about-avatar">
-              <img src="/images/marie.jpg" alt="Marie" onerror="this.style.display='none';this.parentElement.querySelector('.avatar-letter').style.display='flex'" />
-              <span class="avatar-letter" style="display:none">M</span>
+              <img src="/team/marie.png" alt="Marie Westermann" />
             </div>
             <p class="about-name">Marie</p>
             <p class="about-role">Co-Founder</p>
@@ -61,8 +60,7 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="about-team-card">
             <div class="about-avatar">
-              <img src="/images/lara.jpg" alt="Lara" onerror="this.style.display='none';this.parentElement.querySelector('.avatar-letter').style.display='flex'" />
-              <span class="avatar-letter" style="display:none">L</span>
+              <img src="/team/lara.png" alt="Lara Bullemer" />
             </div>
             <p class="about-name">Lara</p>
             <p class="about-role">Co-Founder</p>
