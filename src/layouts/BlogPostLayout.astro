@@ -1,0 +1,218 @@
+---
+import Layout from './Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Layout title={`${frontmatter.title} | Diamo Blog`} description={frontmatter.description}>
+  <Navbar />
+  <main>
+    <article class="blog-post section">
+      <div class="container blog-container">
+        <a href="/" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+
+        <header class="blog-header">
+          {frontmatter.tags && (
+            <div class="blog-tags">
+              {frontmatter.tags.map((tag: string) => (
+                <span class="blog-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+          <h1 class="blog-title">{frontmatter.title}</h1>
+          <div class="blog-meta">
+            <span class="blog-author">{frontmatter.author}</span>
+            <span class="blog-divider">·</span>
+            <time datetime={frontmatter.pubDate}>{formattedDate}</time>
+          </div>
+        </header>
+
+        <div class="blog-content prose">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .blog-post {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    min-height: 80vh;
+  }
+
+  .blog-container {
+    max-width: 740px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xl);
+    transition: color var(--transition-fast);
+  }
+
+  .back-link:hover {
+    color: var(--navy);
+  }
+
+  /* Header */
+  .blog-header {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .blog-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .blog-author {
+    font-weight: 600;
+    color: var(--lavender);
+  }
+
+  .blog-divider {
+    opacity: 0.4;
+  }
+
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    background: rgba(155, 139, 203, 0.08);
+    border: 1px solid rgba(155, 139, 203, 0.12);
+    border-radius: var(--radius-full);
+    color: var(--lavender);
+    letter-spacing: 0.03em;
+  }
+
+  /* Prose / Content */
+  .prose {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+  }
+
+  .prose :global(h2),
+  .prose :global(h3),
+  .prose :global(h4) {
+    font-family: var(--font-sans);
+    color: var(--navy);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+    line-height: 1.3;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .prose :global(h3) {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .prose :global(p) {
+    margin-bottom: var(--space-md);
+  }
+
+  .prose :global(strong) {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .prose :global(em) {
+    color: var(--text-primary);
+    font-style: italic;
+  }
+
+  .prose :global(a) {
+    color: var(--lavender);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+  }
+
+  .prose :global(a:hover) {
+    color: var(--navy);
+  }
+
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-bottom: var(--space-md);
+    padding-left: 1.5rem;
+  }
+
+  .prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose :global(ol li) {
+    padding-left: 0.25rem;
+  }
+
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--divider);
+    margin: var(--space-xl) 0;
+  }
+
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--lavender);
+    padding-left: var(--space-md);
+    margin: var(--space-lg) 0;
+    font-style: italic;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .blog-container {
+      padding: 0 var(--space-sm);
+    }
+
+    .blog-title {
+      font-size: 1.6rem;
+    }
+  }
+</style>
