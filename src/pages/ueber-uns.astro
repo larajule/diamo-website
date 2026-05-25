@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Über uns | Diamo" description="Das Diamo Manifesto: Warum wir Diamo gegründet haben und wie wir die Fitnesswelt für Frauen verändern wollen.">
+  <Navbar />
+  <main class="about-page">
+    <div class="about-container">
+      
+      <div class="about-hero">
+        <span class="about-label">Das Diamo Manifesto</span>
+        <h1 class="about-title">
+          Your body isn't one size fits all. <br/>
+          <span class="about-title-italic">It's time for a new era.</span>
+        </h1>
+        <div class="about-divider"></div>
+      </div>
+
+      <section class="about-section">
+        <h2 class="about-h2">Warum wir Diamo gegründet haben</h2>
+        <p>
+          Die gesamte Fitnesswelt ist linear aufgebaut. Fast alle Trainingspläne, Fitness-Tracker und wissenschaftlichen Studien basieren auf Daten, die an Männern durchgeführt wurden – ausgelegt auf einen starren 24-Stunden-Hormonrhythmus. Jeden Tag die gleiche Leistung, jede Woche das gleiche Pensum.
+        </p>
+        <p>
+          Doch der weibliche Körper funktioniert anders. Wir leben in einem dynamischen Zyklus, der individuell zwischen 21 und 35 Tagen variiert. Unsere Energie, unsere Kraft und unsere mentale Stärke verändern sich in vier Phasen ganz natürlich. Gegen diese Biologie anzukämpfen, führt zu Erschöpfung und Frust. Mit ihr zu arbeiten, führt zu maximalem Wohlbefinden und echter Performance.
+        </p>
+      </section>
+
+      <section class="about-section about-vision">
+        <h2 class="about-h2">Unsere Vision</h2>
+        <p>
+          Diamo ist nicht einfach die nächste Fitness-App. Wir sind das intelligente Bindeglied zwischen hochpräzisen Wearable-Daten und deiner einzigartigen weiblichen Physiologie. Wir übersetzen die Metriken deiner Smartwatch oder deines Rings in den Kontext deines Zyklus.
+        </p>
+        <p>
+          Gleichzeitig glauben wir an <strong>"Offline First"</strong>. Wir nutzen Technologie nicht, um dich vor dem Bildschirm zu isolieren, sondern um dich mit echten Menschen zu verbinden. Diamo bringt Frauen in lokalen Tribes und Run Clubs zusammen, die am selben Tag auf einem ähnlichen Energielevel sind. 
+        </p>
+      </section>
+
+      <section class="about-section">
+        <h2 class="about-h2">Wer wir sind</h2>
+        <p class="about-who-intro">
+          Hinter Diamo steht kein anonymer Tech-Konzern, sondern ein Team aus hochmotivierten Frauen, die die Fitnesswelt revolutionieren wollen. Wir haben Diamo gegründet, weil wir selbst nach einer Lösung gesucht haben, die unseren Körper als Ganzes versteht – wissenschaftlich fundiert, technisch smart und tief in einer echten Community verwurzelt.
+        </p>
+        
+        <div class="about-team-grid">
+          <div class="about-team-card">
+            <div class="about-avatar">M</div>
+            <p class="about-name">Marie</p>
+            <p class="about-role">Co-Founder</p>
+          </div>
+          <div class="about-team-card">
+            <div class="about-avatar">L</div>
+            <p class="about-name">Lara</p>
+            <p class="about-role">Co-Founder</p>
+          </div>
+          <div class="about-team-card">
+            <div class="about-avatar">D</div>
+            <p class="about-name">Du</p>
+            <p class="about-role">Co-Founder / Tech</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="about-cta">
+        <h3 class="about-cta-title">Werde Teil der Bewegung.</h3>
+        <a href="/" class="btn btn-primary about-cta-btn">
+          Zurück zur Warteliste
+        </a>
+      </div>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .about-page {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+    min-height: 100vh;
+  }
+
+  .about-container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  /* Hero / Intro */
+  .about-hero {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .about-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .about-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-title-italic {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .about-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--navy);
+    opacity: 0.3;
+    margin: 0 auto;
+  }
+
+  /* Sections */
+  .about-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .about-h2 {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .about-section p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* Vision Block (dark) */
+  .about-vision {
+    background: var(--navy);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin: var(--space-xl) 0;
+  }
+
+  .about-vision .about-h2 {
+    color: var(--ivory);
+  }
+
+  .about-vision p {
+    color: rgba(251, 249, 246, 0.85);
+  }
+
+  .about-vision strong {
+    color: var(--ivory);
+  }
+
+  /* Team Grid */
+  .about-who-intro {
+    margin-bottom: var(--space-xl) !important;
+  }
+
+  .about-team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .about-team-card {
+    padding: var(--space-md);
+    border: 1px solid rgba(11, 25, 46, 0.08);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast);
+  }
+
+  .about-team-card:hover {
+    border-color: rgba(11, 25, 46, 0.2);
+  }
+
+  .about-avatar {
+    width: 56px;
+    height: 56px;
+    background: rgba(11, 25, 46, 0.06);
+    border-radius: 50%;
+    margin: 0 auto var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .about-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .about-role {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* CTA */
+  .about-cta {
+    text-align: center;
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(11, 25, 46, 0.08);
+  }
+
+  .about-cta-title {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+  }
+
+  .about-cta-btn {
+    padding: 0.75rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .about-team-grid {
+      grid-template-columns: 1fr;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+
+    .about-vision {
+      padding: var(--space-lg);
+    }
+  }
+</style>

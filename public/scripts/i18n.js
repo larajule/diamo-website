@@ -5,6 +5,7 @@ const translations = {
     'nav.features': 'Features',
     'nav.how': 'How It Works',
     'nav.team': 'Team',
+    'nav.about': 'About Us',
     'nav.cta': 'Get Early Access',
 
     // Hero
@@ -141,6 +142,7 @@ const translations = {
     'footer.company': 'Company',
     'footer.company.team': 'Team',
     'footer.company.careers': 'Careers',
+    'footer.company.about': 'About Us',
     'footer.company.press': 'Press',
     'footer.contact': 'Get in Touch',
     'footer.legal': '© 2026 Diamo. All rights reserved.',
@@ -190,6 +192,7 @@ const translations = {
     'nav.features': 'Features',
     'nav.how': 'So funktioniert\'s',
     'nav.team': 'Team',
+    'nav.about': 'Über uns',
     'nav.cta': 'Frühzugang sichern',
 
     // Hero
@@ -326,6 +329,7 @@ const translations = {
     'footer.company': 'Unternehmen',
     'footer.company.team': 'Team',
     'footer.company.careers': 'Karriere',
+    'footer.company.about': '\u00dcber uns',
     'footer.company.press': 'Presse',
     'footer.contact': 'Kontakt',
     'footer.legal': '© 2026 Diamo. Alle Rechte vorbehalten.',
