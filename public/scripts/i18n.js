@@ -115,10 +115,10 @@ const translations = {
     'team.marie.t3': 'Fitness',
     'team.hiring.title': 'We\'re looking for visionaries',
     'team.role1.title': 'Technical Co-Founder',
-    'team.role1.desc': 'Build the core community logic and a stable, scalable app architecture. Focus on user interaction and technical scalability.',
+    'team.role1.desc': 'Build our Flutter app, design the cycle-algorithm backend, and own the full tech stack from API to deployment. Equity-based, ideal for a senior developer passionate about health-tech.',
     'team.role1.cta': 'Apply',
     'team.role2.title': 'Co-Founder: Influencerin',
-    'team.role2.desc': 'Build an authentic community through social media recommendations. Trust over advertising.',
+    'team.role2.desc': 'Grow our Instagram, TikTok, and YouTube presence authentically. Create content around women\'s fitness, cycle health, and community. 10k+ followers preferred.',
     'team.role2.cta': 'Apply',
 
     // Beta Signup
@@ -143,9 +143,11 @@ const translations = {
     'footer.company.press': 'Press',
     'footer.contact': 'Get in Touch',
     'footer.legal': '© 2026 Diamo. All rights reserved.',
+    'footer.disclaimer': 'Diamo is not a medical service and does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before starting any fitness program. Use of the app is at your own risk. Diamo assumes no liability for health-related outcomes.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.imprint': 'Imprint',
+    'page.title': 'Diamo | Cycle-Synced Workouts & Fitness Community',
 
     // Waitlist Modal
     'modal.label': 'Early Access',
@@ -297,10 +299,10 @@ const translations = {
     'team.marie.t3': 'Fitness',
     'team.hiring.title': 'Wir suchen Visionärinnen',
     'team.role1.title': 'Technical Co-Founder',
-    'team.role1.desc': 'Aufbau der Community-Logik und einer stabilen, skalierbaren App-Architektur. Fokus auf Nutzer-Interaktion und technische Skalierbarkeit.',
+    'team.role1.desc': 'Entwickle unsere Flutter-App, gestalte das Zyklus-Algorithmus-Backend und verantworte den gesamten Tech-Stack von API bis Deployment. Equity-basiert, ideal f\u00fcr eine:n erfahrene:n Entwickler:in mit Leidenschaft f\u00fcr Health-Tech.',
     'team.role1.cta': 'Bewerben',
     'team.role2.title': 'Co-Founderin: Influencerin',
-    'team.role2.desc': 'Aufbau einer authentischen Community durch Social-Media-Empfehlungen. Vertrauen statt Werbung.',
+    'team.role2.desc': 'Baue unsere Instagram-, TikTok- und YouTube-Pr\u00e4senz authentisch auf. Erstelle Content rund um Frauen-Fitness, Zyklusgesundheit und Community. 10k+ Follower bevorzugt.',
     'team.role2.cta': 'Bewerben',
 
     // Beta Signup
@@ -325,9 +327,11 @@ const translations = {
     'footer.company.press': 'Presse',
     'footer.contact': 'Kontakt',
     'footer.legal': '© 2026 Diamo. Alle Rechte vorbehalten.',
+    'footer.disclaimer': 'Diamo ist kein medizinischer Dienst und bietet keine medizinische Beratung, Diagnose oder Behandlung an. Konsultiere immer eine qualifizierte medizinische Fachkraft, bevor du ein Fitnessprogramm beginnst. Die Nutzung der App erfolgt auf eigenes Risiko. Diamo \u00fcbernimmt keine Haftung f\u00fcr gesundheitliche Auswirkungen.',
     'footer.privacy': 'Datenschutz',
     'footer.terms': 'AGB',
     'footer.imprint': 'Impressum',
+    'page.title': 'Diamo | Zyklus-synchrone Workouts & Fitness Community',
 
     // Waitlist Modal
     'modal.label': 'Frühzugang',
@@ -393,6 +397,12 @@ function setLanguage(lang) {
 
   // Update html lang attribute
   document.documentElement.lang = lang;
+
+  // Update page title
+  const pageTitle = translations[lang]['page.title'];
+  if (pageTitle) {
+    document.title = pageTitle;
+  }
 
   // Persist
   localStorage.setItem('diamo-lang', lang);
