@@ -123,7 +123,7 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta Program',
-    'beta.title': 'Become part of the movement. Apply as a beta tester now',
+    'beta.title': 'Help us revolutionize fitness for women',
     'beta.description': 'We\'re inviting a small group of women to test Diamo before launch. Get early access, share your feedback, and help us build something that truly fits your body and your life.',
     'beta.feat1': 'Free access during beta',
     'beta.feat2': 'Direct input on features',
@@ -305,7 +305,7 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta-Programm',
-    'beta.title': 'Werde Teil der Bewegung. Jetzt als Beta-Testerin bewerben!',
+    'beta.title': 'Hilf uns, Fitness f\u00fcr Frauen zu revolutionieren',
     'beta.description': 'Wir laden eine kleine Gruppe von Frauen ein, Diamo vor dem Launch zu testen. Erhalte frühzeitigen Zugang, teile dein Feedback und hilf uns, etwas zu entwickeln, das wirklich zu deinem Körper und deinem Leben passt.',
     'beta.feat1': 'Kostenloser Zugang während der Beta',
     'beta.feat2': 'Direkter Einfluss auf Features',
