@@ -4,78 +4,78 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Über uns | Diamo" description="Lerne Marie und Lara kennen – die Gründerinnen von Diamo. Erfahre, warum wir eine Fitness-App entwickeln, die den weiblichen Zyklus versteht.">
+<Layout title="About Us | Diamo" description="Meet Marie and Lara — the founders of Diamo. Learn why we're building a fitness app that understands the female cycle.">
   <Navbar />
   <main class="about-page">
     <div class="about-container">
       
       <div class="about-hero">
-        <h1 class="about-title">
+        <h1 class="about-title" data-i18n="about.title">
           We believe fitness should <br/>
-          <span class="about-title-italic">work with your body, not against it.</span>
+          <span class="about-title-italic" data-i18n="about.title.italic">work with your body, not against it.</span>
         </h1>
         <div class="about-divider"></div>
       </div>
 
       <section class="about-section">
-        <h2 class="about-h2">Hi, wir sind Marie und Lara</h2>
-        <p>
-          Wir sind zwei Frauen, die es leid waren, nach Trainingsplänen zu trainieren, die nicht für uns gemacht waren. Pläne, die nicht verstehen, warum wir an manchen Tagen voller Energie stecken und an anderen einfach nicht die gleiche Leistung abrufen können.
+        <h2 class="about-h2" data-i18n="about.story.title">Hi, we're Marie and Lara</h2>
+        <p data-i18n="about.story.p1">
+          We're two women who got tired of following training plans that weren't made for us. Plans that don't understand why some days we're full of energy and other days we just can't perform at the same level.
         </p>
-        <p>
-          Irgendwann haben wir verstanden: Das liegt nicht an mangelnder Disziplin. Das liegt daran, dass unser Körper in einem ganz eigenen Rhythmus arbeitet. Einem Zyklus, der individuell zwischen 21 und 35 Tagen variiert und unsere Energie, Kraft und Erholung auf ganz natürliche Weise beeinflusst.
+        <p data-i18n="about.story.p2">
+          At some point we realized: it's not a lack of discipline. It's our body working in its own rhythm. A cycle that individually varies between 21 and 35 days, naturally influencing our energy, strength, and recovery.
         </p>
-        <p>
-          Also haben wir beschlossen, selbst etwas zu bauen, das diesen Rhythmus versteht. So ist Diamo entstanden.
+        <p data-i18n="about.story.p3">
+          So we decided to build something that understands this rhythm. That's how Diamo was born.
         </p>
       </section>
 
       <section class="about-section about-vision">
-        <h2 class="about-h2">Was Diamo anders macht</h2>
-        <p>
-          Diamo ist keine weitere Fitness-App, die dir sagt, du sollst mehr leisten. Diamo versteht, dass dein Körper nicht jeden Tag gleich funktioniert – und das ist gut so.
+        <h2 class="about-h2" data-i18n="about.vision.title">What makes Diamo different</h2>
+        <p data-i18n="about.vision.p1">
+          Diamo isn't just another fitness app telling you to push harder. Diamo understands that your body doesn't work the same every day — and that's a good thing.
         </p>
-        <p>
-          Wir verbinden die Daten deiner Smartwatch oder deines Oura Rings mit dem Wissen über deinen Zyklus und erstellen daraus einen Trainingsplan, der wirklich zu dir passt. Nicht gestern, nicht morgen, sondern heute.
+        <p data-i18n="about.vision.p2">
+          We connect data from your smartwatch or Oura Ring with knowledge about your cycle to create a training plan that truly fits you. Not yesterday, not tomorrow, but today.
         </p>
-        <p>
-          Und weil wir glauben, dass echte Motivation von echten Menschen kommt, verbindet Diamo dich mit Frauen in deiner Nähe. Lokale Run Clubs, gemeinsame Workouts, echte Connections – <strong>offline first</strong>.
+        <p data-i18n="about.vision.p3">
+          And because we believe real motivation comes from real people, Diamo connects you with women near you. Local run clubs, shared workouts, real connections — <strong>offline first</strong>.
         </p>
       </section>
 
       <section class="about-section">
-        <h2 class="about-h2">Wer hinter Diamo steht</h2>
-        <p class="about-who-intro">
-          Kein großer Konzern, kein anonymes Team. Nur zwei Freundinnen mit einer gemeinsamen Vision und dem Antrieb, etwas zu verändern.
+        <h2 class="about-h2" data-i18n="about.team.title">The people behind Diamo</h2>
+        <p class="about-who-intro" data-i18n="about.team.intro">
+          No big corporation, no anonymous team. Just two friends with a shared vision and the drive to change something.
         </p>
         
         <div class="about-team-grid">
           <div class="about-team-card">
-            <div class="about-avatar">M</div>
+            <div class="about-avatar">
+              <img src="/images/marie.jpg" alt="Marie" onerror="this.style.display='none';this.parentElement.querySelector('.avatar-letter').style.display='flex'" />
+              <span class="avatar-letter" style="display:none">M</span>
+            </div>
             <p class="about-name">Marie</p>
             <p class="about-role">Co-Founder</p>
-            <p class="about-bio">Strategy, Operations & lizenzierte Fitness-Trainerin. Bringt Consulting-Erfahrung und eine Leidenschaft für Community-Building mit.</p>
+            <p class="about-bio" data-i18n="about.marie.bio">Strategy, Operations & licensed fitness trainer. Brings consulting experience and a passion for community building.</p>
           </div>
           <div class="about-team-card">
-            <div class="about-avatar">L</div>
+            <div class="about-avatar">
+              <img src="/images/lara.jpg" alt="Lara" onerror="this.style.display='none';this.parentElement.querySelector('.avatar-letter').style.display='flex'" />
+              <span class="avatar-letter" style="display:none">L</span>
+            </div>
             <p class="about-name">Lara</p>
             <p class="about-role">Co-Founder</p>
-            <p class="about-bio">Creative Direction, Brand Strategy & Women's Health. Sorgt dafür, dass Diamo sich so anfühlt, wie es sich anfühlen soll.</p>
-          </div>
-          <div class="about-team-card">
-            <div class="about-avatar">?</div>
-            <p class="about-name">Vielleicht du?</p>
-            <p class="about-role">Co-Founder / Tech</p>
-            <p class="about-bio">Wir suchen jemanden, der unsere Vision teilt und Diamo technisch zum Leben erweckt. Flutter, Firebase, API-Design – klingt nach dir?</p>
+            <p class="about-bio" data-i18n="about.lara.bio">Creative Direction, Brand Strategy & Women's Health. Makes sure Diamo feels exactly the way it should.</p>
           </div>
         </div>
       </section>
 
       <div class="about-cta">
-        <h3 class="about-cta-title">Klingt nach etwas, das du erleben willst?</h3>
-        <p class="about-cta-text">Wir sind noch ganz am Anfang und genau das macht es besonders. Sei von Anfang an dabei.</p>
-        <a href="/" class="btn btn-primary about-cta-btn">
-          Zur Warteliste
+        <h3 class="about-cta-title" data-i18n="about.cta.title">Sound like something you want to be part of?</h3>
+        <p class="about-cta-text" data-i18n="about.cta.text">We're just getting started — and that's what makes it special. Be there from the beginning.</p>
+        <a href="/" class="btn btn-primary about-cta-btn" data-i18n="about.cta.btn">
+          Join the Waitlist
         </a>
       </div>
 
@@ -176,12 +176,12 @@ import Footer from '../components/Footer.astro';
 
   .about-team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
   }
 
   .about-team-card {
-    padding: var(--space-md);
+    padding: var(--space-lg);
     border: 1px solid rgba(11, 25, 46, 0.08);
     border-radius: var(--radius-md);
     text-align: center;
@@ -194,36 +194,48 @@ import Footer from '../components/Footer.astro';
   }
 
   .about-avatar {
-    width: 52px;
-    height: 52px;
+    width: 72px;
+    height: 72px;
     background: rgba(11, 25, 46, 0.06);
     border-radius: 50%;
     margin: 0 auto var(--space-sm);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  .about-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-letter {
     font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--navy);
+    align-items: center;
+    justify-content: center;
   }
 
   .about-name {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--navy);
   }
 
   .about-role {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     color: var(--text-muted);
     margin-top: 0.15rem;
     margin-bottom: 0.6rem;
   }
 
   .about-bio {
-    font-size: 0.8rem;
-    line-height: 1.55;
+    font-size: 0.82rem;
+    line-height: 1.6;
     color: var(--text-secondary);
   }
 
@@ -255,7 +267,7 @@ import Footer from '../components/Footer.astro';
   @media (max-width: 640px) {
     .about-team-grid {
       grid-template-columns: 1fr;
-      max-width: 280px;
+      max-width: 320px;
       margin: 0 auto;
     }
 

@@ -152,6 +152,25 @@ const translations = {
     'footer.imprint': 'Imprint',
     'page.title': 'Diamo | Cycle-Synced Workouts & Fitness Community',
 
+    // About Page
+    'about.title': 'We believe fitness should <br/>',
+    'about.title.italic': 'work with your body, not against it.',
+    'about.story.title': 'Hi, we\'re Marie and Lara',
+    'about.story.p1': 'We\'re two women who got tired of following training plans that weren\'t made for us. Plans that don\'t understand why some days we\'re full of energy and other days we just can\'t perform at the same level.',
+    'about.story.p2': 'At some point we realized: it\'s not a lack of discipline. It\'s our body working in its own rhythm. A cycle that individually varies between 21 and 35 days, naturally influencing our energy, strength, and recovery.',
+    'about.story.p3': 'So we decided to build something that understands this rhythm. That\'s how Diamo was born.',
+    'about.vision.title': 'What makes Diamo different',
+    'about.vision.p1': 'Diamo isn\'t just another fitness app telling you to push harder. Diamo understands that your body doesn\'t work the same every day \u2014 and that\'s a good thing.',
+    'about.vision.p2': 'We connect data from your smartwatch or Oura Ring with knowledge about your cycle to create a training plan that truly fits you. Not yesterday, not tomorrow, but today.',
+    'about.vision.p3': 'And because we believe real motivation comes from real people, Diamo connects you with women near you. Local run clubs, shared workouts, real connections \u2014 <strong>offline first</strong>.',
+    'about.team.title': 'The people behind Diamo',
+    'about.team.intro': 'No big corporation, no anonymous team. Just two friends with a shared vision and the drive to change something.',
+    'about.marie.bio': 'Strategy, Operations & licensed fitness trainer. Brings consulting experience and a passion for community building.',
+    'about.lara.bio': 'Creative Direction, Brand Strategy & Women\'s Health. Makes sure Diamo feels exactly the way it should.',
+    'about.cta.title': 'Sound like something you want to be part of?',
+    'about.cta.text': 'We\'re just getting started \u2014 and that\'s what makes it special. Be there from the beginning.',
+    'about.cta.btn': 'Join the Waitlist',
+
     // Waitlist Modal
     'modal.label': 'Early Access',
     'modal.title': 'Be among the first',
@@ -338,6 +357,25 @@ const translations = {
     'footer.terms': 'AGB',
     'footer.imprint': 'Impressum',
     'page.title': 'Diamo | Zyklus-synchrone Workouts & Fitness Community',
+
+    // About Page
+    'about.title': 'Wir glauben, Fitness sollte <br/>',
+    'about.title.italic': 'mit deinem K\u00f6rper arbeiten, nicht gegen ihn.',
+    'about.story.title': 'Hi, wir sind Marie und Lara',
+    'about.story.p1': 'Wir sind zwei Frauen, die es leid waren, nach Trainingspl\u00e4nen zu trainieren, die nicht f\u00fcr uns gemacht waren. Pl\u00e4ne, die nicht verstehen, warum wir an manchen Tagen voller Energie stecken und an anderen einfach nicht die gleiche Leistung abrufen k\u00f6nnen.',
+    'about.story.p2': 'Irgendwann haben wir verstanden: Das liegt nicht an mangelnder Disziplin. Das liegt daran, dass unser K\u00f6rper in einem ganz eigenen Rhythmus arbeitet. Einem Zyklus, der individuell zwischen 21 und 35 Tagen variiert und unsere Energie, Kraft und Erholung auf ganz nat\u00fcrliche Weise beeinflusst.',
+    'about.story.p3': 'Also haben wir beschlossen, selbst etwas zu bauen, das diesen Rhythmus versteht. So ist Diamo entstanden.',
+    'about.vision.title': 'Was Diamo anders macht',
+    'about.vision.p1': 'Diamo ist keine weitere Fitness-App, die dir sagt, du sollst mehr leisten. Diamo versteht, dass dein K\u00f6rper nicht jeden Tag gleich funktioniert \u2013 und das ist gut so.',
+    'about.vision.p2': 'Wir verbinden die Daten deiner Smartwatch oder deines Oura Rings mit dem Wissen \u00fcber deinen Zyklus und erstellen daraus einen Trainingsplan, der wirklich zu dir passt. Nicht gestern, nicht morgen, sondern heute.',
+    'about.vision.p3': 'Und weil wir glauben, dass echte Motivation von echten Menschen kommt, verbindet Diamo dich mit Frauen in deiner N\u00e4he. Lokale Run Clubs, gemeinsame Workouts, echte Connections \u2013 <strong>offline first</strong>.',
+    'about.team.title': 'Wer hinter Diamo steht',
+    'about.team.intro': 'Kein gro\u00dfer Konzern, kein anonymes Team. Nur zwei Freundinnen mit einer gemeinsamen Vision und dem Antrieb, etwas zu ver\u00e4ndern.',
+    'about.marie.bio': 'Strategy, Operations & lizenzierte Fitness-Trainerin. Bringt Consulting-Erfahrung und eine Leidenschaft f\u00fcr Community-Building mit.',
+    'about.lara.bio': 'Creative Direction, Brand Strategy & Women\u2019s Health. Sorgt daf\u00fcr, dass Diamo sich so anf\u00fchlt, wie es sich anf\u00fchlen soll.',
+    'about.cta.title': 'Klingt nach etwas, das du erleben willst?',
+    'about.cta.text': 'Wir sind noch ganz am Anfang \u2013 und genau das macht es besonders. Sei von Anfang an dabei.',
+    'about.cta.btn': 'Zur Warteliste',
 
     // Waitlist Modal
     'modal.label': 'Frühzugang',
