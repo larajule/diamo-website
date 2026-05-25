@@ -41,7 +41,7 @@ const translations = {
     // Features
     'features.label': 'Features',
     'features.title': 'Your data, finally put to work',
-    'features.subtitle': 'Millions track with Apple Watch, Oura, or Garmin but nobody uses the data. Diamo turns your existing health data into real, actionable workouts. No wearable? No problem, it works without one too.',
+    'features.subtitle': 'Millions track with Apple Watch, Oura, or Garmin but nobody uses the data. Diamo reads your health data through the lens of your cycle phase and turns it into real, actionable workouts. No wearable? No problem, it works without one too.',
 
     // Community
     'community.label': 'Community',
@@ -223,7 +223,7 @@ const translations = {
     // Features
     'features.label': 'Features',
     'features.title': 'Deine Daten, endlich sinnvoll genutzt',
-    'features.subtitle': 'Millionen tracken mit Apple Watch, Oura oder Garmin, aber niemand nutzt die Daten. Diamo verwandelt deine vorhandenen Gesundheitsdaten in echte, umsetzbare Workouts. Kein Wearable? Kein Problem, es funktioniert auch ohne.',
+    'features.subtitle': 'Millionen tracken mit Apple Watch, Oura oder Garmin, aber niemand nutzt die Daten. Diamo liest deine Gesundheitsdaten im Kontext deiner Zyklusphase und verwandelt sie in echte, umsetzbare Workouts. Kein Wearable? Kein Problem, es funktioniert auch ohne.',
 
     // Community
     'community.label': 'Die Community',
