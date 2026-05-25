@@ -261,3 +261,23 @@ p {
     padding: 0 var(--space-sm);
   }
 }
+
+/* Legal page language notice */
+.legal-lang-notice {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.2rem;
+  background: rgba(155, 139, 203, 0.08);
+  border: 1px solid rgba(155, 139, 203, 0.15);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  max-width: 700px;
+}
+
+.legal-lang-notice svg {
+  color: var(--lavender);
+  flex-shrink: 0;
+}

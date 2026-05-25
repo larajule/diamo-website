@@ -21,10 +21,10 @@ const translations = {
     'hero.stat3.label': 'Community Power',
 
     // Problem
-    'problem.label': 'The Problem',
-    'problem.title': 'No more male standards in training',
-    'problem.subtitle': 'Most fitness algorithms are based on male biology. Diamo is different. We adapt your workouts daily to your cycle, your energy, and your daily life.',
-    'problem.detail': 'Diamo is the <strong>first software only solution</strong> that connects daily biometric data with a hormonal performance system and a local community. No expensive wearables required.',
+    'problem.label': 'The Difference',
+    'problem.title': 'Your cycle is your superpower',
+    'problem.subtitle': 'Your body follows a unique rhythm. Diamo listens to your cycle, energy, and daily life to create workouts that move with you.',
+    'problem.detail': 'Diamo is the <strong>first software only solution</strong> that connects daily biometric data with a hormonal performance system and a local community.',
     'problem.without': 'Without Diamo',
     'problem.with': 'With Diamo',
     'problem.old1': 'Generic workout plans',
@@ -40,8 +40,8 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Full performance, completely hardware-free',
-    'features.subtitle': 'You don\'t need expensive smartwatches. Diamo works hardware-free directly on your smartphone.',
+    'features.title': 'Your data, finally put to work',
+    'features.subtitle': 'Millions track with Apple Watch, Oura, or Garmin but nobody uses the data. Diamo turns your existing health data into real, actionable workouts. No wearable? No problem, it works without one too.',
 
     // Community
     'community.label': 'Community',
@@ -203,10 +203,10 @@ const translations = {
     'hero.stat3.label': 'Community Power',
 
     // Problem
-    'problem.label': 'Das Problem',
-    'problem.title': 'Schluss mit männlichen Standards im Training',
-    'problem.subtitle': 'Die meisten Fitness-Algorithmen basieren auf männlicher Biologie. Diamo ist anders. Wir passen deine Workouts täglich an deinen Zyklus, deine Energie und deinen Alltag an.',
-    'problem.detail': 'Diamo ist die <strong>erste reine Software-Lösung</strong>, die tägliche biometrische Daten mit einem hormonellen Leistungssystem und einer lokalen Community verbindet. Keine teuren Wearables nötig.',
+    'problem.label': 'Der Unterschied',
+    'problem.title': 'Dein Zyklus ist deine Superkraft',
+    'problem.subtitle': 'Dein Körper folgt einem einzigartigen Rhythmus. Diamo hört auf deinen Zyklus, deine Energie und deinen Alltag, um Workouts zu erstellen, die sich mit dir bewegen.',
+    'problem.detail': 'Diamo ist die <strong>erste reine Software-Lösung</strong>, die tägliche biometrische Daten mit einem hormonellen Leistungssystem und einer lokalen Community verbindet.',
     'problem.without': 'Ohne Diamo',
     'problem.with': 'Mit Diamo',
     'problem.old1': 'Generische Trainingspläne',
@@ -222,8 +222,8 @@ const translations = {
 
     // Features
     'features.label': 'Features',
-    'features.title': 'Volle Performance, ganz ohne Zusatz-Hardware',
-    'features.subtitle': 'Du brauchst keine teuren Smartwatches. Diamo funktioniert hardware-frei direkt über dein Smartphone.',
+    'features.title': 'Deine Daten, endlich sinnvoll genutzt',
+    'features.subtitle': 'Millionen tracken mit Apple Watch, Oura oder Garmin, aber niemand nutzt die Daten. Diamo verwandelt deine vorhandenen Gesundheitsdaten in echte, umsetzbare Workouts. Kein Wearable? Kein Problem, es funktioniert auch ohne.',
 
     // Community
     'community.label': 'Die Community',
