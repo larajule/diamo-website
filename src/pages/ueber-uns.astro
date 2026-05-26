@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="About Us | Diamo" description="Meet Marie and Lara — the founders of Diamo. Learn why we're building a fitness app that understands the female cycle.">
+<Layout title="About Us | Diamo" description="Learn about the idea and vision behind Diamo — cycle-synced fitness powered by science, community, and real connection.">
   <Navbar />
   <main class="about-page">
     <div class="about-container">
@@ -18,15 +18,15 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <section class="about-section">
-        <h2 class="about-h2" data-i18n="about.story.title">Hi, we're Marie and Lara</h2>
+        <h2 class="about-h2" data-i18n="about.story.title">Why Diamo exists</h2>
         <p data-i18n="about.story.p1">
-          We spent years following training plans that ignored the most fundamental part of our biology: our cycle. Plans that expected the same performance on day 5 and day 25. Plans that made us feel like failures when our bodies simply needed something different.
+          For too long, fitness has ignored the most fundamental part of female biology: the cycle. Training plans expected the same performance on day 5 and day 25. They made women feel like failures when their bodies simply needed something different.
         </p>
         <p data-i18n="about.story.p2">
-          Then we learned the science: every woman moves through four distinct cycle phases, each shaping her energy, strength, and recovery in unique ways. This isn't a limitation. It's an advantage, if you know how to use it.
+          But the science is clear: every woman moves through four distinct cycle phases, each shaping her energy, strength, and recovery in unique ways. This isn't a limitation — it's an advantage, if you know how to use it.
         </p>
         <p data-i18n="about.story.p3">
-          So we built Diamo. The app that finally trains with your cycle, not against it.
+          That's why Diamo was built. The app that finally trains with your cycle, not against it.
         </p>
       </section>
 
@@ -44,27 +44,32 @@ import Footer from '../components/Footer.astro';
       </section>
 
       <section class="about-section">
-        <h2 class="about-h2" data-i18n="about.team.title">Built by women, for women</h2>
-        <p class="about-who-intro" data-i18n="about.team.intro">
-          We're not a big tech company. We're two friends who experienced firsthand how cycle-aware training changed everything and decided every woman deserves access to this.
+        <h2 class="about-h2" data-i18n="about.values.title">What we believe</h2>
+        <p class="about-values-intro" data-i18n="about.values.intro">
+          Diamo is built on a simple conviction: women deserve fitness tools that truly understand their bodies. These are the principles that guide everything we create.
         </p>
         
-        <div class="about-team-grid">
-          <div class="about-team-card">
-            <div class="about-avatar">
-              <img src="/team/marie.png" alt="Marie Westermann" />
+        <div class="about-values-grid">
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>
             </div>
-            <p class="about-name">Marie</p>
-            <p class="about-role">Co-Founder</p>
-            <p class="about-bio" data-i18n="about.marie.bio">Strategy, Operations & licensed fitness trainer. Brings consulting experience and a passion for community building.</p>
+            <h3 class="about-value-name" data-i18n="about.value1.title">Science-backed</h3>
+            <p class="about-value-desc" data-i18n="about.value1.desc">Every recommendation is rooted in real cycle science and sports physiology — not trends, not guesswork.</p>
           </div>
-          <div class="about-team-card">
-            <div class="about-avatar">
-              <img src="/team/lara.png" alt="Lara Bullemer" />
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <p class="about-name">Lara</p>
-            <p class="about-role">Co-Founder</p>
-            <p class="about-bio" data-i18n="about.lara.bio">Creative Direction, Brand Strategy & Women's Health. Makes sure Diamo feels exactly the way it should.</p>
+            <h3 class="about-value-name" data-i18n="about.value2.title">Community first</h3>
+            <p class="about-value-desc" data-i18n="about.value2.desc">The best workouts happen together. Diamo connects you with local women in similar cycle phases for real, offline training.</p>
+          </div>
+          <div class="about-value-card">
+            <div class="about-value-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="about-value-name" data-i18n="about.value3.title">Built for women</h3>
+            <p class="about-value-desc" data-i18n="about.value3.desc">Not an afterthought. Not a pink version of a men's app. Diamo is designed from scratch around the female body and experience.</p>
           </div>
         </div>
       </section>
@@ -167,72 +172,53 @@ import Footer from '../components/Footer.astro';
     color: var(--ivory);
   }
 
-  /* Team Grid */
-  .about-who-intro {
+  /* Values Grid */
+  .about-values-intro {
     margin-bottom: var(--space-xl) !important;
   }
 
-  .about-team-grid {
+  .about-values-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
   }
 
-  .about-team-card {
+  .about-value-card {
     padding: var(--space-lg);
     border: 1px solid rgba(11, 25, 46, 0.08);
     border-radius: var(--radius-md);
     text-align: center;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   }
 
-  .about-team-card:hover {
+  .about-value-card:hover {
     border-color: rgba(11, 25, 46, 0.16);
     box-shadow: 0 4px 20px rgba(11, 25, 46, 0.04);
+    transform: translateY(-2px);
   }
 
-  .about-avatar {
-    width: 72px;
-    height: 72px;
-    background: rgba(11, 25, 46, 0.06);
-    border-radius: 50%;
+  .about-value-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(155, 139, 203, 0.08);
+    border-radius: var(--radius-md);
     margin: 0 auto var(--space-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    color: var(--lavender);
   }
 
-  .about-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .avatar-letter {
-    font-family: var(--font-serif);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--navy);
-    align-items: center;
-    justify-content: center;
-  }
-
-  .about-name {
+  .about-value-name {
+    font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
     color: var(--navy);
+    margin-bottom: 0.4rem;
   }
 
-  .about-role {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-top: 0.15rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .about-bio {
-    font-size: 0.82rem;
+  .about-value-desc {
+    font-size: 0.85rem;
     line-height: 1.6;
     color: var(--text-secondary);
   }
@@ -263,7 +249,7 @@ import Footer from '../components/Footer.astro';
   }
 
   @media (max-width: 640px) {
-    .about-team-grid {
+    .about-values-grid {
       grid-template-columns: 1fr;
       max-width: 320px;
       margin: 0 auto;
@@ -274,3 +260,4 @@ import Footer from '../components/Footer.astro';
     }
   }
 </style>
+

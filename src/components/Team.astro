@@ -14,7 +14,7 @@
       </p>
     </div>
     
-    <div class="team-grid">
+    <div class="team-grid team-grid--single">
       <div class="team-card animate-in" style="transition-delay: 0.1s">
         <div class="team-image-wrapper">
           <img src="/team/lara.png" alt="Lara Bullemer" class="team-image" />
@@ -22,7 +22,7 @@
         </div>
         <div class="team-info">
           <h3 class="team-name">Lara Bullemer</h3>
-          <span class="team-role" data-i18n="team.lara.role">Co-Founder</span>
+          <span class="team-role" data-i18n="team.lara.role">Founder</span>
           <span class="team-focus" data-i18n="team.lara.focus">Creative & Growth</span>
           <p class="team-bio" data-i18n="team.lara.bio">Focus on women's health aligned with marketing & logic: medical depth (aspiring naturopath). Creative direction at the level of global lifestyle brands (experience in the film industry & digital media studies). Management expertise (MBA).</p>
           <div class="team-tags">
@@ -32,25 +32,8 @@
           </div>
         </div>
       </div>
-
-      <div class="team-card animate-in" style="transition-delay: 0.25s">
-        <div class="team-image-wrapper">
-          <img src="/team/marie.png" alt="Marie Westermann" class="team-image" />
-          <div class="team-image-overlay"></div>
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">Marie Westermann</h3>
-          <span class="team-role" data-i18n="team.marie.role">Co-Founder</span>
-          <span class="team-focus" data-i18n="team.marie.focus">Strategy & Operations</span>
-          <p class="team-bio" data-i18n="team.marie.bio">Focus on operational excellence and building community structures. Consulting experience at Inverto (BCG Company) and investment know-how at Coparion. Professional depth as a licensed fitness trainer (B-License).</p>
-          <div class="team-tags">
-            <span class="team-tag" data-i18n="team.marie.t1">Strategy</span>
-            <span class="team-tag" data-i18n="team.marie.t2">Operations</span>
-            <span class="team-tag" data-i18n="team.marie.t3">Fitness</span>
-          </div>
-        </div>
-      </div>
     </div>
+
     
     <div class="open-roles animate-in">
       <h3 class="open-roles-title" data-i18n="team.hiring.title">We're looking for visionaries</h3>
@@ -109,6 +92,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
     margin-bottom: var(--space-2xl);
+  }
+
+  .team-grid--single {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .team-card {

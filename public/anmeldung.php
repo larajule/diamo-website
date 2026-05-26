@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // E-Mail Einstellungen
-    $to = "marie.westermann.hd@me.com, larabullemer@gmail.com"; 
+    $to = "larabullemer@gmail.com"; 
     $subject = "Neue Anmeldung Diamo: " . ucfirst($formType);
     $body = "Du hast eine neue Anmeldung über das Formular '$formType' erhalten.\n\n" .
             "Name: $name\n" .
