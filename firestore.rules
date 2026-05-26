@@ -1,0 +1,128 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: waitlist
+    // Document ID: auto-generated
+    // Fields:
+    //   - email: string (required, valid email, max 320 chars)
+    //   - source: string (required, must be 'waitlist')
+    //   - createdAt: timestamp (required, server-generated)
+    //
+    // Collection: beta_applications
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required, 1-100 chars)
+    //   - email: string (required, valid email, max 320 chars)
+    //   - motivation: string (optional, max 2000 chars)
+    //   - source: string (required, must be 'beta-tester')
+    //   - createdAt: timestamp (required, server-generated)
+    //
+    // Collection: applications
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required, 1-100 chars)
+    //   - email: string (required, valid email, max 320 chars)
+    //   - message: string (required, 1-5000 chars)
+    //   - source: string (required, must be 'team-application')
+    //   - createdAt: timestamp (required, server-generated)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    // Validate email format
+    function isValidEmail(email) {
+      return email is string &&
+        email.size() > 0 &&
+        email.size() <= 320 &&
+        email.matches('^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$');
+    }
+
+    // Validate string length
+    function validStringLength(field, minLen, maxLen) {
+      return request.resource.data[field] is string &&
+        request.resource.data[field].size() >= minLen &&
+        request.resource.data[field].size() <= maxLen;
+    }
+
+    // Validate that the document contains only the allowed fields
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    // Validate required fields exist
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidWaitlistEntry() {
+      return hasOnlyAllowedFields(['email', 'source', 'createdAt']) &&
+             hasRequiredFields(['email', 'source', 'createdAt']) &&
+             isValidEmail(request.resource.data.email) &&
+             request.resource.data.source == 'waitlist' &&
+             request.resource.data.createdAt is timestamp;
+    }
+
+    function isValidBetaApplication() {
+      return hasOnlyAllowedFields(['name', 'email', 'motivation', 'source', 'createdAt']) &&
+             hasRequiredFields(['name', 'email', 'source', 'createdAt']) &&
+             validStringLength('name', 1, 100) &&
+             isValidEmail(request.resource.data.email) &&
+             (
+               !('motivation' in request.resource.data) ||
+               (request.resource.data.motivation is string &&
+                request.resource.data.motivation.size() <= 2000)
+             ) &&
+             request.resource.data.source == 'beta-tester' &&
+             request.resource.data.createdAt is timestamp;
+    }
+
+    function isValidApplication() {
+      return hasOnlyAllowedFields(['name', 'email', 'message', 'source', 'createdAt']) &&
+             hasRequiredFields(['name', 'email', 'message', 'source', 'createdAt']) &&
+             validStringLength('name', 1, 100) &&
+             isValidEmail(request.resource.data.email) &&
+             validStringLength('message', 1, 5000) &&
+             request.resource.data.source == 'team-application' &&
+             request.resource.data.createdAt is timestamp;
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    // Waitlist: create-only, no auth required (public form)
+    match /waitlist/{docId} {
+      allow create: if isValidWaitlistEntry();
+      allow read, update, delete: if false;
+    }
+
+    // Beta applications: create-only, no auth required (public form)
+    match /beta_applications/{docId} {
+      allow create: if isValidBetaApplication();
+      allow read, update, delete: if false;
+    }
+
+    // Team applications: create-only, no auth required (public form)
+    match /applications/{docId} {
+      allow create: if isValidApplication();
+      allow read, update, delete: if false;
+    }
+
+    // Default deny everything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

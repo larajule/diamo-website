@@ -46,12 +46,12 @@
             <h4 class="role-title" data-i18n="team.role1.title">Technical Co-Founder</h4>
             <p class="role-description" data-i18n="team.role1.desc">Build the core app architecture and cycle-algorithm backend. Experience with Flutter, Firebase, and API design required. Passion for health-tech is a must.</p>
           </div>
-          <a href="#" class="role-apply" data-open-apply>
+          <button type="button" class="role-apply" data-open-apply>
             <span data-i18n="team.role1.cta">Apply</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
             </svg>
-          </a>
+          </button>
         </div>
         <div class="role-card" style="transition-delay: 0.4s">
           <div class="role-icon">
@@ -61,12 +61,12 @@
             <h4 class="role-title" data-i18n="team.role2.title">Co-Founder: Influencer</h4>
             <p class="role-description" data-i18n="team.role2.desc">Fitness content creator with an established audience who wants to co-build a brand. You create workout videos, inspire women, and bring a real community with you.</p>
           </div>
-          <a href="#" class="role-apply" data-open-apply>
+          <button type="button" class="role-apply" data-open-apply>
             <span data-i18n="team.role2.cta">Apply</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -260,6 +260,11 @@
     color: var(--lavender);
     white-space: nowrap;
     transition: gap var(--transition-fast);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
   }
 
   .role-apply:hover {

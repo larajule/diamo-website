@@ -426,6 +426,9 @@
 </style>
 
 <script>
+  import { db } from '../scripts/firebase.js';
+  import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+
   // Beta Modal
   const betaModal = document.getElementById('beta-modal');
   const betaBackdrop = document.getElementById('beta-backdrop');
@@ -463,29 +466,28 @@
       feedbackDiv.innerText = '';
     }
 
-    const formData = new FormData(betaForm as HTMLFormElement);
+    const name = (document.getElementById('beta-name') as HTMLInputElement)?.value;
+    const email = (document.getElementById('beta-email') as HTMLInputElement)?.value;
+    const motivation = (document.getElementById('beta-motivation') as HTMLTextAreaElement)?.value;
 
     try {
-      const response = await fetch('https://diamo.club/anmeldung.php', {
-        method: 'POST',
-        body: formData
+      const docRef = await addDoc(collection(db, 'beta_applications'), {
+        name: name,
+        email: email,
+        motivation: motivation || '',
+        source: 'beta-tester',
+        createdAt: serverTimestamp(),
       });
-      const result = await response.json();
+      console.log('Beta application saved with ID:', docRef.id);
 
-      if (response.ok) {
-        if (betaForm) betaForm.style.display = 'none';
-        if (betaSuccess) betaSuccess.style.display = 'block';
-        (betaForm as HTMLFormElement)?.reset();
-      } else {
-        if (feedbackDiv) {
-          feedbackDiv.className = 'form-feedback feedback-error';
-          feedbackDiv.innerText = result.message || 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
-        }
-      }
+      if (betaForm) betaForm.style.display = 'none';
+      if (betaSuccess) betaSuccess.style.display = 'block';
+      (betaForm as HTMLFormElement)?.reset();
     } catch (error) {
+      console.error('Firestore Error:', error);
       if (feedbackDiv) {
         feedbackDiv.className = 'form-feedback feedback-error';
-        feedbackDiv.innerText = 'Netzwerkfehler. Konnte nicht gesendet werden.';
+        feedbackDiv.innerText = 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
       }
     } finally {
       if (submitText) (submitText as HTMLElement).style.display = '';
@@ -530,29 +532,28 @@
       feedbackDiv.innerText = '';
     }
 
-    const formData = new FormData(applyForm as HTMLFormElement);
+    const name = (document.getElementById('apply-name') as HTMLInputElement)?.value;
+    const email = (document.getElementById('apply-email') as HTMLInputElement)?.value;
+    const message = (document.getElementById('apply-message') as HTMLTextAreaElement)?.value;
 
     try {
-      const response = await fetch('https://diamo.club/anmeldung.php', {
-        method: 'POST',
-        body: formData
+      const docRef = await addDoc(collection(db, 'applications'), {
+        name: name,
+        email: email,
+        message: message,
+        source: 'team-application',
+        createdAt: serverTimestamp(),
       });
-      const result = await response.json();
+      console.log('Application saved with ID:', docRef.id);
 
-      if (response.ok) {
-        if (applyForm) applyForm.style.display = 'none';
-        if (applySuccess) applySuccess.style.display = 'block';
-        (applyForm as HTMLFormElement)?.reset();
-      } else {
-        if (feedbackDiv) {
-          feedbackDiv.className = 'form-feedback feedback-error';
-          feedbackDiv.innerText = result.message || 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
-        }
-      }
+      if (applyForm) applyForm.style.display = 'none';
+      if (applySuccess) applySuccess.style.display = 'block';
+      (applyForm as HTMLFormElement)?.reset();
     } catch (error) {
+      console.error('Firestore Error:', error);
       if (feedbackDiv) {
         feedbackDiv.className = 'form-feedback feedback-error';
-        feedbackDiv.innerText = 'Netzwerkfehler. Konnte nicht gesendet werden.';
+        feedbackDiv.innerText = 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
       }
     } finally {
       if (submitText) (submitText as HTMLElement).style.display = '';
