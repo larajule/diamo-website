@@ -3,7 +3,11 @@
 
 <section class="beta-signup section" id="beta">
   <div class="container">
-    <div class="beta-card animate-in">
+    <div class="beta-wrapper">
+      <div class="beta-lifestyle-bg">
+        <img src="/images/beta-lifestyle.jpeg" alt="" class="beta-lifestyle-img" />
+      </div>
+      <div class="beta-card animate-in">
       <div class="beta-content">
         <div class="beta-icon">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -52,6 +56,8 @@
         </button>
         <p class="beta-note" data-i18n="beta.note">Limited spots · No commitment · Cancel anytime</p>
       </div>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -62,7 +68,37 @@
     padding-top: var(--space-lg);
   }
 
+  .beta-wrapper {
+    position: relative;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .beta-lifestyle-bg {
+    position: absolute;
+    top: -30px;
+    right: -60px;
+    width: 220px;
+    height: 280px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    opacity: 0.12;
+    z-index: 0;
+    transform: rotate(3deg);
+    pointer-events: none;
+  }
+
+  .beta-lifestyle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(30%);
+  }
+
   .beta-card {
+    position: relative;
+    z-index: 1;
     max-width: 640px;
     margin: 0 auto;
     text-align: center;
@@ -71,7 +107,6 @@
     border-radius: var(--radius-xl);
     border: 1px solid var(--divider);
     box-shadow: var(--shadow-md);
-    position: relative;
     overflow: hidden;
   }
 

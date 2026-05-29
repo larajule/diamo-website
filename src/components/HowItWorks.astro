@@ -48,6 +48,11 @@
         <p class="hiw-step-description" data-i18n="hiw.s3.desc">Join local events, share your journey, and connect with women who train in sync with their bodies. Away from the screen, into real life.</p>
       </div>
     </div>
+
+    <div class="hiw-lifestyle-accent animate-in">
+      <img src="/images/hiw-lifestyle.jpeg" alt="Fitness lifestyle" class="hiw-lifestyle-img" />
+      <div class="hiw-lifestyle-overlay"></div>
+    </div>
   </div>
 </section>
 
@@ -128,6 +133,35 @@
     .hiw-connector {
       display: block;
     }
+  }
+
+  .hiw-lifestyle-accent {
+    margin-top: var(--space-2xl);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hiw-lifestyle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+
+  .hiw-lifestyle-accent:hover .hiw-lifestyle-img {
+    transform: scale(1.02);
+  }
+
+  .hiw-lifestyle-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(0, 32, 96, 0.06) 100%);
+    pointer-events: none;
   }
 
   @media (max-width: 768px) {

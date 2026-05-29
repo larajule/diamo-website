@@ -16,6 +16,9 @@
           Diamo is the <strong>first software only solution</strong> that connects daily biometric data 
           with a hormonal performance system and a local community.
         </p>
+        <div class="problem-lifestyle-strip animate-in">
+          <img src="/images/problem-lifestyle.jpeg" alt="Woman in a lunge pose" class="problem-lifestyle-img" />
+        </div>
       </div>
       
       <div class="problem-visual animate-in">
@@ -71,6 +74,27 @@
   .problem-detail strong {
     color: var(--navy);
     font-weight: 600;
+  }
+
+  .problem-lifestyle-strip {
+    margin-top: var(--space-lg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 180px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .problem-lifestyle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+
+  .problem-lifestyle-strip:hover .problem-lifestyle-img {
+    transform: scale(1.03);
   }
 
   .comparison-card {

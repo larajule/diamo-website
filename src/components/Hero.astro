@@ -3,6 +3,9 @@
 
 <section class="hero" id="hero">
   <div class="hero-bg">
+    <div class="hero-lifestyle-bg">
+      <img src="/images/hero-lifestyle.jpeg" alt="" class="hero-lifestyle-img" />
+    </div>
     <div class="hero-gradient"></div>
     <div class="hero-particles"></div>
   </div>
@@ -79,6 +82,25 @@
     position: absolute;
     inset: 0;
     z-index: 0;
+  }
+
+  .hero-lifestyle-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 60%, transparent 100%);
+  }
+
+  .hero-lifestyle-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    filter: grayscale(15%) contrast(0.95);
   }
 
   .hero-gradient {
@@ -301,6 +323,12 @@
     .hero-content {
       grid-template-columns: 1fr;
       text-align: center;
+    }
+
+    .hero-lifestyle-bg {
+      width: 100%;
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
     }
 
     .hero-description {
