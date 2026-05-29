@@ -72,6 +72,7 @@ const translations = {
     'features.f4.t2': 'Garmin',
     'features.f4.t3': 'Whoop',
     'features.f4.t4': 'Manual Input',
+    'features.lifestyle.caption': 'Recovery is part of the plan',
 
     // Screenshots
     'screenshots.label': 'The App',
@@ -276,6 +277,7 @@ const translations = {
     'features.f4.t2': 'Garmin',
     'features.f4.t3': 'Whoop',
     'features.f4.t4': 'Manuelle Eingabe',
+    'features.lifestyle.caption': 'Regeneration ist Teil des Plans',
 
     // Screenshots
     'screenshots.label': 'Die App',

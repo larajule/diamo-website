@@ -4,8 +4,8 @@
 <section class="beta-signup section" id="beta">
   <div class="container">
     <div class="beta-wrapper">
-      <div class="beta-lifestyle-bg">
-        <img src="/images/beta-lifestyle.jpeg" alt="" class="beta-lifestyle-img" />
+      <div class="beta-lifestyle-side animate-in">
+        <img src="/images/beta-lifestyle.jpeg" alt="Overhead view of yoga practice" class="beta-lifestyle-img" />
       </div>
       <div class="beta-card animate-in">
       <div class="beta-content">
@@ -58,7 +58,6 @@
       </div>
       </div>
     </div>
-    </div>
   </div>
 </section>
 
@@ -69,23 +68,20 @@
   }
 
   .beta-wrapper {
-    position: relative;
-    max-width: 740px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-lg);
+    align-items: center;
+    max-width: 960px;
     margin: 0 auto;
   }
 
-  .beta-lifestyle-bg {
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 280px;
-    height: 340px;
+  .beta-lifestyle-side {
     border-radius: var(--radius-xl);
     overflow: hidden;
-    opacity: 0.25;
-    z-index: 0;
-    transform: rotate(3deg);
-    pointer-events: none;
+    box-shadow: var(--shadow-lg);
+    height: 100%;
+    min-height: 400px;
   }
 
   .beta-lifestyle-img {
@@ -93,11 +89,15 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    display: block;
+    transition: transform var(--transition-slow);
+  }
+
+  .beta-lifestyle-side:hover .beta-lifestyle-img {
+    transform: scale(1.03);
   }
 
   .beta-card {
-    position: relative;
-    z-index: 1;
     max-width: 640px;
     margin: 0 auto;
     text-align: center;
@@ -106,6 +106,7 @@
     border-radius: var(--radius-xl);
     border: 1px solid var(--divider);
     box-shadow: var(--shadow-md);
+    position: relative;
     overflow: hidden;
   }
 
@@ -194,6 +195,14 @@
   }
 
   @media (max-width: 768px) {
+    .beta-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .beta-lifestyle-side {
+      min-height: 280px;
+    }
+
     .beta-card {
       padding: var(--space-xl) var(--space-md);
     }
