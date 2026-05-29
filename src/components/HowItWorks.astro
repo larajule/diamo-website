@@ -50,9 +50,7 @@
         </div>
       </div>
 
-      <div class="hiw-image animate-in">
-        <img src="/images/hiw-lifestyle.jpeg" alt="Fitness lifestyle" class="hiw-lifestyle-img" />
-      </div>
+
     </div>
   </div>
 </section>
@@ -67,16 +65,9 @@
     margin-bottom: var(--space-xl);
   }
 
-  .hiw-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-    align-items: center;
-  }
-
   .hiw-steps {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
   }
 
@@ -146,12 +137,9 @@
   }
 
   @media (max-width: 768px) {
-    .hiw-content {
+    .hiw-steps {
       grid-template-columns: 1fr;
-    }
-
-    .hiw-image {
-      min-height: 280px;
+      gap: var(--space-xl);
     }
   }
 </style>
