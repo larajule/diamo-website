@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Firebase Cloud Functions
+functions/lib/
+functions/node_modules/

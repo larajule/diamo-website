@@ -69,18 +69,18 @@
 
   .beta-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: var(--space-lg);
-    align-items: center;
+    grid-template-columns: 2fr 3fr;
     max-width: 960px;
     margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--divider);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
   }
 
   .beta-lifestyle-side {
-    border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    height: 100%;
     min-height: 400px;
   }
 
@@ -98,26 +98,13 @@
   }
 
   .beta-card {
-    max-width: 640px;
-    margin: 0 auto;
     text-align: center;
-    padding: var(--space-2xl) var(--space-xl);
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--divider);
-    box-shadow: var(--shadow-md);
+    padding: var(--space-xl) var(--space-lg);
     position: relative;
-    overflow: hidden;
   }
 
   .beta-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--navy), var(--lavender), var(--sage));
+    display: none;
   }
 
   .beta-icon {
