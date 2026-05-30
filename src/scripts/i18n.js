@@ -144,8 +144,8 @@ const translations = {
     'modal.placeholder': 'Your email address',
     'modal.submit': 'Join Waitlist',
     'modal.privacy': 'No spam, ever. We respect your privacy.',
-    'modal.success.title': 'You\'re on the list!',
-    'modal.success.desc': 'We\'ll reach out when Diamo is ready for you.',
+    'modal.success.title': 'Hey! 💜',
+    'modal.success.desc': 'Thank you for signing up for the Diamo waitlist! We\'re so excited to have you on board.<br><br>We\'re working hard to get Diamo ready for you. As soon as we launch, you\'ll be one of the first to know. Promise!<br><br>Best wishes,<br>Your Diamo Team',
 
     // Beta Tester Modal
     'beta-modal.label': 'Beta Tester Program',
@@ -316,8 +316,8 @@ const translations = {
     'modal.placeholder': 'Deine E-Mail-Adresse',
     'modal.submit': 'Eintragen',
     'modal.privacy': 'Kein Spam, versprochen. Wir respektieren deine Privatsphäre.',
-    'modal.success.title': 'Du bist auf der Liste!',
-    'modal.success.desc': 'Wir melden uns, wenn Diamo für dich bereit ist.',
+    'modal.success.title': 'Hey! 💜',
+    'modal.success.desc': 'Vielen Dank, dass du dich für die Diamo-Warteliste angemeldet hast! Wir freuen uns riesig, dass du dabei bist.<br><br>Wir arbeiten gerade mit Hochdruck daran, Diamo für dich fertig zu stellen. Sobald es losgeht, bist du eine der Ersten, die es erfährt. Versprochen!<br><br>Liebe Grüße,<br>Dein Diamo-Team',
 
     // Beta Tester Modal
     'beta-modal.label': 'Beta-Tester-Programm',
