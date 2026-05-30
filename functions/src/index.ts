@@ -298,8 +298,7 @@ export const onTeamApplication = onDocumentCreated(
       const confirmHtml = buildUserConfirmationHtml(
         `Hey ${displayName}! 💼`,
         `<p style="margin:0 0 16px;">Vielen Dank für deine Bewerbung bei Diamo! Wir freuen uns, dass du Teil unseres Teams werden möchtest.</p>
-        <p style="margin:0 0 16px;">Wir schauen uns deine Bewerbung sorgfältig an und melden uns innerhalb weniger Tage bei dir.</p>
-        <p style="margin:0;">Wir suchen leidenschaftliche Menschen, die Frauengesundheit neu gestalten wollen — und deine Nachricht zeigt, dass du dazugehörst!</p>`,
+        <p style="margin:0;">Wir schauen uns deine Bewerbung sorgfältig an und melden uns innerhalb weniger Tage bei dir.</p>`,
         `Liebe Grüße,<br>Dein Diamo-Team`
       );
 
