@@ -82,6 +82,22 @@
   .beta-lifestyle-side {
     overflow: hidden;
     min-height: 400px;
+    position: relative;
+  }
+
+  .beta-lifestyle-side::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 32, 96, 0.18) 0%,
+      rgba(155, 139, 203, 0.1) 50%,
+      rgba(0, 32, 96, 0.22) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
   }
 
   .beta-lifestyle-img {
@@ -91,6 +107,7 @@
     object-position: center;
     display: block;
     transition: transform var(--transition-slow);
+    filter: saturate(0.85) brightness(1.02);
   }
 
   .beta-lifestyle-side:hover .beta-lifestyle-img {
