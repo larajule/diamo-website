@@ -1,0 +1,86 @@
+---
+---
+
+<section class="recovery-section">
+  <div class="container">
+    <div class="recovery-banner animate-in">
+      <img src="/images/recovery.png" alt="Woman sitting with a foam roller in recovery activewear" class="recovery-img" />
+      <div class="recovery-overlay"></div>
+      <div class="recovery-caption-wrapper">
+        <span class="recovery-caption" data-i18n="features.lifestyle.caption">Recovery is part of the plan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .recovery-section {
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--white) 100%);
+    padding: var(--space-lg) 0;
+  }
+
+  .recovery-banner {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    max-width: 960px;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .recovery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: var(--ivory);
+    transition: transform var(--transition-slow);
+    filter: saturate(0.8) brightness(1.08) contrast(1.05);
+  }
+
+  .recovery-banner:hover .recovery-img {
+    transform: scale(1.02);
+  }
+
+  .recovery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(0, 32, 96, 0.25) 0%,
+      rgba(26, 58, 122, 0.12) 40%,
+      rgba(0, 32, 96, 0.3) 100%
+    );
+    pointer-events: none;
+  }
+
+  .recovery-caption-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 20, 60, 0.45) 100%);
+  }
+
+  .recovery-caption {
+    font-family: var(--font-serif);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .recovery-banner {
+      aspect-ratio: 3 / 4;
+    }
+
+    .recovery-img {
+      object-fit: cover;
+    }
+  }
+</style>
