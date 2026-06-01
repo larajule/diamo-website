@@ -235,7 +235,8 @@
   .hero-stats {
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
+    flex-wrap: wrap;
   }
 
   .stat {
@@ -357,7 +358,29 @@
     }
 
     .hero-title {
-      font-size: clamp(2rem, 8vw, 3rem);
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    .btn-hero-cta {
+      padding: 0.9rem 1.75rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-stats {
+      gap: var(--space-sm);
+    }
+
+    .stat-value {
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
     }
   }
 </style>
