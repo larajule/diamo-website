@@ -4,17 +4,6 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import WaitlistModal from '../components/WaitlistModal.astro';
 import BetaApplyModals from '../components/BetaApplyModals.astro';
-
-const faqData = [
-  {
-    question: "Welcher Sport ist während der Periode am besten?",
-    answer: "Während der Menstruation sind sanfte Bewegungsformen wie Yoga, leichte Spaziergänge, Schwimmen und Stretching ideal. Dein Körper befindet sich in einer Regenerationsphase – leichte Bewegung kann Krämpfe lindern und die Durchblutung fördern, ohne den Körper zusätzlich zu belasten. Intensive HIIT-Workouts oder schweres Krafttraining solltest du in dieser Phase reduzieren und stattdessen auf Mobilität und Entspannung setzen."
-  },
-  {
-    question: "Sollte man in der Lutealphase Krafttraining machen?",
-    answer: "Ja, Krafttraining ist in der frühen Lutealphase durchaus möglich – allerdings mit angepasster Intensität. Dein Progesteronspiegel steigt in dieser Phase, was zu einer erhöhten Körpertemperatur und schnellerer Ermüdung führen kann. Setze auf moderate Gewichte mit kontrollierten Wiederholungen statt auf Maximalversuche. In der späten Lutealphase (kurz vor der Periode) ist es sinnvoll, die Intensität weiter zu reduzieren und den Fokus auf Stabilität, Mobilität und leichteres Training zu legen."
-  }
-];
 ---
 
 <Layout
@@ -272,23 +261,6 @@ const faqData = [
         </div>
       </section>
 
-      <!-- FAQ Section -->
-      <section class="pillar-section pillar-faq animate-in">
-        <h2 class="pillar-h2">Häufig gestellte Fragen</h2>
-
-        {faqData.map((faq) => (
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>{faq.question}</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </summary>
-            <div class="faq-answer">
-              <p>{faq.answer}</p>
-            </div>
-          </details>
-        ))}
-      </section>
-
       <!-- Final CTA -->
       <div class="pillar-final-cta animate-in">
         <h3 class="pillar-final-title">Bereit, im Einklang mit deinem Körper zu trainieren?</h3>
@@ -312,19 +284,6 @@ const faqData = [
   <BetaApplyModals />
 </Layout>
 
-<!-- FAQPage JSON-LD -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqData.map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-})} />
 
 <style>
   /* ================================

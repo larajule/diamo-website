@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+import BetaApplyModals from '../components/BetaApplyModals.astro';
 ---
 
 <Layout title="Über uns | Diamo" description="Erfahre mehr über die Idee und Vision hinter Diamo — zyklusbasiertes Training, unterstützt durch Wissenschaft, Community und echte Verbindungen.">
@@ -77,14 +79,16 @@ import Footer from '../components/Footer.astro';
       <div class="about-cta">
         <h3 class="about-cta-title" data-i18n="about.cta.title">Klingt nach etwas, das du erleben willst?</h3>
         <p class="about-cta-text" data-i18n="about.cta.text">Wir sind noch ganz am Anfang und genau das macht es besonders. Sei von Anfang an dabei.</p>
-        <a href="/" class="btn btn-primary about-cta-btn" data-i18n="about.cta.btn">
-          Zur Warteliste
-        </a>
+        <button type="button" class="btn btn-primary about-cta-btn" data-open-waitlist data-i18n="about.cta.btn">
+          Frühzugang sichern
+        </button>
       </div>
 
     </div>
   </main>
   <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
 </Layout>
 
 <style>
