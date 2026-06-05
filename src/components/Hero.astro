@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import heroScreen from '../assets/screenshots/home-v2.png';
 ---
 
 <section class="hero" id="hero">
@@ -11,13 +13,13 @@
     <div class="hero-text">
       <div class="hero-brand animate-in">diamo</div>
       <h1 class="hero-title animate-in" data-i18n="hero.title">
-        A new era of women's health
+        Eine neue Ära der Frauengesundheit
       </h1>
       
       <p class="hero-description animate-in" data-i18n="hero.description">
-        Personalized, <span class="usp-highlight">cycle</span>-synced fitness powered by science. 
-        Diamo adapts your workouts to your body's unique rhythm and connects 
-        you to a real, local <span class="usp-highlight">community</span>
+        Personalisiertes, <span class="usp-highlight">zyklusbasiertes</span> Training, unterstützt durch Wissenschaft. 
+        Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an und verbindet 
+        dich mit einer echten, lokalen <span class="usp-highlight">Community</span>
       </p>
       
       <div class="hero-actions animate-in">
@@ -25,10 +27,10 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 5v14M5 12h14"/>
           </svg>
-          <span data-i18n="hero.cta.waitlist">Join the Waitlist</span>
+          <span data-i18n="hero.cta.waitlist">Auf die Warteliste</span>
         </a>
         <a href="#features" class="btn btn-ghost">
-          <span data-i18n="hero.cta.features">Explore Features</span>
+          <span data-i18n="hero.cta.features">Features entdecken</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 17l9.2-9.2M17 17V7.8H7.8"/>
           </svg>
@@ -38,12 +40,12 @@
       <div class="hero-stats animate-in">
         <div class="stat">
           <span class="stat-value" data-i18n="hero.stat1.value">4</span>
-          <span class="stat-label" data-i18n="hero.stat1.label">Training Modules</span>
+          <span class="stat-label" data-i18n="hero.stat1.label">Trainingsmodule</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-value" data-i18n="hero.stat2.value">100%</span>
-          <span class="stat-label" data-i18n="hero.stat2.label">Cycle Synced</span>
+          <span class="stat-label" data-i18n="hero.stat2.label">Zyklusbasiert</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -56,7 +58,7 @@
     <div class="hero-visual animate-in">
       <div class="phone-mockup">
         <div class="phone-frame">
-          <img src="/screenshots/home-v2.png" alt="Diamo App Home Screen" class="phone-screen" />
+          <Image src={heroScreen} alt="Diamo App Startbildschirm" class="phone-screen" loading="eager" />
         </div>
       </div>
       <div class="hero-glow"></div>

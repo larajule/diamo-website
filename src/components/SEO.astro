@@ -6,6 +6,7 @@ export interface Props {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  canonicalUrl?: string;
 }
 
 const {
@@ -14,7 +15,8 @@ const {
   keywords = "Zyklusbasiertes Training, Zyklus-synchrone Workouts, Frauen Fitness Community, weibliche Biologie Fitness, hormonbasierte Fitness",
   ogTitle = "Diamo | Eine neue Ära der Frauengesundheit",
   ogDescription = "Vom passiven Tracking zur aktiven Performance. Verbinde dich mit lokalen Tribes und trainiere zyklus-synchron.",
-  ogImage = "https://diamo.club/diamo-preview.jpg"
+  ogImage = "https://diamo.club/diamo-preview.jpg",
+  canonicalUrl
 } = Astro.props;
 ---
 
@@ -22,7 +24,52 @@ const {
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
 
-<meta property="og:title" content={ogTitle} />
-<meta property="og:description" content={ogDescription} />
+<!-- Canonical URL -->
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+<!-- Open Graph -->
+<meta property="og:title" content={ogTitle || title} />
+<meta property="og:description" content={ogDescription || description} />
 <meta property="og:type" content="website" />
 <meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="Diamo" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ogTitle || title} />
+<meta name="twitter:description" content={ogDescription || description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Diamo",
+  "url": "https://diamo.club",
+  "logo": "https://diamo.club/icon.png",
+  "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@diamo.club",
+    "contactType": "customer service"
+  },
+  "sameAs": []
+})} />
+
+<!-- JSON-LD SoftwareApplication -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Diamo",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, Android",
+  "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
+  "url": "https://diamo.club",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+})} />

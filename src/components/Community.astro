@@ -1,27 +1,30 @@
 ---
+import { Image } from 'astro:assets';
+import communityTribe from '../assets/images/community-tribe.png';
+import communityScreen from '../assets/screenshots/community.png';
 ---
 
 <section class="community-section section" id="community">
   <div class="container">
     <div class="community-header animate-in">
-      <span class="section-label" data-i18n="community.label">Community</span>
+      <span class="section-label" data-i18n="community.label">Die Community</span>
       <h2 class="section-title" data-i18n="community.title">
-        Find your tribe instead of digital isolation
+        Finde deinen Tribe statt digitaler Isolation
       </h2>
       <p class="community-description" data-i18n="community.description">
-        Don't train alone in front of a screen. We use digital data to curate real, physical encounters in local tribes directly in your city.
+        Trainiere nicht mehr allein vor dem Screen. Wir nutzen digitale Daten, um echte, physische Begegnungen in lokalen Tribes direkt in deiner Stadt zu kuratieren.
       </p>
     </div>
 
     <div class="community-showcase animate-in">
       <div class="community-image-wrapper">
-        <img src="/images/community-tribe.png" alt="Women running together in a local Diamo tribe" class="community-hero-image" />
+        <Image src={communityTribe} alt="Frauen laufen gemeinsam in einem lokalen Diamo Tribe" class="community-hero-image" loading="lazy" />
         <div class="community-image-overlay"></div>
       </div>
       
       <div class="community-phone-float">
         <div class="phone-frame">
-          <img src="/screenshots/community.png" alt="Diamo Community App" class="phone-screen" />
+          <Image src={communityScreen} alt="Diamo Community App-Ansicht" class="phone-screen" loading="lazy" />
         </div>
         <div class="community-glow"></div>
       </div>

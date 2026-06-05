@@ -15,7 +15,7 @@ Hier erfährst du, warum die Kombination aus exzellenter Hardware und zyklusbewu
 
 ---
 
-### 1. Universelle Hardware trifft auf weibliche Biologie
+## 1. Universelle Hardware trifft auf weibliche Biologie
 
 Fitness-Tracker sind darauf ausgelegt, universelle Gesundheitsplattformen für Millionen von Menschen zu sein. Sie liefern eine brillante, objektive Basis an Rohdaten. 
 
@@ -28,7 +28,7 @@ Die Besonderheit des weiblichen Körpers ist jedoch, dass unsere "Baseline" nich
 
 Wenn dein Wearable dir in der Lutealphase also einen leicht erhöhten Ruhepuls anzeigt, ist das kein Zeichen für schlechte Erholung oder aufkommende Krankheit – es ist schlichtweg deine Biologie, die genau das tut, was sie soll.
 
-### 2. Diamo: Der Übersetzer für deine Tracker-Daten
+## 2. Diamo: Der Übersetzer für deine Tracker-Daten
 
 Genau für diese Schnittstelle haben wir **Diamo** entwickelt. Diamo ist die *cycle training app for women*, die deine Wearable-Daten nimmt und sie durch die Linse des weiblichen Zyklus betrachtet. 
 
@@ -40,20 +40,20 @@ Wir feiern die Technologie der großen Hardware-Anbieter und setzen als speziali
 
 Anstatt frustriert zu sein, weil ein Algorithmus dir in der Lutealphase zu Höchstleistungen rät, hilft dir Diamo dabei, mit deinen Daten *und* deinen Hormonen synchron zu arbeiten.
 
-### 3. Zyklusbasiertes Training: So erreichst du deine Ziele gesünder
+## 3. Zyklusbasiertes Training: So erreichst du deine Ziele gesünder
 
 Durch die Synergie aus smarter Hardware und unserer Zyklus-Software entsteht echtes weibliches Biohacking. 
 
 * **In der Follikel- und Ovulationsphase** nutzen wir deine starken Vitalwerte, um dich an deine Grenzen zu bringen. Jetzt ist die Zeit für schweres Krafttraining und schnelle Intervalle.
 * **In der späten Lutealphase** interpretieren wir die veränderten Tracker-Daten richtig und senken die Intensität. Die App hilft dir, deinen Körper nicht zusätzlich mit Stresshormonen zu überfluten, was langfristig den Muskelaufbau schützt und tiefe Erschöpfung verhindert.
 
-### 4. Von den Daten in die Community: Die Diamo Tribes
+## 4. Von den Daten in die Community: Die Diamo Tribes
 
 Während dich deine Wearables perfekt beim Datensammeln unterstützen, sorgt Diamo für das menschliche Element. Unser "Offline First"-Ansatz nutzt deine Erkenntnisse, um dich mit lokalen **Run Clubs** und Fitness-Tribes in deiner Stadt zu matchen. 
 
 Du triffst Frauen, die sich in einer ähnlichen Zyklusphase befinden und heute auf einem ähnlichen Energielevel sind wie du. So wird aus Solo-Tracking ein echtes, motivierendes Community-Erlebnis.
 
-### Fazit: Das Beste aus beiden Welten
+## Fazit: Das Beste aus beiden Welten
 
 Du musst dich nicht zwischen präziser Technologie und weiblicher Intuition entscheiden. Die Zukunft der Frauengesundheit liegt in der perfekten Symbiose aus beidem. Nutze die Brillanz deines Oura-Rings oder deiner Apple Watch und lass dir von Diamo zeigen, was diese Daten für dein zyklusbasiertes Training wirklich bedeuten.
 

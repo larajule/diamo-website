@@ -9,16 +9,18 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#002060" />
+    <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID_HERE" />
     
-    <SEO title={title} description={description} />
+    <SEO title={title} description={description} canonicalUrl={canonicalUrl} />
     <GoogleAnalytics />
     
     <!-- Favicon -->

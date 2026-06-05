@@ -460,10 +460,10 @@ function initLanguage() {
 
   // Auto-detect browser language
   const browserLang = navigator.language?.slice(0, 2);
-  if (browserLang === 'de') {
-    setLanguage('de');
+  if (browserLang === 'en') {
+    setLanguage('en');
   }
-  // Default is English (already rendered in HTML)
+  // Default is German (already rendered in HTML)
 }
 
 // Make globally accessible

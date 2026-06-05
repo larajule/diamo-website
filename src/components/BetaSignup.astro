@@ -1,11 +1,13 @@
 ---
+import { Image } from 'astro:assets';
+import betaLifestyle from '../assets/images/beta-lifestyle-edited.png';
 ---
 
 <section class="beta-signup section" id="beta">
   <div class="container">
     <div class="beta-wrapper">
       <div class="beta-lifestyle-side animate-in">
-        <img src="/images/beta-lifestyle-edited.png" alt="Woman doing a yoga bridge pose in cream activewear" class="beta-lifestyle-img" />
+        <Image src={betaLifestyle} alt="Frau in Yoga-Brückenpose in beiger Aktivkleidung" class="beta-lifestyle-img" loading="lazy" />
       </div>
       <div class="beta-card animate-in">
       <div class="beta-content">
@@ -16,14 +18,14 @@
             <path d="M12 8h.01"/>
           </svg>
         </div>
-        <span class="beta-label" data-i18n="beta.label">Beta Program</span>
+        <span class="beta-label" data-i18n="beta.label">Beta-Programm</span>
         <h2 class="beta-title" data-i18n="beta.title">
-          Help us revolutionize fitness for women
+          Hilf uns, Fitness für Frauen zu revolutionieren
         </h2>
         <p class="beta-description" data-i18n="beta.description">
-          We're inviting a small group of women to test Diamo before launch. 
-          Get early access, share your feedback, and help us build something 
-          that truly fits your body and your life.
+          Wir laden eine kleine Gruppe von Frauen ein, Diamo vor dem Launch zu testen. 
+          Erhalte frühzeitigen Zugang, teile dein Feedback und hilf uns, etwas zu entwickeln, 
+          das wirklich zu deinem Körper und deinem Leben passt.
         </p>
         <div class="beta-features">
           <div class="beta-feature">
@@ -31,30 +33,30 @@
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span data-i18n="beta.feat1">Free access during beta</span>
+            <span data-i18n="beta.feat1">Kostenloser Zugang während der Beta</span>
           </div>
           <div class="beta-feature">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span data-i18n="beta.feat2">Direct input on features</span>
+            <span data-i18n="beta.feat2">Direkter Einfluss auf Features</span>
           </div>
           <div class="beta-feature">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span data-i18n="beta.feat3">Founding member perks at launch</span>
+            <span data-i18n="beta.feat3">Founding-Member-Vorteile zum Launch</span>
           </div>
         </div>
         <button type="button" class="btn btn-primary beta-cta" data-open-beta>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 5v14M5 12h14"/>
           </svg>
-          <span data-i18n="beta.cta">Join the Beta</span>
+          <span data-i18n="beta.cta">Beta beitreten</span>
         </button>
-        <p class="beta-note" data-i18n="beta.note">Limited spots · No commitment · Cancel anytime</p>
+        <p class="beta-note" data-i18n="beta.note">Begrenzte Plätze · Keine Verpflichtung · Jederzeit kündbar</p>
       </div>
       </div>
     </div>
@@ -211,3 +213,18 @@
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const betaBtn = document.querySelector('.beta-cta[data-open-beta]');
+    betaBtn?.addEventListener('click', () => {
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', 'sign_up', { method: 'beta_waitlist' });
+        }
+      } catch (e) {
+        // Silently fail if gtag is blocked by adblocker
+      }
+    });
+  });
+</script>

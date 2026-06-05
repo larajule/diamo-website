@@ -1,0 +1,690 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+import BetaApplyModals from '../components/BetaApplyModals.astro';
+
+const faqData = [
+  {
+    question: "Welcher Sport ist während der Periode am besten?",
+    answer: "Während der Menstruation sind sanfte Bewegungsformen wie Yoga, leichte Spaziergänge, Schwimmen und Stretching ideal. Dein Körper befindet sich in einer Regenerationsphase – leichte Bewegung kann Krämpfe lindern und die Durchblutung fördern, ohne den Körper zusätzlich zu belasten. Intensive HIIT-Workouts oder schweres Krafttraining solltest du in dieser Phase reduzieren und stattdessen auf Mobilität und Entspannung setzen."
+  },
+  {
+    question: "Sollte man in der Lutealphase Krafttraining machen?",
+    answer: "Ja, Krafttraining ist in der frühen Lutealphase durchaus möglich – allerdings mit angepasster Intensität. Dein Progesteronspiegel steigt in dieser Phase, was zu einer erhöhten Körpertemperatur und schnellerer Ermüdung führen kann. Setze auf moderate Gewichte mit kontrollierten Wiederholungen statt auf Maximalversuche. In der späten Lutealphase (kurz vor der Periode) ist es sinnvoll, die Intensität weiter zu reduzieren und den Fokus auf Stabilität, Mobilität und leichteres Training zu legen."
+  }
+];
+---
+
+<Layout
+  title="Zyklusbasiertes Training: Der ultimative Workout-Guide | Diamo"
+  description="Lerne, wie du dein Training an deinen Zyklus anpasst. Unser Guide zeigt dir die besten Workouts für jede Phase – von Menstruation bis Eisprung. Jetzt mit Diamo starten!"
+>
+  <Navbar />
+
+  <main class="pillar-page">
+    <div class="pillar-container">
+
+      <!-- Hero -->
+      <header class="pillar-hero animate-in">
+        <span class="pillar-label">Fitness-Guide</span>
+        <h1 class="pillar-title">
+          Zyklusbasiertes Training:<br/>
+          <span class="pillar-title-accent">Dein Workout-Guide für jede Phase</span>
+        </h1>
+        <p class="pillar-intro">
+          Dein Körper ist keine Maschine, die jeden Tag gleich funktioniert. Er durchläuft einen
+          faszinierenden Zyklus aus vier Phasen – jede mit eigener Energie, eigenem Potenzial und
+          eigenen Bedürfnissen. Wer das versteht, trainiert nicht nur klüger, sondern erzielt
+          nachhaltig bessere Ergebnisse.
+        </p>
+        <div class="pillar-divider"></div>
+      </header>
+
+      <!-- Intro Section -->
+      <section class="pillar-section animate-in">
+        <h2 class="pillar-h2">Warum Training nach dem Zyklus Sinn macht</h2>
+        <p>
+          Klassische Trainingspläne behandeln jeden Tag gleich: gleiche Übungen, gleiche Intensität,
+          gleiche Erwartungen. Doch die weibliche Physiologie funktioniert anders. Während des
+          Menstruationszyklus schwanken Hormone wie Östrogen und Progesteron erheblich – und mit
+          ihnen Kraft, Ausdauer, Erholungsfähigkeit und sogar die Verletzungsanfälligkeit.
+        </p>
+        <p>
+          Studien aus der Sportmedizin zeigen: Frauen, die ihr Training an ihren Zyklus anpassen,
+          berichten von <strong>weniger Verletzungen</strong>, <strong>besserer Regeneration</strong>
+          und <strong>mehr Motivation</strong>. Es geht nicht darum, weniger zu trainieren – sondern
+          zur richtigen Zeit das Richtige zu tun.
+        </p>
+        <p>
+          Der weibliche Zyklus lässt sich in vier Hauptphasen unterteilen, die jeweils unterschiedliche
+          hormonelle Profile aufweisen. Jede Phase bietet einzigartige Chancen, das Training zu
+          optimieren. Im Folgenden zeigen wir dir, wie du jede Phase für dich nutzen kannst.
+        </p>
+      </section>
+
+      <!-- Phase 1: Menstruation -->
+      <section class="pillar-section pillar-phase animate-in">
+        <div class="phase-badge phase-badge--menstruation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>
+          <span>Phase 1 · Tag 1–5</span>
+        </div>
+        <h2 class="pillar-h2">Menstruation: Fokus auf Regeneration</h2>
+        <p>
+          In den ersten Tagen deines Zyklus befinden sich Östrogen und Progesteron auf ihrem niedrigsten
+          Niveau. Dein Körper richtet seine Energie auf die Erneuerung der Gebärmutterschleimhaut –
+          und das spürst du oft in Form von Müdigkeit, Krämpfen oder einem allgemeinen Energietief.
+        </p>
+        <p>
+          Das bedeutet nicht, dass du dich auf die Couch legen musst. Ganz im Gegenteil: Leichte,
+          sanfte Bewegung kann in dieser Phase sogar Beschwerden lindern. Der Schlüssel liegt in der
+          <strong>richtigen Intensität</strong>.
+        </p>
+
+        <div class="phase-recommendations">
+          <div class="phase-do">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Empfohlene Aktivitäten
+            </h3>
+            <ul>
+              <li>Sanftes Yoga und Stretching</li>
+              <li>Leichte Spaziergänge in der Natur</li>
+              <li>Schwimmen mit niedriger Intensität</li>
+              <li>Atemübungen und Meditation</li>
+              <li>Foam Rolling und Mobility-Work</li>
+            </ul>
+          </div>
+          <div class="phase-avoid">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              Besser vermeiden
+            </h3>
+            <ul>
+              <li>Hochintensives Intervalltraining (HIIT)</li>
+              <li>Schweres Krafttraining mit Maximalgewicht</li>
+              <li>Lange, intensive Cardio-Einheiten</li>
+              <li>Wettkämpfe oder Performance-Tests</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 2: Follikelphase -->
+      <section class="pillar-section pillar-phase animate-in">
+        <div class="phase-badge phase-badge--follicular">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span>Phase 2 · Tag 6–13</span>
+        </div>
+        <h2 class="pillar-h2">Follikelphase: Energieaufbau</h2>
+        <p>
+          Nach der Menstruation beginnt der Körper, vermehrt Östrogen zu produzieren. Dieses Hormon
+          hat einen bemerkenswerten Effekt: Es steigert deine Leistungsfähigkeit, fördert den
+          Muskelaufbau und verbessert deine Stimmung. Viele Frauen fühlen sich in dieser Phase
+          am energiegeladensten und motiviertesten.
+        </p>
+        <p>
+          Nutze diese Phase, um <strong>Progression aufzubauen</strong>. Dein Körper ist bereit für
+          neue Herausforderungen – sei es ein neues Gewicht, eine neue Übung oder ein schnelleres
+          Tempo. Die Follikelphase ist der ideale Zeitraum, um an Kraft und Ausdauer zu arbeiten.
+        </p>
+
+        <div class="phase-recommendations">
+          <div class="phase-do">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Empfohlene Aktivitäten
+            </h3>
+            <ul>
+              <li>Progressives Krafttraining</li>
+              <li>HIIT und Tabata-Workouts</li>
+              <li>Neue Übungen und Skills lernen</li>
+              <li>Intensiveres Cardio (Laufen, Radfahren)</li>
+              <li>Gruppentraining und Wettkämpfe</li>
+            </ul>
+          </div>
+          <div class="phase-avoid">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              Achtung
+            </h3>
+            <ul>
+              <li>Trotz hoher Energie: Warm-up nie überspringen</li>
+              <li>Übertraining vermeiden – Ruhetage einplanen</li>
+              <li>Auf Körpersignale achten, nicht nur auf Motivation</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inline CTA: Mid-page -->
+      <div class="pillar-inline-cta animate-in">
+        <div class="pillar-cta-card">
+          <h3 class="pillar-cta-title">Trainiere smarter, nicht härter</h3>
+          <p class="pillar-cta-text">
+            Diamo erstellt dir jeden Tag einen personalisierten Trainingsplan,
+            der genau zu deiner aktuellen Zyklusphase passt.
+          </p>
+          <button type="button" class="btn btn-primary pillar-cta-btn" data-open-beta>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <span>Beta-Zugang sichern</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Phase 3: Eisprung -->
+      <section class="pillar-section pillar-phase animate-in">
+        <div class="phase-badge phase-badge--ovulation">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+          <span>Phase 3 · Tag 14–16</span>
+        </div>
+        <h2 class="pillar-h2">Eisprung: Maximale Performance</h2>
+        <p>
+          Der Eisprung markiert den Höhepunkt deines Östrogenspiegels. Das Ergebnis: Du bist in
+          Topform. Kraft, Ausdauer und Koordination befinden sich auf ihrem Maximum. Viele
+          Spitzensportlerinnen nutzen diese Phase gezielt für persönliche Bestleistungen.
+        </p>
+        <p>
+          Allerdings gibt es einen wichtigen Aspekt zu beachten: Rund um den Eisprung steigt auch
+          die <strong>Verletzungsanfälligkeit der Bänder</strong>, insbesondere des vorderen
+          Kreuzbandes (ACL). Studien zeigen, dass das erhöhte Östrogen die Elastizität der Bänder
+          beeinflusst. Ein sorgfältiges Aufwärmen und saubere Technik sind in dieser Phase
+          besonders wichtig.
+        </p>
+
+        <div class="phase-recommendations">
+          <div class="phase-do">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Empfohlene Aktivitäten
+            </h3>
+            <ul>
+              <li>PR-Versuche (Personal Records) im Krafttraining</li>
+              <li>Sprint-Intervalle und plyometrisches Training</li>
+              <li>Intensive Gruppenworkouts</li>
+              <li>Wettkämpfe und Leistungstests</li>
+              <li>Anspruchsvolle Koordinationsübungen</li>
+            </ul>
+          </div>
+          <div class="phase-avoid">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              Achtung
+            </h3>
+            <ul>
+              <li>Gründliches Aufwärmen ist Pflicht (Bandstabilität)</li>
+              <li>Technik vor Gewicht – saubere Ausführung priorisieren</li>
+              <li>Bei Gelenk-Instabilitäten: Sprungübungen reduzieren</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phase 4: Lutealphase -->
+      <section class="pillar-section pillar-phase animate-in">
+        <div class="phase-badge phase-badge--luteal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Phase 4 · Tag 17–28</span>
+        </div>
+        <h2 class="pillar-h2">Lutealphase: Kraft erhalten & Vorbereitung</h2>
+        <p>
+          Nach dem Eisprung übernimmt Progesteron die Führung. Dieses Hormon bereitet den Körper
+          auf eine mögliche Schwangerschaft vor – und das hat spürbare Auswirkungen auf dein
+          Training. Die Körpertemperatur steigt leicht an, der Ruhepuls kann erhöht sein, und viele
+          Frauen erleben PMS-Symptome wie Blähungen, Stimmungsschwankungen oder erhöhte
+          Schmerzempfindlichkeit.
+        </p>
+        <p>
+          Das Ziel in dieser Phase ist es, <strong>das Erreichte zu erhalten</strong>, ohne den
+          Körper zu überlasten. Moderate Intensität ist der Schlüssel. Interessanterweise nutzt
+          der Körper in der Lutealphase vermehrt Fett als Energiequelle – ein Vorteil für
+          längere, gleichmäßige Ausdauereinheiten.
+        </p>
+
+        <div class="phase-recommendations">
+          <div class="phase-do">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Empfohlene Aktivitäten
+            </h3>
+            <ul>
+              <li>Moderates Krafttraining (70–80% Intensität)</li>
+              <li>Steady-State Cardio (Joggen, Radfahren)</li>
+              <li>Pilates und Barre-Workouts</li>
+              <li>Yoga-Flows für Flexibilität</li>
+              <li>Lange Spaziergänge und Wandern</li>
+            </ul>
+          </div>
+          <div class="phase-avoid">
+            <h3 class="phase-list-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              Besser vermeiden
+            </h3>
+            <ul>
+              <li>Neue persönliche Bestleistungen erzwingen</li>
+              <li>Hochintensive Intervalle an PMS-Tagen</li>
+              <li>Training bei starker Erschöpfung – Ruhe ist ok!</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="pillar-section pillar-faq animate-in">
+        <h2 class="pillar-h2">Häufig gestellte Fragen</h2>
+
+        {faqData.map((faq) => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{faq.question}</span>
+              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </section>
+
+      <!-- Final CTA -->
+      <div class="pillar-final-cta animate-in">
+        <h3 class="pillar-final-title">Bereit, im Einklang mit deinem Körper zu trainieren?</h3>
+        <p class="pillar-final-text">
+          Diamo passt dein Training automatisch an deine aktuelle Zyklusphase an.
+          Wissenschaftlich fundiert, persönlich zugeschnitten, mit einer echten Community.
+        </p>
+        <button type="button" class="btn btn-primary pillar-final-btn" data-open-beta>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          <span>Jetzt Beta-Testerin werden</span>
+        </button>
+        <p class="pillar-final-note">Kostenlos · Begrenzte Plätze · Jederzeit kündbar</p>
+      </div>
+
+    </div>
+  </main>
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+<!-- FAQPage JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+})} />
+
+<style>
+  /* ================================
+     PILLAR PAGE — ZYKLUSBASIERTES TRAINING
+     ================================ */
+
+  .pillar-page {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+    min-height: 100vh;
+  }
+
+  .pillar-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  /* Hero */
+  .pillar-hero {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .pillar-label {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: var(--space-sm);
+    padding: 0.4rem 1rem;
+    background: rgba(155, 139, 203, 0.08);
+    border: 1px solid rgba(155, 139, 203, 0.15);
+    border-radius: var(--radius-full);
+  }
+
+  .pillar-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+  }
+
+  .pillar-title-accent {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .pillar-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .pillar-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--navy);
+    opacity: 0.2;
+    margin: var(--space-lg) auto 0;
+  }
+
+  /* Sections */
+  .pillar-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .pillar-h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+  }
+
+  .pillar-section p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .pillar-section p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .pillar-section strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  /* Phase Badges */
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-md);
+  }
+
+  .phase-badge--menstruation {
+    background: rgba(196, 145, 142, 0.1);
+    color: var(--rose);
+    border: 1px solid rgba(196, 145, 142, 0.2);
+  }
+
+  .phase-badge--follicular {
+    background: rgba(141, 198, 166, 0.1);
+    color: var(--sage);
+    border: 1px solid rgba(141, 198, 166, 0.2);
+  }
+
+  .phase-badge--ovulation {
+    background: rgba(212, 165, 116, 0.1);
+    color: var(--warm-gold);
+    border: 1px solid rgba(212, 165, 116, 0.2);
+  }
+
+  .phase-badge--luteal {
+    background: rgba(155, 139, 203, 0.1);
+    color: var(--lavender);
+    border: 1px solid rgba(155, 139, 203, 0.2);
+  }
+
+  /* Phase Recommendations */
+  .phase-recommendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .phase-do,
+  .phase-avoid {
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--divider);
+  }
+
+  .phase-do {
+    background: rgba(141, 198, 166, 0.04);
+    border-color: rgba(141, 198, 166, 0.15);
+  }
+
+  .phase-avoid {
+    background: rgba(196, 145, 142, 0.04);
+    border-color: rgba(196, 145, 142, 0.15);
+  }
+
+  .phase-list-title {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .phase-do .phase-list-title svg {
+    color: var(--sage);
+  }
+
+  .phase-avoid .phase-list-title svg {
+    color: var(--rose);
+  }
+
+  .phase-recommendations ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .phase-recommendations li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    padding: 0.35rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .phase-recommendations li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--divider);
+  }
+
+  .phase-do li::before {
+    background: var(--sage);
+  }
+
+  .phase-avoid li::before {
+    background: var(--rose);
+  }
+
+  /* Inline CTA */
+  .pillar-inline-cta {
+    margin: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .pillar-cta-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .pillar-cta-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--ivory);
+    margin-bottom: var(--space-sm);
+  }
+
+  .pillar-cta-text {
+    font-size: 0.95rem;
+    color: rgba(251, 249, 246, 0.75);
+    max-width: 440px;
+    margin: 0 auto var(--space-md);
+    line-height: 1.7;
+  }
+
+  .pillar-cta-btn {
+    background: var(--ivory);
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .pillar-cta-btn:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* FAQ Section */
+  .pillar-faq {
+    margin-top: var(--space-xl);
+  }
+
+  .faq-item {
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+    transition: border-color var(--transition-fast);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(0, 32, 96, 0.15);
+  }
+
+  .faq-item[open] {
+    border-color: rgba(155, 139, 203, 0.3);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    transition: background var(--transition-fast);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    background: rgba(155, 139, 203, 0.04);
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+
+  .faq-answer p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Final CTA */
+  .pillar-final-cta {
+    text-align: center;
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(11, 25, 46, 0.08);
+  }
+
+  .pillar-final-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+  }
+
+  .pillar-final-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto var(--space-md);
+    line-height: 1.7;
+  }
+
+  .pillar-final-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  .pillar-final-note {
+    margin-top: var(--space-sm);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .phase-recommendations {
+      grid-template-columns: 1fr;
+    }
+
+    .pillar-cta-card {
+      padding: var(--space-lg);
+    }
+  }
+</style>

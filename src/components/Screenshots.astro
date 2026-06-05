@@ -1,16 +1,22 @@
 ---
+import { Image } from 'astro:assets';
+import homeScreen from '../assets/screenshots/home-v2.png';
+import insightsScreen from '../assets/screenshots/insights_home.png';
+import calendarScreen from '../assets/screenshots/calendar.png';
+import communityScreen from '../assets/screenshots/community.png';
+import personalScreen from '../assets/screenshots/personal.png';
 ---
 
 <section class="screenshots section" id="screenshots">
   <div class="container">
     <div class="screenshots-header">
-      <span class="section-label animate-in" data-i18n="screenshots.label">The App</span>
+      <span class="section-label animate-in" data-i18n="screenshots.label">Die App</span>
       <h2 class="section-title animate-in" data-i18n="screenshots.title">
-        Designed to feel<br/>like second nature
+        Designt, um sich<br/>natürlich anzufühlen
       </h2>
       <p class="section-subtitle animate-in" data-i18n="screenshots.subtitle">
-        A clean, intuitive interface that puts your wellbeing first. 
-        Every screen crafted with intention.
+        Ein klares, intuitives Interface, das dein Wohlbefinden in den Vordergrund stellt. 
+        Jeder Screen mit Intention gestaltet.
       </p>
     </div>
     
@@ -18,60 +24,60 @@
       <div class="screenshot-item">
         <div class="phone-wrapper">
           <div class="mini-phone">
-            <img src="/screenshots/home-v2.png" alt="Diamo Home Tab" />
+            <Image src={homeScreen} alt="Diamo Home-Tab" loading="lazy" />
           </div>
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.home">Home</h4>
-          <p data-i18n="screenshots.home.desc">Your daily dashboard with workouts, cycle rhythm, and motivational quotes</p>
+          <p data-i18n="screenshots.home.desc">Dein tägliches Dashboard mit Workouts, Zyklusrhythmus und Motivationssprüchen</p>
         </div>
       </div>
 
       <div class="screenshot-item elevated">
         <div class="phone-wrapper">
           <div class="mini-phone">
-            <img src="/screenshots/insights_home.png" alt="Diamo Insights" />
+            <Image src={insightsScreen} alt="Diamo Einblicke-Tab" loading="lazy" />
           </div>
         </div>
         <div class="screenshot-info">
-          <h4 data-i18n="screenshots.insights">Insights</h4>
-          <p data-i18n="screenshots.insights.desc">Daily health insights, cycle-based tips, and personalized recommendations</p>
+          <h4 data-i18n="screenshots.insights">Einblicke</h4>
+          <p data-i18n="screenshots.insights.desc">Tägliche Gesundheits-Einblicke, zyklusbasierte Tipps und personalisierte Empfehlungen</p>
         </div>
       </div>
       
       <div class="screenshot-item">
         <div class="phone-wrapper">
           <div class="mini-phone">
-            <img src="/screenshots/calendar.png" alt="Diamo Calendar" />
+            <Image src={calendarScreen} alt="Diamo Kalender-Tab" loading="lazy" />
           </div>
         </div>
         <div class="screenshot-info">
-          <h4 data-i18n="screenshots.calendar">Calendar</h4>
-          <p data-i18n="screenshots.calendar.desc">Cycle phase tracking with color coded workout types and daily planning</p>
+          <h4 data-i18n="screenshots.calendar">Kalender</h4>
+          <p data-i18n="screenshots.calendar.desc">Zyklusphase-Tracking mit farbcodierten Trainingstypen und Tagesplanung</p>
         </div>
       </div>
       
       <div class="screenshot-item elevated">
         <div class="phone-wrapper">
           <div class="mini-phone">
-            <img src="/screenshots/community.png" alt="Diamo Community" />
+            <Image src={communityScreen} alt="Diamo Community-Tab" loading="lazy" />
           </div>
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.community">Community</h4>
-          <p data-i18n="screenshots.community.desc">Find local run clubs, studio events, and connect with friends nearby</p>
+          <p data-i18n="screenshots.community.desc">Finde lokale Laufgruppen, Studio-Events und vernetze dich mit Freundinnen</p>
         </div>
       </div>
       
       <div class="screenshot-item">
         <div class="phone-wrapper">
           <div class="mini-phone">
-            <img src="/screenshots/personal.png" alt="Diamo Personal Profile" />
+            <Image src={personalScreen} alt="Diamo Persönliches Profil" loading="lazy" />
           </div>
         </div>
         <div class="screenshot-info">
-          <h4 data-i18n="screenshots.personal">Personal</h4>
-          <p data-i18n="screenshots.personal.desc">Your cycle status, activity level, and personalized plan settings</p>
+          <h4 data-i18n="screenshots.personal">Persönlich</h4>
+          <p data-i18n="screenshots.personal.desc">Dein Zyklusstatus, Aktivitätslevel und personalisierte Plan-Einstellungen</p>
         </div>
       </div>
     </div>

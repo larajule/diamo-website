@@ -1,13 +1,15 @@
 ---
+import { Image } from 'astro:assets';
+import recoveryImg from '../assets/images/recovery.png';
 ---
 
 <section class="recovery-section">
   <div class="container">
     <div class="recovery-banner animate-in">
-      <img src="/images/recovery.png" alt="Woman sitting with a foam roller in recovery activewear" class="recovery-img" />
+      <Image src={recoveryImg} alt="Frau mit Faszienrolle bei der Regeneration" class="recovery-img" loading="lazy" />
       <div class="recovery-overlay"></div>
       <div class="recovery-caption-wrapper">
-        <span class="recovery-caption" data-i18n="features.lifestyle.caption">Recovery is part of the plan</span>
+        <span class="recovery-caption" data-i18n="features.lifestyle.caption">Regeneration ist Teil des Plans</span>
       </div>
     </div>
   </div>
