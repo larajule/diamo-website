@@ -124,8 +124,25 @@ const translations = {
     'beta.feat1': 'Free access during beta',
     'beta.feat2': 'Direct input on features',
     'beta.feat3': 'Founding member perks at launch',
-    'beta.cta': 'Join the Beta',
+    'beta.cta': 'Get Early Access',
     'beta.note': 'Limited spots · No commitment · Cancel anytime',
+
+    // FAQ
+    'faq.label': 'FAQ',
+    'faq.title': 'Frequently Asked Questions',
+    'faq.q0': 'What is Diamo?',
+    'faq.a0': 'Diamo is a fitness app that automatically adapts your training to your menstrual cycle. It analyzes your cycle phase and creates a personalized daily workout plan – supported by data from your smartwatch. Additionally, Diamo connects you with local fitness communities (Tribes) in your city.',
+    'faq.q1': 'What is cycle-based training?',
+    'faq.a1': 'Cycle-based training means adapting your workouts to the four phases of your menstrual cycle. During the follicular phase and around ovulation, you\'re more capable – ideal for intense training. During the luteal phase and menstruation, you benefit from moderate sessions and recovery. Learn more in our detailed guide.',
+    'faq.q2': 'Do I need a fitness tracker or smartwatch?',
+    'faq.a2': 'No! Diamo works completely without a wearable. However, if you have an Apple Watch, Oura Ring, or Garmin device, Diamo can use your health data (HRV, sleep, resting heart rate) to adapt your training even more precisely to your body.',
+    'faq.q3': 'Is Diamo free?',
+    'faq.a3': 'Yes, during the beta phase Diamo is completely free. As an early access user, you get full access to all features at no cost. After the official launch, there will be a freemium model – founding members receive special benefits.',
+    'faq.q4': 'When will the app be available?',
+    'faq.a4': 'The beta version launches in summer 2026 for a small group of testers. Join the waitlist to be the first to know and secure your spot.',
+    'faq.q5': 'Which devices will Diamo be available on?',
+    'faq.a5': 'Diamo will be available for iOS and Android at launch. The app supports integration with Apple Watch, Oura Ring, and Garmin devices – more wearables will follow after launch.',
+    'faq.guide-link': '→ Read the full guide: Cycle-Based Training',
 
     // Footer
     'footer.tagline': 'A New Era of<br/>Women\'s Health',
@@ -134,6 +151,9 @@ const translations = {
     'footer.product.how': 'How It Works',
     'footer.product.app': 'The App',
     'footer.product.blog': 'Blog',
+    'footer.blog': 'Blog',
+    'footer.blog.article1': 'Fitness Apps vs. Cycle',
+    'footer.blog.article2': 'Wearables & Cycle',
     'footer.company': 'Company',
     'footer.company.team': 'Team',
     'footer.company.careers': 'Careers',
@@ -329,8 +349,25 @@ const translations = {
     'beta.feat1': 'Kostenloser Zugang während der Beta',
     'beta.feat2': 'Direkter Einfluss auf Features',
     'beta.feat3': 'Founding-Member-Vorteile zum Launch',
-    'beta.cta': 'Beta beitreten',
-    'beta.note': 'Begrenzte Plätze · Keine Verpflichtung · Jederzeit kündbar',
+    'beta.cta': 'Fr\u00fchzugang sichern',
+    'beta.note': 'Begrenzte Pl\u00e4tze · Keine Verpflichtung · Jederzeit k\u00fcndbar',
+
+    // FAQ
+    'faq.label': 'FAQ',
+    'faq.title': 'H\u00e4ufig gestellte Fragen',
+    'faq.q0': 'Was ist Diamo?',
+    'faq.a0': 'Diamo ist eine Fitness-App, die dein Training automatisch an deinen Menstruationszyklus anpasst. Sie analysiert deine Zyklusphase und erstellt dir t\u00e4glich einen personalisierten Trainingsplan \u2013 unterst\u00fctzt durch Daten deiner Smartwatch. Zus\u00e4tzlich verbindet dich Diamo mit lokalen Fitness-Communities (Tribes) in deiner Stadt.',
+    'faq.q1': 'Was ist zyklusbasiertes Training?',
+    'faq.a1': 'Zyklusbasiertes Training bedeutet, deine Workouts an die vier Phasen deines Menstruationszyklus anzupassen. In der Follikelphase und rund um den Eisprung bist du leistungsf\u00e4higer \u2013 ideal f\u00fcr intensives Training. In der Lutealphase und w\u00e4hrend der Menstruation profitierst du von moderateren Einheiten und Regeneration. Mehr dazu erf\u00e4hrst du in unserem ausf\u00fchrlichen Guide.',
+    'faq.q2': 'Brauche ich einen Fitness-Tracker oder eine Smartwatch?',
+    'faq.a2': 'Nein! Diamo funktioniert auch komplett ohne Wearable. Wenn du allerdings eine Apple Watch, einen Oura Ring oder ein Garmin-Ger\u00e4t hast, kann Diamo deine Gesundheitsdaten (HRV, Schlaf, Ruhepuls) nutzen, um dein Training noch pr\u00e4ziser an deinen K\u00f6rper anzupassen.',
+    'faq.q3': 'Ist Diamo kostenlos?',
+    'faq.a3': 'Ja, w\u00e4hrend der Beta-Phase ist Diamo komplett kostenlos. Als Early-Access-Nutzerin bekommst du vollen Zugang zu allen Features ohne Kosten. Nach dem offiziellen Launch wird es ein Freemium-Modell geben \u2013 Founding Members erhalten besondere Vorteile.',
+    'faq.q4': 'Wann ist die App verf\u00fcgbar?',
+    'faq.a4': 'Die Beta-Version startet im Sommer 2026 f\u00fcr eine kleine Gruppe von Testerinnen. Trag dich in die Warteliste ein, um als Erste informiert zu werden und dir deinen Platz zu sichern.',
+    'faq.q5': 'F\u00fcr welche Ger\u00e4te wird Diamo verf\u00fcgbar sein?',
+    'faq.a5': 'Diamo wird zum Start f\u00fcr iOS und Android verf\u00fcgbar sein. Die App unterst\u00fctzt die Integration mit Apple Watch, Oura Ring und Garmin-Ger\u00e4ten \u2013 weitere Wearables folgen nach dem Launch.',
+    'faq.guide-link': '\u2192 Zum ausf\u00fchrlichen Guide: Zyklusbasiertes Training',
 
     // Footer
     'footer.tagline': 'Eine neue Ära der<br/>Frauengesundheit',
@@ -339,6 +376,9 @@ const translations = {
     'footer.product.how': 'So funktioniert\'s',
     'footer.product.app': 'Die App',
     'footer.product.blog': 'Blog',
+    'footer.blog': 'Blog',
+    'footer.blog.article1': 'Fitness-Apps vs. Zyklus',
+    'footer.blog.article2': 'Wearables & Zyklus',
     'footer.company': 'Unternehmen',
     'footer.company.team': 'Team',
     'footer.company.careers': 'Karriere',
@@ -430,6 +470,17 @@ function setLanguage(lang) {
     if (value) {
       el.setAttribute('placeholder', value);
     }
+  });
+
+  // Update hrefs for language-specific links (e.g. blog posts)
+  document.querySelectorAll('[data-i18n-href-en]').forEach(el => {
+    const enHref = el.getAttribute('data-i18n-href-en');
+    const deHref = el.getAttribute('data-i18n-href-de') || el.getAttribute('data-original-href') || el.getAttribute('href');
+    // Store original DE href on first run
+    if (!el.getAttribute('data-original-href')) {
+      el.setAttribute('data-original-href', el.getAttribute('href'));
+    }
+    el.setAttribute('href', lang === 'en' ? enHref : el.getAttribute('data-original-href'));
   });
 
   // Update the language toggle button state
