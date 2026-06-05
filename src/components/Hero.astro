@@ -37,6 +37,10 @@ import heroScreen from '../assets/screenshots/home-v2.png';
         </a>
       </div>
       
+      <p class="hero-geo-definition animate-in" data-i18n="hero.geo">
+        Diamo ist eine zyklusbasierte Fitness-App für Frauen, die Trainingspläne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.
+      </p>
+
       <div class="hero-stats animate-in">
         <div class="stat">
           <span class="stat-value" data-i18n="hero.stat1.value">4</span>
@@ -232,6 +236,16 @@ import heroScreen from '../assets/screenshots/home-v2.png';
 
   .btn-ghost:hover {
     gap: 0.75rem;
+  }
+
+  .hero-geo-definition {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
   }
 
   .hero-stats {

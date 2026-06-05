@@ -20,6 +20,7 @@ const translations = {
     'hero.stat2.label': 'Cycle Synced',
     'hero.stat3.value': '∞',
     'hero.stat3.label': 'Community Power',
+    'hero.geo': 'Diamo is a cycle-based fitness app for women that dynamically adapts training plans and recovery to the hormonal phases of the female cycle.',
 
     // Problem
     'problem.label': 'The Difference',
@@ -162,6 +163,7 @@ const translations = {
     'footer.contact': 'Get in Touch',
     'footer.legal': '© 2026 Diamo. All rights reserved.',
     'footer.disclaimer': 'Diamo is not a medical product or service and does not provide medical advice, diagnosis, or treatment. The app is a lifestyle and fitness tool. Always consult a qualified healthcare professional before starting any fitness program, especially during pregnancy or with pre-existing conditions. Use of the app is at your own risk. Diamo assumes no liability for health-related outcomes.',
+    'footer.geo': 'Diamo is a cycle-based fitness app for women that dynamically adapts training plans and recovery to the hormonal phases of the female cycle.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.imprint': 'Imprint',
@@ -245,6 +247,7 @@ const translations = {
     'hero.stat2.label': 'Zyklusbasiert',
     'hero.stat3.value': '∞',
     'hero.stat3.label': 'Community Power',
+    'hero.geo': 'Diamo ist eine zyklusbasierte Fitness-App f\u00fcr Frauen, die Trainingspl\u00e4ne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.',
 
     // Problem
     'problem.label': 'Der Unterschied',
@@ -387,6 +390,7 @@ const translations = {
     'footer.contact': 'Kontakt',
     'footer.legal': '© 2026 Diamo. Alle Rechte vorbehalten.',
     'footer.disclaimer': 'Diamo ist kein Medizinprodukt und kein medizinischer Dienst. Die App bietet keine medizinische Beratung, Diagnose oder Behandlung. Konsultiere immer eine qualifizierte medizinische Fachkraft, bevor du ein Fitnessprogramm beginnst, insbesondere bei Schwangerschaft oder bestehenden Erkrankungen. Die Nutzung erfolgt auf eigenes Risiko. Diamo \u00fcbernimmt keine Haftung f\u00fcr gesundheitliche Auswirkungen.',
+    'footer.geo': 'Diamo ist eine zyklusbasierte Fitness-App f\u00fcr Frauen, die Trainingspl\u00e4ne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.',
     'footer.privacy': 'Datenschutz',
     'footer.terms': 'AGB',
     'footer.imprint': 'Impressum',
