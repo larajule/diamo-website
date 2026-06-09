@@ -1,0 +1,496 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BetaSignup from '../components/BetaSignup.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+import BetaApplyModals from '../components/BetaApplyModals.astro';
+
+const faqData = [
+  {
+    question: "Wie passe ich meinen Halbmarathon-Trainingsplan an meinen Zyklus an?",
+    answer: "Ein zyklusbasierter Halbmarathon-Plan berücksichtigt deine vier Zyklusphasen: In der Follikelphase setzt du auf intensive Intervalle und Tempoläufe, da dein Körper leistungsfähiger ist. Rund um den Eisprung kannst du Longruns mit höherer Intensität planen. In der Lutealphase liegt der Fokus auf lockeren Dauerläufen und Grundlagenausdauer, während die Menstruationsphase für leichte Regenerationsläufe oder aktive Erholung genutzt wird. Diamo erstellt dir diesen Plan automatisch und passt ihn täglich an dein aktuelles Energielevel und deine Zyklusdaten an."
+  },
+  {
+    question: "Warum ist zyklusbasiertes Training im Leistungssport so wichtig?",
+    answer: "Im Leistungssport zählt jedes Prozent. Hormonelle Schwankungen während des Zyklus beeinflussen direkt die Energiebereitstellung, die Thermoregulation, die Erholungsfähigkeit und sogar die Verletzungsanfälligkeit. Studien zeigen, dass rund um den Eisprung die Bandlaxität steigt und das ACL-Verletzungsrisiko zunimmt. Gleichzeitig variiert die VO₂max im Zyklusverlauf. Wer diese Faktoren ignoriert, verschenkt Leistung und riskiert Übertraining. Ein zyklusbewusster Trainingsplan nutzt die Hochphasen gezielt für Leistungsspitzen und schützt den Körper in vulnerablen Phasen."
+  }
+];
+---
+
+<Layout
+  title="Zyklusbasiertes Training für Marathon & Halbmarathon | Diamo"
+  description="Dein zyklusbasierter Trainingsplan für Ausdauersport: Passe Longruns, Tempoläufe und Erholung an deinen Zyklus an. Mit der Diamo Community findest du Laufpartnerinnen für Marathon und Halbmarathon."
+>
+  <Navbar />
+
+  <main class="endurance-page">
+    <div class="endurance-container">
+
+      <!-- Hero -->
+      <header class="endurance-hero animate-in">
+        <span class="endurance-label">Ausdauersport-Guide</span>
+        <h1 class="endurance-title">
+          Zyklusbasiertes Training für<br/>
+          <span class="endurance-title-accent">Marathon, Halbmarathon & Ausdauersport</span>
+        </h1>
+        <p class="endurance-intro">
+          Dein Zyklus beeinflusst, wie dein Körper Energie bereitstellt, sich erholt und Leistung abruft.
+          Wer das als Läuferin versteht und nutzt, trainiert nicht nur gesünder, sondern läuft auch schneller.
+          Dieser Guide zeigt dir, wie du deinen Trainingsplan an deine Biologie anpasst.
+        </p>
+        <div class="endurance-divider"></div>
+      </header>
+
+      <!-- Section 1: Warum Ausdauersportlerinnen ihren Zyklus nutzen sollten -->
+      <section class="endurance-section animate-in">
+        <h2 class="endurance-h2">Warum Ausdauersportlerinnen ihren Zyklus nutzen sollten</h2>
+        <p>
+          Im Ausdauersport entscheiden Nuancen über Erfolg und Frust. Dein Hormonsystem ist dabei
+          eine der mächtigsten Stellschrauben, die die meisten Trainingspläne komplett ignorieren.
+          Östrogen und Progesteron beeinflussen nicht nur deine Stimmung, sondern ganz konkret drei
+          leistungsrelevante Bereiche.
+        </p>
+
+        <div class="endurance-benefits-grid">
+          <div class="endurance-benefit-card">
+            <div class="endurance-benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="endurance-benefit-title">Energiebereitstellung</h3>
+            <p class="endurance-benefit-desc">
+              In der Follikelphase greift dein Körper bevorzugt auf Kohlenhydrate zurück, ideal für
+              schnelle Intervalle. In der Lutealphase dominiert die Fettverbrennung, perfekt für
+              lange, gleichmäßige Dauerläufe.
+            </p>
+          </div>
+          <div class="endurance-benefit-card">
+            <div class="endurance-benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            </div>
+            <h3 class="endurance-benefit-title">Leistung & VO₂max</h3>
+            <p class="endurance-benefit-desc">
+              Deine maximale Sauerstoffaufnahme schwankt im Zyklusverlauf. Rund um den Eisprung
+              erreichst du dein Leistungshoch, während die Thermoregulation in der Lutealphase
+              erschwert ist und dein Puls schneller steigt.
+            </p>
+          </div>
+          <div class="endurance-benefit-card">
+            <div class="endurance-benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="endurance-benefit-title">Verletzungsprävention</h3>
+            <p class="endurance-benefit-desc">
+              Rund um den Eisprung steigt die Bandlaxität durch erhöhtes Östrogen. Das bedeutet ein
+              höheres Risiko für Bänderverletzungen, besonders im Kniebereich (ACL). Saubere Technik
+              und angepasstes Training schützen dich gezielt.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          All diese Faktoren sind keine Einschränkung. Sie sind dein biologischer Vorteil,
+          wenn du lernst, sie für dein Training zu nutzen. Mehr Hintergrund zu den einzelnen Phasen
+          findest du in unserem
+          <a href="/zyklusbasiertes-training/" class="endurance-link">ausführlichen Guide zum zyklusbasierten Training</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: Dein zyklusbasierter Plan bis zur Ziellinie -->
+      <section class="endurance-section animate-in">
+        <h2 class="endurance-h2">Dein zyklusbasierter Plan bis zur Ziellinie</h2>
+        <p>
+          Klassische Marathon-Pläne sind starr: 16 Wochen, festgelegte Longruns an fixen Tagen,
+          lineare Steigerung ohne Rücksicht auf deinen Körper. Das funktioniert auf dem Papier,
+          aber nicht in der Realität deines Zyklus.
+        </p>
+        <p>
+          <strong>Diamo denkt anders.</strong> Statt dir einen statischen Blockplan zu geben, passt dein
+          Diamo Coach deinen Trainingsplan täglich an. In der Follikelphase stehen intensive Tempoläufe
+          und Intervalltraining auf dem Programm. Rund um den Eisprung kannst du deine
+          Longruns mit vollem Potenzial laufen. Und in der Lutealphase, wenn dein Körper vermehrt auf
+          Fettverbrennung setzt, nutzt Diamo das gezielt für lockere Grundlagenausdauer.
+        </p>
+        <p>
+          <strong>Erholungsphasen sind keine verlorene Zeit.</strong> Während der Menstruation empfiehlt dir
+          Diamo aktive Regeneration: leichte Dauerläufe, Mobilität oder Yoga. Denn wer klug pausiert,
+          läuft am Renntag stärker. Das Ergebnis: Ein Trainingsplan, der sich anfühlt, als wäre er nur
+          für dich geschrieben, weil er es ist.
+        </p>
+      </section>
+
+      <!-- Inline CTA -->
+      <div class="endurance-inline-cta animate-in">
+        <div class="endurance-cta-card">
+          <h3 class="endurance-cta-title">Lauf smarter, nicht härter</h3>
+          <p class="endurance-cta-text">
+            Diamo erstellt dir täglich einen Trainingsplan, der zu deiner
+            aktuellen Zyklusphase und deinem Laufziel passt.
+          </p>
+          <button type="button" class="btn btn-primary endurance-cta-btn" data-open-waitlist>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <span>Frühzugang sichern</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- BetaSignup #1 -->
+      <BetaSignup />
+
+      <!-- Section 3: Gemeinsam ins Ziel -->
+      <section class="endurance-section animate-in">
+        <h2 class="endurance-h2">Gemeinsam ins Ziel: Die Diamo Lauf-Community</h2>
+        <p>
+          Marathon-Training kann einsam sein. Die langen Läufe am Wochenende, die Zweifel in Woche 12,
+          die Frage, ob das Tempo stimmt. Genau hier setzt die Diamo Community an.
+        </p>
+        <p>
+          <strong>Finde Accountability-Partnerinnen</strong>, die für dieselbe Distanz trainieren wie du.
+          Ob 10 Kilometer, Halbmarathon oder Marathon: Diamo verbindet dich mit Frauen in deiner Stadt,
+          die ein ähnliches Laufziel verfolgen und sich in einer vergleichbaren Zyklusphase befinden.
+          Gemeinsame Longruns, geteiltes Wissen, echte Motivation.
+        </p>
+        <p>
+          <strong>Tauscht euch aus</strong> über die Herausforderungen, die nur Läuferinnen kennen:
+          Wie trainiere ich mit PMS-Symptomen? Was esse ich vor einem Longrun in der Lutealphase?
+          Wie gehe ich mit dem erhöhten Puls in der zweiten Zyklushälfte um? In der Diamo Community
+          findest du Antworten von Frauen, die genau das Gleiche erleben.
+        </p>
+        <p>
+          Unsere lokalen <strong>Lauf-Tribes</strong> bringen dich raus aus dem Solo-Training und rein in echte
+          Verbindungen. Denn die besten Lauferlebnisse passieren nicht alleine auf der Strecke,
+          sondern gemeinsam. <strong>Offline first.</strong>
+        </p>
+      </section>
+
+      <!-- Section 4: FAQ -->
+      <section class="endurance-section endurance-faq animate-in">
+        <h2 class="endurance-h2">Häufige Fragen zum Ausdauersport im Zyklus</h2>
+
+        <div class="faq-list">
+          {faqData.map((faq, i) => (
+            <details class="faq-item" id={`endurance-faq-${i}`}>
+              <summary class="faq-question">
+                <span>{faq.question}</span>
+                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <!-- FAQPage JSON-LD -->
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqData.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      })} />
+
+      <!-- BetaSignup #2 -->
+      <BetaSignup />
+
+    </div>
+  </main>
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+
+<style>
+  /* ================================
+     ENDURANCE LANDING PAGE
+     ================================ */
+
+  .endurance-page {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+    min-height: 100vh;
+  }
+
+  .endurance-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+
+  /* Hero */
+  .endurance-hero {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .endurance-label {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lavender);
+    margin-bottom: var(--space-sm);
+    padding: 0.4rem 1rem;
+    background: rgba(155, 139, 203, 0.08);
+    border: 1px solid rgba(155, 139, 203, 0.15);
+    border-radius: var(--radius-full);
+  }
+
+  .endurance-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+  }
+
+  .endurance-title-accent {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .endurance-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .endurance-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--navy);
+    opacity: 0.2;
+    margin: var(--space-lg) auto 0;
+  }
+
+  /* Sections */
+  .endurance-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .endurance-h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+    line-height: 1.3;
+  }
+
+  .endurance-section p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .endurance-section p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .endurance-section strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .endurance-link {
+    color: var(--lavender);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .endurance-link:hover {
+    color: var(--navy);
+  }
+
+  /* Benefits Grid */
+  .endurance-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+  }
+
+  .endurance-benefit-card {
+    padding: var(--space-lg);
+    border: 1px solid rgba(11, 25, 46, 0.08);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .endurance-benefit-card:hover {
+    border-color: rgba(11, 25, 46, 0.16);
+    box-shadow: 0 4px 20px rgba(11, 25, 46, 0.04);
+    transform: translateY(-2px);
+  }
+
+  .endurance-benefit-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(155, 139, 203, 0.08);
+    border-radius: var(--radius-md);
+    margin: 0 auto var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lavender);
+  }
+
+  .endurance-benefit-title {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .endurance-benefit-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  /* Inline CTA */
+  .endurance-inline-cta {
+    margin: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .endurance-cta-card {
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .endurance-cta-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--ivory);
+    margin-bottom: var(--space-sm);
+  }
+
+  .endurance-cta-text {
+    font-size: 0.95rem;
+    color: rgba(251, 249, 246, 0.75);
+    max-width: 440px;
+    margin: 0 auto var(--space-md);
+    line-height: 1.7;
+  }
+
+  .endurance-cta-btn {
+    background: var(--ivory);
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .endurance-cta-btn:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* FAQ */
+  .endurance-faq .faq-list {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(0, 32, 96, 0.15);
+    box-shadow: 0 2px 12px rgba(0, 32, 96, 0.04);
+  }
+
+  .faq-item[open] {
+    border-color: rgba(155, 139, 203, 0.3);
+    box-shadow: 0 4px 20px rgba(155, 139, 203, 0.08);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    font-family: var(--font-sans);
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+    transition: background var(--transition-fast);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    background: rgba(155, 139, 203, 0.04);
+  }
+
+  .faq-chevron {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+  }
+
+  .faq-item[open] .faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+
+  .faq-answer p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .endurance-benefits-grid {
+      grid-template-columns: 1fr;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-question {
+      font-size: 0.95rem;
+      padding: var(--space-sm) var(--space-md);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .endurance-cta-card {
+      padding: var(--space-lg);
+    }
+  }
+</style>
