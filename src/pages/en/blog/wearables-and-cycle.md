@@ -7,7 +7,7 @@ author: 'Diamo Team'
 tags: ["Women's Health", 'Cycle Training', 'Wearables', 'Biohacking', 'Fitness']
 ---
 
-Apple Watch, Oura Ring, Garmin – the modern wearables on our wrists and fingers are true technological marvels. They measure our heart rate variability (HRV) with incredible precision, track our sleep stages, and deliver valuable health metrics every morning. They've made biohacking accessible for everyday life.
+Apple Watch, Oura Ring, Garmin: the modern wearables on our wrists and fingers are true technological marvels. They measure our heart rate variability (HRV) with incredible precision, track our sleep stages, and deliver valuable health metrics every morning. They've made biohacking accessible for everyday life.
 
 But to get the absolute maximum out of these fantastic devices, women need an additional layer: **The context of our own female physiology.**
 
@@ -26,7 +26,7 @@ The uniqueness of the female body, however, is that our "baseline" isn't the sam
 3. **Ovulation phase:** The absolute performance peak.
 4. **Luteal phase:** Body temperature naturally rises due to the hormone progesterone, resting heart rate is often slightly elevated.
 
-When your wearable shows you a slightly elevated resting heart rate during the luteal phase, it's not a sign of poor recovery or oncoming illness – it's simply your biology doing exactly what it should.
+When your wearable shows you a slightly elevated resting heart rate during the luteal phase, it's not a sign of poor recovery or oncoming illness. It's simply your biology doing exactly what it should.
 
 ## 2. Diamo: The Translator for Your Tracker Data
 

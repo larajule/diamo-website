@@ -7,7 +7,7 @@ author: 'Diamo Team'
 tags: ['Frauengesundheit', 'Zyklus-Training', 'Wearables', 'Biohacking', 'Fitness']
 ---
 
-Apple Watch, Oura Ring, Garmin – die modernen Wearables an unseren Handgelenken und Fingern sind echte technische Meisterwerke. Sie messen unsere Herzfrequenzvariabilität (HRV) mit unglaublicher Präzision, tracken unsere Schlafphasen und liefern uns jeden Morgen wertvolle Gesundheitsmetriken. Sie haben das Biohacking für den Alltag zugänglich gemacht.
+Apple Watch, Oura Ring, Garmin: die modernen Wearables an unseren Handgelenken und Fingern sind echte technische Meisterwerke. Sie messen unsere Herzfrequenzvariabilität (HRV) mit unglaublicher Präzision, tracken unsere Schlafphasen und liefern uns jeden Morgen wertvolle Gesundheitsmetriken. Sie haben das Biohacking für den Alltag zugänglich gemacht.
 
 Doch um das absolute Maximum aus diesen fantastischen Geräten herauszuholen, braucht es für Frauen noch eine zusätzliche Ebene: **Den Kontext unserer eigenen weiblichen Physiologie.**
 
@@ -26,7 +26,7 @@ Die Besonderheit des weiblichen Körpers ist jedoch, dass unsere "Baseline" nich
 3. **Ovulationsphase:** Das absolute Leistungshoch.
 4. **Lutealphase:** Die Körpertemperatur steigt durch das Hormon Progesteron natürlich an, der Ruhepuls ist oft leicht erhöht.
 
-Wenn dein Wearable dir in der Lutealphase also einen leicht erhöhten Ruhepuls anzeigt, ist das kein Zeichen für schlechte Erholung oder aufkommende Krankheit – es ist schlichtweg deine Biologie, die genau das tut, was sie soll.
+Wenn dein Wearable dir in der Lutealphase also einen leicht erhöhten Ruhepuls anzeigt, ist das kein Zeichen für schlechte Erholung oder aufkommende Krankheit. Es ist schlichtweg deine Biologie, die genau das tut, was sie soll.
 
 ## 2. Diamo: Der Übersetzer für deine Tracker-Daten
 

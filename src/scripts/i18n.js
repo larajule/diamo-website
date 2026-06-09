@@ -89,7 +89,7 @@ const translations = {
     'hiw.s1.title': 'Tell us about you',
     'hiw.s1.desc': 'A quick onboarding captures your fitness goals, cycle data, energy patterns, and personal preferences to create your unique persona.',
     'hiw.s2.title': 'Get your daily plan',
-    'hiw.s2.desc': 'Every morning, Diamo delivers a personalized workout adapted to your cycle phase, energy level, and how you slept. All powered by real science.',
+    'hiw.s2.desc': 'Every morning, Diamo delivers a personalized workout adapted to your cycle phase, energy level, and how you slept. Based on current cycle research.',
     'hiw.s3.title': 'Move with your tribe',
     'hiw.s3.desc': 'Join local events, share your journey, and connect with women who train in sync with their bodies. Away from the screen, into real life.',
 
@@ -261,7 +261,7 @@ const translations = {
     'hiw.s1.title': 'Erzähl uns von dir',
     'hiw.s1.desc': 'Ein kurzes Onboarding erfasst deine Fitnessziele, Zyklusdaten, Energiemuster und persönliche Vorlieben, um dein einzigartiges Profil zu erstellen.',
     'hiw.s2.title': 'Dein täglicher Plan',
-    'hiw.s2.desc': 'Jeden Morgen liefert Diamo ein personalisiertes Workout, angepasst an deine Zyklusphase, dein Energielevel und wie du geschlafen hast. Alles wissenschaftlich fundiert.',
+    'hiw.s2.desc': 'Jeden Morgen liefert Diamo ein personalisiertes Workout, angepasst an deine Zyklusphase, dein Energielevel und wie du geschlafen hast. Basierend auf aktueller Zyklusforschung.',
     'hiw.s3.title': 'Bewege dich mit deinem Tribe',
     'hiw.s3.desc': 'Nimm an lokalen Events teil, teile deine Reise und vernetze dich mit Frauen, die im Einklang mit ihrem Körper trainieren. Weg vom Bildschirm, rein ins echte Leben.',
 
