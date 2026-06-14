@@ -100,6 +100,15 @@
     width: 100%;
   }
 
+  .nav-link.active {
+    color: var(--navy);
+  }
+
+  .nav-link.active::after {
+    width: 100%;
+    background: var(--navy);
+  }
+
   .nav-cta {
     padding: 0.65rem 1.5rem;
     font-size: 0.85rem;
@@ -198,5 +207,69 @@
   const links = document.getElementById('nav-links');
   toggle?.addEventListener('click', () => {
     links?.classList.toggle('open');
+  });
+
+  // Active nav link highlighting
+  function updateActiveNav() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
+
+    // Clear all active states
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Check for standalone pages first (Über uns, Guide, etc.)
+    const pageMatch = Array.from(navLinks).find(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('/#') || href === '/') return false;
+      return currentPath.startsWith(href);
+    });
+
+    if (pageMatch) {
+      pageMatch.classList.add('active');
+      return;
+    }
+
+    // On the homepage, use scroll-based section detection
+    if (currentPath === '/' || currentPath === '/index.html') {
+      const sections = ['features', 'how-it-works', 'team'];
+      const sectionElements = sections
+        .map(id => ({ id, el: document.getElementById(id) }))
+        .filter(s => s.el);
+
+      if (sectionElements.length === 0) return;
+
+      // Find which section is most visible
+      let activeSection = null;
+      const scrollY = window.scrollY + window.innerHeight / 3;
+
+      for (const section of sectionElements) {
+        const top = section.el.offsetTop;
+        const bottom = top + section.el.offsetHeight;
+        if (scrollY >= top && scrollY < bottom) {
+          activeSection = section.id;
+          break;
+        }
+      }
+
+      if (activeSection) {
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === `/#${activeSection}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+  }
+
+  // Run on load and scroll
+  updateActiveNav();
+  window.addEventListener('scroll', updateActiveNav);
+
+  // Also update when clicking nav links (for smooth scroll)
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      setTimeout(updateActiveNav, 100);
+    });
   });
 </script>
