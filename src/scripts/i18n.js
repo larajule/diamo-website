@@ -137,6 +137,27 @@ const translations = {
     'footer.terms': 'Terms of Service',
     'footer.imprint': 'Imprint',
 
+    // About Page
+    'about.title': 'Your cycle is your superpower.',
+    'about.title.italic': 'We\'re here to unlock it.',
+    'about.story.title': 'Why Diamo exists',
+    'about.story.p1': 'For too long, fitness has ignored the most fundamental part of female biology: The cycle. Training plans expected the same performance on day 5 and day 25. They made women feel like failures when their bodies simply needed something different.',
+    'about.story.p2': 'But the science is clear: Every woman moves through four distinct cycle phases, each shaping her energy, strength, and recovery in unique ways. This isn\'t a limitation, it\'s an advantage, if you know how to use it.',
+    'about.story.p3': 'That\'s why Diamo was built. The app that finally trains with your cycle, not against it.',
+    'about.vision.title': 'Training that speaks your cycle\'s language',
+    'about.vision.p1': 'During your follicular phase, your body is ready to push limits. During your luteal phase, it needs a different kind of strength. Diamo knows the difference and adapts your training accordingly.',
+    'about.vision.p2': 'We connect the data from your Apple Watch, Oura Ring, or Garmin with real-time cycle awareness to create a plan that fits exactly where you are today. Not a generic plan. Your plan.',
+    'about.vision.p3': 'And because we believe the best workouts happen together, Diamo connects you with women near you who are in a similar cycle phase. Local run clubs, shared energy, real connections. <strong>Offline first</strong>.',
+    'about.values.title': 'What we believe',
+    'about.values.intro': 'Diamo is built on a simple conviction: Women deserve fitness tools that truly understand their bodies. These are the principles that guide everything we create.',
+    'about.value2.title': 'Community first',
+    'about.value2.desc': 'The best workouts happen together. Diamo connects you with local women in similar cycle phases for real, offline training.',
+    'about.value3.title': 'Built for women',
+    'about.value3.desc': 'Not an afterthought. Not a pink version of a men\'s app. Diamo is designed from scratch around the female body and experience.',
+    'about.cta.title': 'Sound like something you want to be part of?',
+    'about.cta.text': 'We\'re just getting started and that\'s what makes it special. Be there from the beginning.',
+    'about.cta.btn': 'Join the Waitlist',
+
     // Waitlist Modal
     'modal.label': 'Early Access',
     'modal.title': 'Be among the first.',
@@ -342,6 +363,27 @@ const translations = {
     'apply-modal.privacy': 'Wir melden uns innerhalb weniger Tage.',
     'apply-modal.success.title': 'Bewerbung gesendet!',
     'apply-modal.success.desc': 'Wir prüfen sie und melden uns bald bei dir.',
+
+    // About Page
+    'about.title': 'Dein Zyklus ist deine Superkraft.',
+    'about.title.italic': 'Wir helfen dir, sie zu nutzen.',
+    'about.story.title': 'Warum es Diamo gibt',
+    'about.story.p1': 'Viel zu lange hat Fitness den grundlegendsten Teil der weiblichen Biologie ignoriert: den Zyklus. Trainingspläne haben an Tag 5 und Tag 25 die gleiche Leistung erwartet. Sie haben Frauen das Gefühl gegeben zu versagen, wenn ihr Körper einfach etwas anderes brauchte.',
+    'about.story.p2': 'Aber die Wissenschaft ist eindeutig: Jede Frau durchläuft vier verschiedene Zyklusphasen, die ihre Energie, Kraft und Erholung auf einzigartige Weise beeinflussen. Das ist keine Einschränkung, sondern ein Vorteil, wenn man ihn zu nutzen weiß.',
+    'about.story.p3': 'Deshalb wurde Diamo gebaut. Die App, die endlich mit deinem Zyklus trainiert, nicht gegen ihn.',
+    'about.vision.title': 'Training, das die Sprache deines Zyklus spricht',
+    'about.vision.p1': 'In der Follikelphase ist dein Körper bereit, Grenzen zu verschieben. In der Lutealphase braucht er eine andere Art von Stärke. Diamo kennt den Unterschied und passt dein Training entsprechend an.',
+    'about.vision.p2': 'Wir verbinden die Daten deiner Apple Watch, deines Oura Rings oder Garmin mit Echtzeit Zyklusbewusstsein, um einen Plan zu erstellen, der genau zu dir passt. Heute. Kein generischer Plan. Dein Plan.',
+    'about.vision.p3': 'Und weil wir glauben, dass die besten Workouts gemeinsam passieren, verbindet Diamo dich mit Frauen in deiner Nähe, die in einer ähnlichen Zyklusphase sind. Lokale Run Clubs, geteilte Energie, echte Connections. <strong>Offline first</strong>.',
+    'about.values.title': 'Woran wir glauben',
+    'about.values.intro': 'Diamo basiert auf einer einfachen Überzeugung: Frauen verdienen Fitness Tools, die ihren Körper wirklich verstehen. Das sind die Prinzipien, die alles leiten, was wir schaffen.',
+    'about.value2.title': 'Community first',
+    'about.value2.desc': 'Die besten Workouts passieren gemeinsam. Diamo verbindet dich mit lokalen Frauen in ähnlichen Zyklusphasen für echtes, offline Training.',
+    'about.value3.title': 'Für Frauen gebaut',
+    'about.value3.desc': 'Kein Nachgedanke. Keine rosa Version einer Männer App. Diamo ist von Grund auf um den weiblichen Körper und die weibliche Erfahrung herum designed.',
+    'about.cta.title': 'Klingt nach etwas, das du erleben willst?',
+    'about.cta.text': 'Wir sind noch ganz am Anfang und genau das macht es besonders. Sei von Anfang an dabei.',
+    'about.cta.btn': 'Zur Warteliste',
   }
 };
 
