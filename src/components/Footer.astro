@@ -7,6 +7,20 @@
       <div class="footer-brand">
         <span class="footer-logo">d.</span>
         <p class="footer-tagline" data-i18n="footer.tagline">Eine neue Ära der<br/>Frauengesundheit</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/diamo.app" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" id="footer-instagram-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@diamo0172" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok" id="footer-tiktok-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+              <path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6a2.59 2.59 0 0 1 2.6-2.55c.27 0 .53.04.77.12V9.64a5.73 5.73 0 0 0-.77-.05A5.72 5.72 0 0 0 4.14 15.3a5.72 5.72 0 0 0 5.72 5.72 5.72 5.72 0 0 0 5.72-5.72V9.43a7.37 7.37 0 0 0 4.28 1.37V7.71a4.28 4.28 0 0 1-3.26-1.89z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
       </div>
       
       <div class="footer-links">
@@ -85,6 +99,37 @@
     font-size: 0.95rem;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.4);
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: var(--space-md);
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.45);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .social-btn:hover {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08), 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .social-btn:active {
+    transform: translateY(0);
   }
 
   .footer-links {
