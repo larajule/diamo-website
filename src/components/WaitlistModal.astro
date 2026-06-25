@@ -325,10 +325,24 @@
   const successMsg = document.getElementById('modal-success');
   const submitBtn = document.getElementById('submit-btn');
 
-  // Open modal from any element with data-open-waitlist or href="#waitlist"
+  // Track which source triggered the modal
+  let currentSource: 'waitlist' | 'beta_tester' = 'waitlist';
+
+  // Open modal from waitlist buttons → source: 'waitlist'
   document.querySelectorAll('[data-open-waitlist], a[href="#waitlist"]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
+      currentSource = 'waitlist';
+      modal?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Open modal from beta-tester buttons → source: 'beta_tester'
+  document.querySelectorAll('[data-open-beta]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentSource = 'beta_tester';
       modal?.classList.add('open');
       document.body.style.overflow = 'hidden';
     });
@@ -347,7 +361,7 @@
     if (e.key === 'Escape') closeModal();
   });
 
-  // Form submission → Firestore
+  // Form submission → Firestore 'waitlist' collection
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const feedbackDiv = document.getElementById('waitlist-feedback');
@@ -369,7 +383,7 @@
     try {
       const docRef = await addDoc(collection(db, 'waitlist'), {
         email: email,
-        source: 'waitlist',
+        source: currentSource,
         createdAt: serverTimestamp(),
       });
       console.log('Waitlist entry saved with ID:', docRef.id);

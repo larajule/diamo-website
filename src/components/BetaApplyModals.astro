@@ -1,82 +1,6 @@
 ---
 ---
 
-<div class="modal-overlay" id="beta-modal">
-  <div class="modal-backdrop" id="beta-backdrop"></div>
-  <div class="modal-container">
-    <button class="modal-close" id="beta-close" aria-label="Close">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    
-    <div class="modal-content">
-      <div class="modal-visual beta-visual">
-        <div class="modal-logo">β</div>
-        <div class="modal-glow"></div>
-      </div>
-      
-      <div class="modal-body">
-        <span class="modal-label" data-i18n="beta-modal.label">Beta Tester Program</span>
-        <h2 class="modal-title" data-i18n="beta-modal.title">Test Diamo before everyone else</h2>
-        <p class="modal-description" data-i18n="beta-modal.description">
-          We're looking for a small group of women to test Diamo starting July 2026. 
-          As a beta tester, you'll get free access, shape the product with your feedback, 
-          and earn founding member perks at launch.
-        </p>
-        
-        <form class="modal-form" id="beta-form">
-          <input type="hidden" name="form_type" value="Beta-Tester" />
-          <div class="beta-fields">
-            <input 
-              type="text" 
-              id="beta-name"
-              name="name"
-              class="modal-input" 
-              placeholder="Your name"
-              data-i18n-placeholder="beta-modal.name-placeholder"
-              required 
-            />
-            <input 
-              type="email" 
-              id="beta-email"
-              name="email"
-              class="modal-input" 
-              placeholder="Your email address"
-              data-i18n-placeholder="beta-modal.email-placeholder"
-              required 
-              autocomplete="email"
-            />
-            <textarea 
-              id="beta-motivation"
-              name="motivation"
-              class="modal-input modal-textarea" 
-              placeholder="Why do you want to test Diamo? (optional)"
-              data-i18n-placeholder="beta-modal.motivation-placeholder"
-              rows="3"
-            ></textarea>
-          </div>
-          <button type="submit" class="modal-submit beta-submit" id="beta-submit-btn">
-            <span class="submit-text" data-i18n="beta-modal.submit">Apply as Beta Tester</span>
-            <span class="submit-loading" style="display:none;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spinner">
-                <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
-              </svg>
-            </span>
-          </button>
-          <div id="beta-feedback" class="form-feedback"></div>
-          <p class="modal-privacy" data-i18n="beta-modal.privacy">Limited spots · Starting July 2026</p>
-        </form>
-        
-        <div class="modal-success" id="beta-success" style="display:none;">
-          <div class="success-icon">✓</div>
-          <h3 data-i18n="beta-modal.success.title">Application received!</h3>
-          <p data-i18n="beta-modal.success.desc">We'll review your application and get back to you soon.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Apply Modal (for job roles) -->
 <div class="modal-overlay" id="apply-modal">
@@ -104,7 +28,7 @@
         
         <form class="modal-form" id="apply-form">
           <input type="hidden" name="form_type" value="Bewerbung" />
-          <div class="beta-fields">
+          <div class="apply-fields">
             <input 
               type="text" 
               id="apply-name"
@@ -233,13 +157,7 @@
     overflow: hidden;
   }
 
-  .beta-visual {
-    background: linear-gradient(135deg, var(--sage) 0%, #5a9e7a 40%, var(--navy) 100%);
-  }
 
-  .apply-visual {
-    background: linear-gradient(135deg, var(--lavender) 0%, #7a6ab8 40%, var(--navy) 100%);
-  }
 
   .modal-logo {
     font-family: var(--font-serif);
@@ -288,7 +206,11 @@
     margin-bottom: var(--space-md);
   }
 
-  .beta-fields {
+  .apply-visual {
+    background: linear-gradient(135deg, var(--lavender) 0%, #7a6ab8 40%, var(--navy) 100%);
+  }
+
+  .apply-fields {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -429,73 +351,7 @@
   import { db } from '../scripts/firebase.js';
   import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
-  // Beta Modal
-  const betaModal = document.getElementById('beta-modal');
-  const betaBackdrop = document.getElementById('beta-backdrop');
-  const betaClose = document.getElementById('beta-close');
-  const betaForm = document.getElementById('beta-form');
-  const betaSuccess = document.getElementById('beta-success');
-  const betaSubmitBtn = document.getElementById('beta-submit-btn');
-
-  document.querySelectorAll('[data-open-beta]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      betaModal?.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  function closeBetaModal() {
-    betaModal?.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  betaBackdrop?.addEventListener('click', closeBetaModal);
-  betaClose?.addEventListener('click', closeBetaModal);
-
-  betaForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const feedbackDiv = document.getElementById('beta-feedback');
-    const submitText = betaSubmitBtn?.querySelector('.submit-text');
-    const submitLoading = betaSubmitBtn?.querySelector('.submit-loading');
-    if (submitText) (submitText as HTMLElement).style.display = 'none';
-    if (submitLoading) (submitLoading as HTMLElement).style.display = 'flex';
-
-    if (feedbackDiv) {
-      feedbackDiv.className = 'form-feedback';
-      feedbackDiv.innerText = '';
-    }
-
-    const name = (document.getElementById('beta-name') as HTMLInputElement)?.value;
-    const email = (document.getElementById('beta-email') as HTMLInputElement)?.value;
-    const motivation = (document.getElementById('beta-motivation') as HTMLTextAreaElement)?.value;
-
-    try {
-      const docRef = await addDoc(collection(db, 'beta_applications'), {
-        name: name,
-        email: email,
-        motivation: motivation || '',
-        source: 'beta-tester',
-        createdAt: serverTimestamp(),
-      });
-      console.log('Beta application saved with ID:', docRef.id);
-
-      if (betaForm) betaForm.style.display = 'none';
-      if (betaSuccess) betaSuccess.style.display = 'block';
-      (betaForm as HTMLFormElement)?.reset();
-    } catch (error) {
-      console.error('Firestore Error:', error);
-      if (feedbackDiv) {
-        feedbackDiv.className = 'form-feedback feedback-error';
-        feedbackDiv.innerText = 'Es gab einen Fehler. Bitte versuche es später noch einmal.';
-      }
-    } finally {
-      if (submitText) (submitText as HTMLElement).style.display = '';
-      if (submitLoading) (submitLoading as HTMLElement).style.display = 'none';
-    }
-  });
-
-  // Apply Modal
+  // Apply Modal (Job Applications)
   const applyModal = document.getElementById('apply-modal');
   const applyBackdrop = document.getElementById('apply-backdrop');
   const applyClose = document.getElementById('apply-close');
@@ -561,10 +417,9 @@
     }
   });
 
-  // Close any modal on Escape
+  // Close modal on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      closeBetaModal();
       closeApplyModal();
     }
   });
