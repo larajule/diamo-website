@@ -1,4 +1,19 @@
-name: Deploy to Production
+# =============================================================================
+# DEPLOYMENT: diamo-website → www.diamo.club (Production)
+# =============================================================================
+# This workflow deploys ONLY the Astro landing page (diamo-website) to the
+# production domain www.diamo.club via FTP.
+#
+# IMPORTANT: This deployment is completely separate from the Diamo web-app
+# (test environment). It does NOT use Firebase Hosting and will NOT affect
+# any other project or environment.
+#
+# Target: www.diamo.club (FTP)
+# Source: ./dist/ (Astro build output)
+# Trigger: Push to main branch only
+# =============================================================================
+
+name: Deploy to Production (www.diamo.club)
 
 on:
   push:
@@ -29,7 +44,7 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Deploy to FTP server
+      - name: Deploy to FTP server (www.diamo.club)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}

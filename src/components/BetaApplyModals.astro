@@ -388,18 +388,33 @@
       feedbackDiv.innerText = '';
     }
 
-    const name = (document.getElementById('apply-name') as HTMLInputElement)?.value;
-    const email = (document.getElementById('apply-email') as HTMLInputElement)?.value;
-    const message = (document.getElementById('apply-message') as HTMLTextAreaElement)?.value;
+    const nameInput = document.getElementById('apply-name') as HTMLInputElement | null;
+    const emailInput = document.getElementById('apply-email') as HTMLInputElement | null;
+    const messageInput = document.getElementById('apply-message') as HTMLTextAreaElement | null;
+    const name = nameInput?.value?.trim();
+    const email = emailInput?.value?.trim();
+    const message = messageInput?.value?.trim();
+
+    if (!name || !email || !message) {
+      if (feedbackDiv) {
+        feedbackDiv.className = 'form-feedback feedback-error';
+        feedbackDiv.innerText = 'Bitte fülle alle Felder aus.';
+      }
+      if (submitText) (submitText as HTMLElement).style.display = '';
+      if (submitLoading) (submitLoading as HTMLElement).style.display = 'none';
+      return;
+    }
 
     try {
-      const docRef = await addDoc(collection(db, 'applications'), {
+      // Construct a clean payload with exactly the 5 fields the security rules expect
+      const payload: { name: string; email: string; message: string; source: string; createdAt: ReturnType<typeof serverTimestamp> } = {
         name: name,
         email: email,
         message: message,
         source: 'team-application',
         createdAt: serverTimestamp(),
-      });
+      };
+      const docRef = await addDoc(collection(db, 'applications'), payload);
       console.log('Application saved with ID:', docRef.id);
 
       if (applyForm) applyForm.style.display = 'none';

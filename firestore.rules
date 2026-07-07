@@ -33,7 +33,7 @@ service cloud.firestore {
       return email is string &&
         email.size() > 0 &&
         email.size() <= 320 &&
-        email.matches('^[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$');
+        email.matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+[.][a-zA-Z]{2,}$');
     }
 
     // Validate string length

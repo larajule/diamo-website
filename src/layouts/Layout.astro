@@ -53,7 +53,7 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
         anchor.addEventListener('click', function (e) {
           const href = this.getAttribute('href');
           // Skip bare '#' and modal-opener links
-          if (!href || href === '#' || href === '#waitlist' || this.hasAttribute('data-open-waitlist') || this.hasAttribute('data-open-beta') || this.hasAttribute('data-open-apply')) return;
+          if (!href || href === '#' || href === '#waitlist' || href === '#beta' || this.hasAttribute('data-open-waitlist') || this.hasAttribute('data-open-beta') || this.hasAttribute('data-open-apply')) return;
           try {
             const target = document.querySelector(href);
             if (target) {

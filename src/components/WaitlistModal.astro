@@ -13,32 +13,32 @@
     <div class="modal-content">
       <div class="modal-visual">
         <div class="modal-logo">d.</div>
+        <div class="modal-badge-float">BETA</div>
         <div class="modal-glow"></div>
       </div>
       
       <div class="modal-body">
-        <span class="modal-label" data-i18n="modal.label">Early Access</span>
-        <h2 class="modal-title" data-i18n="modal.title">Be among the first</h2>
+        <span class="modal-label" data-i18n="modal.label">Beta-Programm</span>
+        <h2 class="modal-title" data-i18n="modal.title">Werde Beta-Testerin</h2>
         <p class="modal-description" data-i18n="modal.description">
-          Join our exclusive waitlist and get early access to Diamo 
-          before the official launch. We'll notify you when it's your turn.
+          Sichere dir deinen exklusiven Platz und gestalte Diamo von Anfang an mit.
+          Wir lesen jedes Feedback und bauen die App gemeinsam mit dir.
         </p>
         
         <form class="modal-form" id="waitlist-form">
-          <input type="hidden" name="form_type" value="Warteliste" />
           <div class="input-group">
             <input 
               type="email" 
               id="waitlist-email"
               name="email"
               class="modal-input" 
-              placeholder="Your email address"
+              placeholder="Deine E-Mail-Adresse"
               data-i18n-placeholder="modal.placeholder"
               required 
               autocomplete="email"
             />
             <button type="submit" class="modal-submit" id="submit-btn">
-              <span class="submit-text" data-i18n="modal.submit">Join Waitlist</span>
+              <span class="submit-text" data-i18n="modal.submit">Beta-Zugang sichern</span>
               <span class="submit-loading" style="display:none;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="spinner">
                   <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
@@ -47,13 +47,13 @@
             </button>
           </div>
           <div id="waitlist-feedback" class="form-feedback"></div>
-          <p class="modal-privacy" data-i18n="modal.privacy">No spam, ever. We respect your privacy.</p>
+          <p class="modal-privacy" data-i18n="modal.privacy">Begrenzte Plätze · Kein Spam, versprochen.</p>
         </form>
         
         <div class="modal-success" id="modal-success" style="display:none;">
           <div class="success-icon">✓</div>
-          <h3 data-i18n="modal.success.title">Confirmed.</h3>
-          <p data-i18n="modal.success.desc">Check your inbox for a confirmation email.</p>
+          <h3 data-i18n="modal.success.title">Du bist dabei! 🎉</h3>
+          <p data-i18n="modal.success.desc">Wir melden uns bei dir, sobald es losgeht.</p>
         </div>
       </div>
     </div>
@@ -112,8 +112,8 @@
     height: 36px;
     border-radius: 50%;
     border: none;
-    background: rgba(0, 32, 96, 0.06);
-    color: var(--navy);
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--white);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -122,7 +122,7 @@
   }
 
   .modal-close:hover {
-    background: rgba(0, 32, 96, 0.12);
+    background: rgba(255, 255, 255, 0.25);
     transform: rotate(90deg);
   }
 
@@ -143,6 +143,22 @@
     color: var(--white);
     position: relative;
     z-index: 2;
+  }
+
+  .modal-badge-float {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--radius-full);
+    z-index: 3;
   }
 
   .modal-glow {
@@ -325,24 +341,13 @@
   const successMsg = document.getElementById('modal-success');
   const submitBtn = document.getElementById('submit-btn');
 
-  // Track which source triggered the modal
-  let currentSource: 'waitlist' | 'beta_tester' = 'waitlist';
+  // All signups are beta testers — single source, no ambiguity
+  const FORM_SOURCE = 'beta_tester' as const;
 
-  // Open modal from waitlist buttons → source: 'waitlist'
-  document.querySelectorAll('[data-open-waitlist], a[href="#waitlist"]').forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      currentSource = 'waitlist';
-      modal?.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  // Open modal from beta-tester buttons → source: 'beta_tester'
+  // Open modal from any beta-trigger button
   document.querySelectorAll('[data-open-beta]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
-      currentSource = 'beta_tester';
       modal?.classList.add('open');
       document.body.style.overflow = 'hidden';
     });
@@ -378,15 +383,29 @@
       feedbackDiv.innerText = '';
     }
 
-    const email = (document.getElementById('waitlist-email') as HTMLInputElement)?.value;
+    const emailInput = document.getElementById('waitlist-email') as HTMLInputElement | null;
+    const email = emailInput?.value?.trim();
+
+    if (!email) {
+      if (feedbackDiv) {
+        feedbackDiv.className = 'form-feedback feedback-error';
+        feedbackDiv.innerText = 'Bitte gib eine gültige E-Mail-Adresse ein.';
+      }
+      if (submitText) (submitText as HTMLElement).style.display = '';
+      if (submitLoading) (submitLoading as HTMLElement).style.display = 'none';
+      return;
+    }
 
     try {
-      const docRef = await addDoc(collection(db, 'waitlist'), {
+      // Construct a clean payload with exactly the 3 fields the security rules expect
+      // source is always 'beta_tester' — no other value is used
+      const payload: { email: string; source: string; createdAt: ReturnType<typeof serverTimestamp> } = {
         email: email,
-        source: currentSource,
+        source: FORM_SOURCE,
         createdAt: serverTimestamp(),
-      });
-      console.log('Waitlist entry saved with ID:', docRef.id);
+      };
+      const docRef = await addDoc(collection(db, 'waitlist'), payload);
+      console.log('Beta tester entry saved with ID:', docRef.id);
 
       // Show success view
       if (form) form.style.display = 'none';

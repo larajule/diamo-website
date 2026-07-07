@@ -6,20 +6,19 @@ const translations = {
     'nav.how': 'How It Works',
     'nav.team': 'Team',
     'nav.about': 'About Us',
-    'nav.cta': 'Get Early Access',
+    'nav.cta': 'Become a Beta Tester',
 
     // Hero
-    'hero.badge': '',
-    'hero.title': 'A new era of women\'s health',
-    'hero.description': 'Personalized, cycle-synced fitness powered by science. Diamo adapts your workouts to your body\'s unique rhythm and connects you to a real, local community',
-    'hero.cta.waitlist': 'Join the Waitlist',
-    'hero.cta.features': 'Explore Features',
-    'hero.stat1.value': '4',
-    'hero.stat1.label': 'Training Categories',
+    'hero.badge': 'Exclusive Beta Access',
+    'hero.title': 'Your workout routine,<br/>reimagined.',
+    'hero.description': 'Be there from the start and actively shape Diamo. We read every single piece of feedback and your opinion shapes the app. Let\'s build the fitness app your body deserves, together.',
+    'hero.cta.beta': 'Start as a Beta Tester',
+    'hero.stat1.value': 'Limited',
+    'hero.stat1.label': 'Spots available',
     'hero.stat2.value': '100%',
-    'hero.stat2.label': 'Cycle Synced',
-    'hero.stat3.value': '∞',
-    'hero.stat3.label': 'Community Power',
+    'hero.stat2.label': 'Free',
+    'hero.stat3.value': 'Your',
+    'hero.stat3.label': 'Impact matters',
     'hero.geo': 'Diamo is a cycle-based fitness app for women that dynamically adapts workout plans and recovery to the hormonal phases of the menstrual cycle.',
 
     // Problem
@@ -120,12 +119,12 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta Program',
-    'beta.title': 'Help us revolutionize fitness for women',
-    'beta.description': 'We\'re inviting a small group of women to test Diamo before launch. Get early access, share your feedback, and help us build something that truly fits your body and your life.',
+    'beta.title': 'Shape Diamo as a<br/>VIP Beta Tester.',
+    'beta.description': 'Join an exclusive group testing Diamo before everyone else. Your feedback flows directly into development and you actively shape the app.',
     'beta.feat1': 'Free access during beta',
     'beta.feat2': 'Direct input on features',
     'beta.feat3': 'Founding member perks at launch',
-    'beta.cta': 'Get Early Access',
+    'beta.cta': 'Start as a Beta Tester',
     'beta.note': 'Limited spots · No commitment · Cancel anytime',
 
     'faq.label': 'FAQ',
@@ -188,17 +187,17 @@ const translations = {
     'about.value3.desc': 'Not an afterthought. Not a pink version of a men\'s app. Diamo is designed from scratch around the female body and experience.',
     'about.cta.title': 'Sound like something you want to be part of?',
     'about.cta.text': 'We\'re just getting started and that\'s what makes it special. Be there from the beginning.',
-    'about.cta.btn': 'Join the Waitlist',
+    'about.cta.btn': 'Become a Beta Tester',
 
-    // Waitlist Modal
-    'modal.label': 'Early Access',
-    'modal.title': 'Be among the first',
-    'modal.description': 'Join our exclusive waitlist and get early access to Diamo before the official launch. We\'ll notify you when it\'s your turn.',
+    // Beta Modal
+    'modal.label': 'Beta Program',
+    'modal.title': 'Become a Beta Tester.',
+    'modal.description': 'Secure your exclusive spot and shape Diamo from the very start. We read every piece of feedback and build the app together with you.',
     'modal.placeholder': 'Your email address',
-    'modal.submit': 'Join Waitlist',
-    'modal.privacy': 'No spam, ever. We respect your privacy.',
-    'modal.success.title': 'Confirmed.',
-    'modal.success.desc': 'Check your inbox for a confirmation email.',
+    'modal.submit': 'Secure Beta Access',
+    'modal.privacy': 'Limited spots · No spam, ever.',
+    'modal.success.title': 'You\'re in! 🎉',
+    'modal.success.desc': 'We\'ll reach out to you when it\'s time to start.',
 
     // Beta Tester Modal
     'beta-modal.label': 'Beta Tester Program',
@@ -231,20 +230,19 @@ const translations = {
     'nav.how': 'So funktioniert\'s',
     'nav.team': 'Team',
     'nav.about': 'Über uns',
-    'nav.cta': 'Frühzugang sichern',
+    'nav.cta': 'Beta-Tester werden',
 
     // Hero
-    'hero.badge': '',
-    'hero.title': 'Eine neue Ära der Frauengesundheit',
-    'hero.description': 'Personalisiertes, zyklusbasiertes Training, unterstützt durch Wissenschaft. Diamo passt deine Workouts an den einzigartigen Rhythmus deines Körpers an und verbindet dich mit einer echten, lokalen Community',
-    'hero.cta.waitlist': 'Auf die Warteliste',
-    'hero.cta.features': 'Features entdecken',
-    'hero.stat1.value': '4',
-    'hero.stat1.label': 'Trainingsmodule',
+    'hero.badge': 'Exklusiver Beta-Zugang',
+    'hero.title': 'Dein Fitness-Alltag,<br/>neu gedacht.',
+    'hero.description': 'Sei von Anfang an dabei und gestalte Diamo aktiv mit. Wir lesen jedes einzelne Feedback und deine Meinung formt die App. Lass uns zusammen die Fitness-App bauen, die dein Körper verdient.',
+    'hero.cta.beta': 'Als Beta-Testerin starten',
+    'hero.stat1.value': 'Begrenzt',
+    'hero.stat1.label': 'Plätze verfügbar',
     'hero.stat2.value': '100%',
-    'hero.stat2.label': 'Zyklusbasiert',
-    'hero.stat3.value': '∞',
-    'hero.stat3.label': 'Community Power',
+    'hero.stat2.label': 'Kostenlos',
+    'hero.stat3.value': 'Dein',
+    'hero.stat3.label': 'Einfluss zählt',
     'hero.geo': 'Diamo ist eine zyklusbasierte Fitness-App f\u00fcr Frauen, die Trainingspl\u00e4ne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.',
 
     // Problem
@@ -345,13 +343,13 @@ const translations = {
 
     // Beta Signup
     'beta.label': 'Beta-Programm',
-    'beta.title': 'Hilf uns, Fitness f\u00fcr Frauen zu revolutionieren',
-    'beta.description': 'Wir laden eine kleine Gruppe von Frauen ein, Diamo vor dem Launch zu testen. Erhalte frühzeitigen Zugang, teile dein Feedback und hilf uns, etwas zu entwickeln, das wirklich zu deinem Körper und deinem Leben passt.',
+    'beta.title': 'Gestalte Diamo mit<br/>als VIP-Beta-Testerin.',
+    'beta.description': 'Werde Teil einer exklusiven Gruppe, die Diamo vor allen anderen testet. Dein Feedback fließt direkt in die Entwicklung ein und du formst die App aktiv mit.',
     'beta.feat1': 'Kostenloser Zugang während der Beta',
     'beta.feat2': 'Direkter Einfluss auf Features',
     'beta.feat3': 'Founding-Member-Vorteile zum Launch',
-    'beta.cta': 'Fr\u00fchzugang sichern',
-    'beta.note': 'Begrenzte Pl\u00e4tze · Keine Verpflichtung · Jederzeit k\u00fcndbar',
+    'beta.cta': 'Als Beta-Testerin starten',
+    'beta.note': 'Begrenzte Plätze · Keine Verpflichtung · Jederzeit kündbar',
 
     'faq.label': 'FAQ',
     'faq.title': 'H\u00e4ufig gestellte Fragen',
@@ -413,17 +411,17 @@ const translations = {
     'about.value3.desc': 'Kein Nachgedanke. Keine rosa Version einer M\u00e4nner-App. Diamo ist von Grund auf um den weiblichen K\u00f6rper und die weibliche Erfahrung herum designed.',
     'about.cta.title': 'Klingt nach etwas, das du erleben willst?',
     'about.cta.text': 'Wir sind noch ganz am Anfang und genau das macht es besonders. Sei von Anfang an dabei.',
-    'about.cta.btn': 'Zur Warteliste',
+    'about.cta.btn': 'Beta-Testerin werden',
 
-    // Waitlist Modal
-    'modal.label': 'Frühzugang',
-    'modal.title': 'Sei unter den Ersten.',
-    'modal.description': 'Trag dich auf unsere exklusive Warteliste ein und erhalte frühzeitigen Zugang zu Diamo vor dem offiziellen Launch. Wir benachrichtigen dich, wenn es soweit ist.',
+    // Beta Modal
+    'modal.label': 'Beta-Programm',
+    'modal.title': 'Werde Beta-Testerin.',
+    'modal.description': 'Sichere dir deinen exklusiven Platz und gestalte Diamo von Anfang an mit. Wir lesen jedes Feedback und bauen die App gemeinsam mit dir.',
     'modal.placeholder': 'Deine E-Mail-Adresse',
-    'modal.submit': 'Eintragen',
-    'modal.privacy': 'Kein Spam, versprochen. Wir respektieren deine Privatsphäre.',
-    'modal.success.title': 'Bestätigt.',
-    'modal.success.desc': 'Schau in dein Postfach für eine Bestätigungsmail.',
+    'modal.submit': 'Beta-Zugang sichern',
+    'modal.privacy': 'Begrenzte Plätze · Kein Spam, versprochen.',
+    'modal.success.title': 'Du bist dabei! 🎉',
+    'modal.success.desc': 'Wir melden uns bei dir, sobald es losgeht.',
 
     // Beta Tester Modal
     'beta-modal.label': 'Beta-Tester-Programm',
