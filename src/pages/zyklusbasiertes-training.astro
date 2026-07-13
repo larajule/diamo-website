@@ -17,12 +17,12 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
 
       <!-- Hero -->
       <header class="pillar-hero animate-in">
-        <span class="pillar-label">Fitness-Guide</span>
+        <span class="pillar-label" data-i18n="guide.label">Fitness-Guide</span>
         <h1 class="pillar-title">
-          Zyklusbasiertes Training:<br/>
-          <span class="pillar-title-accent">Dein Workout-Guide für jede Phase</span>
+          <span data-i18n="guide.title">Zyklusbasiertes Training:</span><br/>
+          <span class="pillar-title-accent" data-i18n="guide.title.accent">Dein Workout-Guide für jede Phase</span>
         </h1>
-        <p class="pillar-intro">
+        <p class="pillar-intro" data-i18n="guide.intro">
           Dein Körper ist keine Maschine, die jeden Tag gleich funktioniert. Er durchläuft einen
           faszinierenden Zyklus aus vier Phasen, jede mit eigener Energie, eigenem Potenzial und
           eigenen Bedürfnissen. Wer das versteht, trainiert nicht nur klüger, sondern erzielt
@@ -33,20 +33,20 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
 
       <!-- Intro Section -->
       <section class="pillar-section animate-in">
-        <h2 class="pillar-h2">Warum Training nach dem Zyklus Sinn macht</h2>
-        <p>
+        <h2 class="pillar-h2" data-i18n="guide.why.title">Warum Training nach dem Zyklus Sinn macht</h2>
+        <p data-i18n="guide.why.p1">
           Klassische Trainingspläne behandeln jeden Tag gleich: gleiche Übungen, gleiche Intensität,
           gleiche Erwartungen. Doch die weibliche Physiologie funktioniert anders. Während des
           Menstruationszyklus schwanken Hormone wie Östrogen und Progesteron erheblich, und mit
           ihnen Kraft, Ausdauer, Erholungsfähigkeit und sogar die Verletzungsanfälligkeit.
         </p>
-        <p>
+        <p data-i18n="guide.why.p2">
           Studien aus der Sportmedizin zeigen: Frauen, die ihr Training an ihren Zyklus anpassen,
           berichten von <strong>weniger Verletzungen</strong>, <strong>besserer Regeneration</strong>
           und <strong>mehr Motivation</strong>. Es geht nicht darum, weniger zu trainieren, sondern
           zur richtigen Zeit das Richtige zu tun.
         </p>
-        <p>
+        <p data-i18n="guide.why.p3">
           Der weibliche Zyklus lässt sich in vier Hauptphasen unterteilen, die jeweils unterschiedliche
           hormonelle Profile aufweisen. Jede Phase bietet einzigartige Chancen, das Training zu
           optimieren. Im Folgenden zeigen wir dir, wie du jede Phase für dich nutzen kannst.
@@ -57,15 +57,15 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <section class="pillar-section pillar-phase animate-in">
         <div class="phase-badge phase-badge--menstruation">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/><path d="M12 6v6l4 2"/></svg>
-          <span>Phase 1 · Tag 1–5</span>
+          <span data-i18n="guide.phase1.badge">Phase 1 · Tag 1–5</span>
         </div>
-        <h2 class="pillar-h2">Menstruation: Fokus auf Regeneration</h2>
-        <p>
+        <h2 class="pillar-h2" data-i18n="guide.phase1.title">Menstruation: Fokus auf Regeneration</h2>
+        <p data-i18n="guide.phase1.p1">
           In den ersten Tagen deines Zyklus befinden sich Östrogen und Progesteron auf ihrem niedrigsten
           Niveau. Dein Körper richtet seine Energie auf die Erneuerung der Gebärmutterschleimhaut,
           und das spürst du oft in Form von Müdigkeit, Krämpfen oder einem allgemeinen Energietief.
         </p>
-        <p>
+        <p data-i18n="guide.phase1.p2">
           Das bedeutet nicht, dass du dich auf die Couch legen musst. Ganz im Gegenteil: Leichte,
           sanfte Bewegung kann in dieser Phase sogar Beschwerden lindern. Der Schlüssel liegt in der
           <strong>richtigen Intensität</strong>.
@@ -75,26 +75,26 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
           <div class="phase-do">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Empfohlene Aktivitäten
+              <span data-i18n="guide.phase1.do.title">Empfohlene Aktivitäten</span>
             </h3>
             <ul>
-              <li>Sanftes Yoga und Stretching</li>
-              <li>Leichte Spaziergänge in der Natur</li>
-              <li>Schwimmen mit niedriger Intensität</li>
-              <li>Atemübungen und Meditation</li>
-              <li>Foam Rolling und Mobility-Work</li>
+              <li data-i18n="guide.phase1.do.1">Sanftes Yoga und Stretching</li>
+              <li data-i18n="guide.phase1.do.2">Leichte Spaziergänge in der Natur</li>
+              <li data-i18n="guide.phase1.do.3">Schwimmen mit niedriger Intensität</li>
+              <li data-i18n="guide.phase1.do.4">Atemübungen und Meditation</li>
+              <li data-i18n="guide.phase1.do.5">Foam Rolling und Mobility-Work</li>
             </ul>
           </div>
           <div class="phase-avoid">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-              Besser vermeiden
+              <span data-i18n="guide.phase1.avoid.title">Besser vermeiden</span>
             </h3>
             <ul>
-              <li>Hochintensives Intervalltraining (HIIT)</li>
-              <li>Schweres Krafttraining mit Maximalgewicht</li>
-              <li>Lange, intensive Cardio-Einheiten</li>
-              <li>Wettkämpfe oder Performance-Tests</li>
+              <li data-i18n="guide.phase1.avoid.1">Hochintensives Intervalltraining (HIIT)</li>
+              <li data-i18n="guide.phase1.avoid.2">Schweres Krafttraining mit Maximalgewicht</li>
+              <li data-i18n="guide.phase1.avoid.3">Lange, intensive Cardio-Einheiten</li>
+              <li data-i18n="guide.phase1.avoid.4">Wettkämpfe oder Performance-Tests</li>
             </ul>
           </div>
         </div>
@@ -104,16 +104,16 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <section class="pillar-section pillar-phase animate-in">
         <div class="phase-badge phase-badge--follicular">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-          <span>Phase 2 · Tag 6–13</span>
+          <span data-i18n="guide.phase2.badge">Phase 2 · Tag 6–13</span>
         </div>
-        <h2 class="pillar-h2">Follikelphase: Energieaufbau</h2>
-        <p>
+        <h2 class="pillar-h2" data-i18n="guide.phase2.title">Follikelphase: Energieaufbau</h2>
+        <p data-i18n="guide.phase2.p1">
           Nach der Menstruation beginnt der Körper, vermehrt Östrogen zu produzieren. Dieses Hormon
           hat einen bemerkenswerten Effekt: Es steigert deine Leistungsfähigkeit, fördert den
           Muskelaufbau und verbessert deine Stimmung. Viele Frauen fühlen sich in dieser Phase
           am energiegeladensten und motiviertesten.
         </p>
-        <p>
+        <p data-i18n="guide.phase2.p2">
           Nutze diese Phase, um <strong>Progression aufzubauen</strong>. Dein Körper ist bereit für
           neue Herausforderungen, sei es ein neues Gewicht, eine neue Übung oder ein schnelleres
           Tempo. Die Follikelphase ist der ideale Zeitraum, um an Kraft und Ausdauer zu arbeiten.
@@ -123,25 +123,25 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
           <div class="phase-do">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Empfohlene Aktivitäten
+              <span data-i18n="guide.phase2.do.title">Empfohlene Aktivitäten</span>
             </h3>
             <ul>
-              <li>Progressives Krafttraining</li>
-              <li>HIIT und Tabata-Workouts</li>
-              <li>Neue Übungen und Skills lernen</li>
-              <li>Intensiveres Cardio (Laufen, Radfahren)</li>
-              <li>Gruppentraining und Wettkämpfe</li>
+              <li data-i18n="guide.phase2.do.1">Progressives Krafttraining</li>
+              <li data-i18n="guide.phase2.do.2">HIIT und Tabata-Workouts</li>
+              <li data-i18n="guide.phase2.do.3">Neue Übungen und Skills lernen</li>
+              <li data-i18n="guide.phase2.do.4">Intensiveres Cardio (Laufen, Radfahren)</li>
+              <li data-i18n="guide.phase2.do.5">Gruppentraining und Wettkämpfe</li>
             </ul>
           </div>
           <div class="phase-avoid">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-              Achtung
+              <span data-i18n="guide.phase2.avoid.title">Achtung</span>
             </h3>
             <ul>
-              <li>Trotz hoher Energie: Warm-up nie überspringen</li>
-              <li>Übertraining vermeiden, Ruhetage einplanen</li>
-              <li>Auf Körpersignale achten, nicht nur auf Motivation</li>
+              <li data-i18n="guide.phase2.avoid.1">Trotz hoher Energie: Warm-up nie überspringen</li>
+              <li data-i18n="guide.phase2.avoid.2">Übertraining vermeiden, Ruhetage einplanen</li>
+              <li data-i18n="guide.phase2.avoid.3">Auf Körpersignale achten, nicht nur auf Motivation</li>
             </ul>
           </div>
         </div>
@@ -150,8 +150,8 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <!-- Inline CTA: Mid-page -->
       <div class="pillar-inline-cta animate-in">
         <div class="pillar-cta-card">
-          <h3 class="pillar-cta-title">Trainiere smarter, nicht härter</h3>
-          <p class="pillar-cta-text">
+          <h3 class="pillar-cta-title" data-i18n="guide.cta.title">Trainiere smarter, nicht härter</h3>
+          <p class="pillar-cta-text" data-i18n="guide.cta.text">
             Diamo erstellt dir jeden Tag einen personalisierten Trainingsplan,
             der genau zu deiner aktuellen Zyklusphase passt.
           </p>
@@ -159,7 +159,7 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 5v14M5 12h14"/>
             </svg>
-            <span>Frühzugang sichern</span>
+            <span data-i18n="guide.cta.btn">Frühzugang sichern</span>
           </button>
         </div>
       </div>
@@ -168,15 +168,15 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <section class="pillar-section pillar-phase animate-in">
         <div class="phase-badge phase-badge--ovulation">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
-          <span>Phase 3 · Tag 14–16</span>
+          <span data-i18n="guide.phase3.badge">Phase 3 · Tag 14–16</span>
         </div>
-        <h2 class="pillar-h2">Eisprung: Maximale Performance</h2>
-        <p>
+        <h2 class="pillar-h2" data-i18n="guide.phase3.title">Eisprung: Maximale Performance</h2>
+        <p data-i18n="guide.phase3.p1">
           Der Eisprung markiert den Höhepunkt deines Östrogenspiegels. Das Ergebnis: Du bist in
           Topform. Kraft, Ausdauer und Koordination befinden sich auf ihrem Maximum. Viele
           Spitzensportlerinnen nutzen diese Phase gezielt für persönliche Bestleistungen.
         </p>
-        <p>
+        <p data-i18n="guide.phase3.p2">
           Allerdings gibt es einen wichtigen Aspekt zu beachten: Rund um den Eisprung steigt auch
           die <strong>Verletzungsanfälligkeit der Bänder</strong>, insbesondere des vorderen
           Kreuzbandes (ACL). Studien zeigen, dass das erhöhte Östrogen die Elastizität der Bänder
@@ -188,25 +188,25 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
           <div class="phase-do">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Empfohlene Aktivitäten
+              <span data-i18n="guide.phase3.do.title">Empfohlene Aktivitäten</span>
             </h3>
             <ul>
-              <li>PR-Versuche (Personal Records) im Krafttraining</li>
-              <li>Sprint-Intervalle und plyometrisches Training</li>
-              <li>Intensive Gruppenworkouts</li>
-              <li>Wettkämpfe und Leistungstests</li>
-              <li>Anspruchsvolle Koordinationsübungen</li>
+              <li data-i18n="guide.phase3.do.1">PR-Versuche (Personal Records) im Krafttraining</li>
+              <li data-i18n="guide.phase3.do.2">Sprint-Intervalle und plyometrisches Training</li>
+              <li data-i18n="guide.phase3.do.3">Intensive Gruppenworkouts</li>
+              <li data-i18n="guide.phase3.do.4">Wettkämpfe und Leistungstests</li>
+              <li data-i18n="guide.phase3.do.5">Anspruchsvolle Koordinationsübungen</li>
             </ul>
           </div>
           <div class="phase-avoid">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-              Achtung
+              <span data-i18n="guide.phase3.avoid.title">Achtung</span>
             </h3>
             <ul>
-              <li>Gründliches Aufwärmen ist Pflicht (Bandstabilität)</li>
-              <li>Technik vor Gewicht: saubere Ausführung priorisieren</li>
-              <li>Bei Gelenk-Instabilitäten: Sprungübungen reduzieren</li>
+              <li data-i18n="guide.phase3.avoid.1">Gründliches Aufwärmen ist Pflicht (Bandstabilität)</li>
+              <li data-i18n="guide.phase3.avoid.2">Technik vor Gewicht: saubere Ausführung priorisieren</li>
+              <li data-i18n="guide.phase3.avoid.3">Bei Gelenk-Instabilitäten: Sprungübungen reduzieren</li>
             </ul>
           </div>
         </div>
@@ -216,17 +216,17 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <section class="pillar-section pillar-phase animate-in">
         <div class="phase-badge phase-badge--luteal">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          <span>Phase 4 · Tag 17–28</span>
+          <span data-i18n="guide.phase4.badge">Phase 4 · Tag 17–28</span>
         </div>
-        <h2 class="pillar-h2">Lutealphase: Kraft erhalten & Vorbereitung</h2>
-        <p>
+        <h2 class="pillar-h2" data-i18n="guide.phase4.title">Lutealphase: Kraft erhalten &amp; Vorbereitung</h2>
+        <p data-i18n="guide.phase4.p1">
           Nach dem Eisprung übernimmt Progesteron die Führung. Dieses Hormon bereitet den Körper
           auf eine mögliche Schwangerschaft vor, und das hat spürbare Auswirkungen auf dein
           Training. Die Körpertemperatur steigt leicht an, der Ruhepuls kann erhöht sein, und viele
           Frauen erleben PMS-Symptome wie Blähungen, Stimmungsschwankungen oder erhöhte
           Schmerzempfindlichkeit.
         </p>
-        <p>
+        <p data-i18n="guide.phase4.p2">
           Das Ziel in dieser Phase ist es, <strong>das Erreichte zu erhalten</strong>, ohne den
           Körper zu überlasten. Moderate Intensität ist der Schlüssel. Interessanterweise nutzt
           der Körper in der Lutealphase vermehrt Fett als Energiequelle, ein Vorteil für
@@ -237,25 +237,25 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
           <div class="phase-do">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Empfohlene Aktivitäten
+              <span data-i18n="guide.phase4.do.title">Empfohlene Aktivitäten</span>
             </h3>
             <ul>
-              <li>Moderates Krafttraining (70–80% Intensität)</li>
-              <li>Steady-State Cardio (Joggen, Radfahren)</li>
-              <li>Pilates und Barre-Workouts</li>
-              <li>Yoga-Flows für Flexibilität</li>
-              <li>Lange Spaziergänge und Wandern</li>
+              <li data-i18n="guide.phase4.do.1">Moderates Krafttraining (70–80% Intensität)</li>
+              <li data-i18n="guide.phase4.do.2">Steady-State Cardio (Joggen, Radfahren)</li>
+              <li data-i18n="guide.phase4.do.3">Pilates und Barre-Workouts</li>
+              <li data-i18n="guide.phase4.do.4">Yoga-Flows für Flexibilität</li>
+              <li data-i18n="guide.phase4.do.5">Lange Spaziergänge und Wandern</li>
             </ul>
           </div>
           <div class="phase-avoid">
             <h3 class="phase-list-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
-              Besser vermeiden
+              <span data-i18n="guide.phase4.avoid.title">Besser vermeiden</span>
             </h3>
             <ul>
-              <li>Neue persönliche Bestleistungen erzwingen</li>
-              <li>Hochintensive Intervalle an PMS-Tagen</li>
-              <li>Training bei starker Erschöpfung: Ruhe ist ok!</li>
+              <li data-i18n="guide.phase4.avoid.1">Neue persönliche Bestleistungen erzwingen</li>
+              <li data-i18n="guide.phase4.avoid.2">Hochintensive Intervalle an PMS-Tagen</li>
+              <li data-i18n="guide.phase4.avoid.3">Training bei starker Erschöpfung: Ruhe ist ok!</li>
             </ul>
           </div>
         </div>
@@ -263,8 +263,8 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
 
       <!-- Final CTA -->
       <div class="pillar-final-cta animate-in">
-        <h3 class="pillar-final-title">Bereit, im Einklang mit deinem Körper zu trainieren?</h3>
-        <p class="pillar-final-text">
+        <h3 class="pillar-final-title" data-i18n="guide.final.title">Bereit, im Einklang mit deinem Körper zu trainieren?</h3>
+        <p class="pillar-final-text" data-i18n="guide.final.text">
           Diamo passt dein Training automatisch an deine aktuelle Zyklusphase an.
           Evidenzbasiert, persönlich zugeschnitten, mit einer echten Community.
         </p>
@@ -272,9 +272,9 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 5v14M5 12h14"/>
           </svg>
-          <span>Jetzt Frühzugang sichern</span>
+          <span data-i18n="guide.final.btn">Jetzt Frühzugang sichern</span>
         </button>
-        <p class="pillar-final-note">Kostenlos · Begrenzte Plätze · Jederzeit kündbar</p>
+        <p class="pillar-final-note" data-i18n="guide.final.note">Kostenlos · Begrenzte Plätze · Jederzeit kündbar</p>
       </div>
 
     </div>
