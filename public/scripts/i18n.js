@@ -236,7 +236,7 @@ const translations = {
     // Beta Modal
     'modal.label': 'Beta Program',
     'modal.title': 'Become a Beta Tester.',
-    'modal.description': 'Secure your exclusive spot and shape Diamo from the very start. We read every piece of feedback and build the app together with you.',
+    'modal.description': 'Secure your exclusive spot and shape Diamo from the very start. Your feedback flows directly into development.',
     'modal.placeholder': 'Your email address',
     'modal.submit': 'Secure Beta Access',
     'modal.privacy': 'Limited spots · No spam, ever.',
@@ -482,7 +482,7 @@ const translations = {
     // Beta Modal
     'modal.label': 'Beta-Programm',
     'modal.title': 'Werde Beta-Testerin.',
-    'modal.description': 'Sichere dir deinen exklusiven Platz und gestalte Diamo von Anfang an mit. Wir lesen jedes Feedback und bauen die App gemeinsam mit dir.',
+    'modal.description': 'Sichere dir deinen exklusiven Platz und gestalte Diamo von Anfang an mit. Dein Feedback fließt direkt in die Entwicklung ein.',
     'modal.placeholder': 'Deine E-Mail-Adresse',
     'modal.submit': 'Beta-Zugang sichern',
     'modal.privacy': 'Begrenzte Plätze · Kein Spam, versprochen.',

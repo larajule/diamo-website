@@ -158,7 +158,7 @@ function buildUserConfirmationHtml(
 }
 
 // ═══════════════════════════════════════════════════
-// 1. WAITLIST — neue Wartelisten-Einträge
+// 1. WAITLIST — neue Wartelisten-Einträge & Beta-Tester
 // ═══════════════════════════════════════════════════
 export const onWaitlistEntry = onDocumentCreated(
   {
@@ -170,39 +170,69 @@ export const onWaitlistEntry = onDocumentCreated(
     if (!data) return;
 
     const email = data.email || "—";
+    const source = data.source || "waitlist";
+    const isBetaTester = source === "beta_tester";
     const timestamp = data.createdAt?.toDate
       ? formatDate(data.createdAt.toDate())
       : formatDate(new Date());
 
-    // Admin notification
-    const html = buildEmailHtml("Neue Wartelisten-Anmeldung 🎉", "📋", [
+    // ── Admin notification (adapted per source) ──
+    const adminTitle = isBetaTester
+      ? "Neue Beta-Testerin 🧪"
+      : "Neue Wartelisten-Anmeldung 🎉";
+    const adminEmoji = isBetaTester ? "🧪" : "📋";
+    const adminSubject = isBetaTester
+      ? `🧪 Neue Beta-Testerin: ${email}`
+      : `🆕 Neue Wartelisten-Anmeldung: ${email}`;
+
+    const adminHtml = buildEmailHtml(adminTitle, adminEmoji, [
       { label: "E-Mail", value: email },
-      { label: "Quelle", value: data.source || "waitlist" },
+      { label: "Quelle", value: source },
       { label: "Zeitpunkt", value: timestamp },
     ]);
 
-    await sendNotification(
-      `🆕 Neue Wartelisten-Anmeldung: ${email}`,
-      html
-    );
+    await sendNotification(adminSubject, adminHtml);
 
-    // User confirmation email
+    // ── User confirmation email (adapted per source) ──
     if (email && email !== "—") {
-      const confirmHtml = buildUserConfirmationHtml(
-        "Hey! 💜",
-        `<p style="margin:0 0 16px;">Vielen Dank, dass du dich für die Diamo-Warteliste angemeldet hast! Wir freuen uns riesig, dass du dabei bist.</p>
-        <p style="margin:0 0 16px;">Wir arbeiten gerade mit Hochdruck daran, Diamo für dich fertig zu stellen. Sobald es losgeht, bist du eine der Ersten, die es erfährt. Versprochen!</p>`,
-        `Liebe Grüße,<br>Dein Diamo-Team`
-      );
+      if (isBetaTester) {
+        // VIP Beta-Tester confirmation
+        const confirmHtml = buildUserConfirmationHtml(
+          "Hey! 🧪💜",
+          `<p style="margin:0 0 16px;">Danke, dass du Diamo als Beta-Testerin mitgestaltest! Wir freuen uns riesig, dass du dabei bist.</p>
+          <p style="margin:0 0 16px;">Du bist jetzt Teil einer exklusiven Gruppe, die Diamo vor allen anderen erlebt. Das erwartet dich:</p>
+          <ul style="margin:0 0 16px;padding-left:20px;color:#4a4a4a;">
+            <li style="margin-bottom:8px;">✨ <strong>Kostenloser Zugang</strong> während der gesamten Beta-Phase</li>
+            <li style="margin-bottom:8px;">💬 <strong>Direkter Einfluss</strong> auf Features und Entwicklung</li>
+            <li style="margin-bottom:8px;">🏅 <strong>Founding-Member-Vorteile</strong> zum Launch</li>
+          </ul>
+          <p style="margin:0;">Wir melden uns bei dir, sobald es losgeht. Versprochen!</p>`,
+          `Liebe Grüße,<br>Dein Diamo-Team`
+        );
 
-      await sendConfirmationToUser(
-        email,
-        "Willkommen auf der Diamo-Warteliste! 💜",
-        confirmHtml
-      );
+        await sendConfirmationToUser(
+          email,
+          "Willkommen im Diamo Beta-Programm! 🧪💜",
+          confirmHtml
+        );
+      } else {
+        // Classic waitlist confirmation (unchanged)
+        const confirmHtml = buildUserConfirmationHtml(
+          "Hey! 💜",
+          `<p style="margin:0 0 16px;">Vielen Dank, dass du dich für die Diamo-Warteliste angemeldet hast! Wir freuen uns riesig, dass du dabei bist.</p>
+          <p style="margin:0 0 16px;">Wir arbeiten gerade mit Hochdruck daran, Diamo für dich fertig zu stellen. Sobald es losgeht, bist du eine der Ersten, die es erfährt. Versprochen!</p>`,
+          `Liebe Grüße,<br>Dein Diamo-Team`
+        );
+
+        await sendConfirmationToUser(
+          email,
+          "Willkommen auf der Diamo-Warteliste! 💜",
+          confirmHtml
+        );
+      }
     }
 
-    console.log(`✉️ Waitlist notification + confirmation sent for ${email}`);
+    console.log(`✉️ ${isBetaTester ? "Beta" : "Waitlist"} notification + confirmation sent for ${email}`);
   }
 );
 
