@@ -344,6 +344,9 @@
   // All signups are beta testers — single source, no ambiguity
   const FORM_SOURCE = 'beta_tester' as const;
 
+  // Detect browser language: 'de' for German, 'en' for everything else
+  const userLanguage = (navigator.language?.startsWith('de') ? 'de' : 'en') as const;
+
   // Open modal from any beta-trigger button
   document.querySelectorAll('[data-open-beta]').forEach(el => {
     el.addEventListener('click', (e) => {
@@ -397,11 +400,12 @@
     }
 
     try {
-      // Construct a clean payload with exactly the 3 fields the security rules expect
-      // source is always 'beta_tester' — no other value is used
-      const payload: { email: string; source: string; createdAt: ReturnType<typeof serverTimestamp> } = {
+      // Construct a clean payload with exactly the fields the security rules expect
+      // source is always 'beta_tester', language is 'de' or 'en'
+      const payload: { email: string; source: string; language: string; createdAt: ReturnType<typeof serverTimestamp> } = {
         email: email,
         source: FORM_SOURCE,
+        language: userLanguage,
         createdAt: serverTimestamp(),
       };
       const docRef = await addDoc(collection(db, 'waitlist'), payload);

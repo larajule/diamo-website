@@ -12,6 +12,7 @@ service cloud.firestore {
     //   - email: string (required, valid email, max 320 chars)
     //   - source: string (required, must be 'waitlist' or 'beta_tester')
     //   - createdAt: timestamp (required, server-generated)
+    //   - language: string (optional, 'de' or 'en')
     //
     // Collection: applications
     // Document ID: auto-generated
@@ -58,11 +59,12 @@ service cloud.firestore {
     // ===============================================================
 
     function isValidWaitlistEntry() {
-      return hasOnlyAllowedFields(['email', 'source', 'createdAt']) &&
+      return hasOnlyAllowedFields(['email', 'source', 'createdAt', 'language']) &&
              hasRequiredFields(['email', 'source', 'createdAt']) &&
              isValidEmail(request.resource.data.email) &&
              (request.resource.data.source == 'waitlist' || request.resource.data.source == 'beta_tester') &&
-             request.resource.data.createdAt is timestamp;
+             request.resource.data.createdAt is timestamp &&
+             (!('language' in request.resource.data) || request.resource.data.language in ['de', 'en']);
     }
 
     function isValidApplication() {
