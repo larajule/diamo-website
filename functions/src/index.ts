@@ -178,12 +178,12 @@ export const onWaitlistEntry = onDocumentCreated(
 
     // ── Admin notification (adapted per source) ──
     const adminTitle = isBetaTester
-      ? "Neue Beta-Testerin 🧪"
-      : "Neue Wartelisten-Anmeldung 🎉";
-    const adminEmoji = isBetaTester ? "🧪" : "📋";
+      ? "Neue Beta-Testerin"
+      : "Neue Wartelisten-Anmeldung";
+    const adminEmoji = isBetaTester ? "" : "";
     const adminSubject = isBetaTester
-      ? `🧪 Neue Beta-Testerin: ${email}`
-      : `🆕 Neue Wartelisten-Anmeldung: ${email}`;
+      ? `Neue Beta-Testerin: ${email}`
+      : `Neue Wartelisten-Anmeldung: ${email}`;
 
     const adminHtml = buildEmailHtml(adminTitle, adminEmoji, [
       { label: "E-Mail", value: email },
@@ -193,46 +193,66 @@ export const onWaitlistEntry = onDocumentCreated(
 
     await sendNotification(adminSubject, adminHtml);
 
-    // ── User confirmation email (adapted per source) ──
+    // ── User confirmation email (adapted per source + language) ──
     if (email && email !== "—") {
+      const lang = data.language === "en" ? "en" : "de";
+
       if (isBetaTester) {
-        // VIP Beta-Tester confirmation
         const confirmHtml = buildUserConfirmationHtml(
-          "Hey! 🧪💜",
-          `<p style="margin:0 0 16px;">Danke, dass du Diamo als Beta-Testerin mitgestaltest! Wir freuen uns riesig, dass du dabei bist.</p>
-          <p style="margin:0 0 16px;">Du bist jetzt Teil einer exklusiven Gruppe, die Diamo vor allen anderen erlebt. Das erwartet dich:</p>
-          <ul style="margin:0 0 16px;padding-left:20px;color:#4a4a4a;">
-            <li style="margin-bottom:8px;">✨ <strong>Kostenloser Zugang</strong> während der gesamten Beta-Phase</li>
-            <li style="margin-bottom:8px;">💬 <strong>Direkter Einfluss</strong> auf Features und Entwicklung</li>
-            <li style="margin-bottom:8px;">🏅 <strong>Founding-Member-Vorteile</strong> zum Launch</li>
-          </ul>
-          <p style="margin:0;">Wir melden uns bei dir, sobald es losgeht. Versprochen!</p>`,
-          `Liebe Grüße,<br>Dein Diamo-Team`
+          "Hey! 💜",
+          lang === "en"
+            ? `<p style="margin:0 0 16px;">Thank you for joining Diamo as a beta tester! We're thrilled to have you on board.</p>
+            <p style="margin:0 0 16px;">You're now part of an exclusive group that gets to experience Diamo before everyone else. Here's what awaits you:</p>
+            <ul style="margin:0 0 16px;padding-left:20px;color:#4a4a4a;">
+              <li style="margin-bottom:8px;"><strong>Free access</strong> throughout the entire beta phase</li>
+              <li style="margin-bottom:8px;"><strong>Direct influence</strong> on features and development</li>
+              <li style="margin-bottom:8px;"><strong>Founding member perks</strong> at launch</li>
+            </ul>
+            <p style="margin:0;">We'll reach out to you as soon as it's time to start. Promise!</p>`
+            : `<p style="margin:0 0 16px;">Danke, dass du Diamo als Beta-Testerin mitgestaltest! Wir freuen uns riesig, dass du dabei bist.</p>
+            <p style="margin:0 0 16px;">Du bist jetzt Teil einer exklusiven Gruppe, die Diamo vor allen anderen erlebt. Das erwartet dich:</p>
+            <ul style="margin:0 0 16px;padding-left:20px;color:#4a4a4a;">
+              <li style="margin-bottom:8px;"><strong>Kostenloser Zugang</strong> während der gesamten Beta-Phase</li>
+              <li style="margin-bottom:8px;"><strong>Direkter Einfluss</strong> auf Features und Entwicklung</li>
+              <li style="margin-bottom:8px;"><strong>Founding-Member-Vorteile</strong> zum Launch</li>
+            </ul>
+            <p style="margin:0;">Wir melden uns bei dir, sobald es losgeht. Versprochen!</p>`,
+          lang === "en"
+            ? `Best regards,<br>Your Diamo Team`
+            : `Liebe Grüße,<br>Dein Diamo-Team`
         );
 
         await sendConfirmationToUser(
           email,
-          "Willkommen im Diamo Beta-Programm! 🧪💜",
+          lang === "en"
+            ? "Welcome to the Diamo Beta Program!"
+            : "Willkommen im Diamo Beta-Programm!",
           confirmHtml
         );
       } else {
-        // Classic waitlist confirmation (unchanged)
         const confirmHtml = buildUserConfirmationHtml(
           "Hey! 💜",
-          `<p style="margin:0 0 16px;">Vielen Dank, dass du dich für die Diamo-Warteliste angemeldet hast! Wir freuen uns riesig, dass du dabei bist.</p>
-          <p style="margin:0 0 16px;">Wir arbeiten gerade mit Hochdruck daran, Diamo für dich fertig zu stellen. Sobald es losgeht, bist du eine der Ersten, die es erfährt. Versprochen!</p>`,
-          `Liebe Grüße,<br>Dein Diamo-Team`
+          lang === "en"
+            ? `<p style="margin:0 0 16px;">Thank you for signing up for the Diamo waitlist! We're thrilled to have you on board.</p>
+            <p style="margin:0 0 16px;">We're working hard to get Diamo ready for you. As soon as it's time, you'll be one of the first to know. Promise!</p>`
+            : `<p style="margin:0 0 16px;">Vielen Dank, dass du dich für die Diamo-Warteliste angemeldet hast! Wir freuen uns riesig, dass du dabei bist.</p>
+            <p style="margin:0 0 16px;">Wir arbeiten gerade mit Hochdruck daran, Diamo für dich fertig zu stellen. Sobald es losgeht, bist du eine der Ersten, die es erfährt. Versprochen!</p>`,
+          lang === "en"
+            ? `Best regards,<br>Your Diamo Team`
+            : `Liebe Grüße,<br>Dein Diamo-Team`
         );
 
         await sendConfirmationToUser(
           email,
-          "Willkommen auf der Diamo-Warteliste! 💜",
+          lang === "en"
+            ? "Welcome to the Diamo Waitlist!"
+            : "Willkommen auf der Diamo-Warteliste!",
           confirmHtml
         );
       }
     }
 
-    console.log(`✉️ ${isBetaTester ? "Beta" : "Waitlist"} notification + confirmation sent for ${email}`);
+    console.log(`${isBetaTester ? "Beta" : "Waitlist"} notification + confirmation sent for ${email}`);
   }
 );
 
@@ -256,7 +276,7 @@ export const onBetaApplication = onDocumentCreated(
       : formatDate(new Date());
 
     // Admin notification
-    const html = buildEmailHtml("Neue Beta-Tester Bewerbung 🧪", "🧪", [
+    const html = buildEmailHtml("Neue Beta-Tester Bewerbung", "", [
       { label: "Name", value: name },
       { label: "E-Mail", value: email },
       { label: "Motivation", value: motivation },
@@ -264,29 +284,38 @@ export const onBetaApplication = onDocumentCreated(
     ]);
 
     await sendNotification(
-      `🧪 Neue Beta-Bewerbung von ${name} (${email})`,
+      `Neue Beta-Bewerbung von ${name} (${email})`,
       html
     );
 
     // User confirmation email
     if (email && email !== "—") {
-      const displayName = name !== "—" ? name : "du";
+      const lang = data.language === "en" ? "en" : "de";
+      const displayName = name !== "—" ? name : (lang === "en" ? "there" : "du");
       const confirmHtml = buildUserConfirmationHtml(
-        `Hey ${displayName}! 🧪`,
-        `<p style="margin:0 0 16px;">Vielen Dank für deine Bewerbung als Beta-Testerin! Wir freuen uns sehr über dein Interesse an Diamo.</p>
-        <p style="margin:0 0 16px;">Wir schauen uns deine Bewerbung an und melden uns bald bei dir. Als Beta-Testerin bekommst du kostenlosen Zugang, kannst Features mitgestalten und sicherst dir Founding-Member-Vorteile zum Launch.</p>
-        <p style="margin:0;">Wir können es kaum erwarten, dich an Bord zu haben!</p>`,
-        `Liebe Grüße,<br>Dein Diamo-Team`
+        `Hey ${displayName}! 💜`,
+        lang === "en"
+          ? `<p style="margin:0 0 16px;">Thank you for applying as a beta tester! We're very excited about your interest in Diamo.</p>
+          <p style="margin:0 0 16px;">We'll review your application and get back to you soon. As a beta tester, you'll get free access, shape features with your feedback, and earn founding member perks at launch.</p>
+          <p style="margin:0;">We can't wait to have you on board!</p>`
+          : `<p style="margin:0 0 16px;">Vielen Dank für deine Bewerbung als Beta-Testerin! Wir freuen uns sehr über dein Interesse an Diamo.</p>
+          <p style="margin:0 0 16px;">Wir schauen uns deine Bewerbung an und melden uns bald bei dir. Als Beta-Testerin bekommst du kostenlosen Zugang, kannst Features mitgestalten und sicherst dir Founding-Member-Vorteile zum Launch.</p>
+          <p style="margin:0;">Wir können es kaum erwarten, dich an Bord zu haben!</p>`,
+        lang === "en"
+          ? `Best regards,<br>Your Diamo Team`
+          : `Liebe Grüße,<br>Dein Diamo-Team`
       );
 
       await sendConfirmationToUser(
         email,
-        "Deine Beta-Bewerbung bei Diamo 🧪",
+        lang === "en"
+          ? "Your Beta Application at Diamo"
+          : "Deine Beta-Bewerbung bei Diamo",
         confirmHtml
       );
     }
 
-    console.log(`✉️ Beta application notification + confirmation sent for ${email}`);
+    console.log(`Beta application notification + confirmation sent for ${email}`);
   }
 );
 
@@ -310,7 +339,7 @@ export const onTeamApplication = onDocumentCreated(
       : formatDate(new Date());
 
     // Admin notification
-    const html = buildEmailHtml("Neue Team-Bewerbung 🚀", "💼", [
+    const html = buildEmailHtml("Neue Team-Bewerbung", "", [
       { label: "Name", value: name },
       { label: "E-Mail", value: email },
       { label: "Nachricht", value: message },
@@ -318,27 +347,35 @@ export const onTeamApplication = onDocumentCreated(
     ]);
 
     await sendNotification(
-      `💼 Neue Team-Bewerbung von ${name} (${email})`,
+      `Neue Team-Bewerbung von ${name} (${email})`,
       html
     );
 
     // User confirmation email
     if (email && email !== "—") {
-      const displayName = name !== "—" ? name : "du";
+      const lang = data.language === "en" ? "en" : "de";
+      const displayName = name !== "—" ? name : (lang === "en" ? "there" : "du");
       const confirmHtml = buildUserConfirmationHtml(
-        `Hey ${displayName}! 💼`,
-        `<p style="margin:0 0 16px;">Vielen Dank für deine Bewerbung bei Diamo! Wir freuen uns, dass du Teil unseres Teams werden möchtest.</p>
-        <p style="margin:0;">Wir schauen uns deine Bewerbung sorgfältig an und melden uns innerhalb weniger Tage bei dir.</p>`,
-        `Liebe Grüße,<br>Dein Diamo-Team`
+        `Hey ${displayName}! 💜`,
+        lang === "en"
+          ? `<p style="margin:0 0 16px;">Thank you for applying to Diamo! We're excited that you want to be part of our team.</p>
+          <p style="margin:0;">We'll carefully review your application and get back to you within a few days.</p>`
+          : `<p style="margin:0 0 16px;">Vielen Dank für deine Bewerbung bei Diamo! Wir freuen uns, dass du Teil unseres Teams werden möchtest.</p>
+          <p style="margin:0;">Wir schauen uns deine Bewerbung sorgfältig an und melden uns innerhalb weniger Tage bei dir.</p>`,
+        lang === "en"
+          ? `Best regards,<br>Your Diamo Team`
+          : `Liebe Grüße,<br>Dein Diamo-Team`
       );
 
       await sendConfirmationToUser(
         email,
-        "Deine Bewerbung bei Diamo 💼",
+        lang === "en"
+          ? "Your Application at Diamo"
+          : "Deine Bewerbung bei Diamo",
         confirmHtml
       );
     }
 
-    console.log(`✉️ Team application notification + confirmation sent for ${email}`);
+    console.log(`Team application notification + confirmation sent for ${email}`);
   }
 );

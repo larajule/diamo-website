@@ -406,12 +406,14 @@
     }
 
     try {
-      // Construct a clean payload with exactly the 5 fields the security rules expect
-      const payload: { name: string; email: string; message: string; source: string; createdAt: ReturnType<typeof serverTimestamp> } = {
+      // Construct a clean payload with exactly the fields the security rules expect
+      const pageLanguage = document.documentElement.lang === 'de' ? 'de' : 'en';
+      const payload: { name: string; email: string; message: string; source: string; language: string; createdAt: ReturnType<typeof serverTimestamp> } = {
         name: name,
         email: email,
         message: message,
         source: 'team-application',
+        language: pageLanguage,
         createdAt: serverTimestamp(),
       };
       const docRef = await addDoc(collection(db, 'applications'), payload);

@@ -52,7 +52,7 @@
         
         <div class="modal-success" id="modal-success" style="display:none;">
           <div class="success-icon">✓</div>
-          <h3 data-i18n="modal.success.title">Du bist dabei! 🎉</h3>
+          <h3 data-i18n="modal.success.title">Du bist dabei!</h3>
           <p data-i18n="modal.success.desc">Wir melden uns bei dir, sobald es losgeht.</p>
         </div>
       </div>
@@ -344,8 +344,8 @@
   // All signups are beta testers — single source, no ambiguity
   const FORM_SOURCE = 'beta_tester' as const;
 
-  // Detect browser language: 'de' for German, 'en' for everything else
-  const userLanguage = (navigator.language?.startsWith('de') ? 'de' : 'en') as const;
+  // Detect page language from the i18n system (html lang attribute)
+  const userLanguage = (document.documentElement.lang === 'de' ? 'de' : 'en') as const;
 
   // Open modal from any beta-trigger button
   document.querySelectorAll('[data-open-beta]').forEach(el => {

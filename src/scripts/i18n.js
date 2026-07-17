@@ -240,7 +240,7 @@ const translations = {
     'modal.placeholder': 'Your email address',
     'modal.submit': 'Secure Beta Access',
     'modal.privacy': 'Limited spots · No spam, ever.',
-    'modal.success.title': 'You\'re in! 🎉',
+    'modal.success.title': 'You\'re in!',
     'modal.success.desc': 'We\'ll reach out to you when it\'s time to start.',
 
     // Beta Tester Modal
@@ -486,7 +486,7 @@ const translations = {
     'modal.placeholder': 'Deine E-Mail-Adresse',
     'modal.submit': 'Beta-Zugang sichern',
     'modal.privacy': 'Begrenzte Plätze · Kein Spam, versprochen.',
-    'modal.success.title': 'Du bist dabei! 🎉',
+    'modal.success.title': 'Du bist dabei!',
     'modal.success.desc': 'Wir melden uns bei dir, sobald es losgeht.',
 
     // Beta Tester Modal

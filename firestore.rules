@@ -68,13 +68,14 @@ service cloud.firestore {
     }
 
     function isValidApplication() {
-      return hasOnlyAllowedFields(['name', 'email', 'message', 'source', 'createdAt']) &&
+      return hasOnlyAllowedFields(['name', 'email', 'message', 'source', 'createdAt', 'language']) &&
              hasRequiredFields(['name', 'email', 'message', 'source', 'createdAt']) &&
              validStringLength('name', 1, 100) &&
              isValidEmail(request.resource.data.email) &&
              validStringLength('message', 1, 5000) &&
              request.resource.data.source == 'team-application' &&
-             request.resource.data.createdAt is timestamp;
+             request.resource.data.createdAt is timestamp &&
+             (!('language' in request.resource.data) || request.resource.data.language in ['de', 'en']);
     }
 
     // ===============================================================
