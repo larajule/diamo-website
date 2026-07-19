@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import heroScreen from '../assets/screenshots/home-v2.png';
+import heroScreen from '../assets/screenshots/home-v2.PNG';
 ---
 
 <section class="hero" id="hero">
@@ -61,6 +61,7 @@ import heroScreen from '../assets/screenshots/home-v2.png';
     <div class="hero-visual animate-in">
       <div class="phone-mockup">
         <div class="phone-frame">
+          <div class="hero-dynamic-island"></div>
           <Image src={heroScreen} alt="Diamo App Startbildschirm" class="phone-screen" loading="eager" />
         </div>
       </div>
@@ -273,6 +274,7 @@ import heroScreen from '../assets/screenshots/home-v2.png';
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -90px;
   }
 
   .phone-mockup {
@@ -284,12 +286,39 @@ import heroScreen from '../assets/screenshots/home-v2.png';
   .phone-frame {
     position: relative;
     width: 280px;
-    background: var(--soft-black);
+    background: #1a1a1a;
     border-radius: 38px;
     padding: 10px;
     box-shadow: 
-      0 16px 48px rgba(0, 32, 96, 0.2),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+      0 24px 70px rgba(0, 0, 0, 0.22),
+      0 10px 24px rgba(0, 0, 0, 0.14),
+      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
+    border-radius: 38px;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .hero-dynamic-island {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 20px;
+    background: #000;
+    border-radius: 12px;
+    z-index: 4;
   }
 
   .phone-screen {
