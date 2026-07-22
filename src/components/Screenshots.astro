@@ -87,9 +87,9 @@ import personalScreen from '../assets/screenshots/personal.PNG';
   }
 
   .screenshots-showcase {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
     justify-content: center;
-    align-items: flex-end;
     gap: var(--space-lg);
     padding-bottom: var(--space-lg);
   }
@@ -102,20 +102,21 @@ import personalScreen from '../assets/screenshots/personal.PNG';
     transition: transform 0.3s ease;
   }
 
-  .screenshot-item:hover {
+  .screenshot-item:hover .phone-wrapper {
     transform: translateY(-8px);
   }
 
-  .screenshot-item.elevated {
+  .screenshot-item.elevated .phone-wrapper {
     transform: translateY(-16px);
   }
 
-  .screenshot-item.elevated:hover {
+  .screenshot-item.elevated:hover .phone-wrapper {
     transform: translateY(-24px);
   }
 
   .phone-wrapper {
     position: relative;
+    transition: transform 0.3s ease;
   }
 
   .mini-phone {
@@ -138,6 +139,7 @@ import personalScreen from '../assets/screenshots/personal.PNG';
   .screenshot-info {
     text-align: center;
     max-width: 180px;
+    min-height: 90px;
   }
 
   .screenshot-info h4 {

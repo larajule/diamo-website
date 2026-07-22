@@ -358,9 +358,18 @@ import heroScreen from '../assets/screenshots/home-v2.PNG';
     .hero-content {
       grid-template-columns: 1fr;
       text-align: center;
-      gap: var(--space-md);
-      padding-top: var(--space-md);
+      gap: var(--space-sm);
+      padding-top: var(--space-sm);
       padding-bottom: var(--space-sm);
+    }
+
+    .hero-visual {
+      order: -1;
+      margin-top: 0;
+    }
+
+    .hero-text {
+      order: 2;
     }
 
     .hero-badge {
@@ -385,17 +394,16 @@ import heroScreen from '../assets/screenshots/home-v2.PNG';
       margin-bottom: var(--space-sm);
     }
 
-    .hero-stats {
-      justify-content: center;
-      gap: var(--space-sm);
+    .hero-geo-definition {
+      display: none;
     }
 
-    .hero-visual {
-      order: 1;
+    .hero-stats {
+      display: none;
     }
 
     .phone-frame {
-      width: 180px;
+      width: 220px;
     }
 
     .hero-title {
@@ -406,14 +414,6 @@ import heroScreen from '../assets/screenshots/home-v2.PNG';
     .btn-hero-cta {
       padding: 1rem 2rem;
       font-size: 0.95rem;
-    }
-
-    .stat-value {
-      font-size: 1.1rem;
-    }
-
-    .stat-label {
-      font-size: 0.65rem;
     }
   }
 </style>

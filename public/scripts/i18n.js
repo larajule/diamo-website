@@ -275,7 +275,7 @@ const translations = {
     'nav.team': 'Team',
     'nav.about': 'Über uns',
     'nav.guide': 'Guide',
-    'nav.cta': 'Beta-Tester werden',
+    'nav.cta': 'Beta-Testerin werden',
 
     // Guide Page (Zyklusbasiertes Training)
     'guide.label': 'Fitness-Guide',
