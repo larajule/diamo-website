@@ -171,13 +171,13 @@ const translations = {
     // Team
     'team.label': 'The Team',
     'team.title': 'Made by women,<br/>for women.',
-    'team.subtitle': 'A team combining management expertise, medical knowledge, and creativity to redefine women\'s health.',
-    'team.marie.name': 'Marie Westermann',
-    'team.marie.role': 'Strategy & Ops',
-    'team.marie.bio': 'Marie brings deep experience from operational consulting at Inverto/BCG and a strong VC background at Coparion. As a licensed fitness trainer, she combines analytical thinking with a genuine understanding of movement and women\'s health.',
+    'team.subtitle': 'We built Diamo because we were frustrated ourselves: no fitness app understood that our cycle, our everyday life, and our energy levels are deeply connected. We wanted a solution that finally brings it all together — including a real-life community that happens offline.',
     'team.lara.name': 'Lara Bullemer',
     'team.lara.role': 'Creative & Growth',
-    'team.lara.bio': 'Lara combines media creation (B.A. Digital Media, Film & Web) and strategic business know-how (M.A.) with deep body knowledge as an aspiring naturopath. She understands how to make data visible and build brands with meaning.',
+    'team.lara.bio': 'Lara brings together media creation (B.A. Digital Media, Film & Web) and strategic business thinking (M.A.) with deep body knowledge as an aspiring naturopath. She knows how to make complex health data feel intuitive and builds brands that truly resonate.',
+    'team.marie.name': 'Marie Westermann',
+    'team.marie.role': 'Strategy & Ops',
+    'team.marie.bio': 'Marie combines deep experience from operational consulting at Inverto/BCG and a strong VC background at Coparion with her passion as a licensed fitness trainer. She bridges analytical precision with a genuine love for movement and women\'s health.',
 
     // Beta Signup
     'beta.label': 'Beta Program',
@@ -431,13 +431,13 @@ const translations = {
     // Team
     'team.label': 'Das Team',
     'team.title': 'Von Frauen<br/>für Frauen.',
-    'team.subtitle': 'Ein Team, das Management-Expertise, medizinisches Wissen und Kreativität vereint, um Frauengesundheit neu zu definieren.',
-    'team.marie.name': 'Marie Westermann',
-    'team.marie.role': 'Strategy & Ops',
-    'team.marie.bio': 'Marie bringt tiefgreifende Erfahrung aus der operativen Beratung bei Inverto/BCG und einen starken VC-Background bei Coparion mit. Als lizenzierte Fitnesstrainerin verbindet sie analytisches Denken mit echtem Verständnis für Bewegung und weibliche Gesundheit.',
+    'team.subtitle': 'Wir haben Diamo gegründet, weil wir selbst frustriert waren: Keine Fitness-App versteht, dass unser Zyklus, unser Alltag und unser Energielevel zusammengehören. Wir wollten endlich eine Lösung, die all das verbindet — inklusive einer echten Community, die offline stattfindet.',
     'team.lara.name': 'Lara Bullemer',
     'team.lara.role': 'Creative & Growth',
-    'team.lara.bio': 'Lara vereint Medien-Kreation (B.A. Digital Media, Film & Web) und strategisches Business-Know-how (M.A.) mit tiefem Körperwissen als angehende Heilpraktikerin. Sie versteht, wie man Daten sichtbar macht und Marken mit Bedeutung aufbaut.',
+    'team.lara.bio': 'Lara vereint Medien-Kreation (B.A. Digital Media, Film & Web) und strategisches Business-Know-how (M.A.) mit tiefem Körperwissen als angehende Heilpraktikerin. Sie versteht es, komplexe Gesundheitsdaten greifbar zu machen und Marken aufzubauen, die wirklich berühren.',
+    'team.marie.name': 'Marie Westermann',
+    'team.marie.role': 'Strategy & Ops',
+    'team.marie.bio': 'Marie verbindet tiefgreifende Erfahrung aus der operativen Beratung bei Inverto/BCG und einen starken VC-Background bei Coparion mit ihrer Leidenschaft als lizenzierte Fitnesstrainerin. Sie bringt analytische Stärke und echte Liebe für Bewegung und Frauengesundheit zusammen.',
 
     // Beta Signup
     'beta.label': 'Beta-Programm',
