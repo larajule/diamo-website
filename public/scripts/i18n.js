@@ -173,11 +173,11 @@ const translations = {
     'team.title': 'Made by women,<br/>for women.',
     'team.subtitle': 'We built Diamo because we were frustrated ourselves: no fitness app understood that our cycle, our everyday life, and our energy levels are deeply connected. We wanted a solution that finally brings it all together — including a real-life community that happens offline.',
     'team.lara.name': 'Lara Bullemer',
-    'team.lara.role': 'Creative & Growth',
-    'team.lara.bio': 'Lara brings together media creation (B.A. Digital Media, Film & Web) and strategic business thinking (M.A.) with deep body knowledge as an aspiring naturopath. She knows how to make complex health data feel intuitive and builds brands that truly resonate.',
+    'team.lara.role': 'Co-Founder',
+    'team.lara.bio': '"Hi, I\'m Lara! As an aspiring naturopath, my greatest passion is making real knowledge about the female body accessible. Before founding Diamo, I worked in the film industry and digital brand strategy — complemented by my Master\'s in Business. For me, health doesn\'t have to be clinical and dry. I want Diamo to combine scientific depth with the design and feel of a modern lifestyle brand."',
     'team.marie.name': 'Marie Westermann',
-    'team.marie.role': 'Strategy & Ops',
-    'team.marie.bio': 'Marie combines deep experience from operational consulting at Inverto/BCG and a strong VC background at Coparion with her passion as a licensed fitness trainer. She bridges analytical precision with a genuine love for movement and women\'s health.',
+    'team.marie.role': 'Co-Founder',
+    'team.marie.bio': '"I\'m Marie and I take care of strategy and operations at Diamo. My professional journey started in management consulting (Inverto/BCG) and venture capital (Coparion), where I learned to think analytically and big. But my true passion has always been sports. As a licensed fitness trainer, I know exactly what our bodies need. At Diamo, I now bring both worlds together: logic and a genuine love for movement."',
 
     // Beta Signup
     'beta.label': 'Beta Program',
@@ -433,11 +433,11 @@ const translations = {
     'team.title': 'Von Frauen<br/>für Frauen.',
     'team.subtitle': 'Wir haben Diamo gegründet, weil wir selbst frustriert waren: Keine Fitness-App versteht, dass unser Zyklus, unser Alltag und unser Energielevel zusammengehören. Wir wollten endlich eine Lösung, die all das verbindet — inklusive einer echten Community, die offline stattfindet.',
     'team.lara.name': 'Lara Bullemer',
-    'team.lara.role': 'Creative & Growth',
-    'team.lara.bio': 'Lara vereint Medien-Kreation (B.A. Digital Media, Film & Web) und strategisches Business-Know-how (M.A.) mit tiefem Körperwissen als angehende Heilpraktikerin. Sie versteht es, komplexe Gesundheitsdaten greifbar zu machen und Marken aufzubauen, die wirklich berühren.',
+    'team.lara.role': 'Co-Founderin',
+    'team.lara.bio': '„Hi, ich bin Lara! Als angehende Heilpraktikerin ist es meine größte Leidenschaft, echtes Wissen über den weiblichen Körper zugänglich zu machen. Bevor ich Diamo gegründet habe, war ich in der Filmbranche und in der digitalen Markenführung unterwegs – ergänzt durch meinen BWL-Master. Für mich muss Gesundheit nicht klinisch und trocken sein. Ich möchte, dass Diamo wissenschaftlichen Tiefgang mit dem Design und dem Gefühl einer modernen Lifestyle-Brand vereint."',
     'team.marie.name': 'Marie Westermann',
-    'team.marie.role': 'Strategy & Ops',
-    'team.marie.bio': 'Marie verbindet tiefgreifende Erfahrung aus der operativen Beratung bei Inverto/BCG und einen starken VC-Background bei Coparion mit ihrer Leidenschaft als lizenzierte Fitnesstrainerin. Sie bringt analytische Stärke und echte Liebe für Bewegung und Frauengesundheit zusammen.',
+    'team.marie.role': 'Co-Founderin',
+    'team.marie.bio': '„Ich bin Marie und kümmere mich bei Diamo um die Strategie und die operativen Abläufe. Meine berufliche Reise startete in der Unternehmensberatung (Inverto/BCG) und im Venture-Capital (Coparion), wo ich gelernt habe, Dinge analytisch und groß zu denken. Meine wahre Leidenschaft lag aber schon immer im Sport. Als lizenzierte Fitnesstrainerin weiß ich genau, was unser Körper braucht. Bei Diamo bringe ich nun beide Welten zusammen: Logik und echte Liebe zur Bewegung."',
 
     // Beta Signup
     'beta.label': 'Beta-Programm',
