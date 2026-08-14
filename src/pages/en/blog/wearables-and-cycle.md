@@ -1,9 +1,9 @@
 ---
 layout: '../../../layouts/BlogPostLayout.astro'
 title: 'The Perfect Team: How to Combine Wearable Data and Your Cycle for Optimal Training'
-description: 'Apple Watch, Oura and more deliver amazing body data. Learn how Diamo translates these values into real, cycle-synced training for women.'
+description: 'Apple Watch, Oura and more deliver amazing body data. Learn how diamo translates these values into real, cycle-synced training for women.'
 pubDate: '2026-05-25'
-author: 'Diamo Team'
+author: 'diamo Team'
 tags: ["Women's Health", 'Cycle Training', 'Wearables', 'Biohacking', 'Fitness']
 ---
 
@@ -28,17 +28,17 @@ The uniqueness of the female body, however, is that our "baseline" isn't the sam
 
 When your wearable shows you a slightly elevated resting heart rate during the luteal phase, it's not a sign of poor recovery or oncoming illness. It's simply your biology doing exactly what it should.
 
-## 2. Diamo: The Translator for Your Tracker Data
+## 2. diamo: The Translator for Your Tracker Data
 
-This is exactly the interface we developed **Diamo** for. Diamo is the *cycle training app for women* that takes your wearable data and views it through the lens of the female cycle.
+This is exactly the interface we developed **diamo** for. diamo is the *cycle training app for women* that takes your wearable data and views it through the lens of the female cycle.
 
-We celebrate the technology of the major hardware providers and position ourselves as a specialized software layer exactly where raw data stops. Diamo connects the precise measurements of your tracker with your personal rhythm:
+We celebrate the technology of the major hardware providers and position ourselves as a specialized software layer exactly where raw data stops. diamo connects the precise measurements of your tracker with your personal rhythm:
 
 * Your watch delivers exact sleep and pulse values.
-* Diamo knows which cycle day you're on and properly contextualizes these values.
+* diamo knows which cycle day you're on and properly contextualizes these values.
 * The result: An up-to-date training plan perfectly tailored to you.
 
-Instead of being frustrated because an algorithm recommends peak performance during your luteal phase, Diamo helps you work in sync with your data *and* your hormones.
+Instead of being frustrated because an algorithm recommends peak performance during your luteal phase, diamo helps you work in sync with your data *and* your hormones.
 
 ## 3. Cycle-Based Training: Reaching Your Goals in a Healthier Way
 
@@ -47,14 +47,14 @@ Through the synergy of smart hardware and our cycle software, real female biohac
 * **During the follicular and ovulation phases**, we use your strong vital signs to push you to your limits. Now is the time for heavy strength training and fast intervals.
 * **During the late luteal phase**, we correctly interpret the changed tracker data and reduce intensity. The app helps you avoid flooding your body with additional stress hormones, which protects muscle building long-term and prevents deep exhaustion.
 
-## 4. From Data to Community: The Diamo Tribes
+## 4. From Data to Community: The diamo Girls
 
-While your wearables perfectly support you in collecting data, Diamo provides the human element. Our "Offline First" approach uses your insights to match you with local **Run Clubs** and fitness tribes in your city.
+While your wearables perfectly support you in collecting data, diamo provides the human element. Our "Offline First" approach uses your insights to match you with local **Run Clubs** and fitness tribes in your city.
 
 You meet women who are in a similar cycle phase and at a similar energy level as you today. This turns solo tracking into a real, motivating community experience.
 
 ## Conclusion: The Best of Both Worlds
 
-You don't have to choose between precise technology and female intuition. The future of women's health lies in the perfect symbiosis of both. Use the brilliance of your Oura Ring or Apple Watch and let Diamo show you what these data really mean for your cycle-based training.
+You don't have to choose between precise technology and female intuition. The future of women's health lies in the perfect symbiosis of both. Use the brilliance of your Oura Ring or Apple Watch and let diamo show you what these data really mean for your cycle-based training.
 
-**Ready for the next level of your training?** Sign up now at [diamo.club](https://diamo.club), secure your spot on the waitlist for early access, and experience a completely new, smart era of fitness with Diamo!
+**Ready for the next level of your training?** Sign up now at [diamo.club](https://diamo.club), secure your spot on the waitlist for early access, and experience a completely new, smart era of fitness with diamo!

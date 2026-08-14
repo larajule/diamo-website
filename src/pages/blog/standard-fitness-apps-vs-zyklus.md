@@ -1,9 +1,9 @@
 ---
 layout: '../../layouts/BlogPostLayout.astro'
 title: 'Warum Standard-Fitness-Apps für Frauen nicht funktionieren (und die Alternative)'
-description: 'Starre Trainingspläne ignorieren den weiblichen Zyklus. Erfahre, warum das scheitert und wie Diamo dein Training endlich an deine Biologie anpasst.'
+description: 'Starre Trainingspläne ignorieren den weiblichen Zyklus. Erfahre, warum das scheitert und wie diamo dein Training endlich an deine Biologie anpasst.'
 pubDate: '2026-06-05'
-author: 'Diamo Team'
+author: 'diamo Team'
 tags: ['Frauengesundheit', 'Fitness-Apps', 'Zyklusbasiertes Training', 'Trainingsplanung', 'Biohacking']
 ---
 
@@ -67,15 +67,15 @@ Deine Apple Watch oder dein Oura Ring liefern fantastische Rohdaten. Aber ohne d
 
 Die richtige App nimmt diese Daten und interpretiert sie durch die **Linse der weiblichen Physiologie**, nicht durch einen Algorithmus, der für den männlichen Durchschnitt kalibriert wurde.
 
-## Schluss mit dem Frust: Deshalb bauen wir Diamo
+## Schluss mit dem Frust: Deshalb bauen wir diamo
 
-Genau für diese Lücke gibt es **Diamo**. Wir bauen die Fitness-App, die sich an deinen Körper anpasst, nicht umgekehrt.
+Genau für diese Lücke gibt es **diamo**. Wir bauen die Fitness-App, die sich an deinen Körper anpasst, nicht umgekehrt.
 
-Diamo verbindet drei Elemente, die es so noch nicht gibt:
+diamo verbindet drei Elemente, die es so noch nicht gibt:
 
 - **Zykus-synchrone Workouts:** Jeden Tag ein Trainingsplan, der zu deiner aktuellen Zyklusphase und deinem Energielevel passt. In der Follikelphase pushed dich die App. In der Lutealphase schützt sie dich.
-- **Wearable-Kontext:** Deine Smartwatch-Daten werden nicht einfach angezeigt, sie werden *verstanden*. Diamo weiß, was ein erhöhter Puls am Tag 22 bedeutet, und passt dein Training entsprechend an.
-- **Echte Community:** Unsere lokalen *Tribes* verbinden dich mit Frauen in deiner Stadt, die sich in einer ähnlichen Phase befinden. Gemeinsame Run Clubs, geteilte Energie, echte Motivation. **Offline first.**
+- **Wearable-Kontext:** Deine Smartwatch-Daten werden nicht einfach angezeigt, sie werden *verstanden*. diamo weiß, was ein erhöhter Puls am Tag 22 bedeutet, und passt dein Training entsprechend an.
+- **Echte Community:** Unsere lokalen *Girls* verbinden dich mit Frauen in deiner Stadt, die sich in einer ähnlichen Phase befinden. Gemeinsame Run Clubs, geteilte Energie, echte Motivation. **Offline first.**
 
 Wir glauben, dass die Zukunft der Frauengesundheit nicht in noch mehr Daten liegt, sondern in der **richtigen Interpretation** dieser Daten. Und in einer Community, die versteht, dass dein bestes Training nicht jeden Tag gleich aussehen muss.
 

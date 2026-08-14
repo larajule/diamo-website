@@ -9,33 +9,10 @@
         Von Frauen<br/>für Frauen
       </h2>
       <p class="section-subtitle animate-in" data-i18n="team.subtitle">
-        Wir haben Diamo gegründet, weil wir selbst frustriert waren: Keine Fitness-App versteht, 
+        Wir haben diamo gegründet, weil wir selbst frustriert waren: Keine Fitness-App versteht, 
         dass unser Zyklus, unser Alltag und unser Energielevel zusammengehören. Wir wollten endlich 
         eine Lösung, die all das verbindet — inklusive einer echten Community, die offline stattfindet.
       </p>
-    </div>
-    
-    <div class="founders animate-in">
-      <div class="founders-image-wrapper">
-        <img src="/images/marie-lara.jpg" alt="Lara Bullemer und Marie Westermann – die Gründerinnen von Diamo" class="founders-image" loading="lazy" />
-      </div>
-      <div class="founders-content">
-        <div class="founder-block">
-          <h3 class="founder-name" data-i18n="team.lara.name">Lara Bullemer</h3>
-          <span class="founder-role" data-i18n="team.lara.role">Co-Founderin</span>
-          <p class="founder-bio" data-i18n="team.lara.bio">
-            „Hi, ich bin Lara! Als angehende Heilpraktikerin ist es meine größte Leidenschaft, echtes Wissen über den weiblichen Körper zugänglich zu machen. Bevor ich Diamo gegründet habe, war ich in der Filmbranche tätig, ergänzt durch meinen BWL-Master. Für mich muss Gesundheit nicht klinisch und trocken sein. Ich möchte, dass Diamo wissenschaftlichen Tiefgang mit dem Design und dem Gefühl einer modernen Lifestyle-Brand vereint."
-          </p>
-        </div>
-        <div class="founder-divider"></div>
-        <div class="founder-block">
-          <h3 class="founder-name" data-i18n="team.marie.name">Marie Westermann</h3>
-          <span class="founder-role" data-i18n="team.marie.role">Co-Founderin</span>
-          <p class="founder-bio" data-i18n="team.marie.bio">
-            „Ich bin Marie und kümmere mich bei Diamo um die Strategie und die operativen Abläufe. Meine berufliche Reise startete in der Unternehmensberatung (Inverto/BCG) und im Venture Capital (Coparion), wo ich gelernt habe, Dinge analytisch und groß zu denken. Meine wahre Leidenschaft lag aber schon immer im Sport. Als lizenzierte Fitnesstrainerin weiß ich genau, was unser Körper braucht. Bei Diamo bringe ich nun beide Welten zusammen: Logik und echte Liebe zur Bewegung."
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -52,85 +29,5 @@
 
   .team-header .section-subtitle {
     margin: 0 auto;
-  }
-
-  .founders {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
-  .founders-image-wrapper {
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .founders-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform var(--transition-slow);
-  }
-
-  .founders-image-wrapper:hover .founders-image {
-    transform: scale(1.02);
-  }
-
-  .founders-content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-  }
-
-  .founder-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .founder-name {
-    font-family: var(--font-sans);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--navy);
-  }
-
-  .founder-role {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--lavender);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.3rem;
-  }
-
-  .founder-bio {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    max-width: 100%;
-  }
-
-  .founder-divider {
-    width: 40px;
-    height: 2px;
-    background: var(--divider);
-  }
-
-  @media (max-width: 768px) {
-    .founders {
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-    }
-
-    .founders-image-wrapper {
-      max-width: 400px;
-      margin: 0 auto;
-    }
   }
 </style>

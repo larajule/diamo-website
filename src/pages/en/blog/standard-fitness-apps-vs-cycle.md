@@ -1,9 +1,9 @@
 ---
 layout: '../../../layouts/BlogPostLayout.astro'
 title: "Why Standard Fitness Apps Don't Work for Women (and the Alternative)"
-description: 'Rigid training plans ignore the female cycle. Learn why that fails and how Diamo finally adapts your training to your biology.'
+description: 'Rigid training plans ignore the female cycle. Learn why that fails and how diamo finally adapts your training to your biology.'
 pubDate: '2026-06-05'
-author: 'Diamo Team'
+author: 'diamo Team'
 tags: ["Women's Health", 'Fitness Apps', 'Cycle-Based Training', 'Training Planning', 'Biohacking']
 ---
 
@@ -67,15 +67,15 @@ Your Apple Watch or Oura Ring delivers fantastic raw data. But without the conte
 
 The right app takes this data and interprets it through the **lens of female physiology**, not through an algorithm calibrated for the male average.
 
-## End the Frustration: That's Why We're Building Diamo
+## End the Frustration: That's Why We're Building diamo
 
-This is exactly the gap **Diamo** fills. We're building the fitness app that adapts to your body, not the other way around.
+This is exactly the gap **diamo** fills. We're building the fitness app that adapts to your body, not the other way around.
 
-Diamo combines three elements that don't exist together yet:
+diamo combines three elements that don't exist together yet:
 
 - **Cycle-synced workouts:** Every day a training plan that matches your current cycle phase and energy level. During the follicular phase, the app pushes you. During the luteal phase, it protects you.
-- **Wearable context:** Your smartwatch data isn't just displayed, it's *understood*. Diamo knows what an elevated pulse on day 22 means and adjusts your training accordingly.
-- **Real community:** Our local *Tribes* connect you with women in your city who are in a similar phase. Shared run clubs, shared energy, real motivation. **Offline first.**
+- **Wearable context:** Your smartwatch data isn't just displayed, it's *understood*. diamo knows what an elevated pulse on day 22 means and adjusts your training accordingly.
+- **Real community:** Our local *Girls* connect you with women in your city who are in a similar phase. Shared run clubs, shared energy, real motivation. **Offline first.**
 
 We believe the future of women's health doesn't lie in even more data, but in the **right interpretation** of that data. And in a community that understands that your best training doesn't look the same every day.
 

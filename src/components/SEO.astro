@@ -10,11 +10,11 @@ export interface Props {
 }
 
 const {
-  title = "Diamo | Zyklus-synchrone Workouts & Fitness Community",
-  description = "Trainiere im Einklang mit deiner Biologie. Diamo bietet dir Zyklus-synchrone Workouts und echte Community-Begegnungen in lokalen Tribes. Jetzt Beta-Testerin werden!",
+  title = "diamo | Zyklus-synchrone Workouts & Fitness Community",
+  description = "Trainiere im Einklang mit deiner Biologie. diamo bietet dir Zyklus-synchrone Workouts und echte Community-Begegnungen mit lokalen Girls. Jetzt Beta-Testerin werden!",
   keywords = "Zyklusbasiertes Training, Zyklus-synchrone Workouts, Frauen Fitness Community, weibliche Biologie Fitness, hormonbasierte Fitness",
-  ogTitle = "Diamo | Eine neue Ära der Frauengesundheit",
-  ogDescription = "Vom passiven Tracking zur aktiven Performance. Verbinde dich mit lokalen Tribes und trainiere zyklus-synchron.",
+  ogTitle = "diamo | Eine neue Ära der Frauengesundheit",
+  ogDescription = "Vom passiven Tracking zur aktiven Performance. Verbinde dich mit lokalen Girls und trainiere zyklus-synchron.",
   ogImage = "https://diamo.club/diamo-preview.jpg",
   canonicalUrl
 } = Astro.props;
@@ -33,7 +33,7 @@ const {
 <meta property="og:type" content="website" />
 <meta property="og:image" content={ogImage} />
 <meta property="og:locale" content="de_DE" />
-<meta property="og:site_name" content="Diamo" />
+<meta property="og:site_name" content="diamo" />
 {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
 
 <!-- Twitter Card -->
@@ -46,7 +46,7 @@ const {
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Diamo",
+  "name": "diamo",
   "url": "https://diamo.club",
   "logo": "https://diamo.club/icon.png",
   "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
@@ -62,7 +62,7 @@ const {
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Diamo",
+  "name": "diamo",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS, Android",
   "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
