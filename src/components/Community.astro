@@ -54,7 +54,7 @@ import communityScreen from '../assets/screenshots/community.png';
   /* Layered showcase: image as base, phone floating on top */
   .community-showcase {
     position: relative;
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -67,9 +67,9 @@ import communityScreen from '../assets/screenshots/community.png';
 
   .community-hero-image {
     width: 100%;
-    height: auto;
-    max-height: 360px;
-    object-fit: contain;
+    height: 420px;
+    object-fit: cover;
+    object-position: center center;
     display: block;
     transition: transform var(--transition-slow);
   }
@@ -129,7 +129,7 @@ import communityScreen from '../assets/screenshots/community.png';
 
   @media (max-width: 768px) {
     .community-hero-image {
-      height: auto;
+      height: 300px;
     }
 
     .community-phone-float {
