@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import heroScreen from '../assets/screenshots/home-v2.png';
+// TODO: Ersetze '98_1x_shots_so.png' durch '178_1x_shots_so.png' sobald die Datei im Repo liegt
 ---
 
 <section class="hero" id="hero">
@@ -59,11 +58,13 @@ import heroScreen from '../assets/screenshots/home-v2.png';
     </div>
     
     <div class="hero-visual animate-in">
-      <div class="phone-mockup">
-        <div class="phone-frame">
-          <div class="hero-dynamic-island"></div>
-          <Image src={heroScreen} alt="diamo App Startbildschirm" class="phone-screen" loading="eager" />
-        </div>
+      <div class="hero-mockup-wrap">
+        <img
+          src="/screenshots/98_1x_shots_so.png"
+          alt="diamo App – drei Screens in 3D-Darstellung"
+          class="hero-mockup-img"
+          loading="eager"
+        />
       </div>
       <div class="hero-glow"></div>
     </div>
@@ -268,73 +269,42 @@ import heroScreen from '../assets/screenshots/home-v2.png';
     background: var(--divider);
   }
 
-  /* Phone Mockup */
+  /* 3D Mockup Hero Visual */
   .hero-visual {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -90px;
+    margin-top: -40px;
   }
 
-  .phone-mockup {
+  .hero-mockup-wrap {
     position: relative;
     z-index: 2;
     animation: float 6s ease-in-out infinite;
-  }
-
-  .phone-frame {
-    position: relative;
-    width: 280px;
-    background: #1a1a1a;
-    border-radius: 38px;
-    padding: 10px;
-    box-shadow: 
-      0 24px 70px rgba(0, 0, 0, 0.22),
-      0 10px 24px rgba(0, 0, 0, 0.14),
-      0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-      inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  }
-
-  .phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 20%;
-    right: 20%;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%);
-    border-radius: 38px;
-    pointer-events: none;
-    z-index: 3;
-  }
-
-  .hero-dynamic-island {
-    position: absolute;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 20px;
-    background: #000;
-    border-radius: 12px;
-    z-index: 4;
-  }
-
-  .phone-screen {
     width: 100%;
-    border-radius: 30px;
+    max-width: 580px;
+  }
+
+  .hero-mockup-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     display: block;
+    filter: drop-shadow(0 32px 64px rgba(0, 32, 96, 0.22)) drop-shadow(0 8px 24px rgba(155, 139, 203, 0.15));
   }
 
   .hero-glow {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(155, 139, 203, 0.15) 0%, transparent 70%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(155, 139, 203, 0.12) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 1;
-    filter: blur(40px);
+    filter: blur(60px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 
@@ -402,8 +372,8 @@ import heroScreen from '../assets/screenshots/home-v2.png';
       display: none;
     }
 
-    .phone-frame {
-      width: 220px;
+    .hero-mockup-wrap {
+      max-width: 340px;
     }
 
     .hero-title {

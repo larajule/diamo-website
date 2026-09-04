@@ -1,9 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import homeScreen from '../assets/screenshots/home-v2.png';
-import calendarScreen from '../assets/screenshots/calendar.png';
-import communityScreen from '../assets/screenshots/community.png';
-import personalScreen from '../assets/screenshots/personal.png';
 ---
 
 <section class="screenshots section" id="screenshots">
@@ -22,9 +17,12 @@ import personalScreen from '../assets/screenshots/personal.png';
     <div class="screenshots-showcase animate-in">
       <div class="screenshot-item">
         <div class="phone-wrapper">
-          <div class="mini-phone">
-            <Image src={homeScreen} alt="diamo Home-Tab" loading="lazy" />
-          </div>
+          <img
+            src="/screenshots/home.png"
+            alt="diamo Home-Tab"
+            class="flat-mockup-img"
+            loading="lazy"
+          />
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.home">Home</h4>
@@ -34,9 +32,12 @@ import personalScreen from '../assets/screenshots/personal.png';
 
       <div class="screenshot-item elevated">
         <div class="phone-wrapper">
-          <div class="mini-phone">
-            <Image src={calendarScreen} alt="diamo Kalender-Tab" loading="lazy" />
-          </div>
+          <img
+            src="/screenshots/calendar.png"
+            alt="diamo Kalender-Tab"
+            class="flat-mockup-img"
+            loading="lazy"
+          />
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.calendar">Kalender</h4>
@@ -46,9 +47,12 @@ import personalScreen from '../assets/screenshots/personal.png';
       
       <div class="screenshot-item">
         <div class="phone-wrapper">
-          <div class="mini-phone">
-            <Image src={communityScreen} alt="diamo Community-Tab" loading="lazy" />
-          </div>
+          <img
+            src="/screenshots/community.png"
+            alt="diamo Community-Tab"
+            class="flat-mockup-img"
+            loading="lazy"
+          />
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.community">Community</h4>
@@ -58,9 +62,12 @@ import personalScreen from '../assets/screenshots/personal.png';
       
       <div class="screenshot-item elevated">
         <div class="phone-wrapper">
-          <div class="mini-phone">
-            <Image src={personalScreen} alt="diamo Persönliches Profil" loading="lazy" />
-          </div>
+          <img
+            src="/screenshots/personal.png"
+            alt="diamo Persönliches Profil"
+            class="flat-mockup-img"
+            loading="lazy"
+          />
         </div>
         <div class="screenshot-info">
           <h4 data-i18n="screenshots.personal">Persönlich</h4>
@@ -114,26 +121,19 @@ import personalScreen from '../assets/screenshots/personal.png';
     transform: translateY(-24px);
   }
 
-  .phone-wrapper {
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-
-  .mini-phone {
-    width: 200px;
-    background: var(--soft-black);
-    border-radius: 28px;
-    padding: 8px;
-    box-shadow: 
-      0 16px 48px rgba(0, 32, 96, 0.15),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
-    transition: all var(--transition-base);
-  }
-
-  .mini-phone img {
+  /* Neue Flat-Mockup-Bilder: haben eigenen Phone-Frame */
+  .flat-mockup-img {
     width: 100%;
-    border-radius: 22px;
+    height: auto;
+    object-fit: contain;
     display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 16px 40px rgba(0, 32, 96, 0.14)) drop-shadow(0 4px 12px rgba(0,0,0,0.06));
+    transition: filter var(--transition-base);
+  }
+
+  .phone-wrapper:hover .flat-mockup-img {
+    filter: drop-shadow(0 24px 56px rgba(0, 32, 96, 0.2)) drop-shadow(0 8px 20px rgba(155, 139, 203, 0.15));
   }
 
   .screenshot-info {
@@ -171,9 +171,9 @@ import personalScreen from '../assets/screenshots/personal.png';
       transform: translateY(-8px);
     }
 
-    .mini-phone {
+    .phone-wrapper {
       width: 100%;
-      max-width: 200px;
+      max-width: 220px;
       margin: 0 auto;
     }
   }
@@ -183,8 +183,8 @@ import personalScreen from '../assets/screenshots/personal.png';
       grid-template-columns: 1fr;
     }
 
-    .mini-phone {
-      width: 200px;
+    .phone-wrapper {
+      max-width: 240px;
     }
   }
 </style>
