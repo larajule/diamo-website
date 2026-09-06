@@ -6,6 +6,9 @@
     <div class="hero-grain"></div>
   </div>
 
+  <!-- Blue background reveal (pulled down by scan line) -->
+  <div class="hero-blue-reveal" id="hero-blue-reveal"></div>
+
   <!-- Animated data mesh background -->
   <canvas class="hero-mesh" id="hero-mesh"></canvas>
 
@@ -162,9 +165,12 @@
     overflow: hidden;
     background: var(--ivory);
     min-height: 100vh;
-    transition: background 2.5s ease;
+    transition: none;
   }
-  .hero.hero-blue {
+
+  /* Blue reveal overlay — scan line pulls it down */
+  .hero-blue-reveal {
+    position: absolute; inset: 0; z-index: 0;
     background: linear-gradient(165deg, 
       #e8f0f8 0%, 
       #dde8f4 20%, 
@@ -172,6 +178,17 @@
       #cfddf0 60%,
       #dce6f2 80%,
       #edf1f6 100%);
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .hero-blue-reveal.revealing {
+    opacity: 1;
+    animation: revealDown 4s ease-in-out forwards;
+  }
+  @keyframes revealDown {
+    0% { clip-path: inset(0 0 100% 0); }
+    100% { clip-path: inset(0 0 0% 0); }
   }
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
   .hero-grain {
@@ -529,9 +546,9 @@
 
   // Phase 7: Fade out scan → reveal hero
   function finishSequence() {
-    // Fade scan out quickly
+    // Fade scan out
     scanLayer?.classList.add('fade-out');
-    // Text appears first on ivory
+    // Text appears on ivory
     setTimeout(() => {
       document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
     }, 400);
@@ -541,12 +558,15 @@
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
     }, 1500);
-    // THEN blue background + mesh + loop fade in softly
+    // Scan line pulls blue down (synced timing)
     setTimeout(() => {
-      document.getElementById('hero')?.classList.add('hero-blue');
-      document.getElementById('hero-mesh')?.classList.add('visible');
+      document.getElementById('hero-blue-reveal')?.classList.add('revealing');
       document.querySelector('.hero-scanloop')?.classList.add('visible');
-    }, 2200);
+    }, 2000);
+    // Mesh appears subtly after blue is mostly revealed
+    setTimeout(() => {
+      document.getElementById('hero-mesh')?.classList.add('visible');
+    }, 4500);
   }
 
   // ─── Animated data mesh background ───
