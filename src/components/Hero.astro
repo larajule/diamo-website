@@ -202,7 +202,7 @@
     opacity: 0; transition: opacity 0.8s ease;
   }
   .scan-layer.active { opacity: 1; }
-  .scan-layer.fade-out { opacity: 0; transition: opacity 0.6s ease; }
+  .scan-layer.fade-out { opacity: 0; transition: opacity 0.35s ease; }
 
   .scan-woman {
     height: 80vh; width: auto; object-fit: contain;
@@ -234,7 +234,7 @@
   }
   .hero-scanloop.visible {
     opacity: 1;
-    animation: scanLoop 6s ease-in-out infinite;
+    animation: scanLoop 12s ease-in-out 2s infinite;
   }
   @keyframes scanLoop {
     0% { top: 5%; } 50% { top: 95%; } 100% { top: 5%; }
