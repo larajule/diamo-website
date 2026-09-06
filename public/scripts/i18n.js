@@ -91,7 +91,7 @@ const translations = {
     // Hero
     'hero.micro': 'body intelligence system',
     'hero.title': 'Your body is not the same every day.<br/>Your training shouldn\'t be either.',
-    'hero.description': 'diamo understands what your body truly needs today. Hormones, energy, sleep, stress. Every morning a workout that adapts to you. And a community of women who move together.',
+    'hero.description': 'diamo understands what your body truly needs today. Hormones, energy, sleep, stress. Every day a workout that adapts to you. And a community of women who move together.',
     'hero.cta.beta': 'Get early access',
     'hero.discover': 'Discover',
 
@@ -111,7 +111,7 @@ const translations = {
     'features.f1.t2': 'Endurance',
     'features.f1.t3': 'Mobility',
     'features.f1.t4': 'Recovery',
-    'features.f1.highlight': 'Strength, endurance, mobility or active recovery. Every morning a plan that matches your energy, cycle phase and sleep quality.',
+    'features.f1.highlight': 'Strength, endurance, mobility or active recovery. Every day a plan that matches your energy, cycle phase and sleep quality.',
     'features.f2.title': 'Your phone is enough. Really.',
     'features.f2.highlight': 'Personalized training from day 1. No extra cost, no wearable. Just your phone and your health app.',
     'features.f2.desc': 'Your phone already tracks steps, distance and flights via Apple Health or Google Fit. Completely free. That\'s enough for smart recommendations. Got a smartwatch? We\'ll also use heart rate, HRV, sleep and VO2max. But you can start right away, without spending a cent.',
@@ -361,7 +361,7 @@ const translations = {
 
     'hero.micro': 'body intelligence system',
     'hero.title': 'Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht mehr.',
-    'hero.description': 'diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Morgen ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.',
+    'hero.description': 'diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Tag ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.',
     'hero.cta.beta': 'Early Access sichern',
     'hero.discover': 'Entdecken',
 
@@ -381,7 +381,7 @@ const translations = {
     'features.f1.t2': 'Ausdauer',
     'features.f1.t3': 'Mobilität',
     'features.f1.t4': 'Erholung',
-    'features.f1.highlight': 'Kraft, Ausdauer, Mobilität oder aktive Erholung. Jeden Morgen ein Plan, der zu deinem heutigen Energielevel passt.',
+    'features.f1.highlight': 'Kraft, Ausdauer, Mobilität oder aktive Erholung. Jeden Tag ein Plan, der zu deinem heutigen Energielevel passt.',
     'features.f2.title': 'Dein Smartphone reicht. Wirklich.',
     'features.f2.highlight': 'Personalisiertes Training ab Tag 1. Ohne Zusatzkosten, ohne Wearable. Nur dein Smartphone und deine Health App.',
     'features.f2.desc': 'Dein Smartphone misst bereits Schritte, Strecke und Treppensteigen. Kostenlos über Apple Health oder Google Fit. Das reicht für smarte Empfehlungen. Hast du eine Smartwatch? Dann nutzen wir zusätzlich Herzfrequenz, HRV, Schlaf und VO2max. Aber starten kannst du sofort, ohne einen Cent extra.',
