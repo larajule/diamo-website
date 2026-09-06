@@ -298,9 +298,19 @@
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
-      if (typeof window.setLanguage === 'function') {
-        window.setLanguage(lang);
+      // Immediate visual feedback
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      });
+      // Call setLanguage (retry if not loaded yet)
+      function trySetLang() {
+        if (typeof window.setLanguage === 'function') {
+          window.setLanguage(lang);
+        } else {
+          setTimeout(trySetLang, 100);
+        }
       }
+      trySetLang();
     });
   });
 
