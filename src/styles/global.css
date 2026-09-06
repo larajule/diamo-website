@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
 h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 
@@ -131,12 +131,29 @@ p {
 }
 
 .section {
-  padding: var(--space-2xl) 0;
+  padding: var(--space-3xl) 0;
+}
+
+/* Warm alternating section backgrounds for visual rhythm */
+.problem {
+  background: linear-gradient(180deg, var(--ivory) 0%, rgba(155, 139, 203, 0.04) 30%, rgba(155, 139, 203, 0.06) 70%, var(--ivory) 100%);
+}
+
+.features {
+  background: var(--ivory);
+}
+
+.screenshots {
+  background: linear-gradient(180deg, var(--ivory) 0%, rgba(185, 215, 234, 0.05) 40%, rgba(141, 198, 166, 0.04) 80%, var(--ivory) 100%);
+}
+
+.community-section {
+  background: linear-gradient(180deg, var(--ivory) 0%, rgba(196, 145, 142, 0.04) 50%, var(--ivory) 100%);
 }
 
 .section-label {
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -149,7 +166,7 @@ p {
 }
 
 .section-subtitle {
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.7;
@@ -203,6 +220,7 @@ p {
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(0, 32, 96, 0.04), 0 1px 6px rgba(0, 0, 0, 0.02);
 }
 
 .card:hover {
@@ -245,19 +263,21 @@ p {
 
 .animate-in {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transform: translateY(24px) scale(0.98);
+  filter: blur(4px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out), filter 0.9s var(--ease-out);
 }
 
 .animate-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .section {
-    padding: var(--space-xl) 0;
+    padding: var(--space-2xl) 0;
   }
 
   .container {

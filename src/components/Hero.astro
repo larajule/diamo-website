@@ -1,389 +1,229 @@
 ---
-// TODO: Ersetze '98_1x_shots_so.png' durch '178_1x_shots_so.png' sobald die Datei im Repo liegt
 ---
 
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <div class="hero-gradient"></div>
-    <div class="hero-particles"></div>
+    <div class="hero-grain"></div>
   </div>
-  
-  <div class="hero-content container">
+
+  <!-- Countdown -->
+  <div class="hero-countdown" id="hero-countdown">
+    <span class="hc-num" id="hc-3">3</span>
+    <span class="hc-num" id="hc-2">2</span>
+    <span class="hc-num" id="hc-1">1</span>
+    <span class="hc-go" id="hc-go">GO</span>
+  </div>
+
+  <!-- Side-by-side: text left, phone right -->
+  <div class="hero-split">
+    <!-- Text -->
     <div class="hero-text">
-      <span class="hero-brand animate-in">diamo</span>
-      <div class="hero-badge animate-in">
-        <span class="badge-dot"></span>
-        <span data-i18n="hero.badge">Exklusiver Beta-Zugang</span>
-      </div>
-      <h1 class="hero-title animate-in" data-i18n="hero.title">
-        Dein Fitness-Alltag, neu gedacht.
+      <span class="hero-micro hero-reveal hero-reveal--1" data-i18n="hero.micro">body intelligence system</span>
+
+      <h1 class="hero-headline hero-reveal hero-reveal--headline" data-i18n="hero.title">
+        Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht.
       </h1>
-      
-      <p class="hero-description animate-in" data-i18n="hero.description">
-        Sei von Anfang an dabei und gestalte diamo aktiv mit.
-        Wir lesen jedes einzelne Feedback und deine Meinung formt die App.
-        Lass uns zusammen die Fitness-App bauen, die dein Körper verdient.
-      </p>
-      
-      <div class="hero-actions animate-in">
-        <button type="button" class="btn btn-primary btn-hero-cta btn-shimmer" data-open-beta>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-            <polyline points="22 4 12 14.01 9 11.01"/>
-          </svg>
-          <span data-i18n="hero.cta.beta">Als Beta-Testerin starten</span>
-        </button>
-      </div>
-      
-      <p class="hero-geo-definition animate-in" data-i18n="hero.geo">
-        diamo ist eine zyklusbasierte Fitness-App für Frauen, die Trainingspläne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.
+
+      <p class="hero-sub hero-reveal hero-reveal--2" data-i18n="hero.description">
+        diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Morgen ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.
       </p>
 
-      <div class="hero-stats animate-in">
-        <div class="stat">
-          <span class="stat-value" data-i18n="hero.stat1.value">Begrenzt</span>
-          <span class="stat-label" data-i18n="hero.stat1.label">Plätze verfügbar</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-value" data-i18n="hero.stat2.value">100%</span>
-          <span class="stat-label" data-i18n="hero.stat2.label">Kostenlos</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-value" data-i18n="hero.stat3.value">Dein</span>
-          <span class="stat-label" data-i18n="hero.stat3.label">Einfluss zählt</span>
-        </div>
+      <div class="hero-cta-row hero-reveal hero-reveal--2">
+        <button type="button" class="hero-btn-primary" data-open-beta>
+          <span data-i18n="hero.cta.beta">Early Access sichern</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
       </div>
     </div>
-    
-    <div class="hero-visual animate-in">
-      <div class="hero-mockup-wrap">
-        <img
-          src="/screenshots/98_1x_shots_so.png"
-          alt="diamo App – drei Screens in 3D-Darstellung"
-          class="hero-mockup-img"
-          loading="eager"
-        />
+
+    <!-- Phone -->
+    <div class="hero-phone-wrapper hero-reveal hero-reveal--phone">
+      <div class="hero-phone">
+        <div class="hero-phone-screen">
+          <img src="/screenshots/login.png" alt="diamo Login – Welcome back" loading="eager" />
+        </div>
       </div>
-      <div class="hero-glow"></div>
     </div>
   </div>
+
+  <div class="hero-fade"></div>
 </section>
 
 
 <style>
   .hero {
     position: relative;
+    display: flex; flex-direction: column; align-items: center;
+    overflow: hidden; background: var(--ivory);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding-top: var(--nav-height);
   }
 
-  .hero-bg {
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-grain {
+    position: absolute; inset: 0; opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* ─── Countdown ─── */
+  .hero-countdown {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 50; pointer-events: none;
+  }
+  .hc-num, .hc-go {
     position: absolute;
-    inset: 0;
-    z-index: 0;
+    font-family: var(--font-serif); font-weight: 700; color: var(--navy);
+    opacity: 0; transform: scale(0.7);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .hc-num { font-size: clamp(14rem, 35vw, 26rem); }
+  .hc-go  { font-size: clamp(12rem, 30vw, 22rem); letter-spacing: 0.05em; }
+  .hc-num.active, .hc-go.active { opacity: 0.06; transform: scale(1); }
+  .hc-num.shrink, .hc-go.shrink {
+    opacity: 0; transform: scale(1.5);
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
 
-  .hero-gradient {
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(ellipse 80% 60% at 20% 50%, rgba(155, 139, 203, 0.1) 0%, transparent 70%),
-      radial-gradient(ellipse 60% 80% at 80% 30%, rgba(185, 215, 234, 0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 50% at 60% 80%, rgba(141, 198, 166, 0.06) 0%, transparent 70%),
-      linear-gradient(180deg, var(--ivory) 0%, rgba(252, 251, 247, 0.95) 100%);
+  /* ─── Reveal ─── */
+  .hero-reveal {
+    opacity: 0; transform: translateY(24px); filter: blur(4px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
+  .hero-reveal.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+  .hero-reveal--headline { transform: translateY(36px); }
+  .hero-reveal--phone { transform: translateY(60px); filter: blur(6px); }
+  .hero-reveal--phone.is-visible { transform: translateY(0); filter: blur(0); }
 
-  .hero-particles {
-    position: absolute;
-    inset: 0;
-    background-image: 
-      radial-gradient(2px 2px at 20% 30%, rgba(155, 139, 203, 0.3), transparent),
-      radial-gradient(2px 2px at 80% 20%, rgba(185, 215, 234, 0.3), transparent),
-      radial-gradient(1.5px 1.5px at 60% 70%, rgba(196, 145, 142, 0.2), transparent),
-      radial-gradient(1.5px 1.5px at 40% 80%, rgba(155, 139, 203, 0.2), transparent);
-    animation: float 8s ease-in-out infinite;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
-    align-items: center;
-    padding-top: var(--space-xl);
-    padding-bottom: var(--space-xl);
-  }
-
-  /* Exclusive Badge */
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.1rem;
-    background: rgba(0, 32, 96, 0.06);
-    border: 1px solid rgba(0, 32, 96, 0.1);
-    border-radius: var(--radius-full);
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: var(--space-md);
-    width: fit-content;
-  }
-
-  .badge-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--sage);
-    border-radius: 50%;
-    animation: pulseGlow 2s ease-in-out infinite;
-    box-shadow: 0 0 8px rgba(141, 198, 166, 0.5);
-  }
-
-  .hero-brand {
-    display: block;
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
-    color: var(--lavender);
-    letter-spacing: 0.08em;
-    margin-bottom: var(--space-sm);
-  }
-
-  .hero-title {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1.08;
-    margin-bottom: var(--space-md);
-    font-variant-ligatures: no-common-ligatures;
-    font-feature-settings: "liga" 0, "clig" 0;
-  }
-
-  .hero-accent {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--lavender) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-description {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
-    max-width: 480px;
-  }
-
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-lg);
-    flex-wrap: wrap;
-  }
-
-  .btn-hero-cta {
-    padding: 1.2rem 3rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    box-shadow: 0 6px 28px rgba(0, 32, 96, 0.35);
-    letter-spacing: 0.02em;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-hero-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 40px rgba(0, 32, 96, 0.45), 0 0 60px rgba(155, 139, 203, 0.15);
-  }
-
-  /* Shimmer effect on CTA */
-  .btn-shimmer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.15) 50%,
-      transparent 100%
-    );
-    animation: shimmerSlide 3s ease-in-out infinite;
-  }
-
-  @keyframes shimmerSlide {
-    0%, 100% { left: -100%; }
-    50% { left: 150%; }
-  }
-
-  .hero-geo-definition {
-    font-size: 0.82rem;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.45);
-    line-height: 1.6;
-    max-width: 480px;
-    margin-top: var(--space-sm);
-    margin-bottom: var(--space-sm);
-  }
-
-  .hero-stats {
-    display: flex;
-    align-items: center;
-    gap: var(--space-sm);
-    flex-wrap: wrap;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .stat-value {
-    font-family: var(--font-sans);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--navy);
-  }
-
-  .stat-label {
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .stat-divider {
-    width: 1px;
-    height: 36px;
-    background: var(--divider);
-  }
-
-  /* 3D Mockup Hero Visual */
-  .hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -40px;
-  }
-
-  .hero-mockup-wrap {
-    position: relative;
-    z-index: 2;
-    animation: float 6s ease-in-out infinite;
+  /* ─── Split Layout ─── */
+  .hero-split {
+    position: relative; z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    gap: clamp(2rem, 5vw, 6rem);
     width: 100%;
-    max-width: 580px;
+    max-width: 1200px;
+    padding: calc(var(--nav-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    min-height: calc(100vh - var(--nav-height));
+    box-sizing: border-box;
   }
 
-  .hero-mockup-img {
+  /* ─── Text ─── */
+  .hero-text {
+    display: flex; flex-direction: column; align-items: flex-start; text-align: left;
+    flex: 1 1 50%;
+    max-width: 520px;
+  }
+  .hero-micro {
+    font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--lavender); margin-bottom: var(--space-sm);
+  }
+  .hero-headline {
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+    line-height: 1.08; letter-spacing: -0.03em;
+    margin-bottom: var(--space-md); color: var(--navy);
+  }
+  .hero-sub {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.65; color: var(--text-secondary);
+    max-width: 460px; margin-bottom: var(--space-lg);
+  }
+  .hero-cta-row { margin-bottom: 0; }
+  .hero-btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 1rem 2.2rem; font-family: var(--font-sans);
+    font-size: 0.88rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    border: none; border-radius: var(--radius-full);
+    background: var(--navy); color: var(--white); cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 24px rgba(0, 32, 96, 0.25);
+  }
+  .hero-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 32, 96, 0.35);
+  }
+
+  /* ─── Phone ─── */
+  .hero-phone-wrapper {
+    flex: 0 0 auto;
+    display: flex; justify-content: center; align-items: center;
+  }
+
+  .hero-phone {
+    width: clamp(240px, 22vw, 300px);
+    animation: phone-float 5s ease-in-out infinite;
+  }
+
+  .hero-phone-screen {
+    border-radius: clamp(28px, 4vw, 44px);
+    overflow: hidden;
+    box-shadow:
+      0 4px 12px rgba(0, 20, 60, 0.06),
+      0 16px 48px rgba(0, 20, 60, 0.10),
+      0 32px 80px rgba(0, 20, 60, 0.08);
+  }
+
+  .hero-phone-screen img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     display: block;
-    filter: drop-shadow(0 32px 64px rgba(0, 32, 96, 0.22)) drop-shadow(0 8px 24px rgba(155, 139, 203, 0.15));
   }
 
-  .hero-glow {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(155, 139, 203, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(60px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  @keyframes phone-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 
+  /* ─── Fade ─── */
+  .hero-fade {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
+    pointer-events: none; z-index: 3;
+  }
 
-  /* Stagger animations */
-  .hero-text .animate-in:nth-child(1) { transition-delay: 0.1s; }
-  .hero-text .animate-in:nth-child(2) { transition-delay: 0.2s; }
-  .hero-text .animate-in:nth-child(3) { transition-delay: 0.3s; }
-  .hero-text .animate-in:nth-child(4) { transition-delay: 0.4s; }
-  .hero-text .animate-in:nth-child(5) { transition-delay: 0.5s; }
-  .hero-text .animate-in:nth-child(6) { transition-delay: 0.6s; }
-  .hero-text .animate-in:nth-child(7) { transition-delay: 0.7s; }
-  .hero-visual.animate-in { transition-delay: 0.4s; }
-
-  @media (max-width: 968px) {
-    .hero {
-      min-height: auto;
-      padding-top: var(--nav-height);
-      padding-bottom: var(--space-md);
+  /* ─── Mobile: stack vertically ─── */
+  @media (max-width: 900px) {
+    .hero { min-height: auto; }
+    .hero-split {
+      flex-direction: column; align-items: center;
+      padding-top: calc(var(--nav-height) + var(--space-lg));
+      min-height: auto; gap: var(--space-lg);
     }
-
-    .hero-content {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: var(--space-sm);
-      padding-top: var(--space-sm);
-      padding-bottom: var(--space-sm);
-    }
-
-    .hero-visual {
-      order: -1;
-      margin-top: 0;
-    }
-
-    .hero-text {
-      order: 2;
-    }
-
-    .hero-badge {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-brand {
-      margin-bottom: var(--space-xs);
-    }
-
-    .hero-description {
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 0.95rem;
-      max-width: 100%;
-      margin-bottom: var(--space-sm);
-    }
-
-    .hero-actions {
-      justify-content: center;
-      margin-bottom: var(--space-sm);
-    }
-
-    .hero-geo-definition {
-      display: none;
-    }
-
-    .hero-stats {
-      display: none;
-    }
-
-    .hero-mockup-wrap {
-      max-width: 340px;
-    }
-
-    .hero-title {
-      font-size: clamp(1.8rem, 7vw, 2.5rem);
-      margin-bottom: var(--space-sm);
-    }
-
-    .btn-hero-cta {
-      padding: 1rem 2rem;
-      font-size: 0.95rem;
-    }
+    .hero-text { align-items: center; text-align: center; max-width: 600px; }
+    .hero-headline { font-size: clamp(2.2rem, 8vw, 3rem); }
+    .hero-phone { width: clamp(220px, 50vw, 260px); }
+  }
+  @media (max-width: 480px) {
+    .hero-sub { font-size: 0.98rem; }
+    .hero-phone { width: clamp(200px, 60vw, 240px); }
   }
 </style>
+
+<script>
+  const steps = ['hc-3', 'hc-2', 'hc-1', 'hc-go'];
+  let i = 0;
+  function runCountdown() {
+    if (i >= steps.length) { setTimeout(revealHero, 300); return; }
+    const el = document.getElementById(steps[i]);
+    if (!el) return;
+    el.classList.add('active');
+    setTimeout(() => {
+      el.classList.remove('active'); el.classList.add('shrink');
+      i++; setTimeout(runCountdown, 250);
+    }, 800);
+  }
+  function revealHero() {
+    document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
+    setTimeout(() => {
+      document.querySelectorAll('.hero-reveal--1, .hero-reveal--2').forEach(el => el.classList.add('is-visible'));
+    }, 600);
+    setTimeout(() => {
+      document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
+    }, 1200);
+  }
+  setTimeout(runCountdown, 400);
+</script>

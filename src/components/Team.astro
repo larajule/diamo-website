@@ -8,10 +8,10 @@
       <h2 class="section-title animate-in" data-i18n="team.title">
         Von Frauen<br/>für Frauen
       </h2>
-      <p class="section-subtitle animate-in" data-i18n="team.subtitle">
+      <p class="team-subtitle animate-in" data-i18n="team.subtitle">
         Wir haben diamo gegründet, weil wir selbst frustriert waren: Keine Fitness-App versteht, 
         dass unser Zyklus, unser Alltag und unser Energielevel zusammengehören. Wir wollten endlich 
-        eine Lösung, die all das verbindet — inklusive einer echten Community, die offline stattfindet.
+        eine Lösung, die all das verbindet. Inklusive einer echten Community, die offline stattfindet.
       </p>
     </div>
   </div>
@@ -24,10 +24,14 @@
 
   .team-header {
     text-align: center;
-    margin-bottom: var(--space-lg);
+    margin-bottom: 0;
   }
 
-  .team-header .section-subtitle {
-    margin: 0 auto;
+  .team-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.75;
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: var(--space-md) auto 0;
   }
 </style>

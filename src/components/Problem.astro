@@ -4,210 +4,168 @@
 <section class="problem section" id="problem">
   <div class="container">
 
-    <div class="problem-grid">
-      <div class="problem-text">
-        <span class="section-label animate-in" data-i18n="problem.label">Der Unterschied</span>
-        <h2 class="section-title animate-in" data-i18n="problem.title">
-          Dein Zyklus ist deine Superkraft
-        </h2>
-        <p class="section-subtitle animate-in" data-i18n="problem.subtitle">
-          Dein Körper folgt einem einzigartigen Rhythmus. diamo hört auf deinen Zyklus, deine Energie und deinen Alltag, um Workouts zu erstellen, die sich mit dir bewegen.
-        </p>
-        <p class="problem-detail animate-in" data-i18n="problem.detail">
-          diamo ist die <strong>erste reine Software-Lösung</strong>, die tägliche biometrische Daten 
-          mit einem hormonellen Leistungssystem und einer lokalen Community verbindet.
-        </p>
+    <div class="problem-header">
+      <span class="section-label animate-in" data-i18n="problem.label">Der Unterschied</span>
+      <h2 class="section-title animate-in" data-i18n="problem.title">
+        Standard-Fitness übersieht,<br/>was dich ausmacht.
+      </h2>
+    </div>
+
+    <div class="problem-statements">
+      <div class="problem-statement" data-problem-step>
+        <div class="problem-num">01</div>
+        <div class="problem-body">
+          <p class="problem-text" data-i18n="problem.s1">
+            Dein Körper folgt einem eigenen Rhythmus. Deine Energie, Kraft und Regeneration verändern sich jeden Tag. Die meisten Apps ignorieren das komplett.
+          </p>
+        </div>
       </div>
-      
-      <div class="problem-visual animate-in">
-        <div class="comparison-card">
-          <div class="comparison-side old">
-            <div class="comparison-icon">✕</div>
-            <h4 data-i18n="problem.without">Ohne diamo</h4>
-            <ul>
-              <li data-i18n="problem.old1">Generische Trainingspläne</li>
-              <li data-i18n="problem.old2">Zyklus wird ignoriert</li>
-              <li data-i18n="problem.old3">Alleine zuhause trainieren</li>
-              <li data-i18n="problem.old4">Teure Hardware nötig</li>
-              <li data-i18n="problem.old5">Daten ohne Aktion</li>
-            </ul>
-          </div>
-          <div class="comparison-divider">
-            <div class="comparison-vs">vs</div>
-          </div>
-          <div class="comparison-side new">
-            <div class="comparison-icon">✓</div>
-            <h4 data-i18n="problem.with">Mit diamo</h4>
-            <ul>
-              <li data-i18n="problem.new1">Zyklusbasiertes Training</li>
-              <li data-i18n="problem.new2">Passt sich deiner Energie an</li>
-              <li data-i18n="problem.new3">Vernetzte Community</li>
-              <li data-i18n="problem.new4">Nur Software, keine Hardware</li>
-              <li data-i18n="problem.new5">Umsetzbare tägliche Einblicke</li>
-            </ul>
-          </div>
+
+      <div class="problem-statement" data-problem-step>
+        <div class="problem-num">02</div>
+        <div class="problem-body">
+          <p class="problem-text" data-i18n="problem.s2">
+            diamo liest deine Zyklusdaten, Schlaf, Stress und Aktivität und baut daraus ein Workout, das genau zu dir passt. Jeden einzelnen Tag.
+          </p>
+        </div>
+      </div>
+
+      <div class="problem-statement" data-problem-step>
+        <div class="problem-num">03</div>
+        <div class="problem-body">
+          <p class="problem-text" data-i18n="problem.s3">
+            Keine teure Hardware nötig. Keine 08/15-Pläne. Ein System, das wirklich versteht, wie Frauenkörper funktionieren.
+          </p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
+
 <style>
   .problem {
-    background: var(--white);
-  }
-
-  .problem-hero-image {
-    width: 100%;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    margin-bottom: var(--space-xl);
-    height: 420px;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .problem-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-    display: block;
-    transition: transform var(--transition-slow);
-  }
-
-  .problem-hero-image:hover .problem-hero-img {
-    transform: scale(1.02);
-  }
-
-  .problem-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2xl);
-    align-items: center;
-  }
-
-  .problem-detail {
-    margin-top: var(--space-md);
-    line-height: 1.8;
-  }
-
-  .problem-detail strong {
-    color: var(--navy);
-    font-weight: 600;
-  }
-
-  .comparison-card {
-    display: flex;
-    background: var(--ivory);
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    border: 1px solid var(--divider);
-  }
-
-  .comparison-side {
-    flex: 1;
-    padding: var(--space-md);
-    min-width: 0;
-    overflow-wrap: break-word;
-  }
-
-  .comparison-side h4 {
-    font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-  }
-
-  .comparison-side ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .comparison-side ul li {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .comparison-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: var(--space-sm);
-  }
-
-  .old .comparison-icon {
-    background: rgba(111, 13, 13, 0.08);
-    color: var(--burgundy);
-  }
-
-  .old ul li::before {
-    content: '•';
-    color: var(--text-muted);
-    font-size: 0.9rem;
-  }
-
-  .new .comparison-icon {
-    background: rgba(141, 198, 166, 0.15);
-    color: var(--sage);
-  }
-
-  .new ul li::before {
-    content: '✦';
-    color: var(--lavender);
-    font-size: 0.6rem;
-  }
-
-  .comparison-divider {
-    width: 1px;
-    background: var(--divider);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
   }
 
-  .comparison-vs {
-    position: absolute;
-    background: var(--ivory);
-    padding: 0.5rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  .problem-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-2xl);
   }
 
-  .problem-text .animate-in:nth-child(1) { transition-delay: 0.1s; }
-  .problem-text .animate-in:nth-child(2) { transition-delay: 0.2s; }
-  .problem-text .animate-in:nth-child(3) { transition-delay: 0.3s; }
-  .problem-text .animate-in:nth-child(4) { transition-delay: 0.4s; }
+  .problem-statements {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .problem-statement {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 32, 96, 0.04);
+    opacity: 0.45;
+    transform: scale(0.98);
+    transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .problem-statement.is-active {
+    opacity: 1;
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 40px rgba(0, 32, 96, 0.07), 0 2px 12px rgba(155, 139, 203, 0.06);
+    border-color: rgba(185, 215, 234, 0.4);
+  }
+
+  .problem-num {
+    font-family: var(--font-serif);
+    font-size: clamp(5rem, 10vw, 8rem);
+    font-weight: 700;
+    line-height: 0.85;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--lavender) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.12;
+    min-width: clamp(80px, 12vw, 130px);
+    text-align: center;
+    transition: opacity 0.5s ease;
+    flex-shrink: 0;
+  }
+
+  .problem-statement.is-active .problem-num {
+    opacity: 0.25;
+  }
+
+  .problem-body {
+    flex: 1;
+    padding-top: 0.75rem;
+  }
+
+  .problem-text {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    line-height: 1.75;
+    color: var(--text-primary);
+    max-width: 500px;
+  }
 
   @media (max-width: 768px) {
-    .problem-grid {
-      grid-template-columns: 1fr;
+    .problem-header {
+      text-align: left;
     }
 
-    .problem-hero-image {
-      height: 280px;
-    }
-
-    .comparison-card {
+    .problem-statement {
       flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-sm);
+      padding: var(--space-lg) var(--space-md);
     }
 
-    .comparison-divider {
-      width: 100%;
-      height: 1px;
+    .problem-num {
+      font-size: 4rem;
+      min-width: auto;
+    }
+
+    .problem-text {
+      max-width: none;
     }
   }
 </style>
+
+<script>
+  // Scroll-based highlight for problem statements
+  function updateActiveProblem() {
+    const steps = document.querySelectorAll('[data-problem-step]');
+    if (!steps.length) return;
+
+    const viewCenter = window.innerHeight / 2;
+    let closestStep = null;
+    let closestDist = Infinity;
+
+    steps.forEach(step => {
+      const rect = step.getBoundingClientRect();
+      const stepCenter = rect.top + rect.height / 2;
+      const dist = Math.abs(stepCenter - viewCenter);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closestStep = step;
+      }
+    });
+
+    steps.forEach(step => {
+      step.classList.toggle('is-active', step === closestStep);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveProblem, { passive: true });
+  window.addEventListener('resize', updateActiveProblem);
+  setTimeout(updateActiveProblem, 100);
+</script>

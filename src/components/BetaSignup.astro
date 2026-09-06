@@ -1,221 +1,176 @@
 ---
 import { Image } from 'astro:assets';
-import betaLifestyle from '../assets/images/beta-lifestyle-edited.png';
+import betaLifestyle from '../assets/images/beta-workout-girl.jpg';
 ---
 
-<section class="beta-signup section" id="beta">
-  <div class="container">
-    <div class="beta-wrapper">
-      <div class="beta-lifestyle-side animate-in">
-        <Image src={betaLifestyle} alt="Frau in Yoga-Brückenpose in beiger Aktivkleidung" class="beta-lifestyle-img" loading="lazy" />
-      </div>
-      <div class="beta-card animate-in">
-      <div class="beta-content">
-        <div class="beta-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-            <path d="M12 16v-4"/>
-            <path d="M12 8h.01"/>
-          </svg>
-        </div>
-        <span class="beta-label" data-i18n="beta.label">Beta-Programm</span>
-        <h2 class="beta-title" data-i18n="beta.title">
-          Gestalte diamo mit als Beta-Testerin
-        </h2>
-        <p class="beta-description" data-i18n="beta.description">
-          Werde Teil einer exklusiven Gruppe, die diamo vor allen anderen testet.
-          Dein Feedback fließt direkt in die Entwicklung ein und du formst die App aktiv mit.
-        </p>
-        <div class="beta-features">
-          <div class="beta-feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <span data-i18n="beta.feat1">Kostenloser Zugang während der Beta</span>
-          </div>
-          <div class="beta-feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <span data-i18n="beta.feat2">Direkter Einfluss auf Features</span>
-          </div>
-          <div class="beta-feature">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <span data-i18n="beta.feat3">Founding-Member-Vorteile zum Launch</span>
+<section class="beta-signup" id="beta">
+  <div class="beta-dark">
+    <div class="container">
+      <div class="beta-inner">
+        <div class="beta-text animate-in">
+          <h2 class="beta-headline" data-i18n="beta.title">
+            Begrenzte Plätze.<br/>Einer könnte deiner sein.
+          </h2>
+          <p class="beta-sub" data-i18n="beta.description">
+            Die Beta startet bald mit einer kleinen, exklusiven Gruppe. Du testest diamo kostenlos, gibst Feedback und formst die App, bevor sie alle anderen sehen. Founding Members erhalten besondere Vorteile zum Launch.
+          </p>
+          <div class="beta-actions">
+            <button type="button" class="btn btn-beta-cta" data-open-beta>
+              <span data-i18n="beta.cta">Jetzt Platz sichern</span>
+            </button>
+            <span class="beta-note" data-i18n="beta.note">Begrenzte Plätze · Kostenlos · Founding Member Vorteile</span>
           </div>
         </div>
-        <button type="button" class="btn btn-primary beta-cta" data-open-beta>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
-          <span data-i18n="beta.cta">Als Beta-Testerin starten</span>
-        </button>
-        <p class="beta-note" data-i18n="beta.note">Begrenzte Plätze · Keine Verpflichtung · Jederzeit kündbar</p>
-      </div>
+        <div class="beta-visual animate-in">
+          <Image src={betaLifestyle} alt="Frau mit Workout App" class="beta-img" loading="lazy" />
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+
 <style>
   .beta-signup {
-    background: linear-gradient(180deg, var(--white) 0%, var(--ivory) 100%);
-    padding-top: var(--space-lg);
+    padding: 0;
   }
 
-  .beta-wrapper {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    max-width: 960px;
-    margin: 0 auto;
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--divider);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-  }
-
-  .beta-lifestyle-side {
-    overflow: hidden;
-    min-height: 400px;
+  .beta-dark {
+    background: linear-gradient(135deg, #0a1628 0%, var(--navy) 40%, #1a2a4a 100%);
+    padding: var(--space-3xl) 0;
     position: relative;
+    overflow: hidden;
   }
 
-  .beta-lifestyle-side::after {
+  .beta-dark::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      160deg,
-      rgba(0, 32, 96, 0.38) 0%,
-      rgba(26, 58, 122, 0.25) 40%,
-      rgba(0, 32, 96, 0.4) 100%
-    );
-    z-index: 1;
+    background: 
+      radial-gradient(ellipse 60% 60% at 20% 80%, rgba(155, 139, 203, 0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 80% 20%, rgba(141, 198, 166, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(185, 215, 234, 0.06) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  .beta-lifestyle-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform var(--transition-slow);
-    filter: saturate(0.8) brightness(1.08) contrast(1.05);
-  }
-
-  .beta-lifestyle-side:hover .beta-lifestyle-img {
-    transform: scale(1.03);
-  }
-
-  .beta-card {
-    text-align: center;
-    padding: var(--space-xl) var(--space-lg);
-    position: relative;
-  }
-
-  .beta-card::before {
-    display: none;
-  }
-
-  .beta-icon {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto var(--space-sm);
-    background: rgba(0, 32, 96, 0.05);
-    border-radius: var(--radius-md);
-    display: flex;
+  .beta-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-xl);
     align-items: center;
-    justify-content: center;
-    color: var(--navy);
+    position: relative;
+    z-index: 1;
   }
 
-  .beta-label {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--lavender);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: var(--space-sm);
-  }
-
-  .beta-title {
+  .beta-headline {
     font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    line-height: 1.2;
-    color: var(--navy);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    line-height: 1.1;
+    color: var(--white);
     margin-bottom: var(--space-md);
+    letter-spacing: -0.01em;
   }
 
-  .beta-description {
-    font-size: 1rem;
+  .beta-sub {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
     line-height: 1.7;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.65);
     margin-bottom: var(--space-lg);
     max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .beta-features {
+  .beta-actions {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.65rem;
-    margin-bottom: var(--space-lg);
+    gap: var(--space-md);
+    flex-wrap: wrap;
   }
 
-  .beta-feature {
+  .btn-beta-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-primary);
-  }
-
-  .beta-feature svg {
-    color: var(--sage);
-    flex-shrink: 0;
-  }
-
-  .beta-cta {
-    padding: 1rem 2.25rem;
+    padding: 1.1rem 2.5rem;
+    font-family: var(--font-sans);
     font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    background: var(--white);
+    color: var(--navy);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-beta-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   }
 
   .beta-note {
-    margin-top: var(--space-sm);
     font-size: 0.78rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.4);
     letter-spacing: 0.02em;
   }
 
+  .beta-visual {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .beta-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-slow);
+  }
+
+  .beta-visual:hover .beta-img {
+    transform: scale(1.03);
+  }
+
+  .beta-text.animate-in { transition-delay: 0.1s; }
+  .beta-visual.animate-in { transition-delay: 0.3s; }
+
   @media (max-width: 768px) {
-    .beta-wrapper {
+    .beta-dark {
+      padding: var(--space-2xl) 0;
+    }
+
+    .beta-inner {
       grid-template-columns: 1fr;
+      text-align: center;
     }
 
-    .beta-lifestyle-side {
-      min-height: 280px;
+    .beta-visual {
+      order: -1;
     }
 
-    .beta-card {
-      padding: var(--space-xl) var(--space-md);
+    .beta-img {
+      height: 320px;
+    }
+
+    .beta-actions {
+      justify-content: center;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .beta-sub {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const betaBtn = document.querySelector('.beta-cta[data-open-beta]');
+    const betaBtn = document.querySelector('.btn-beta-cta[data-open-beta]');
     betaBtn?.addEventListener('click', () => {
       try {
         if (typeof gtag === 'function') {

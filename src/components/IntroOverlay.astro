@@ -1,0 +1,233 @@
+---
+---
+
+<!-- Fullscreen Intro Overlay -->
+<div class="intro-overlay" id="intro-overlay">
+  <div class="intro-bg"></div>
+
+  <!-- Exercise screens that fade in one after another -->
+  <div class="intro-exercise intro-ex-1" id="intro-ex-1">
+    <img src="/images/ex-1.png" alt="" aria-hidden="true" />
+    <div class="intro-ex-label">
+      <span class="intro-ex-category">STRENGTH</span>
+      <span class="intro-ex-name">Back Squat</span>
+      <span class="intro-ex-detail">4 × 8 reps</span>
+    </div>
+  </div>
+
+  <div class="intro-exercise intro-ex-2" id="intro-ex-2">
+    <img src="/images/ex-2.png" alt="" aria-hidden="true" />
+    <div class="intro-ex-label">
+      <span class="intro-ex-category">STRENGTH</span>
+      <span class="intro-ex-name">Hip Thrust</span>
+      <span class="intro-ex-detail">3 × 12 reps</span>
+    </div>
+  </div>
+
+  <div class="intro-exercise intro-ex-3" id="intro-ex-3">
+    <img src="/images/ex-3.png" alt="" aria-hidden="true" />
+    <div class="intro-ex-label">
+      <span class="intro-ex-category">STRENGTH</span>
+      <span class="intro-ex-name">Pull-Up</span>
+      <span class="intro-ex-detail">3 × 6 reps</span>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <div class="intro-countdown" id="intro-countdown">
+    <span class="countdown-number" id="countdown-3">3</span>
+    <span class="countdown-number" id="countdown-2">2</span>
+    <span class="countdown-number" id="countdown-1">1</span>
+    <span class="countdown-go" id="countdown-go">GO</span>
+  </div>
+</div>
+
+<style>
+  .intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--soft-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  .intro-overlay.done {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .intro-bg {
+    position: absolute;
+    inset: 0;
+    background: var(--soft-black);
+    transition: background 0.6s ease;
+  }
+
+  .intro-overlay.fade-white .intro-bg {
+    background: var(--ivory);
+  }
+
+  /* Exercise screens */
+  .intro-exercise {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 2;
+  }
+
+  .intro-exercise.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .intro-exercise img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 60px rgba(155, 139, 203, 0.25));
+  }
+
+  .intro-ex-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .intro-ex-category {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--lavender);
+  }
+
+  .intro-ex-name {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+
+  .intro-ex-detail {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 0.05em;
+  }
+
+  /* Countdown */
+  .intro-countdown {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .countdown-number,
+  .countdown-go {
+    position: absolute;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--white);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .countdown-number {
+    font-size: clamp(5rem, 15vw, 10rem);
+  }
+
+  .countdown-go {
+    font-size: clamp(4rem, 12vw, 8rem);
+    letter-spacing: 0.05em;
+  }
+
+  .countdown-number.active,
+  .countdown-go.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .countdown-number.shrink,
+  .countdown-go.shrink {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 768px) {
+    .intro-exercise img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .intro-ex-name {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('intro-overlay');
+    if (!overlay) return;
+
+    // Check if already seen this session
+    if (sessionStorage.getItem('diamo-intro-seen')) {
+      overlay.classList.add('done');
+      return;
+    }
+
+    const ex1 = document.getElementById('intro-ex-1');
+    const ex2 = document.getElementById('intro-ex-2');
+    const ex3 = document.getElementById('intro-ex-3');
+    const c3 = document.getElementById('countdown-3');
+    const c2 = document.getElementById('countdown-2');
+    const c1 = document.getElementById('countdown-1');
+    const cGo = document.getElementById('countdown-go');
+
+    // Prevent scrolling during intro
+    document.body.style.overflow = 'hidden';
+
+    const timeline = [
+      // Exercise 1 — fade in
+      { t: 200, fn: () => ex1?.classList.add('active') },
+      // Exercise 1 → 2
+      { t: 1200, fn: () => { ex1?.classList.remove('active'); ex2?.classList.add('active'); } },
+      // Exercise 2 → 3
+      { t: 2200, fn: () => { ex2?.classList.remove('active'); ex3?.classList.add('active'); } },
+      // Hide exercise 3, show countdown 3
+      { t: 3200, fn: () => { ex3?.classList.remove('active'); c3?.classList.add('active'); } },
+      // 3 → 2
+      { t: 3900, fn: () => { c3?.classList.add('shrink'); c3?.classList.remove('active'); c2?.classList.add('active'); } },
+      // 2 → 1
+      { t: 4600, fn: () => { c2?.classList.add('shrink'); c2?.classList.remove('active'); c1?.classList.add('active'); } },
+      // 1 → GO
+      { t: 5300, fn: () => { c1?.classList.add('shrink'); c1?.classList.remove('active'); cGo?.classList.add('active'); } },
+      // GO shrink + fade to white
+      { t: 5900, fn: () => { cGo?.classList.add('shrink'); cGo?.classList.remove('active'); overlay.classList.add('fade-white'); } },
+      // Remove overlay
+      { t: 6500, fn: () => {
+        overlay.classList.add('done');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('diamo-intro-seen', '1');
+      }},
+    ];
+
+    timeline.forEach(({ t, fn }) => setTimeout(fn, t));
+  });
+</script>
