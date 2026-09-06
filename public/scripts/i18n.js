@@ -360,7 +360,7 @@ const translations = {
     'guide.final.note': 'Kostenlos · Begrenzte Plätze · Jederzeit kündbar',
 
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht.',
+    'hero.title': 'Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht mehr.',
     'hero.description': 'diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Morgen ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.',
     'hero.cta.beta': 'Early Access sichern',
     'hero.discover': 'Entdecken',
