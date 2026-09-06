@@ -486,13 +486,18 @@
 
   if (alreadyPlayed) {
     // Skip to final state immediately
-    scanLayer.style.display = 'none';
-    document.getElementById('hero-countdown').style.display = 'none';
-    document.getElementById('hero-blue-reveal')?.classList.add('revealing');
-    document.getElementById('hero-blue-reveal').style.animationDuration = '0s';
+    if (scanLayer) scanLayer.style.display = 'none';
+    const countdown = document.getElementById('hero-countdown');
+    if (countdown) countdown.style.display = 'none';
+    const blueReveal = document.getElementById('hero-blue-reveal');
+    if (blueReveal) {
+      blueReveal.classList.add('revealing');
+      blueReveal.style.animationDuration = '0s';
+    }
     document.getElementById('hero-mesh')?.classList.add('visible');
     document.querySelector('.hero-scanloop')?.classList.add('visible');
-    document.querySelectorAll('.hero-reveal').forEach(el => {
+    // Show all hero text elements instantly
+    document.querySelectorAll('[class*="hero-reveal"]').forEach(el => {
       el.classList.add('is-visible');
       el.style.transition = 'none';
     });
