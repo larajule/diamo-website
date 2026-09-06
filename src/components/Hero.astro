@@ -6,6 +6,9 @@
     <div class="hero-grain"></div>
   </div>
 
+  <!-- Animated data mesh background -->
+  <canvas class="hero-mesh" id="hero-mesh"></canvas>
+
   <!-- Body Scan Layer -->
   <div class="scan-layer" id="scan-layer">
     <img src="/images/scan-woman.png" alt="" class="scan-woman" id="scan-woman" />
@@ -161,6 +164,17 @@
     position: absolute; inset: 0; opacity: 0.025;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  /* ─── Animated mesh background ─── */
+  .hero-mesh {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
   }
 
   /* ─── Scan Layer ─── */
@@ -490,5 +504,86 @@
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
     }, 1700);
+  }
+
+  // ─── Animated data mesh background ───
+  const meshCanvas = document.getElementById('hero-mesh');
+  if (meshCanvas) {
+    const ctx = meshCanvas.getContext('2d');
+    let w, h, nodes = [];
+    const isMobile = window.innerWidth < 480;
+    const isTablet = window.innerWidth < 900;
+    const nodeCount = isMobile ? 25 : isTablet ? 40 : 60;
+    const connectDist = isMobile ? 100 : isTablet ? 130 : 160;
+
+    function resizeMesh() {
+      const hero = document.getElementById('hero');
+      if (!hero) return;
+      w = meshCanvas.width = hero.offsetWidth;
+      h = meshCanvas.height = hero.offsetHeight;
+    }
+
+    function createNodes() {
+      nodes = [];
+      for (let i = 0; i < nodeCount; i++) {
+        nodes.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.2,
+          r: 1.5 + Math.random() * 1.5,
+          opacity: 0.15 + Math.random() * 0.25
+        });
+      }
+    }
+
+    function drawMesh() {
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < connectDist) {
+            const alpha = (1 - dist / connectDist) * 0.08;
+            ctx.strokeStyle = `rgba(185, 215, 234, ${alpha})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw nodes
+      for (const node of nodes) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(185, 215, 234, ${node.opacity})`;
+        ctx.fill();
+
+        // Move
+        node.x += node.vx;
+        node.y += node.vy;
+
+        // Bounce
+        if (node.x < 0 || node.x > w) node.vx *= -1;
+        if (node.y < 0 || node.y > h) node.vy *= -1;
+      }
+
+      requestAnimationFrame(drawMesh);
+    }
+
+    resizeMesh();
+    createNodes();
+    drawMesh();
+
+    window.addEventListener('resize', () => {
+      resizeMesh();
+      createNodes();
+    });
   }
 </script>
