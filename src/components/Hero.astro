@@ -156,7 +156,14 @@
   .hero {
     position: relative;
     display: flex; flex-direction: column; align-items: center;
-    overflow: hidden; background: var(--ivory);
+    overflow: hidden;
+    background: linear-gradient(165deg, 
+      #e8f0f8 0%, 
+      #dde8f4 20%, 
+      #d4e2f0 40%, 
+      #cfddf0 60%,
+      #dce6f2 80%,
+      #edf1f6 100%);
     min-height: 100vh;
   }
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
@@ -379,7 +386,7 @@
   @keyframes phone-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
   .hero-fade {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
+    position: absolute; bottom: 0; left: 0; right: 0; height: 180px;
     background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
     pointer-events: none; z-index: 3;
   }
@@ -547,9 +554,9 @@
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < connectDist) {
-            const alpha = (1 - dist / connectDist) * 0.2;
-            ctx.strokeStyle = `rgba(139, 127, 199, ${alpha})`;
-            ctx.lineWidth = 0.8;
+            const alpha = (1 - dist / connectDist) * 0.15;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.lineWidth = 0.6;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -562,14 +569,14 @@
       for (const node of nodes) {
         // Outer glow
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(185, 215, 234, ${node.opacity * 0.15})`;
+        ctx.arc(node.x, node.y, node.r * 3, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.1})`;
         ctx.fill();
 
         // Core dot
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(139, 127, 199, ${node.opacity})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.7})`;
         ctx.fill();
 
         // Move
