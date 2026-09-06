@@ -173,8 +173,8 @@
     width: 100%; height: 100%;
     z-index: 1;
     pointer-events: none;
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 8%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 8%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
   }
 
   /* ─── Scan Layer ─── */
@@ -513,8 +513,8 @@
     let w, h, nodes = [];
     const isMobile = window.innerWidth < 480;
     const isTablet = window.innerWidth < 900;
-    const nodeCount = isMobile ? 25 : isTablet ? 40 : 60;
-    const connectDist = isMobile ? 100 : isTablet ? 130 : 160;
+    const nodeCount = isMobile ? 30 : isTablet ? 50 : 80;
+    const connectDist = isMobile ? 120 : isTablet ? 150 : 180;
 
     function resizeMesh() {
       const hero = document.getElementById('hero');
@@ -529,10 +529,10 @@
         nodes.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.3,
-          vy: (Math.random() - 0.5) * 0.2,
-          r: 1.5 + Math.random() * 1.5,
-          opacity: 0.15 + Math.random() * 0.25
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: 2 + Math.random() * 2,
+          opacity: 0.3 + Math.random() * 0.35
         });
       }
     }
@@ -547,9 +547,9 @@
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < connectDist) {
-            const alpha = (1 - dist / connectDist) * 0.08;
-            ctx.strokeStyle = `rgba(185, 215, 234, ${alpha})`;
-            ctx.lineWidth = 0.5;
+            const alpha = (1 - dist / connectDist) * 0.2;
+            ctx.strokeStyle = `rgba(139, 127, 199, ${alpha})`;
+            ctx.lineWidth = 0.8;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -560,9 +560,16 @@
 
       // Draw nodes
       for (const node of nodes) {
+        // Outer glow
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(185, 215, 234, ${node.opacity * 0.15})`;
+        ctx.fill();
+
+        // Core dot
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(185, 215, 234, ${node.opacity})`;
+        ctx.fillStyle = `rgba(139, 127, 199, ${node.opacity})`;
         ctx.fill();
 
         // Move
