@@ -481,71 +481,91 @@
   const scanConns = document.getElementById('scan-connections');
   const steps = ['hc-3', 'hc-2', 'hc-1', 'hc-go'];
 
-  // Phase 1: Fade in (150ms)
-  setTimeout(() => {
-    scanLayer?.classList.add('active');
-    scanWoman?.classList.add('visible');
-    scanGrid?.classList.add('visible');
-    document.getElementById('scan-particles')?.classList.add('visible');
-  }, 150);
+  // Check if animation already played this session
+  const alreadyPlayed = sessionStorage.getItem('diamo-intro-played');
 
-  // Phase 2: Scan line starts (500ms)
-  setTimeout(() => { scanLine?.classList.add('active'); }, 500);
-
-  // Phase 3: Inner body points appear as scan passes
-  const innerPoints = [
-    { id: 'sp-mind', delay: 750 },
-    { id: 'sp-shoulder', delay: 950 },
-    { id: 'sp-stress', delay: 1100 },
-    { id: 'sp-heart', delay: 1350 },
-    { id: 'sp-hormones', delay: 1550 },
-    { id: 'sp-energy', delay: 1700 },
-    { id: 'sp-cycle', delay: 1900 },
-    { id: 'sp-core', delay: 2000 },
-    { id: 'sp-recovery', delay: 2300 },
-    { id: 'sp-knee', delay: 2800 },
-  ];
-  innerPoints.forEach(({ id, delay }) => {
-    setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
-  });
-
-  // Phase 4: Connections + woman vivid (1400ms)
-  setTimeout(() => {
-    scanConns?.classList.add('visible');
-    scanWoman?.classList.add('scanned');
-  }, 1400);
-
-  // Phase 5: Outer cards appear staggered
-  const outerCards = [
-    { id: 'sc-hrv', delay: 1200 },
-    { id: 'sc-sleep', delay: 1600 },
-    { id: 'sc-workout', delay: 1900 },
-    { id: 'sc-mood', delay: 2200 },
-    { id: 'sc-nutrition', delay: 2500 },
-    { id: 'sc-steps', delay: 2700 },
-    { id: 'sc-community', delay: 3000 },
-    { id: 'sc-group', delay: 3200 },
-  ];
-  outerCards.forEach(({ id, delay }) => {
-    setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
-  });
-
-  // Phase 6: Countdown
-  let i = 0;
-  function runCountdown() {
-    if (i >= steps.length) { setTimeout(finishSequence, 400); return; }
-    const el = document.getElementById(steps[i]);
-    if (!el) return;
-    el.classList.add('active');
+  if (alreadyPlayed) {
+    // Skip to final state immediately
+    scanLayer.style.display = 'none';
+    document.getElementById('hero-countdown').style.display = 'none';
+    document.getElementById('hero-blue-reveal')?.classList.add('revealing');
+    document.getElementById('hero-blue-reveal').style.animationDuration = '0s';
+    document.getElementById('hero-mesh')?.classList.add('visible');
+    document.querySelector('.hero-scanloop')?.classList.add('visible');
+    document.querySelectorAll('.hero-reveal').forEach(el => {
+      el.classList.add('is-visible');
+      el.style.transition = 'none';
+    });
+  } else {
+    // Play full animation
+    // Phase 1: Fade in (150ms)
     setTimeout(() => {
-      el.classList.remove('active'); el.classList.add('shrink');
-      i++; setTimeout(runCountdown, 250);
-    }, 800);
+      scanLayer?.classList.add('active');
+      scanWoman?.classList.add('visible');
+      scanGrid?.classList.add('visible');
+      document.getElementById('scan-particles')?.classList.add('visible');
+    }, 150);
+
+    // Phase 2: Scan line starts (500ms)
+    setTimeout(() => { scanLine?.classList.add('active'); }, 500);
+
+    // Phase 3: Inner body points appear as scan passes
+    const innerPoints = [
+      { id: 'sp-mind', delay: 750 },
+      { id: 'sp-shoulder', delay: 950 },
+      { id: 'sp-stress', delay: 1100 },
+      { id: 'sp-heart', delay: 1350 },
+      { id: 'sp-hormones', delay: 1550 },
+      { id: 'sp-energy', delay: 1700 },
+      { id: 'sp-cycle', delay: 1900 },
+      { id: 'sp-core', delay: 2000 },
+      { id: 'sp-recovery', delay: 2300 },
+      { id: 'sp-knee', delay: 2800 },
+    ];
+    innerPoints.forEach(({ id, delay }) => {
+      setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+    });
+
+    // Phase 4: Connections + woman vivid (1400ms)
+    setTimeout(() => {
+      scanConns?.classList.add('visible');
+      scanWoman?.classList.add('scanned');
+    }, 1400);
+
+    // Phase 5: Outer cards appear staggered
+    const outerCards = [
+      { id: 'sc-hrv', delay: 1200 },
+      { id: 'sc-sleep', delay: 1600 },
+      { id: 'sc-workout', delay: 1900 },
+      { id: 'sc-mood', delay: 2200 },
+      { id: 'sc-nutrition', delay: 2500 },
+      { id: 'sc-steps', delay: 2700 },
+      { id: 'sc-community', delay: 3000 },
+      { id: 'sc-group', delay: 3200 },
+    ];
+    outerCards.forEach(({ id, delay }) => {
+      setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+    });
+
+    // Phase 6: Countdown
+    let i = 0;
+    function runCountdown() {
+      if (i >= steps.length) { setTimeout(finishSequence, 400); return; }
+      const el = document.getElementById(steps[i]);
+      if (!el) return;
+      el.classList.add('active');
+      setTimeout(() => {
+        el.classList.remove('active'); el.classList.add('shrink');
+        i++; setTimeout(runCountdown, 250);
+      }, 800);
+    }
+    setTimeout(runCountdown, 600);
   }
-  setTimeout(runCountdown, 600);
 
   // Phase 7: Fade out scan → reveal hero
   function finishSequence() {
+    // Mark as played
+    sessionStorage.setItem('diamo-intro-played', '1');
     // Fade scan out
     scanLayer?.classList.add('fade-out');
     // Text appears on ivory
