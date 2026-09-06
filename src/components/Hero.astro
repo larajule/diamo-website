@@ -6,6 +6,113 @@
     <div class="hero-grain"></div>
   </div>
 
+  <!-- Body Scan Layer -->
+  <div class="scan-layer" id="scan-layer">
+    <img src="/images/scan-woman.png" alt="" class="scan-woman" id="scan-woman" />
+    
+    <!-- Scan line -->
+    <div class="scan-line" id="scan-line"></div>
+
+    <!-- ═══ INNER: Body data points (ON the body) ═══ -->
+    <div class="scan-point sp-inner" id="sp-mind" style="top: 18%; left: 47%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-right">Focus</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-heart" style="top: 31%; left: 45%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-left">Heart Rate · 62 bpm</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-hormones" style="top: 36%; left: 42%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-left">Estrogen ↑</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-cycle" style="top: 42%; left: 46%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-left">Day 9 · Follicular</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-core" style="top: 44%; left: 50%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-right">Core Strength</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-energy" style="top: 38%; left: 48%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-right">Energy · 82%</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-shoulder" style="top: 22%; left: 56%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-right">Mobility</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-knee" style="top: 62%; left: 40%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-left">Stability</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-recovery" style="top: 48%; left: 53%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-right">Recovery · 91%</span>
+    </div>
+    <div class="scan-point sp-inner" id="sp-stress" style="top: 26%; left: 44%;">
+      <span class="sp-dot"></span><span class="sp-ring"></span>
+      <span class="sp-label sp-left">Cortisol · Low</span>
+    </div>
+
+    <!-- ═══ OUTER: Lifestyle data (OUTSIDE the body) ═══ -->
+    <div class="scan-card" id="sc-workout" style="top: 16%; right: 8%;">
+      <span class="sc-title">Today</span>
+      <span class="sc-value">Strength Training</span>
+    </div>
+    <div class="scan-card" id="sc-sleep" style="top: 30%; left: 6%;">
+      <span class="sc-title">Sleep</span>
+      <span class="sc-value">7h 12min · Deep 1h 48min</span>
+    </div>
+    <div class="scan-card" id="sc-steps" style="bottom: 30%; right: 6%;">
+      <span class="sc-title">Steps</span>
+      <span class="sc-value">4,230 today</span>
+    </div>
+    <div class="scan-card" id="sc-community" style="bottom: 18%; right: 10%;">
+      <span class="sc-title">Community</span>
+      <span class="sc-value">3 girls training near you</span>
+    </div>
+    <div class="scan-card" id="sc-group" style="bottom: 24%; left: 6%;">
+      <span class="sc-title">Group Run</span>
+      <span class="sc-value">Tomorrow · 18:00 · 4 joined</span>
+    </div>
+    <div class="scan-card" id="sc-mood" style="top: 44%; right: 6%;">
+      <span class="sc-title">Mood</span>
+      <span class="sc-value">Energized · Ready to go</span>
+    </div>
+    <div class="scan-card" id="sc-nutrition" style="top: 56%; left: 5%;">
+      <span class="sc-title">Nutrition</span>
+      <span class="sc-value">Protein · 48g / 96g</span>
+    </div>
+    <div class="scan-card" id="sc-hrv" style="top: 22%; right: 6%;">
+      <span class="sc-title">HRV</span>
+      <span class="sc-value">48ms · Above average</span>
+    </div>
+
+    <!-- Connecting lines -->
+    <svg class="scan-connections" id="scan-connections" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
+      <line class="conn-line" x1="450" y1="310" x2="200" y2="300" />
+      <line class="conn-line" x1="420" y1="360" x2="200" y2="340" />
+      <line class="conn-line" x1="560" y1="220" x2="750" y2="160" />
+      <line class="conn-line" x1="500" y1="380" x2="750" y2="440" />
+      <line class="conn-line" x1="400" y1="620" x2="200" y2="670" />
+      <line class="conn-line" x1="530" y1="480" x2="750" y2="300" />
+      <line class="conn-line" x1="440" y1="260" x2="200" y2="180" />
+      <line class="conn-line" x1="480" y1="440" x2="750" y2="560" />
+    </svg>
+
+    <!-- Particles -->
+    <div class="scan-particles" id="scan-particles"></div>
+
+    <!-- Grid -->
+    <svg class="scan-grid" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <line x1="0" y1="20" x2="100" y2="20" /><line x1="0" y1="40" x2="100" y2="40" />
+      <line x1="0" y1="60" x2="100" y2="60" /><line x1="0" y1="80" x2="100" y2="80" />
+      <line x1="20" y1="0" x2="20" y2="100" /><line x1="40" y1="0" x2="40" y2="100" />
+      <line x1="60" y1="0" x2="60" y2="100" /><line x1="80" y1="0" x2="80" y2="100" />
+    </svg>
+  </div>
+
   <!-- Countdown -->
   <div class="hero-countdown" id="hero-countdown">
     <span class="hc-num" id="hc-3">3</span>
@@ -14,20 +121,16 @@
     <span class="hc-go" id="hc-go">GO</span>
   </div>
 
-  <!-- Side-by-side: text left, phone right -->
-  <div class="hero-split">
-    <!-- Text -->
+  <!-- Hero content -->
+  <div class="hero-split" id="hero-split">
     <div class="hero-text">
       <span class="hero-micro hero-reveal hero-reveal--1" data-i18n="hero.micro">body intelligence system</span>
-
       <h1 class="hero-headline hero-reveal hero-reveal--headline" data-i18n="hero.title">
         Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht.
       </h1>
-
       <p class="hero-sub hero-reveal hero-reveal--2" data-i18n="hero.description">
         diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Morgen ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.
       </p>
-
       <div class="hero-cta-row hero-reveal hero-reveal--2">
         <button type="button" class="hero-btn-primary" data-open-beta>
           <span data-i18n="hero.cta.beta">Early Access sichern</span>
@@ -35,20 +138,16 @@
         </button>
       </div>
     </div>
-
-    <!-- Phone -->
     <div class="hero-phone-wrapper hero-reveal hero-reveal--phone">
       <div class="hero-phone">
         <div class="hero-phone-screen">
-          <img src="/screenshots/login.png" alt="diamo Login – Welcome back" loading="eager" />
+          <img src="/screenshots/login.png" alt="diamo App" loading="eager" />
         </div>
       </div>
     </div>
   </div>
-
   <div class="hero-fade"></div>
 </section>
-
 
 <style>
   .hero {
@@ -57,12 +156,136 @@
     overflow: hidden; background: var(--ivory);
     min-height: 100vh;
   }
-
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
   .hero-grain {
     position: absolute; inset: 0; opacity: 0.025;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
+  }
+
+  /* ─── Scan Layer ─── */
+  .scan-layer {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 40; pointer-events: none;
+    opacity: 0; transition: opacity 0.8s ease;
+  }
+  .scan-layer.active { opacity: 1; }
+  .scan-layer.fade-out { opacity: 0; transition: opacity 1.2s ease; }
+
+  .scan-woman {
+    height: 80vh; width: auto; object-fit: contain;
+    opacity: 0; filter: saturate(0.2) brightness(1.08);
+    transition: opacity 1.2s ease, filter 2s ease;
+  }
+  .scan-woman.visible { opacity: 0.35; }
+  .scan-woman.scanned { opacity: 0.55; filter: saturate(0.5) brightness(1.02); }
+
+  /* Scan line */
+  .scan-line {
+    position: absolute; left: 10%; right: 10%; height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(139,127,199,0.3) 20%, rgba(139,127,199,0.9) 50%, rgba(139,127,199,0.3) 80%, transparent 100%);
+    box-shadow: 0 0 30px rgba(139,127,199,0.6), 0 0 80px rgba(139,127,199,0.2), 0 -4px 20px rgba(139,127,199,0.15), 0 4px 20px rgba(139,127,199,0.15);
+    top: 0; opacity: 0;
+  }
+  .scan-line.active { opacity: 1; animation: scanDown 3.5s ease-in-out forwards; }
+  @keyframes scanDown { 0% { top: 5%; } 100% { top: 95%; } }
+
+  /* Connections */
+  .scan-connections {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: 0; transition: opacity 0.8s ease;
+  }
+  .scan-connections.visible { opacity: 1; }
+  .conn-line {
+    stroke: rgba(139,127,199,0.12); stroke-width: 0.8;
+    stroke-dasharray: 6 4;
+    stroke-dashoffset: 200;
+    transition: stroke-dashoffset 2s ease;
+  }
+  .scan-connections.visible .conn-line { stroke-dashoffset: 0; }
+
+  /* Grid */
+  .scan-grid {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    opacity: 0; transition: opacity 1.5s ease;
+  }
+  .scan-grid.visible { opacity: 1; }
+  .scan-grid line { stroke: rgba(139,127,199,0.035); stroke-width: 0.15; }
+
+  /* ─── Inner data points (ON body) ─── */
+  .scan-point {
+    position: absolute; transform: translate(-50%, -50%);
+    opacity: 0; transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  .scan-point.visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+  .sp-dot {
+    display: block; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--lavender);
+    box-shadow: 0 0 6px rgba(139,127,199,0.9), 0 0 16px rgba(139,127,199,0.4);
+  }
+  .sp-ring {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px; height: 18px; border-radius: 50%;
+    border: 1px solid rgba(139,127,199,0.25);
+    animation: ringPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes ringPulse {
+    0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%,-50%) scale(2.2); opacity: 0; }
+  }
+
+  .sp-label {
+    position: absolute; top: -6px;
+    font-family: var(--font-sans); font-size: 0.55rem; font-weight: 600;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    color: rgba(139,127,199,0.7); white-space: nowrap;
+  }
+  .sp-right { left: 14px; }
+  .sp-left { right: 14px; text-align: right; }
+
+  /* ─── Outer cards (lifestyle, OUTSIDE body) ─── */
+  .scan-card {
+    position: absolute;
+    display: flex; flex-direction: column; gap: 0.15rem;
+    padding: 0.55rem 0.85rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(139,127,199,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0,20,60,0.05);
+    opacity: 0; transform: translateY(8px) scale(0.95);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1);
+  }
+  .scan-card.visible { opacity: 1; transform: translateY(0) scale(1); }
+
+  .sc-title {
+    font-family: var(--font-sans); font-size: 0.55rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--lavender);
+  }
+  .sc-value {
+    font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600;
+    color: var(--navy); letter-spacing: 0.01em;
+  }
+
+  /* Particles */
+  .scan-particles {
+    position: absolute; inset: 0; pointer-events: none;
+    opacity: 0; transition: opacity 1s ease;
+  }
+  .scan-particles.visible { opacity: 1; }
+  .particle {
+    position: absolute; width: 2px; height: 2px;
+    border-radius: 50%; background: rgba(139,127,199,0.35);
+    animation: floatParticle 4s ease-in-out infinite;
+  }
+  @keyframes floatParticle {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+    50% { transform: translateY(-12px) scale(1.5); opacity: 0.6; }
   }
 
   /* ─── Countdown ─── */
@@ -80,17 +303,12 @@
   .hc-num { font-size: clamp(14rem, 35vw, 26rem); }
   .hc-go  { font-size: clamp(12rem, 30vw, 22rem); letter-spacing: 0.05em; }
   .hc-num.active, .hc-go.active { opacity: 0.06; transform: scale(1); }
-  .hc-num.shrink, .hc-go.shrink {
-    opacity: 0; transform: scale(1.5);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
+  .hc-num.shrink, .hc-go.shrink { opacity: 0; transform: scale(1.5); transition: opacity 0.4s ease, transform 0.4s ease; }
 
   /* ─── Reveal ─── */
   .hero-reveal {
     opacity: 0; transform: translateY(24px); filter: blur(4px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1), filter 0.8s cubic-bezier(0.16,1,0.3,1);
   }
   .hero-reveal.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
   .hero-reveal--headline { transform: translateY(36px); }
@@ -101,19 +319,13 @@
   .hero-split {
     position: relative; z-index: 2;
     display: flex; align-items: center; justify-content: center;
-    gap: clamp(2rem, 5vw, 6rem);
-    width: 100%;
-    max-width: 1200px;
+    gap: clamp(2rem, 5vw, 6rem); width: 100%; max-width: 1200px;
     padding: calc(var(--nav-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
-    min-height: calc(100vh - var(--nav-height));
-    box-sizing: border-box;
+    min-height: calc(100vh - var(--nav-height)); box-sizing: border-box;
   }
-
-  /* ─── Text ─── */
   .hero-text {
     display: flex; flex-direction: column; align-items: flex-start; text-align: left;
-    flex: 1 1 50%;
-    max-width: 520px;
+    flex: 1 1 50%; max-width: 520px;
   }
   .hero-micro {
     font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600;
@@ -139,75 +351,118 @@
     border: none; border-radius: var(--radius-full);
     background: var(--navy); color: var(--white); cursor: pointer;
     transition: all var(--transition-base);
-    box-shadow: 0 4px 24px rgba(0, 32, 96, 0.25);
+    box-shadow: 0 4px 24px rgba(0,32,96,0.25);
   }
-  .hero-btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0, 32, 96, 0.35);
-  }
+  .hero-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,32,96,0.35); }
 
-  /* ─── Phone ─── */
-  .hero-phone-wrapper {
-    flex: 0 0 auto;
-    display: flex; justify-content: center; align-items: center;
-  }
-
-  .hero-phone {
-    width: clamp(240px, 22vw, 300px);
-    animation: phone-float 5s ease-in-out infinite;
-  }
-
+  .hero-phone-wrapper { flex: 0 0 auto; display: flex; justify-content: center; align-items: center; }
+  .hero-phone { width: clamp(240px, 22vw, 300px); animation: phone-float 5s ease-in-out infinite; }
   .hero-phone-screen {
-    border-radius: clamp(28px, 4vw, 44px);
-    overflow: hidden;
-    box-shadow:
-      0 4px 12px rgba(0, 20, 60, 0.06),
-      0 16px 48px rgba(0, 20, 60, 0.10),
-      0 32px 80px rgba(0, 20, 60, 0.08);
+    border-radius: clamp(28px, 4vw, 44px); overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,20,60,0.06), 0 16px 48px rgba(0,20,60,0.10), 0 32px 80px rgba(0,20,60,0.08);
   }
+  .hero-phone-screen img { width: 100%; height: auto; display: block; }
+  @keyframes phone-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-  .hero-phone-screen img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  @keyframes phone-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
-
-  /* ─── Fade ─── */
   .hero-fade {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 100px;
+    position: absolute; bottom: 0; left: 0; right: 0; height: 100px;
     background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
     pointer-events: none; z-index: 3;
   }
 
-  /* ─── Mobile: stack vertically ─── */
   @media (max-width: 900px) {
     .hero { min-height: auto; }
-    .hero-split {
-      flex-direction: column; align-items: center;
-      padding-top: calc(var(--nav-height) + var(--space-lg));
-      min-height: auto; gap: var(--space-lg);
-    }
+    .hero-split { flex-direction: column; align-items: center; padding-top: calc(var(--nav-height) + var(--space-lg)); min-height: auto; gap: var(--space-lg); }
     .hero-text { align-items: center; text-align: center; max-width: 600px; }
     .hero-headline { font-size: clamp(2.2rem, 8vw, 3rem); }
     .hero-phone { width: clamp(220px, 50vw, 260px); }
+    .sp-label { display: none; }
+    .scan-card { padding: 0.4rem 0.6rem; }
+    .sc-value { font-size: 0.58rem; }
   }
   @media (max-width: 480px) {
     .hero-sub { font-size: 0.98rem; }
     .hero-phone { width: clamp(200px, 60vw, 240px); }
+    .scan-card { display: none; }
   }
 </style>
 
 <script>
+  // ─── Create particles ───
+  const particleContainer = document.getElementById('scan-particles');
+  if (particleContainer) {
+    for (let i = 0; i < 25; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.top = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 4 + 's';
+      p.style.animationDuration = (3 + Math.random() * 3) + 's';
+      particleContainer.appendChild(p);
+    }
+  }
+
+  // ─── Animation sequence ───
+  const scanLayer = document.getElementById('scan-layer');
+  const scanWoman = document.getElementById('scan-woman');
+  const scanLine = document.getElementById('scan-line');
+  const scanGrid = document.querySelector('.scan-grid');
+  const scanConns = document.getElementById('scan-connections');
   const steps = ['hc-3', 'hc-2', 'hc-1', 'hc-go'];
+
+  // Phase 1: Fade in (150ms)
+  setTimeout(() => {
+    scanLayer?.classList.add('active');
+    scanWoman?.classList.add('visible');
+    scanGrid?.classList.add('visible');
+    document.getElementById('scan-particles')?.classList.add('visible');
+  }, 150);
+
+  // Phase 2: Scan line starts (500ms)
+  setTimeout(() => { scanLine?.classList.add('active'); }, 500);
+
+  // Phase 3: Inner body points appear as scan passes
+  const innerPoints = [
+    { id: 'sp-mind', delay: 750 },
+    { id: 'sp-shoulder', delay: 950 },
+    { id: 'sp-stress', delay: 1100 },
+    { id: 'sp-heart', delay: 1350 },
+    { id: 'sp-hormones', delay: 1550 },
+    { id: 'sp-energy', delay: 1700 },
+    { id: 'sp-cycle', delay: 1900 },
+    { id: 'sp-core', delay: 2000 },
+    { id: 'sp-recovery', delay: 2300 },
+    { id: 'sp-knee', delay: 2800 },
+  ];
+  innerPoints.forEach(({ id, delay }) => {
+    setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+  });
+
+  // Phase 4: Connections + woman vivid (1400ms)
+  setTimeout(() => {
+    scanConns?.classList.add('visible');
+    scanWoman?.classList.add('scanned');
+  }, 1400);
+
+  // Phase 5: Outer cards appear staggered
+  const outerCards = [
+    { id: 'sc-hrv', delay: 1200 },
+    { id: 'sc-sleep', delay: 1600 },
+    { id: 'sc-workout', delay: 1900 },
+    { id: 'sc-mood', delay: 2200 },
+    { id: 'sc-nutrition', delay: 2500 },
+    { id: 'sc-steps', delay: 2700 },
+    { id: 'sc-community', delay: 3000 },
+    { id: 'sc-group', delay: 3200 },
+  ];
+  outerCards.forEach(({ id, delay }) => {
+    setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+  });
+
+  // Phase 6: Countdown
   let i = 0;
   function runCountdown() {
-    if (i >= steps.length) { setTimeout(revealHero, 300); return; }
+    if (i >= steps.length) { setTimeout(finishSequence, 400); return; }
     const el = document.getElementById(steps[i]);
     if (!el) return;
     el.classList.add('active');
@@ -216,14 +471,19 @@
       i++; setTimeout(runCountdown, 250);
     }, 800);
   }
-  function revealHero() {
-    document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
+  setTimeout(runCountdown, 600);
+
+  // Phase 7: Fade out scan → reveal hero
+  function finishSequence() {
+    scanLayer?.classList.add('fade-out');
+    setTimeout(() => {
+      document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
+    }, 500);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--1, .hero-reveal--2').forEach(el => el.classList.add('is-visible'));
-    }, 600);
+    }, 1100);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
-    }, 1200);
+    }, 1700);
   }
-  setTimeout(runCountdown, 400);
 </script>
