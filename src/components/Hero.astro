@@ -376,68 +376,19 @@
     .hero-text { align-items: center; text-align: center; max-width: 600px; }
     .hero-headline { font-size: clamp(2.2rem, 8vw, 3rem); }
     .hero-phone { width: clamp(220px, 50vw, 260px); }
-
-    /* Scan: woman smaller on mobile */
-    .scan-woman { height: 60vh; }
-
-    /* Labels: shorter, still visible */
+    .scan-woman { height: 65vh; }
     .sp-label { font-size: 0.5rem; }
-
-    /* Cards: smaller, reposition to edges */
-    .scan-card { 
-      padding: 0.35rem 0.6rem;
-      border-radius: 6px;
-    }
-    .sc-title { font-size: 0.48rem; }
-    .sc-value { font-size: 0.58rem; }
-
-    /* Move outer cards closer to edges on tablet */
-    #sc-workout { top: 8%; right: 3%; }
-    #sc-sleep { top: 22%; left: 2%; }
-    #sc-steps { bottom: 22%; right: 3%; }
-    #sc-community { bottom: 10%; right: 3%; }
-    #sc-group { bottom: 16%; left: 2%; }
-    #sc-mood { top: 36%; right: 2%; }
-    #sc-nutrition { top: 50%; left: 2%; }
-    #sc-hrv { top: 14%; right: 3%; }
+    .scan-card { display: none; }
+    .scan-connections { display: none; }
   }
 
   @media (max-width: 480px) {
     .hero-sub { font-size: 0.98rem; }
     .hero-phone { width: clamp(200px, 60vw, 240px); }
-
-    /* Scan: even smaller on phone */
-    .scan-woman { height: 50vh; }
-
-    /* Cards: stack as horizontal strips at top and bottom */
-    .scan-card {
-      position: fixed;
-      left: 50%; transform: translateX(-50%) translateY(8px) scale(0.95);
-      width: auto; max-width: 80vw;
-      text-align: center;
-      flex-direction: row; gap: 0.4rem;
-      align-items: center;
-    }
-    .scan-card.visible { transform: translateX(-50%) translateY(0) scale(1); }
-
-    /* Stack cards vertically with different top positions */
-    #sc-workout  { top: 5%;  left: 50%; right: auto; bottom: auto; }
-    #sc-hrv      { top: 10%; left: 50%; right: auto; bottom: auto; }
-    #sc-sleep    { top: 15%; left: 50%; right: auto; bottom: auto; }
-    #sc-mood     { top: auto; bottom: 18%; left: 50%; right: auto; }
-    #sc-steps    { top: auto; bottom: 13%; left: 50%; right: auto; }
-    #sc-community { top: auto; bottom: 8%; left: 50%; right: auto; }
-    #sc-group    { top: auto; bottom: 3%; left: 50%; right: auto; }
-    #sc-nutrition { top: 20%; left: 50%; right: auto; bottom: auto; }
-
-    .sc-title { font-size: 0.45rem; }
-    .sc-value { font-size: 0.55rem; }
-
-    /* Labels: very compact */
-    .sp-label { font-size: 0.45rem; letter-spacing: 0.03em; }
-
-    /* Scan line wider */
-    .scan-line { left: 3%; right: 3%; }
+    .scan-woman { height: 55vh; }
+    .sp-label { font-size: 0.45rem; }
+    .scan-line { left: 5%; right: 5%; }
+  }
   }
 </style>
 
