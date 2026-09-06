@@ -162,7 +162,7 @@
     overflow: hidden;
     background: var(--ivory);
     min-height: 100vh;
-    transition: background 1.5s ease;
+    transition: background 0.8s ease;
   }
   .hero.hero-blue {
     background: linear-gradient(165deg, 
@@ -202,12 +202,13 @@
     opacity: 0; transition: opacity 0.8s ease;
   }
   .scan-layer.active { opacity: 1; }
-  .scan-layer.fade-out { opacity: 0; transition: opacity 1.2s ease; }
+  .scan-layer.fade-out { opacity: 0; transition: opacity 0.6s ease; }
 
   .scan-woman {
     height: 80vh; width: auto; object-fit: contain;
     opacity: 0; filter: saturate(0.2) brightness(1.08);
-    transition: opacity 1.2s ease, filter 2s ease;
+    transition: opacity 0.8s ease, filter 2s ease;
+    mix-blend-mode: multiply;
   }
   .scan-woman.visible { opacity: 0.35; }
   .scan-woman.scanned { opacity: 0.55; filter: saturate(0.5) brightness(1.02); }
@@ -528,21 +529,26 @@
 
   // Phase 7: Fade out scan → reveal hero
   function finishSequence() {
-    scanLayer?.classList.add('fade-out');
-    // Transition to blue background + show mesh
+    // Start blue BG immediately
     document.getElementById('hero')?.classList.add('hero-blue');
-    document.getElementById('hero-mesh')?.classList.add('visible');
-    // Start looping scan line
-    document.querySelector('.hero-scanloop')?.classList.add('visible');
+    // Fade scan out quickly
+    setTimeout(() => {
+      scanLayer?.classList.add('fade-out');
+    }, 100);
+    // Show mesh + looping scan
+    setTimeout(() => {
+      document.getElementById('hero-mesh')?.classList.add('visible');
+      document.querySelector('.hero-scanloop')?.classList.add('visible');
+    }, 400);
     setTimeout(() => {
       document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
-    }, 500);
+    }, 600);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--1, .hero-reveal--2').forEach(el => el.classList.add('is-visible'));
-    }, 1100);
+    }, 1200);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
-    }, 1700);
+    }, 1800);
   }
 
   // ─── Animated data mesh background ───
