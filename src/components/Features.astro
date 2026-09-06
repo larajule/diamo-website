@@ -2,6 +2,8 @@
 ---
 
 <section class="features section" id="features">
+  <div class="features-bg"></div>
+  <div class="features-fade"></div>
   <div class="container">
     <div class="features-header">
       <span class="section-label animate-in" data-i18n="features.label">Was du bekommst</span>
@@ -81,6 +83,31 @@
 </section>
 
 <style>
+  .features {
+    position: relative;
+  }
+
+  .features-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: linear-gradient(165deg, 
+      #edf1f6 0%, 
+      #e8f0f8 20%, 
+      #dde8f4 40%, 
+      #d9e5f2 60%,
+      #dfe9f4 80%,
+      #edf1f6 100%);
+  }
+
+  .features-fade {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+    background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
+    z-index: 1; pointer-events: none;
+  }
+
+  .features .container {
+    position: relative; z-index: 2;
+  }
+
   .features-header {
     text-align: center;
     margin-bottom: var(--space-2xl);
