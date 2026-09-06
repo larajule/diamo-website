@@ -162,7 +162,7 @@
     overflow: hidden;
     background: var(--ivory);
     min-height: 100vh;
-    transition: background 0.8s ease;
+    transition: background 2.5s ease;
   }
   .hero.hero-blue {
     background: linear-gradient(165deg, 
@@ -188,9 +188,9 @@
     z-index: 1;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 1.5s ease;
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 8%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 8%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
+    transition: opacity 2s ease;
+    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 85%, transparent 100%);
   }
   .hero-mesh.visible { opacity: 1; }
 
@@ -227,7 +227,7 @@
   .hero-scanloop {
     position: absolute; left: 5%; right: 5%; height: 1px;
     background: linear-gradient(90deg, transparent 0%, rgba(139,127,199,0.15) 20%, rgba(139,127,199,0.4) 50%, rgba(139,127,199,0.15) 80%, transparent 100%);
-    box-shadow: 0 0 20px rgba(139,127,199,0.15);
+    box-shadow: 0 0 12px rgba(139,127,199,0.08);
     top: 5%; opacity: 0; z-index: 1;
     pointer-events: none;
     transition: opacity 1s ease;
@@ -529,26 +529,24 @@
 
   // Phase 7: Fade out scan → reveal hero
   function finishSequence() {
-    // Start blue BG immediately
-    document.getElementById('hero')?.classList.add('hero-blue');
     // Fade scan out quickly
-    setTimeout(() => {
-      scanLayer?.classList.add('fade-out');
-    }, 100);
-    // Show mesh + looping scan
-    setTimeout(() => {
-      document.getElementById('hero-mesh')?.classList.add('visible');
-      document.querySelector('.hero-scanloop')?.classList.add('visible');
-    }, 400);
+    scanLayer?.classList.add('fade-out');
+    // Text appears first on ivory
     setTimeout(() => {
       document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
-    }, 600);
+    }, 400);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--1, .hero-reveal--2').forEach(el => el.classList.add('is-visible'));
-    }, 1200);
+    }, 1000);
     setTimeout(() => {
       document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
-    }, 1800);
+    }, 1500);
+    // THEN blue background + mesh + loop fade in softly
+    setTimeout(() => {
+      document.getElementById('hero')?.classList.add('hero-blue');
+      document.getElementById('hero-mesh')?.classList.add('visible');
+      document.querySelector('.hero-scanloop')?.classList.add('visible');
+    }, 2200);
   }
 
   // ─── Animated data mesh background ───
@@ -585,16 +583,16 @@
     function drawMesh() {
       ctx.clearRect(0, 0, w, h);
 
-      // Draw connections
+      // Draw connections only (no big dots)
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < connectDist) {
-            const alpha = (1 - dist / connectDist) * 0.15;
+            const alpha = (1 - dist / connectDist) * 0.07;
             ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.lineWidth = 0.6;
+            ctx.lineWidth = 0.4;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -603,18 +601,11 @@
         }
       }
 
-      // Draw nodes
+      // Tiny subtle dots
       for (const node of nodes) {
-        // Outer glow
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r * 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.1})`;
-        ctx.fill();
-
-        // Core dot
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.7})`;
+        ctx.arc(node.x, node.y, node.r * 0.6, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.2})`;
         ctx.fill();
 
         // Move
