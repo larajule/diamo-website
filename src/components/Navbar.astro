@@ -303,4 +303,9 @@
       }
     });
   });
+
+  // Clicking d. logo resets intro so animation plays again
+  document.querySelector('.nav-logo')?.addEventListener('click', () => {
+    sessionStorage.removeItem('diamo-intro-played');
+  });
 </script>
