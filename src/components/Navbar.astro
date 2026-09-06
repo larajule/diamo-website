@@ -11,8 +11,8 @@
       <a href="/ueber-uns" class="nav-link" data-i18n="nav.about">Über uns</a>
       <a href="/zyklusbasiertes-training" class="nav-link" data-i18n="nav.guide">Guide</a>
       <div class="lang-toggle lang-desktop">
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn active" data-lang="de" onclick="setLanguage('de')">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="de">DE</button>
       </div>
       <a href="#beta" class="btn btn-primary nav-cta" data-open-beta data-i18n="nav.cta">Beta-Testerin werden</a>
     </div>
@@ -20,8 +20,8 @@
     <!-- Mobile: lang toggle always visible -->
     <div class="nav-right-mobile">
       <div class="lang-toggle lang-mobile">
-        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-        <button class="lang-btn active" data-lang="de" onclick="setLanguage('de')">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn active" data-lang="de">DE</button>
       </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
         <span></span>
@@ -292,6 +292,15 @@
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       setTimeout(updateActiveNav, 100);
+    });
+  });
+  // Language toggle — attach event listeners to ALL lang buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      if (typeof window.setLanguage === 'function') {
+        window.setLanguage(lang);
+      }
     });
   });
 </script>
