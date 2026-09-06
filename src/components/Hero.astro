@@ -9,6 +9,9 @@
   <!-- Animated data mesh background -->
   <canvas class="hero-mesh" id="hero-mesh"></canvas>
 
+  <!-- Persistent looping scan line -->
+  <div class="hero-scanloop"></div>
+
   <!-- Body Scan Layer -->
   <div class="scan-layer" id="scan-layer">
     <img src="/images/scan-woman.png" alt="" class="scan-woman" id="scan-woman" />
@@ -157,6 +160,11 @@
     position: relative;
     display: flex; flex-direction: column; align-items: center;
     overflow: hidden;
+    background: var(--ivory);
+    min-height: 100vh;
+    transition: background 1.5s ease;
+  }
+  .hero.hero-blue {
     background: linear-gradient(165deg, 
       #e8f0f8 0%, 
       #dde8f4 20%, 
@@ -164,7 +172,6 @@
       #cfddf0 60%,
       #dce6f2 80%,
       #edf1f6 100%);
-    min-height: 100vh;
   }
   .hero-bg { position: absolute; inset: 0; z-index: 0; }
   .hero-grain {
@@ -214,6 +221,23 @@
   }
   .scan-line.active { opacity: 1; animation: scanDown 3.5s ease-in-out forwards; }
   @keyframes scanDown { 0% { top: 5%; } 100% { top: 95%; } }
+
+  /* Persistent looping scan line (after main scan) */
+  .hero-scanloop {
+    position: absolute; left: 5%; right: 5%; height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(139,127,199,0.15) 20%, rgba(139,127,199,0.4) 50%, rgba(139,127,199,0.15) 80%, transparent 100%);
+    box-shadow: 0 0 20px rgba(139,127,199,0.15);
+    top: 5%; opacity: 0; z-index: 1;
+    pointer-events: none;
+    transition: opacity 1s ease;
+  }
+  .hero-scanloop.visible {
+    opacity: 1;
+    animation: scanLoop 6s ease-in-out infinite;
+  }
+  @keyframes scanLoop {
+    0% { top: 5%; } 50% { top: 95%; } 100% { top: 5%; }
+  }
 
   /* Connections */
   .scan-connections {
@@ -505,8 +529,11 @@
   // Phase 7: Fade out scan → reveal hero
   function finishSequence() {
     scanLayer?.classList.add('fade-out');
-    // Show mesh background
+    // Transition to blue background + show mesh
+    document.getElementById('hero')?.classList.add('hero-blue');
     document.getElementById('hero-mesh')?.classList.add('visible');
+    // Start looping scan line
+    document.querySelector('.hero-scanloop')?.classList.add('visible');
     setTimeout(() => {
       document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
     }, 500);
