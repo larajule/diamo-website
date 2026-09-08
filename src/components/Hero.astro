@@ -383,7 +383,7 @@
 
   /* ─── Split Layout ─── */
   .hero-split {
-    position: relative; z-index: 2;
+    position: relative; z-index: 5;
     display: flex; align-items: center; justify-content: center;
     gap: clamp(2rem, 5vw, 6rem); width: 100%; max-width: 1200px;
     padding: calc(var(--nav-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
@@ -506,8 +506,8 @@
     // Detect if CinematicIntro just played — wait for it to finish
     const ciOverlay = document.getElementById('ci-overlay');
     const ciAlreadySeen = sessionStorage.getItem('diamo-ci-seen');
-    // If CI exists and hasn't been seen yet, it will take ~8s
-    const baseDelay = (ciOverlay && !ciAlreadySeen) ? 8200 : 0;
+    // If CI exists and hasn't been seen yet, it will take ~7s
+    const baseDelay = (ciOverlay && !ciAlreadySeen) ? 7200 : 0;
 
     // Play full animation
     // Phase 1: Fade in scan layer
