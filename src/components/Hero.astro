@@ -430,6 +430,7 @@
   .hero-phone-screen img { width: 100%; height: auto; display: block; }
   @keyframes phone-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
+
   .hero-fade {
     position: absolute; bottom: 0; left: 0; right: 0; height: 180px;
     background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
@@ -502,17 +503,23 @@
       el.style.transition = 'none';
     });
   } else {
+    // Detect if CinematicIntro just played — wait for it to finish
+    const ciOverlay = document.getElementById('ci-overlay');
+    const ciAlreadySeen = sessionStorage.getItem('diamo-ci-seen');
+    // If CI exists and hasn't been seen yet, it will take ~8s
+    const baseDelay = (ciOverlay && !ciAlreadySeen) ? 8200 : 0;
+
     // Play full animation
-    // Phase 1: Fade in (150ms)
+    // Phase 1: Fade in scan layer
     setTimeout(() => {
       scanLayer?.classList.add('active');
       scanWoman?.classList.add('visible');
       scanGrid?.classList.add('visible');
       document.getElementById('scan-particles')?.classList.add('visible');
-    }, 150);
+    }, baseDelay + 150);
 
-    // Phase 2: Scan line starts (500ms)
-    setTimeout(() => { scanLine?.classList.add('active'); }, 500);
+    // Phase 2: Scan line starts
+    setTimeout(() => { scanLine?.classList.add('active'); }, baseDelay + 500);
 
     // Phase 3: Inner body points appear as scan passes
     const innerPoints = [
@@ -528,14 +535,14 @@
       { id: 'sp-knee', delay: 2800 },
     ];
     innerPoints.forEach(({ id, delay }) => {
-      setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+      setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
     });
 
     // Phase 4: Connections + woman vivid (1400ms)
     setTimeout(() => {
       scanConns?.classList.add('visible');
       scanWoman?.classList.add('scanned');
-    }, 1400);
+    }, baseDelay + 1400);
 
     // Phase 5: Outer cards appear staggered
     const outerCards = [
@@ -549,7 +556,7 @@
       { id: 'sc-group', delay: 3200 },
     ];
     outerCards.forEach(({ id, delay }) => {
-      setTimeout(() => document.getElementById(id)?.classList.add('visible'), delay);
+      setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
     });
 
     // Phase 6: Countdown
@@ -564,7 +571,7 @@
         i++; setTimeout(runCountdown, 250);
       }, 800);
     }
-    setTimeout(runCountdown, 600);
+    setTimeout(runCountdown, baseDelay + 600);
   }
 
   // Phase 7: Fade out scan → reveal hero
@@ -674,4 +681,6 @@
       createNodes();
     });
   }
+
+
 </script>

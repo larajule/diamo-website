@@ -9,6 +9,9 @@ const translations = {
     'nav.guide': 'Guide',
     'nav.cta': 'Become a Beta Tester',
 
+    // Neon Banner
+    'banner.text': 'GIRL \u2014 be one of the first \ud83d\udcaa Move your butt with us! Don\'t miss out \u2014 SIGN UP!',
+
     // Cookie Banner
     'cookie.text': 'We use cookies to improve our website and give you the best experience. Help us make diamo even better!',
     'cookie.accept': 'Accept',
@@ -279,6 +282,9 @@ const translations = {
     'nav.about': 'Über uns',
     'nav.guide': 'Guide',
     'nav.cta': 'Beta-Testerin werden',
+
+    // Neon Banner
+    'banner.text': 'GIRL \u2014 Sei eine der Ersten \ud83d\udcaa Beweg deinen Hintern mit uns! Nicht verpassen \u2014 SIGN UP!',
 
     // Cookie Banner
     'cookie.text': 'Wir nutzen Cookies, um unsere Website zu verbessern und dir das beste Erlebnis zu bieten. Hilf uns dabei, diamo noch besser zu machen!',

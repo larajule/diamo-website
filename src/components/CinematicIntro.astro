@@ -1,0 +1,201 @@
+---
+---
+
+<div class="ci-overlay" id="ci-overlay">
+  <div class="ci-grain"></div>
+  <div class="ci-content">
+    <div class="ci-line ci-line-1" id="ci-line-1"></div>
+    <div class="ci-line ci-line-2" id="ci-line-2"></div>
+    <div class="ci-logo" id="ci-logo">d.</div>
+  </div>
+</div>
+
+<style>
+  .ci-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: #0a0e1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  .ci-overlay.fading {
+    opacity: 0;
+  }
+
+  .ci-overlay.done {
+    display: none;
+  }
+
+  .ci-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .ci-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .ci-line {
+    font-family: var(--font-mono, 'JetBrains Mono', 'Courier New', monospace);
+    font-size: clamp(0.9rem, 2.4vw, 1.35rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.88);
+    text-transform: uppercase;
+    line-height: 1.7;
+    min-height: 1.7em;
+    white-space: pre-wrap;
+  }
+
+  .ci-line::after {
+    content: '▌';
+    font-weight: 400;
+    color: #2C7AFF;
+    animation: cursorBlink 0.6s step-end infinite;
+    margin-left: 1px;
+  }
+
+  .ci-line.typed::after {
+    display: none;
+  }
+
+  .ci-line-2 {
+    margin-top: 0.1em;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ci-line-2.visible {
+    opacity: 1;
+  }
+
+  .ci-logo {
+    font-family: var(--font-serif, 'Playfair Display', Georgia, serif);
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .ci-logo.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @media (max-width: 480px) {
+    .ci-line {
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+    .ci-logo {
+      font-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.getElementById('ci-overlay');
+    if (!overlay) return;
+
+    // Session gate
+    if (sessionStorage.getItem('diamo-ci-seen')) {
+      overlay.classList.add('done');
+      return;
+    }
+
+    // Skip old intro overlay
+    sessionStorage.setItem('diamo-intro-seen', '1');
+
+    document.body.style.overflow = 'hidden';
+
+    const line1El = document.getElementById('ci-line-1');
+    const line2El = document.getElementById('ci-line-2');
+    const logo = document.getElementById('ci-logo');
+
+    // Detect language
+    const lang = localStorage.getItem('diamo-lang') ||
+                 (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
+
+    const line1Text = lang === 'de'
+      ? 'DU HAST NUR EIN LEBEN.'
+      : 'YOU HAVE ONE LIFE.';
+    const line2Text = lang === 'de'
+      ? 'DEIN TRAINING SOLLTE\nDAS VERSTEHEN.'
+      : 'YOUR WORKOUT SHOULD\nGET THAT.';
+
+    // Simple typewriter — no sound
+    function typeText(el, text, speed, cb) {
+      let i = 0;
+      function tick() {
+        if (i < text.length) {
+          el.textContent += text[i];
+          i++;
+          const delay = text[i - 1] === '\n' ? speed * 2.5 : speed + Math.random() * 20;
+          setTimeout(tick, delay);
+        } else if (cb) {
+          cb();
+        }
+      }
+      tick();
+    }
+
+    // ─── Timeline ───
+    // 0–1s: dark + grain. Build tension.
+    // 1s: start typing line 1
+    setTimeout(() => {
+      typeText(line1El, line1Text, 60, () => {
+        line1El?.classList.add('typed');
+      });
+    }, 1000);
+
+    // ~3.2s: pause, then reveal line 2
+    setTimeout(() => {
+      line2El?.classList.add('visible');
+    }, 3400);
+
+    // ~3.6s: type line 2
+    setTimeout(() => {
+      typeText(line2El, line2Text, 55, () => {
+        line2El?.classList.add('typed');
+      });
+    }, 3600);
+
+    // ~5.5s: show d. logo — moment of pride
+    setTimeout(() => {
+      logo?.classList.add('visible');
+    }, 5800);
+
+    // ~7s: smooth fade out (1s transition)
+    setTimeout(() => {
+      overlay.classList.add('fading');
+    }, 7000);
+
+    // ~8s: remove + unlock
+    setTimeout(() => {
+      overlay.classList.add('done');
+      document.body.style.overflow = '';
+      sessionStorage.setItem('diamo-ci-seen', '1');
+    }, 8100);
+  });
+</script>
