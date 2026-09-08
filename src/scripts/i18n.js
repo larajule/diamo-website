@@ -90,8 +90,8 @@ const translations = {
 
     // Hero
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Your body is not the same every day.<br/>Your training shouldn\'t be either.',
-    'hero.description': 'diamo understands what your body truly needs today. Hormones, energy, sleep, stress. Every morning a workout that adapts to you. And a community of women who move together.',
+    'hero.title': 'Move now.<br/>Feel later.',
+    'hero.description': 'Smart training that adapts to your body. Every single day.',
     'hero.cta.beta': 'Get early access',
     'hero.discover': 'Discover',
 
@@ -360,8 +360,8 @@ const translations = {
     'guide.final.note': 'Kostenlos · Begrenzte Plätze · Jederzeit kündbar',
 
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Dein Körper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht.',
-    'hero.description': 'diamo versteht, was dein Körper heute wirklich braucht. Hormone, Energie, Schlaf, Stress. Jeden Morgen ein Workout, das sich dir anpasst. Und eine Community aus Frauen, die sich gemeinsam bewegen.',
+    'hero.title': 'Move now.<br/>Feel later.',
+    'hero.description': 'Smartes Training, das sich deinem Körper anpasst. Jeden einzelnen Tag.',
     'hero.cta.beta': 'Early Access sichern',
     'hero.discover': 'Entdecken',
 
