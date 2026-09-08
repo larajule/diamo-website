@@ -586,7 +586,15 @@ function setLanguage(lang) {
 }
 
 function initLanguage() {
-  // Check localStorage first
+  // Check URL query param first (e.g. ?lang=en)
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get('lang');
+  if (urlLang && translations[urlLang]) {
+    setLanguage(urlLang);
+    return;
+  }
+
+  // Check localStorage
   const saved = localStorage.getItem('diamo-lang');
   if (saved && translations[saved]) {
     setLanguage(saved);
