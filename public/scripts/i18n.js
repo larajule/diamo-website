@@ -93,7 +93,7 @@ const translations = {
 
     // Hero
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Move now.<br/>Feel later.',
+    'hero.title': 'Your body is not the same every day.<br/>Your training shouldn\'t be either.',
     'hero.description': 'Smart training that adapts to your body. Every single day.',
     'hero.cta.beta': 'Get early access',
     'hero.discover': 'Discover',
@@ -366,7 +366,7 @@ const translations = {
     'guide.final.note': 'Kostenlos · Begrenzte Plätze · Jederzeit kündbar',
 
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Move now.<br/>Feel later.',
+    'hero.title': 'Dein K\u00f6rper ist nicht jeden Tag gleich.<br/>Dein Training ab jetzt auch nicht mehr.',
     'hero.description': 'Smartes Training, das sich deinem Körper anpasst. Jeden einzelnen Tag.',
     'hero.cta.beta': 'Early Access sichern',
     'hero.discover': 'Entdecken',
