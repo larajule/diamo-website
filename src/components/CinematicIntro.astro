@@ -169,8 +169,9 @@
     const line2El = document.getElementById('ci-line-2');
     const logo = document.getElementById('ci-logo');
 
-    // Detect language
-    const lang = localStorage.getItem('diamo-lang') ||
+    // Detect language — check URL param first, then localStorage, then browser
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const lang = urlLang || localStorage.getItem('diamo-lang') ||
                  (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
 
     const line1Text = lang === 'de'
