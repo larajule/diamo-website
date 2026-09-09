@@ -314,6 +314,14 @@
     });
   });
 
+  // Sync toggle state on load — respect URL param > localStorage > browser
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  const savedLang = urlLang || localStorage.getItem('diamo-lang') ||
+                    (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-lang') === savedLang);
+  });
+
   // Clicking d. logo resets intro so animation plays again
   document.querySelector('.nav-logo')?.addEventListener('click', () => {
     sessionStorage.removeItem('diamo-intro-played');
