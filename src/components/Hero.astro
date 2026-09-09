@@ -1,686 +1,404 @@
 ---
+// TODO: Ersetze '98_1x_shots_so.png' durch '178_1x_shots_so.png' sobald die Datei im Repo liegt
 ---
 
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <div class="hero-grain"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-particles"></div>
   </div>
-
-  <!-- Blue background reveal (pulled down by scan line) -->
-  <div class="hero-blue-reveal" id="hero-blue-reveal"></div>
-
-  <!-- Animated data mesh background -->
-  <canvas class="hero-mesh" id="hero-mesh"></canvas>
-
-  <!-- Persistent looping scan line -->
-  <div class="hero-scanloop"></div>
-
-  <!-- Body Scan Layer -->
-  <div class="scan-layer" id="scan-layer">
-    <img src="/images/scan-woman.png" alt="" class="scan-woman" id="scan-woman" />
-    
-    <!-- Scan line -->
-    <div class="scan-line" id="scan-line"></div>
-
-    <!-- ═══ INNER: Body data points (ON the body) ═══ -->
-    <div class="scan-point sp-inner" id="sp-mind" style="top: 18%; left: 47%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Focus</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-heart" style="top: 31%; left: 45%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Heart Rate · 62 bpm</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-hormones" style="top: 36%; left: 42%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Estrogen ↑</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-cycle" style="top: 42%; left: 46%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Day 9 · Follicular</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-core" style="top: 44%; left: 50%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Core Strength</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-energy" style="top: 38%; left: 48%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Energy · 82%</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-shoulder" style="top: 22%; left: 56%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Mobility</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-knee" style="top: 62%; left: 40%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Stability</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-recovery" style="top: 48%; left: 53%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Recovery · 91%</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-stress" style="top: 26%; left: 44%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Cortisol · Low</span>
-    </div>
-
-    <!-- ═══ OUTER: Lifestyle data (OUTSIDE the body) ═══ -->
-    <div class="scan-card" id="sc-workout" style="top: 16%; right: 8%;">
-      <span class="sc-title">Today</span>
-      <span class="sc-value">Strength Training</span>
-    </div>
-    <div class="scan-card" id="sc-sleep" style="top: 30%; left: 6%;">
-      <span class="sc-title">Sleep</span>
-      <span class="sc-value">7h 12min · Deep 1h 48min</span>
-    </div>
-    <div class="scan-card" id="sc-steps" style="bottom: 30%; right: 6%;">
-      <span class="sc-title">Steps</span>
-      <span class="sc-value">4,230 today</span>
-    </div>
-    <div class="scan-card" id="sc-community" style="bottom: 18%; right: 10%;">
-      <span class="sc-title">Community</span>
-      <span class="sc-value">3 girls training near you</span>
-    </div>
-    <div class="scan-card" id="sc-group" style="bottom: 24%; left: 6%;">
-      <span class="sc-title">Group Run</span>
-      <span class="sc-value">Tomorrow · 18:00 · 4 joined</span>
-    </div>
-    <div class="scan-card" id="sc-mood" style="top: 44%; right: 6%;">
-      <span class="sc-title">Mood</span>
-      <span class="sc-value">Energized · Ready to go</span>
-    </div>
-    <div class="scan-card" id="sc-nutrition" style="top: 56%; left: 5%;">
-      <span class="sc-title">Nutrition</span>
-      <span class="sc-value">Protein · 48g / 96g</span>
-    </div>
-    <div class="scan-card" id="sc-hrv" style="top: 22%; right: 6%;">
-      <span class="sc-title">HRV</span>
-      <span class="sc-value">48ms · Above average</span>
-    </div>
-
-    <!-- Connecting lines -->
-    <svg class="scan-connections" id="scan-connections" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid meet">
-      <line class="conn-line" x1="450" y1="310" x2="200" y2="300" />
-      <line class="conn-line" x1="420" y1="360" x2="200" y2="340" />
-      <line class="conn-line" x1="560" y1="220" x2="750" y2="160" />
-      <line class="conn-line" x1="500" y1="380" x2="750" y2="440" />
-      <line class="conn-line" x1="400" y1="620" x2="200" y2="670" />
-      <line class="conn-line" x1="530" y1="480" x2="750" y2="300" />
-      <line class="conn-line" x1="440" y1="260" x2="200" y2="180" />
-      <line class="conn-line" x1="480" y1="440" x2="750" y2="560" />
-    </svg>
-
-    <!-- Particles -->
-    <div class="scan-particles" id="scan-particles"></div>
-
-    <!-- Grid -->
-    <svg class="scan-grid" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <line x1="0" y1="20" x2="100" y2="20" /><line x1="0" y1="40" x2="100" y2="40" />
-      <line x1="0" y1="60" x2="100" y2="60" /><line x1="0" y1="80" x2="100" y2="80" />
-      <line x1="20" y1="0" x2="20" y2="100" /><line x1="40" y1="0" x2="40" y2="100" />
-      <line x1="60" y1="0" x2="60" y2="100" /><line x1="80" y1="0" x2="80" y2="100" />
-    </svg>
-  </div>
-
-  <!-- Countdown -->
-  <div class="hero-countdown" id="hero-countdown">
-    <span class="hc-num" id="hc-3">3</span>
-    <span class="hc-num" id="hc-2">2</span>
-    <span class="hc-num" id="hc-1">1</span>
-    <span class="hc-go" id="hc-go">GO</span>
-  </div>
-
-  <!-- Hero content -->
-  <div class="hero-split" id="hero-split">
+  
+  <div class="hero-content container">
     <div class="hero-text">
-      <span class="hero-micro hero-reveal hero-reveal--1" data-i18n="hero.micro">body intelligence system</span>
-      <h1 class="hero-headline hero-reveal hero-reveal--headline" data-i18n="hero.title">
-        Move now.<br/>Feel later.
+      <span class="hero-brand animate-in">diamo</span>
+      <div class="hero-badge animate-in">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">Exklusiver Beta-Zugang</span>
+      </div>
+      <h1 class="hero-title animate-in" data-i18n="hero.title">
+        Dein Fitness-Alltag, neu gedacht.
       </h1>
-      <p class="hero-sub hero-reveal hero-reveal--2" data-i18n="hero.description">
-        Smart training that adapts to your body. Every single day.
+      
+      <p class="hero-description animate-in" data-i18n="hero.description">
+        Sei von Anfang an dabei und gestalte diamo aktiv mit.
+        Wir lesen jedes einzelne Feedback und deine Meinung formt die App.
+        Lass uns zusammen die Fitness-App bauen, die dein Körper verdient.
       </p>
-      <div class="hero-cta-row hero-reveal hero-reveal--2">
-        <button type="button" class="hero-btn-primary" data-open-beta>
-          <span data-i18n="hero.cta.beta">Early Access sichern</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      
+      <div class="hero-actions animate-in">
+        <button type="button" class="btn btn-primary btn-hero-cta btn-shimmer" data-open-beta>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span data-i18n="hero.cta.beta">Als Beta-Testerin starten</span>
         </button>
       </div>
-    </div>
-    <div class="hero-phone-wrapper hero-reveal hero-reveal--phone">
-      <div class="hero-phone">
-        <div class="hero-phone-screen">
-          <img src="/screenshots/login.png" alt="diamo App" loading="eager" />
+      
+      <p class="hero-geo-definition animate-in" data-i18n="hero.geo">
+        diamo ist eine zyklusbasierte Fitness-App für Frauen, die Trainingspläne und Regeneration dynamisch an die hormonellen Phasen des weiblichen Zyklus anpasst.
+      </p>
+
+      <div class="hero-stats animate-in">
+        <div class="stat">
+          <span class="stat-value" data-i18n="hero.stat1.value">Begrenzt</span>
+          <span class="stat-label" data-i18n="hero.stat1.label">Plätze verfügbar</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value" data-i18n="hero.stat2.value">100%</span>
+          <span class="stat-label" data-i18n="hero.stat2.label">Kostenlos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value" data-i18n="hero.stat3.value">Dein</span>
+          <span class="stat-label" data-i18n="hero.stat3.label">Einfluss zählt</span>
         </div>
       </div>
     </div>
+    
+    <div class="hero-visual animate-in">
+      <div class="hero-mockup-wrap">
+        <img
+          src="/screenshots/home.png"
+          alt="diamo App – Home Screen"
+          class="hero-mockup-img"
+          loading="eager"
+        />
+      </div>
+    </div>
   </div>
-  <div class="hero-fade"></div>
 </section>
+
 
 <style>
   .hero {
     position: relative;
-    display: flex; flex-direction: column; align-items: center;
-    overflow: hidden;
-    background: var(--ivory);
     min-height: 100vh;
-    transition: none;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding-top: var(--nav-height);
   }
 
-  /* Blue reveal overlay — scan line pulls it down */
-  .hero-blue-reveal {
-    position: absolute; inset: 0; z-index: 0;
-    background: linear-gradient(165deg, 
-      #e8f0f8 0%, 
-      #dde8f4 20%, 
-      #d4e2f0 40%, 
-      #cfddf0 60%,
-      #dce6f2 80%,
-      #edf1f6 100%);
-    clip-path: inset(0 0 100% 0);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .hero-blue-reveal.revealing {
-    opacity: 1;
-    animation: revealDown 4s ease-in-out forwards;
-  }
-  @keyframes revealDown {
-    0% { clip-path: inset(0 0 100% 0); }
-    100% { clip-path: inset(0 0 0% 0); }
-  }
-  .hero-bg { position: absolute; inset: 0; z-index: 0; }
-  .hero-grain {
-    position: absolute; inset: 0; opacity: 0.025;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-    pointer-events: none;
-  }
-
-  /* ─── Animated mesh background ─── */
-  .hero-mesh {
+  .hero-bg {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: var(--ivory);
+  }
+
+  .hero-particles {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, rgba(155, 139, 203, 0.3), transparent),
+      radial-gradient(2px 2px at 80% 20%, rgba(185, 215, 234, 0.3), transparent),
+      radial-gradient(1.5px 1.5px at 60% 70%, rgba(196, 145, 142, 0.2), transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%, rgba(155, 139, 203, 0.2), transparent);
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero-content {
+    position: relative;
     z-index: 1;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 2s ease;
-    mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 85%, transparent 100%);
-  }
-  .hero-mesh.visible { opacity: 1; }
-
-  /* ─── Scan Layer ─── */
-  .scan-layer {
-    position: fixed; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 40; pointer-events: none;
-    opacity: 0; transition: opacity 0.8s ease;
-  }
-  .scan-layer.active { opacity: 1; }
-  .scan-layer.fade-out { opacity: 0; transition: opacity 0.35s ease; }
-
-  .scan-woman {
-    height: 80vh; width: auto; object-fit: contain;
-    opacity: 0; filter: saturate(0.2) brightness(1.08);
-    transition: opacity 0.8s ease, filter 2s ease;
-    mix-blend-mode: multiply;
-  }
-  .scan-woman.visible { opacity: 0.35; }
-  .scan-woman.scanned { opacity: 0.55; filter: saturate(0.5) brightness(1.02); }
-
-  /* Scan line */
-  .scan-line {
-    position: absolute; left: 10%; right: 10%; height: 2px;
-    background: linear-gradient(90deg, transparent 0%, rgba(139,127,199,0.3) 20%, rgba(139,127,199,0.9) 50%, rgba(139,127,199,0.3) 80%, transparent 100%);
-    box-shadow: 0 0 30px rgba(139,127,199,0.6), 0 0 80px rgba(139,127,199,0.2), 0 -4px 20px rgba(139,127,199,0.15), 0 4px 20px rgba(139,127,199,0.15);
-    top: 0; opacity: 0;
-  }
-  .scan-line.active { opacity: 1; animation: scanDown 3.5s ease-in-out forwards; }
-  @keyframes scanDown { 0% { top: 5%; } 100% { top: 95%; } }
-
-  /* Persistent looping scan line (after main scan) */
-  .hero-scanloop {
-    position: absolute; left: 5%; right: 5%; height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(139,127,199,0.15) 20%, rgba(139,127,199,0.4) 50%, rgba(139,127,199,0.15) 80%, transparent 100%);
-    box-shadow: 0 0 12px rgba(139,127,199,0.08);
-    top: 5%; opacity: 0; z-index: 1;
-    pointer-events: none;
-    transition: opacity 1s ease;
-  }
-  .hero-scanloop.visible {
-    opacity: 1;
-    animation: scanLoop 12s ease-in-out 2s infinite;
-  }
-  @keyframes scanLoop {
-    0% { top: 5%; } 50% { top: 95%; } 100% { top: 5%; }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+    padding-top: var(--space-xl);
+    padding-bottom: 0;
   }
 
-  /* Connections */
-  .scan-connections {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    opacity: 0; transition: opacity 0.8s ease;
-  }
-  .scan-connections.visible { opacity: 1; }
-  .conn-line {
-    stroke: rgba(139,127,199,0.12); stroke-width: 0.8;
-    stroke-dasharray: 6 4;
-    stroke-dashoffset: 200;
-    transition: stroke-dashoffset 2s ease;
-  }
-  .scan-connections.visible .conn-line { stroke-dashoffset: 0; }
-
-  /* Grid */
-  .scan-grid {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    opacity: 0; transition: opacity 1.5s ease;
-  }
-  .scan-grid.visible { opacity: 1; }
-  .scan-grid line { stroke: rgba(139,127,199,0.035); stroke-width: 0.15; }
-
-  /* ─── Inner data points (ON body) ─── */
-  .scan-point {
-    position: absolute; transform: translate(-50%, -50%);
-    opacity: 0; transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1);
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  .scan-point.visible { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-
-  .sp-dot {
-    display: block; width: 5px; height: 5px; border-radius: 50%;
-    background: var(--lavender);
-    box-shadow: 0 0 6px rgba(139,127,199,0.9), 0 0 16px rgba(139,127,199,0.4);
-  }
-  .sp-ring {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 18px; height: 18px; border-radius: 50%;
-    border: 1px solid rgba(139,127,199,0.25);
-    animation: ringPulse 2.5s ease-in-out infinite;
-  }
-  @keyframes ringPulse {
-    0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 0.5; }
-    50% { transform: translate(-50%,-50%) scale(2.2); opacity: 0; }
+  /* Exclusive Badge */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(0, 32, 96, 0.06);
+    border: 1px solid rgba(0, 32, 96, 0.1);
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    width: fit-content;
   }
 
-  .sp-label {
-    position: absolute; top: -6px;
-    font-family: var(--font-sans); font-size: 0.55rem; font-weight: 600;
-    letter-spacing: 0.05em; text-transform: uppercase;
-    color: rgba(139,127,199,0.7); white-space: nowrap;
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--sage);
+    border-radius: 50%;
+    animation: pulseGlow 2s ease-in-out infinite;
+    box-shadow: 0 0 8px rgba(141, 198, 166, 0.5);
   }
-  .sp-right { left: 14px; }
-  .sp-left { right: 14px; text-align: right; }
 
-  /* ─── Outer cards (lifestyle, OUTSIDE body) ─── */
-  .scan-card {
-    position: absolute;
-    display: flex; flex-direction: column; gap: 0.15rem;
-    padding: 0.55rem 0.85rem;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(139,127,199,0.1);
-    border-radius: 8px;
-    box-shadow: 0 2px 16px rgba(0,20,60,0.05);
-    opacity: 0; transform: translateY(8px) scale(0.95);
-    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1);
-  }
-  .scan-card.visible { opacity: 1; transform: translateY(0) scale(1); }
-
-  .sc-title {
-    font-family: var(--font-sans); font-size: 0.55rem; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
+  .hero-brand {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
     color: var(--lavender);
-  }
-  .sc-value {
-    font-family: var(--font-sans); font-size: 0.68rem; font-weight: 600;
-    color: var(--navy); letter-spacing: 0.01em;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-sm);
   }
 
-  /* Particles */
-  .scan-particles {
-    position: absolute; inset: 0; pointer-events: none;
-    opacity: 0; transition: opacity 1s ease;
-  }
-  .scan-particles.visible { opacity: 1; }
-  .particle {
-    position: absolute; width: 2px; height: 2px;
-    border-radius: 50%; background: rgba(139,127,199,0.35);
-    animation: floatParticle 4s ease-in-out infinite;
-  }
-  @keyframes floatParticle {
-    0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
-    50% { transform: translateY(-12px) scale(1.5); opacity: 0.6; }
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1.08;
+    margin-bottom: var(--space-md);
+    font-variant-ligatures: no-common-ligatures;
+    font-feature-settings: "liga" 0, "clig" 0;
   }
 
-  /* ─── Countdown ─── */
-  .hero-countdown {
-    position: fixed; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 50; pointer-events: none;
+  .hero-accent {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--lavender) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .hc-num, .hc-go {
+
+  .hero-description {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    max-width: 480px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+  }
+
+  .btn-hero-cta {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 28px rgba(0, 32, 96, 0.35);
+    letter-spacing: 0.02em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 32, 96, 0.45), 0 0 60px rgba(155, 139, 203, 0.15);
+  }
+
+  /* Shimmer effect on CTA */
+  .btn-shimmer::after {
+    content: '';
     position: absolute;
-    font-family: var(--font-serif); font-weight: 700; color: var(--navy);
-    opacity: 0; transform: scale(0.7);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .hc-num { font-size: clamp(14rem, 35vw, 26rem); }
-  .hc-go  { font-size: clamp(12rem, 30vw, 22rem); letter-spacing: 0.05em; }
-  .hc-num.active, .hc-go.active { opacity: 0.06; transform: scale(1); }
-  .hc-num.shrink, .hc-go.shrink { opacity: 0; transform: scale(1.5); transition: opacity 0.4s ease, transform 0.4s ease; }
-
-  /* ─── Reveal ─── */
-  .hero-reveal {
-    opacity: 0; transform: translateY(24px); filter: blur(4px);
-    transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1), filter 0.8s cubic-bezier(0.16,1,0.3,1);
-  }
-  .hero-reveal.is-visible { opacity: 1; transform: translateY(0); filter: blur(0); }
-  .hero-reveal--headline { transform: translateY(36px); }
-  .hero-reveal--phone { transform: translateY(60px); filter: blur(6px); }
-  .hero-reveal--phone.is-visible { transform: translateY(0); filter: blur(0); }
-
-  /* ─── Split Layout ─── */
-  .hero-split {
-    position: relative; z-index: 5;
-    display: flex; align-items: center; justify-content: center;
-    gap: clamp(2rem, 5vw, 6rem); width: 100%; max-width: 1200px;
-    padding: calc(var(--nav-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
-    min-height: calc(100vh - var(--nav-height)); box-sizing: border-box;
-  }
-  .hero-text {
-    display: flex; flex-direction: column; align-items: flex-start; text-align: left;
-    flex: 1 1 50%; max-width: 520px;
-  }
-  .hero-micro {
-    font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--lavender); margin-bottom: var(--space-sm);
-  }
-  .hero-headline {
-    font-size: clamp(2.4rem, 4.5vw, 4rem);
-    line-height: 1.08; letter-spacing: -0.03em;
-    margin-bottom: var(--space-md); color: var(--navy);
-  }
-  .hero-sub {
-    font-size: clamp(1rem, 1.4vw, 1.15rem);
-    line-height: 1.65; color: var(--text-secondary);
-    max-width: 460px; margin-bottom: var(--space-lg);
-  }
-  .hero-cta-row { margin-bottom: 0; }
-  .hero-btn-primary {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    padding: 1rem 2.2rem; font-family: var(--font-sans);
-    font-size: 0.88rem; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    border: none; border-radius: var(--radius-full);
-    background: var(--navy); color: var(--white); cursor: pointer;
-    transition: all var(--transition-base);
-    box-shadow: 0 4px 24px rgba(0,32,96,0.25);
-  }
-  .hero-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,32,96,0.35); }
-
-  .hero-phone-wrapper { flex: 0 0 auto; display: flex; justify-content: center; align-items: center; }
-  .hero-phone { width: clamp(240px, 22vw, 300px); animation: phone-float 5s ease-in-out infinite; }
-  .hero-phone-screen {
-    border-radius: clamp(28px, 4vw, 44px); overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,20,60,0.06), 0 16px 48px rgba(0,20,60,0.10), 0 32px 80px rgba(0,20,60,0.08);
-  }
-  .hero-phone-screen img { width: 100%; height: auto; display: block; }
-  @keyframes phone-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-
-  .hero-fade {
-    position: absolute; bottom: 0; left: 0; right: 0; height: 180px;
-    background: linear-gradient(to bottom, transparent 0%, var(--ivory) 100%);
-    pointer-events: none; z-index: 3;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      transparent 100%
+    );
+    animation: shimmerSlide 3s ease-in-out infinite;
   }
 
-  @media (max-width: 900px) {
-    .hero { min-height: auto; }
-    .hero-split { flex-direction: column; align-items: center; padding-top: calc(var(--nav-height) + var(--space-lg)); min-height: auto; gap: var(--space-lg); }
-    .hero-text { align-items: center; text-align: center; max-width: 600px; }
-    .hero-headline { font-size: clamp(2.2rem, 8vw, 3rem); }
-    .hero-phone { width: clamp(220px, 50vw, 260px); }
-    .scan-layer { padding-top: calc(var(--nav-height) + 1rem); }
-    .scan-woman { height: 60vh; }
-    .sp-label { font-size: 0.5rem; }
-    .scan-card { display: none; }
-    .scan-connections { display: none; }
+  @keyframes shimmerSlide {
+    0%, 100% { left: -100%; }
+    50% { left: 150%; }
   }
 
-  @media (max-width: 480px) {
-    .hero-sub { font-size: 0.98rem; }
-    .hero-phone { width: clamp(200px, 60vw, 240px); }
-    .scan-woman { height: 55vh; }
-    .sp-label { font-size: 0.45rem; }
-    .scan-line { left: 5%; right: 5%; }
+  .hero-geo-definition {
+    font-size: 0.82rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.45);
+    line-height: 1.6;
+    max-width: 480px;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .stat-value {
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--divider);
+  }
+
+  /* Hero Phone Visual */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    /* Overflow to the right — clipped by hero overflow-x:hidden */
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* Push phone top down to align with the EXKLUSIVER BETA-ZUGANG badge */
+    padding-top: 3.5rem;
+    /* Phone bleed below hero section */
+    margin-bottom: -240px;
+  }
+
+  /* Seamless bottom fade — matches the hero background */
+  .hero-visual::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    right: -30%;
+    height: 260px;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(252, 251, 247, 0.5) 35%,
+      rgba(252, 251, 247, 0.9) 72%,
+      var(--ivory) 100%
+    );
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .hero-mockup-wrap {
+    position: relative;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+    /* Big phone — overflows right side, clipped cleanly by hero overflow-x:hidden */
+    width: 155%;
+    max-width: none;
+    flex-shrink: 0;
+    filter:
+      drop-shadow(0 48px 96px rgba(0, 32, 96, 0.20))
+      drop-shadow(0 10px 32px rgba(0, 32, 96, 0.13));
+  }
+
+  .hero-mockup-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+
+  /* Stagger animations */
+  .hero-text .animate-in:nth-child(1) { transition-delay: 0.1s; }
+  .hero-text .animate-in:nth-child(2) { transition-delay: 0.2s; }
+  .hero-text .animate-in:nth-child(3) { transition-delay: 0.3s; }
+  .hero-text .animate-in:nth-child(4) { transition-delay: 0.4s; }
+  .hero-text .animate-in:nth-child(5) { transition-delay: 0.5s; }
+  .hero-text .animate-in:nth-child(6) { transition-delay: 0.6s; }
+  .hero-text .animate-in:nth-child(7) { transition-delay: 0.7s; }
+  .hero-visual.animate-in { transition-delay: 0.4s; }
+
+  @media (max-width: 968px) {
+    .hero {
+      min-height: auto;
+      padding-top: var(--nav-height);
+      padding-bottom: var(--space-md);
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: var(--space-sm);
+      padding-top: var(--space-sm);
+      padding-bottom: var(--space-sm);
+    }
+
+    .hero-visual {
+      order: -1;
+      margin-top: 0;
+    }
+
+    .hero-text {
+      order: 2;
+    }
+
+    .hero-badge {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-brand {
+      margin-bottom: var(--space-xs);
+    }
+
+    .hero-description {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.95rem;
+      max-width: 100%;
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-actions {
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .hero-geo-definition {
+      display: none;
+    }
+
+    .hero-stats {
+      display: none;
+    }
+
+    .hero-mockup-wrap {
+      width: 100%;
+      max-width: none;
+    }
+
+    .hero-visual {
+      margin-bottom: -100px;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 7vw, 2.5rem);
+      margin-bottom: var(--space-sm);
+    }
+
+    .btn-hero-cta {
+      padding: 1rem 2rem;
+      font-size: 0.95rem;
+    }
   }
 </style>
-
-<script>
-  // ─── Create particles ───
-  const particleContainer = document.getElementById('scan-particles');
-  if (particleContainer) {
-    for (let i = 0; i < 25; i++) {
-      const p = document.createElement('div');
-      p.className = 'particle';
-      p.style.left = Math.random() * 100 + '%';
-      p.style.top = Math.random() * 100 + '%';
-      p.style.animationDelay = Math.random() * 4 + 's';
-      p.style.animationDuration = (3 + Math.random() * 3) + 's';
-      particleContainer.appendChild(p);
-    }
-  }
-
-  // ─── Animation sequence ───
-  const scanLayer = document.getElementById('scan-layer');
-  const scanWoman = document.getElementById('scan-woman');
-  const scanLine = document.getElementById('scan-line');
-  const scanGrid = document.querySelector('.scan-grid');
-  const scanConns = document.getElementById('scan-connections');
-  const steps = ['hc-3', 'hc-2', 'hc-1', 'hc-go'];
-
-  // Check if animation already played this session
-  const alreadyPlayed = sessionStorage.getItem('diamo-intro-played');
-
-  if (alreadyPlayed) {
-    // Skip to final state immediately
-    if (scanLayer) scanLayer.style.display = 'none';
-    const countdown = document.getElementById('hero-countdown');
-    if (countdown) countdown.style.display = 'none';
-    const blueReveal = document.getElementById('hero-blue-reveal');
-    if (blueReveal) {
-      blueReveal.classList.add('revealing');
-      blueReveal.style.animationDuration = '0s';
-    }
-    document.getElementById('hero-mesh')?.classList.add('visible');
-    document.querySelector('.hero-scanloop')?.classList.add('visible');
-    // Show all hero text elements instantly
-    document.querySelectorAll('[class*="hero-reveal"]').forEach(el => {
-      el.classList.add('is-visible');
-      el.style.transition = 'none';
-    });
-  } else {
-    // Detect if CinematicIntro just played — wait for it to finish
-    const ciOverlay = document.getElementById('ci-overlay');
-    const ciAlreadySeen = sessionStorage.getItem('diamo-ci-seen');
-    // If CI exists and hasn't been seen yet, it will take ~7s
-    const baseDelay = (ciOverlay && !ciAlreadySeen) ? 7200 : 0;
-
-    // Play full animation
-    // Phase 1: Fade in scan layer
-    setTimeout(() => {
-      scanLayer?.classList.add('active');
-      scanWoman?.classList.add('visible');
-      scanGrid?.classList.add('visible');
-      document.getElementById('scan-particles')?.classList.add('visible');
-    }, baseDelay + 150);
-
-    // Phase 2: Scan line starts
-    setTimeout(() => { scanLine?.classList.add('active'); }, baseDelay + 500);
-
-    // Phase 3: Inner body points appear as scan passes
-    const innerPoints = [
-      { id: 'sp-mind', delay: 750 },
-      { id: 'sp-shoulder', delay: 950 },
-      { id: 'sp-stress', delay: 1100 },
-      { id: 'sp-heart', delay: 1350 },
-      { id: 'sp-hormones', delay: 1550 },
-      { id: 'sp-energy', delay: 1700 },
-      { id: 'sp-cycle', delay: 1900 },
-      { id: 'sp-core', delay: 2000 },
-      { id: 'sp-recovery', delay: 2300 },
-      { id: 'sp-knee', delay: 2800 },
-    ];
-    innerPoints.forEach(({ id, delay }) => {
-      setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
-    });
-
-    // Phase 4: Connections + woman vivid (1400ms)
-    setTimeout(() => {
-      scanConns?.classList.add('visible');
-      scanWoman?.classList.add('scanned');
-    }, baseDelay + 1400);
-
-    // Phase 5: Outer cards appear staggered
-    const outerCards = [
-      { id: 'sc-hrv', delay: 1200 },
-      { id: 'sc-sleep', delay: 1600 },
-      { id: 'sc-workout', delay: 1900 },
-      { id: 'sc-mood', delay: 2200 },
-      { id: 'sc-nutrition', delay: 2500 },
-      { id: 'sc-steps', delay: 2700 },
-      { id: 'sc-community', delay: 3000 },
-      { id: 'sc-group', delay: 3200 },
-    ];
-    outerCards.forEach(({ id, delay }) => {
-      setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
-    });
-
-    // Phase 6: Countdown
-    let i = 0;
-    function runCountdown() {
-      if (i >= steps.length) { setTimeout(finishSequence, 400); return; }
-      const el = document.getElementById(steps[i]);
-      if (!el) return;
-      el.classList.add('active');
-      setTimeout(() => {
-        el.classList.remove('active'); el.classList.add('shrink');
-        i++; setTimeout(runCountdown, 250);
-      }, 800);
-    }
-    setTimeout(runCountdown, baseDelay + 600);
-  }
-
-  // Phase 7: Fade out scan → reveal hero
-  function finishSequence() {
-    // Mark as played
-    sessionStorage.setItem('diamo-intro-played', '1');
-    // Fade scan out
-    scanLayer?.classList.add('fade-out');
-    // Text appears on ivory
-    setTimeout(() => {
-      document.querySelector('.hero-reveal--headline')?.classList.add('is-visible');
-    }, 400);
-    setTimeout(() => {
-      document.querySelectorAll('.hero-reveal--1, .hero-reveal--2').forEach(el => el.classList.add('is-visible'));
-    }, 1000);
-    setTimeout(() => {
-      document.querySelectorAll('.hero-reveal--phone').forEach(el => el.classList.add('is-visible'));
-    }, 1500);
-    // Scan line pulls blue down (synced timing)
-    setTimeout(() => {
-      document.getElementById('hero-blue-reveal')?.classList.add('revealing');
-      document.querySelector('.hero-scanloop')?.classList.add('visible');
-    }, 2000);
-    // Mesh appears subtly after blue is mostly revealed
-    setTimeout(() => {
-      document.getElementById('hero-mesh')?.classList.add('visible');
-    }, 4500);
-  }
-
-  // ─── Animated data mesh background ───
-  const meshCanvas = document.getElementById('hero-mesh');
-  if (meshCanvas) {
-    const ctx = meshCanvas.getContext('2d');
-    let w, h, nodes = [];
-    const isMobile = window.innerWidth < 480;
-    const isTablet = window.innerWidth < 900;
-    const nodeCount = isMobile ? 30 : isTablet ? 50 : 80;
-    const connectDist = isMobile ? 120 : isTablet ? 150 : 180;
-
-    function resizeMesh() {
-      const hero = document.getElementById('hero');
-      if (!hero) return;
-      w = meshCanvas.width = hero.offsetWidth;
-      h = meshCanvas.height = hero.offsetHeight;
-    }
-
-    function createNodes() {
-      nodes = [];
-      for (let i = 0; i < nodeCount; i++) {
-        nodes.push({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.4,
-          vy: (Math.random() - 0.5) * 0.3,
-          r: 2 + Math.random() * 2,
-          opacity: 0.3 + Math.random() * 0.35
-        });
-      }
-    }
-
-    function drawMesh() {
-      ctx.clearRect(0, 0, w, h);
-
-      // Draw connections only (no big dots)
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < connectDist) {
-            const alpha = (1 - dist / connectDist) * 0.07;
-            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.lineWidth = 0.4;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      // Tiny subtle dots
-      for (const node of nodes) {
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.r * 0.6, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${node.opacity * 0.2})`;
-        ctx.fill();
-
-        // Move
-        node.x += node.vx;
-        node.y += node.vy;
-
-        // Bounce
-        if (node.x < 0 || node.x > w) node.vx *= -1;
-        if (node.y < 0 || node.y > h) node.vy *= -1;
-      }
-
-      requestAnimationFrame(drawMesh);
-    }
-
-    resizeMesh();
-    createNodes();
-    drawMesh();
-
-    window.addEventListener('resize', () => {
-      resizeMesh();
-      createNodes();
-    });
-  }
-
-
-</script>

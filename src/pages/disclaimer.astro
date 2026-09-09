@@ -11,158 +11,76 @@ import WaitlistModal from '../components/WaitlistModal.astro';
     <section class="legal section">
       <div class="container">
         <a href="/" class="back-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-          </svg>
-          <span>Back to Homepage</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="disclaimer.back">Zurück zur Startseite</span>
         </a>
 
-        <h1 class="legal-title">Health Disclaimer</h1>
-        <p class="legal-date-en">Last updated: September 2025</p>
-        <p class="legal-date-de" id="disclaimer-de-date" style="display:none;">Stand: September 2025</p>
+        <h1 class="legal-title" data-i18n="disclaimer.title">Gesundheitshinweis</h1>
+        <p class="legal-date" data-i18n="disclaimer.date">Stand: September 2025</p>
 
         <div class="legal-content">
 
           <div class="legal-section disclaimer-box">
-            <p>
-              <strong>⚠️ Important:</strong> diamo is a fitness and wellness app, not a medical device.
-              The information, recommendations, and content provided in the diamo app and on this
-              website do not constitute medical advice, diagnosis, or treatment.
-            </p>
+            <p data-i18n="disclaimer.box"><strong>⚠️ Wichtig:</strong> diamo ist eine Fitness- und Wellness-App, kein Medizinprodukt. Die Informationen, Empfehlungen und Inhalte in der diamo App und auf dieser Website stellen keine medizinische Beratung, Diagnose oder Behandlung dar.</p>
           </div>
 
           <div class="legal-section">
-            <h2>1. Not a Medical Device</h2>
-            <p>
-              diamo is designed to help users align their fitness and training with their menstrual
-              cycle. The app provides general fitness recommendations, educational content about
-              cycle phases, and activity tracking tools. It is <strong>not</strong> a medical device
-              as defined by the EU Medical Device Regulation (MDR 2017/745) or equivalent regulations.
-            </p>
-            <p>
-              The content provided in diamo — including workout recommendations, recovery suggestions,
-              cycle-phase information, and knowledge drops — is for general informational and
-              motivational purposes only.
-            </p>
+            <h2 data-i18n="disclaimer.s1.h">1. Kein Medizinprodukt</h2>
+            <p data-i18n="disclaimer.s1.p1">diamo ist darauf ausgelegt, Nutzerinnen dabei zu helfen, ihr Fitness-Training an ihren Menstruationszyklus anzupassen. Die App bietet allgemeine Trainingsempfehlungen, Bildungsinhalte zu Zyklusphasen und Aktivitätstracking. Sie ist <strong>kein</strong> Medizinprodukt im Sinne der EU-Medizinprodukteverordnung (MDR 2017/745).</p>
+            <p data-i18n="disclaimer.s1.p2">Alle Inhalte in diamo – einschließlich Workout-Empfehlungen, Erholungshinweise, Zyklusphaseninformationen und Wissens-Drops – dienen ausschließlich allgemeinen Informations- und Motivationszwecken.</p>
           </div>
 
           <div class="legal-section">
-            <h2>2. Consult Your Doctor</h2>
-            <p>
-              Before starting any new fitness program or making changes to your exercise routine,
-              you should consult a qualified healthcare professional, especially if:
-            </p>
+            <h2 data-i18n="disclaimer.s2.h">2. Ärztliche Beratung einholen</h2>
+            <p data-i18n="disclaimer.s2.p1">Bevor Sie ein neues Fitnessprogramm beginnen oder Ihre Trainingsroutine ändern, sollten Sie eine qualifizierte medizinische Fachkraft konsultieren, insbesondere wenn:</p>
             <ul>
-              <li>You have or suspect you have a medical condition (e.g., PCOS, endometriosis, heart conditions, joint problems)</li>
-              <li>You are pregnant or postpartum</li>
-              <li>You are recovering from an injury or surgery</li>
-              <li>You have been inactive for an extended period</li>
-              <li>You experience unusual symptoms during or after exercise (e.g., chest pain, shortness of breath, dizziness)</li>
-              <li>You are undergoing medical treatment or taking medication that may affect exercise</li>
-              <li>You have irregular menstrual cycles or hormonal conditions</li>
+              <li data-i18n="disclaimer.s2.li1">Sie eine Erkrankung haben oder vermuten (z.B. PCOS, Endometriose, Herzprobleme, Gelenkbeschwerden)</li>
+              <li data-i18n="disclaimer.s2.li2">Sie schwanger sind oder gerade entbunden haben</li>
+              <li data-i18n="disclaimer.s2.li3">Sie sich von einer Verletzung oder Operation erholen</li>
+              <li data-i18n="disclaimer.s2.li4">Sie längere Zeit körperlich inaktiv waren</li>
+              <li data-i18n="disclaimer.s2.li5">Sie während oder nach dem Sport ungewöhnliche Symptome bemerken (z.B. Brustschmerzen, Atemnot, Schwindel)</li>
+              <li data-i18n="disclaimer.s2.li6">Sie medizinisch behandelt werden oder Medikamente nehmen, die das Training beeinflussen könnten</li>
+              <li data-i18n="disclaimer.s2.li7">Sie unregelmäßige Menstruationszyklen oder hormonelle Erkrankungen haben</li>
             </ul>
-            <p>
-              The recommendations in diamo are not a substitute for professional medical advice.
-              Always seek the advice of your physician or other qualified health provider before
-              acting on anything you read in the app.
-            </p>
+            <p data-i18n="disclaimer.s2.p2">Die Empfehlungen in diamo ersetzen keine professionelle medizinische Beratung.</p>
           </div>
 
           <div class="legal-section">
-            <h2>3. Cycle Tracking Is Not a Contraceptive Method</h2>
-            <p>
-              diamo tracks the menstrual cycle to help users optimize their training. The cycle
-              tracking features in diamo are intended purely for fitness purposes and do <strong>not</strong>
-              serve as a contraceptive method or fertility planning tool. diamo does not predict
-              fertile windows for the purpose of birth control.
-            </p>
+            <h2 data-i18n="disclaimer.s3.h">3. Cycle-Tracking ist keine Verhütungsmethode</h2>
+            <p data-i18n="disclaimer.s3.p">diamo verfolgt den Menstruationszyklus, um das Training zu optimieren. Die Cycle-Tracking-Funktionen dienen ausschließlich Fitness-Zwecken und sind <strong>keine</strong> Verhütungsmethode oder Fruchtbarkeitsplanung.</p>
           </div>
 
           <div class="legal-section">
-            <h2>4. Individual Variation</h2>
-            <p>
-              Every person's body is different. Responses to exercise, recovery needs, and cycle
-              patterns vary significantly between individuals and can change over time. The general
-              recommendations diamo provides are based on current sports science research and are
-              intended as a starting point, not a rigid prescription.
-            </p>
-            <p>
-              Always listen to your body. If a recommended workout feels too intense or causes
-              pain, stop immediately and consult a professional.
-            </p>
+            <h2 data-i18n="disclaimer.s4.h">4. Individuelle Unterschiede</h2>
+            <p data-i18n="disclaimer.s4.p1">Jeder Körper ist anders. Reaktionen auf Training, Erholungsbedarf und Zyklus variieren erheblich zwischen Personen. Die Empfehlungen von diamo sind ein Ausgangspunkt, keine starre Vorschrift.</p>
+            <p data-i18n="disclaimer.s4.p2">Hören Sie immer auf Ihren Körper. Wenn eine empfohlene Einheit zu intensiv ist oder Schmerzen verursacht, hören Sie sofort auf und konsultieren Sie eine Fachkraft.</p>
           </div>
 
           <div class="legal-section">
-            <h2>5. Limitation of Liability for Health-Related Decisions</h2>
-            <p>
-              By using diamo, you acknowledge and agree that:
-            </p>
+            <h2 data-i18n="disclaimer.s5.h">5. Haftungsbeschränkung</h2>
+            <p data-i18n="disclaimer.s5.p1">Durch die Nutzung von diamo erkennen Sie an:</p>
             <ul>
-              <li>You are exercising voluntarily and assume all risks associated with your chosen activities</li>
-              <li>diamo and its founder Lara Bullemer are not responsible for any injury, health deterioration, or adverse outcomes arising from the use of the app's recommendations</li>
-              <li>You will use your own judgment and, where appropriate, seek professional guidance before following any recommendations in the app</li>
-              <li>The information provided may not be applicable to your specific health situation</li>
+              <li data-i18n="disclaimer.s5.li1">Sie trainieren freiwillig und übernehmen alle damit verbundenen Risiken</li>
+              <li data-i18n="disclaimer.s5.li2">diamo und Lara Bullemer sind nicht verantwortlich für Verletzungen oder gesundheitliche Schäden durch die Nutzung der App-Empfehlungen</li>
+              <li data-i18n="disclaimer.s5.li3">Sie nutzen Ihr eigenes Urteilsvermögen und holen ggf. professionellen Rat ein</li>
+              <li data-i18n="disclaimer.s5.li4">Die bereitgestellten Informationen sind möglicherweise nicht auf Ihre individuelle Gesundheitssituation anwendbar</li>
             </ul>
-            <p>
-              This limitation of liability does not apply in cases of intentional misconduct or gross
-              negligence by diamo, nor for damages resulting from injury to life, body, or health.
-            </p>
+            <p data-i18n="disclaimer.s5.p2">Diese Beschränkung gilt nicht bei Vorsatz oder grober Fahrlässigkeit sowie nicht für Schäden an Leben, Körper oder Gesundheit.</p>
           </div>
 
           <div class="legal-section">
-            <h2>6. Accuracy of Information</h2>
-            <p>
-              We strive to ensure that the scientific and educational content in diamo (e.g., knowledge
-              drops, cycle phase explanations) is accurate and based on current research. However,
-              sports science and nutrition research evolves continuously. We cannot guarantee that
-              all information is complete, up to date, or applicable to every individual.
-            </p>
-            <p>
-              If you believe any content in the app contains a factual error, please contact us at
-              <a href="mailto:hello@diamo.club">hello@diamo.club</a>.
-            </p>
+            <h2 data-i18n="disclaimer.s6.h">6. Genauigkeit der Informationen</h2>
+            <p data-i18n="disclaimer.s6.p">Wir bemühen uns, wissenschaftliche und pädagogische Inhalte in diamo korrekt und auf Basis aktueller Forschung zu halten. Sportwissenschaftliche Erkenntnisse entwickeln sich jedoch kontinuierlich. Bei Fehlerhinweisen kontaktieren Sie uns bitte unter <a href="mailto:hello@diamo.club">hello@diamo.club</a>.</p>
           </div>
 
           <div class="legal-section">
-            <h2>7. Third-Party Wearable Data</h2>
-            <p>
-              diamo can connect to Apple Health and Google Health Connect to import health metrics
-              (e.g., heart rate, sleep, steps). This data is used to enhance your training
-              recommendations. However, diamo does not guarantee the accuracy of data from
-              third-party devices. Fitness trackers and wearables may produce inaccurate readings,
-              and any medical-grade interpretation of this data should be performed by a healthcare
-              professional.
-            </p>
+            <h2 data-i18n="disclaimer.s7.h">7. Wearable-Daten Dritter</h2>
+            <p data-i18n="disclaimer.s7.p">diamo kann sich mit Apple Health und Google Health Connect verbinden, um Gesundheitsdaten zu importieren. diamo garantiert nicht die Genauigkeit von Daten aus Drittgeräten. Medizinische Interpretationen dieser Daten sollten von Fachpersonal vorgenommen werden.</p>
           </div>
 
           <div class="legal-section">
-            <h2>8. Deutsch: Gesundheitshinweis</h2>
-            <p>
-              <strong>diamo ist kein Medizinprodukt</strong> und ersetzt keine ärztliche Beratung.
-              Alle in der App angebotenen Trainingsempfehlungen, Informationen zu Zyklusphasen und
-              Wissensinhalte dienen ausschließlich allgemeinen Informationszwecken. Sie stellen keine
-              Diagnose, Behandlungsempfehlung oder Therapieanweisung dar.
-            </p>
-            <p>
-              Vor Beginn eines neuen Trainingsprogramms wird empfohlen, ärztlichen Rat einzuholen,
-              insbesondere bei bestehenden Erkrankungen, in der Schwangerschaft oder nach
-              Verletzungen. Die Nutzung der App erfolgt auf eigene Verantwortung.
-            </p>
-            <p>
-              diamo und Lara Bullemer übernehmen keine Haftung für gesundheitliche Schäden, die auf
-              der Anwendung der App-Inhalte beruhen, soweit diese nicht auf Vorsatz oder grober
-              Fahrlässigkeit beruhen. Die Haftung für Schäden an Leben, Körper oder Gesundheit,
-              die auf einer fahrlässigen Pflichtverletzung beruhen, bleibt unberührt.
-            </p>
-          </div>
-
-          <div class="legal-section">
-            <h2>9. Contact</h2>
-            <p>
-              Questions about this disclaimer:<br/>
-              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a><br/>
-              Post: Lara Bullemer, diamo, Deimern 5, 29614 Soltau, Germany
-            </p>
+            <h2 data-i18n="disclaimer.s8.h">8. Kontakt</h2>
+            <p data-i18n="disclaimer.s8.p">Fragen zu diesem Gesundheitshinweis:<br/>E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a><br/>Post: Lara Bullemer, diamo, Deimern 5, 29614 Soltau</p>
           </div>
 
         </div>
@@ -174,88 +92,27 @@ import WaitlistModal from '../components/WaitlistModal.astro';
 </Layout>
 
 <style>
-  .legal {
-    padding-top: calc(var(--nav-height) + var(--space-2xl));
-    min-height: 80vh;
-  }
-
-  .legal-date-en, .legal-date-de {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
-    margin-top: -0.5rem;
-  }
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-xl);
-    transition: color var(--transition-fast);
-  }
-
+  .legal { padding-top: calc(var(--nav-height) + var(--space-2xl)); min-height: 80vh; }
+  .legal-date { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-lg); margin-top: -0.5rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); margin-bottom: var(--space-xl); transition: color var(--transition-fast); }
   .back-link:hover { color: var(--navy); }
-
-  .legal-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: var(--space-sm);
-  }
-
+  .legal-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--navy); margin-bottom: var(--space-sm); }
   .legal-content { max-width: 700px; }
-
-  .disclaimer-box {
-    background: #fff8e6;
-    border: 1px solid #f5c842;
-    border-left: 4px solid #f5c842;
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: var(--space-xl) !important;
-  }
-
-  .disclaimer-box p {
-    color: #7a5c00 !important;
-    margin-bottom: 0 !important;
-  }
-
+  .disclaimer-box { background: #fff8e6; border: 1px solid #f5c842; border-left: 4px solid #f5c842; border-radius: 10px; padding: 16px 20px; margin-bottom: var(--space-xl) !important; }
+  .disclaimer-box p { color: #7a5c00 !important; margin-bottom: 0 !important; }
   .legal-section { margin-bottom: var(--space-xl); }
-
-  .legal-section h2 {
-    font-family: var(--font-sans);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: var(--space-sm);
-  }
-
-  .legal-section p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: var(--space-sm);
-  }
-
-  .legal-section ul {
-    margin: var(--space-sm) 0 var(--space-sm) 1.5rem;
-  }
-
-  .legal-section ul li {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .legal-section a {
-    color: var(--lavender);
-    font-weight: 500;
-    transition: color var(--transition-fast);
-  }
-
+  .legal-section h2 { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: var(--space-sm); }
+  .legal-section h3 { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .legal-section p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-sm); }
+  .legal-section ul { margin: var(--space-sm) 0 var(--space-sm) 1.5rem; }
+  .legal-section ul li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.25rem; }
+  .legal-section a { color: var(--lavender); font-weight: 500; transition: color var(--transition-fast); }
   .legal-section a:hover { color: var(--navy); }
 </style>
+
+<script src="../scripts/i18n.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.initLanguage) window.initLanguage();
+  });
+</script>

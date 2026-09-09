@@ -11,261 +11,126 @@ import WaitlistModal from '../components/WaitlistModal.astro';
     <section class="legal section">
       <div class="container">
         <a href="/" class="back-link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-          </svg>
-          <span>Zurück zur Startseite</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="legal.back">Zurück zur Startseite</span>
         </a>
 
-        <h1 class="legal-title">Allgemeine Geschäftsbedingungen (AGB)</h1>
-        <p class="legal-date">Stand: September 2025</p>
-
-        <div class="legal-lang-notice" id="legal-lang-notice">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
-          </svg>
-          <span>This page is provided in German as required by German law (TMG/BGB).</span>
-        </div>
+        <h1 class="legal-title" data-i18n="agb.title">Allgemeine Geschäftsbedingungen (AGB)</h1>
+        <p class="legal-date" data-i18n="legal.date">Stand: September 2025</p>
 
         <div class="legal-content">
 
           <div class="legal-section">
-            <h2>1. Anbieter und Geltungsbereich</h2>
-            <p>
-              Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der mobilen
-              Anwendung <strong>diamo</strong> (iOS und Android) sowie der zugehörigen Website
-              <strong>diamo.club</strong>.
-            </p>
-            <p>
-              Anbieterin ist:<br/>
-              <strong>Lara Bullemer</strong><br/>
-              diamo<br/>
-              Deimern 5<br/>
-              29614 Soltau<br/>
-              Deutschland<br/>
-              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a>
-            </p>
-            <p>
-              Mit der Registrierung oder Nutzung der diamo App erklären Sie sich mit diesen AGB
-              einverstanden. Abweichende Bedingungen des Nutzers werden nicht anerkannt.
-            </p>
+            <h2 data-i18n="agb.s1.h">1. Anbieter und Geltungsbereich</h2>
+            <p data-i18n="agb.s1.p1">Diese AGB gelten für die Nutzung der mobilen Anwendung <strong>diamo</strong> (iOS und Android) sowie der zugehörigen Website <strong>diamo.club</strong>.</p>
+            <p data-i18n="agb.s1.p2">Anbieterin ist:<br/><strong>Lara Bullemer</strong><br/>diamo<br/>Deimern 5<br/>29614 Soltau<br/>Deutschland<br/>E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a></p>
+            <p data-i18n="agb.s1.p3">Mit der Registrierung oder Nutzung der diamo App erklären Sie sich mit diesen AGB einverstanden.</p>
           </div>
 
           <div class="legal-section">
-            <h2>2. Leistungsbeschreibung</h2>
-            <p>
-              diamo ist eine App für zyklusbasiertes Fitness-Tracking, die Nutzerinnen dabei
-              unterstützt, ihr Training an die verschiedenen Phasen des Menstruationszyklus
-              anzupassen. Die App bietet insbesondere:
-            </p>
+            <h2 data-i18n="agb.s2.h">2. Leistungsbeschreibung</h2>
+            <p data-i18n="agb.s2.p1">diamo ist eine App für zyklusbasiertes Fitness-Tracking. Die App bietet insbesondere:</p>
             <ul>
-              <li>Personalisierte Trainingsempfehlungen basierend auf der Zyklusphase</li>
-              <li>Aktivitäts- und Workout-Tracking</li>
-              <li>Integration mit Wearables (Apple Health, Google Health Connect)</li>
-              <li>Community-Funktionen (Aktivitäts-Feed, Challenges, Stories)</li>
-              <li>Ausdauersport-Analysen und Erholungshinweise</li>
-              <li>Wissens-Drops zu Zyklus, Training und Gesundheit</li>
+              <li data-i18n="agb.s2.li1">Personalisierte Trainingsempfehlungen basierend auf der Zyklusphase</li>
+              <li data-i18n="agb.s2.li2">Aktivitäts- und Workout-Tracking</li>
+              <li data-i18n="agb.s2.li3">Integration mit Wearables (Apple Health, Google Health Connect)</li>
+              <li data-i18n="agb.s2.li4">Community-Funktionen (Aktivitäts-Feed, Challenges, Stories)</li>
+              <li data-i18n="agb.s2.li5">Ausdauersport-Analysen und Erholungshinweise</li>
+              <li data-i18n="agb.s2.li6">Wissens-Drops zu Zyklus, Training und Gesundheit</li>
             </ul>
-            <p>
-              diamo ist kein Medizinprodukt und stellt keine ärztliche Beratung dar. Die App
-              dient ausschließlich der allgemeinen Fitnessinformation und -motivation. Es gelten
-              ergänzend unsere <a href="/disclaimer/">Gesundheitshinweise</a>.
-            </p>
+            <p data-i18n="agb.s2.p2">diamo ist kein Medizinprodukt. Es gelten ergänzend unsere <a href="/disclaimer/">Gesundheitshinweise</a>.</p>
           </div>
 
           <div class="legal-section">
-            <h2>3. Registrierung und Nutzerkonto</h2>
-            <h3>3.1 Voraussetzungen</h3>
-            <p>
-              Die Nutzung der App setzt eine Registrierung mit einer gültigen E-Mail-Adresse
-              und einem Passwort voraus. Nutzerinnen müssen mindestens 16 Jahre alt sein
-              (gemäß Art. 8 DSGVO / § 2 Abs. 2 BDSG).
-            </p>
-
-            <h3>3.2 Kontoführung</h3>
-            <p>
-              Jede Person darf nur ein Konto anlegen. Das Konto ist nicht übertragbar. Zugangsdaten
-              sind vertraulich zu behandeln. Bei Verdacht auf Missbrauch oder unbefugten Zugriff
-              ist diamo unverzüglich zu informieren.
-            </p>
-
-            <h3>3.3 Kontolöschung</h3>
-            <p>
-              Nutzerinnen können ihr Konto jederzeit in den App-Einstellungen oder durch eine
-              E-Mail an <a href="mailto:hello@diamo.club">hello@diamo.club</a> löschen. Mit der
-              Löschung werden alle personenbezogenen Daten unwiderruflich entfernt, soweit keine
-              gesetzlichen Aufbewahrungspflichten entgegenstehen.
-            </p>
+            <h2 data-i18n="agb.s3.h">3. Registrierung und Nutzerkonto</h2>
+            <h3 data-i18n="agb.s3.h3a">3.1 Voraussetzungen</h3>
+            <p data-i18n="agb.s3.p1">Die Nutzung setzt eine Registrierung voraus. Nutzerinnen müssen mindestens 16 Jahre alt sein (Art. 8 DSGVO).</p>
+            <h3 data-i18n="agb.s3.h3b">3.2 Kontoführung</h3>
+            <p data-i18n="agb.s3.p2">Jede Person darf nur ein Konto anlegen. Das Konto ist nicht übertragbar. Zugangsdaten sind vertraulich zu behandeln.</p>
+            <h3 data-i18n="agb.s3.h3c">3.3 Kontolöschung</h3>
+            <p data-i18n="agb.s3.p3">Nutzerinnen können ihr Konto jederzeit in den App-Einstellungen oder per E-Mail an <a href="mailto:hello@diamo.club">hello@diamo.club</a> löschen.</p>
           </div>
 
           <div class="legal-section">
-            <h2>4. Nutzungsrechte und geistiges Eigentum</h2>
-            <p>
-              diamo räumt Nutzerinnen ein einfaches, nicht übertragbares Recht zur Nutzung der
-              App für persönliche, nicht-kommerzielle Zwecke ein.
-            </p>
-            <p>
-              Alle Inhalte der App und Website (Texte, Grafiken, Logos, UI-Design, Algorithmen,
-              Trainingspläne, Wissens-Drops) sind urheberrechtlich geschützt und verbleiben im
-              Eigentum von diamo bzw. den jeweiligen Lizenzgebern. Eine Vervielfältigung,
-              Verbreitung oder öffentliche Wiedergabe ohne ausdrückliche schriftliche Genehmigung
-              ist untersagt.
-            </p>
-            <p>
-              Inhalte, die Nutzerinnen in der App veröffentlichen (z.B. Story-Beiträge, Kommentare),
-              verbleiben in deren Eigentum. Sie räumen diamo jedoch eine kostenlose, weltweite
-              Lizenz zur Darstellung dieser Inhalte innerhalb der App ein.
-            </p>
+            <h2 data-i18n="agb.s4.h">4. Nutzungsrechte und geistiges Eigentum</h2>
+            <p data-i18n="agb.s4.p1">diamo räumt Nutzerinnen ein einfaches, nicht übertragbares Recht zur persönlichen Nutzung der App ein.</p>
+            <p data-i18n="agb.s4.p2">Alle Inhalte der App und Website sind urheberrechtlich geschützt. Vervielfältigung ohne schriftliche Genehmigung ist untersagt.</p>
+            <p data-i18n="agb.s4.p3">Nutzergenerierte Inhalte verbleiben im Eigentum der Nutzerin. Sie räumen diamo eine Lizenz zur Darstellung innerhalb der App ein.</p>
           </div>
 
           <div class="legal-section">
-            <h2>5. Nutzungspflichten und verbotene Handlungen</h2>
-            <p>Nutzerinnen verpflichten sich, die App nicht für folgende Zwecke zu nutzen:</p>
+            <h2 data-i18n="agb.s5.h">5. Nutzungspflichten und verbotene Handlungen</h2>
+            <p data-i18n="agb.s5.p">Nutzerinnen verpflichten sich, die App nicht für folgende Zwecke zu nutzen:</p>
             <ul>
-              <li>Verbreitung rechtswidriger, beleidigender, diskriminierender oder falscher Inhalte</li>
-              <li>Belästigung, Mobbing oder Stalking anderer Nutzerinnen</li>
-              <li>Verbreitung von Spam, Malware oder unerwünschten kommerziellen Inhalten</li>
-              <li>Umgehung von Sicherheitsmechanismen oder unbefugter Zugriff auf Systeme</li>
-              <li>Automatisiertes Scraping von App-Inhalten</li>
-              <li>Nutzung für kommerzielle Zwecke ohne schriftliche Genehmigung</li>
+              <li data-i18n="agb.s5.li1">Verbreitung rechtswidriger, beleidigender oder falscher Inhalte</li>
+              <li data-i18n="agb.s5.li2">Belästigung, Mobbing oder Stalking anderer Nutzerinnen</li>
+              <li data-i18n="agb.s5.li3">Verbreitung von Spam, Malware oder Werbeinhalten</li>
+              <li data-i18n="agb.s5.li4">Umgehung von Sicherheitsmechanismen</li>
+              <li data-i18n="agb.s5.li5">Automatisiertes Scraping von App-Inhalten</li>
+              <li data-i18n="agb.s5.li6">Kommerzielle Nutzung ohne schriftliche Genehmigung</li>
             </ul>
-            <p>
-              Bei Verstößen behält sich diamo vor, das Nutzerkonto zu sperren oder zu löschen.
-            </p>
+            <p data-i18n="agb.s5.p2">Bei Verstößen behält sich diamo vor, das Nutzerkonto zu sperren oder zu löschen.</p>
           </div>
 
           <div class="legal-section">
-            <h2>6. Verfügbarkeit und Änderungen der App</h2>
-            <p>
-              diamo bemüht sich um eine hohe Verfügbarkeit der App, kann jedoch keine unterbrechungsfreie
-              Verfügbarkeit garantieren. Wartungsarbeiten, technische Störungen oder höhere Gewalt
-              können zu vorübergehenden Einschränkungen führen.
-            </p>
-            <p>
-              Wir behalten uns vor, den Funktionsumfang der App jederzeit zu ändern, zu erweitern
-              oder einzuschränken. Wesentliche Änderungen, die bestehende Nutzungsverträge
-              betreffen, werden mit angemessener Frist angekündigt.
-            </p>
+            <h2 data-i18n="agb.s6.h">6. Verfügbarkeit und Änderungen</h2>
+            <p data-i18n="agb.s6.p1">diamo bemüht sich um hohe Verfügbarkeit, kann jedoch keine Unterbrechungsfreiheit garantieren.</p>
+            <p data-i18n="agb.s6.p2">Wir behalten uns vor, den Funktionsumfang jederzeit zu ändern. Wesentliche Änderungen werden mit angemessener Frist angekündigt.</p>
           </div>
 
           <div class="legal-section">
-            <h2>7. Preise und Premium-Funktionen</h2>
-            <p>
-              Die Grundnutzung von diamo ist kostenlos. Premium-Funktionen können kostenpflichtig
-              angeboten werden. Preise und Konditionen werden vor dem Kauf transparent kommuniziert.
-              Abonnements werden über den jeweiligen App Store (Apple App Store / Google Play Store)
-              abgewickelt; es gelten deren Zahlungs- und Stornierungsbedingungen.
-            </p>
-            <p>
-              Derzeit befindet sich diamo in der Beta-Phase und ist kostenlos verfügbar.
-            </p>
+            <h2 data-i18n="agb.s7.h">7. Preise und Premium-Funktionen</h2>
+            <p data-i18n="agb.s7.p1">Die Grundnutzung ist kostenlos. Premium-Funktionen können kostenpflichtig angeboten werden.</p>
+            <p data-i18n="agb.s7.p2">Derzeit befindet sich diamo in der Beta-Phase und ist kostenlos verfügbar.</p>
           </div>
 
           <div class="legal-section">
-            <h2>8. Haftungsausschluss</h2>
-            <h3>8.1 Gesundheitliche Inhalte</h3>
-            <p>
-              Alle in der App bereitgestellten Trainingsempfehlungen, Wissens-Drops und
-              Informationen zu Zyklus und Gesundheit dienen ausschließlich allgemeinen
-              Informationszwecken. Sie ersetzen keine ärztliche Diagnose, Beratung oder
-              Behandlung. Nutzerinnen sind verpflichtet, vor Beginn eines neuen Trainingsprogramms
-              ärztlichen Rat einzuholen, insbesondere bei Vorerkrankungen, Verletzungen oder in
-              der Schwangerschaft. Für Gesundheitsschäden, die auf der Nutzung der App-Inhalte
-              beruhen, übernimmt diamo keine Haftung, soweit diese nicht auf Vorsatz oder grober
-              Fahrlässigkeit beruhen.
-            </p>
-
-            <h3>8.2 Allgemeine Haftungsbeschränkung</h3>
-            <p>
-              diamo haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder
-              der Gesundheit, die auf einer fahrlässigen Pflichtverletzung beruhen, sowie für
-              Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen.
-            </p>
-            <p>
-              Für leichte Fahrlässigkeit haftet diamo nur bei Verletzung einer wesentlichen
-              Vertragspflicht (Kardinalpflicht) und nur in Höhe des bei Vertragsschluss
-              vorhersehbaren, typischen Schadens.
-            </p>
-            <p>
-              Im Übrigen ist die Haftung von diamo ausgeschlossen, insbesondere für:
-            </p>
+            <h2 data-i18n="agb.s8.h">8. Haftungsausschluss</h2>
+            <h3 data-i18n="agb.s8.h3a">8.1 Gesundheitliche Inhalte</h3>
+            <p data-i18n="agb.s8.p1">Alle Trainingsempfehlungen dienen ausschließlich allgemeinen Informationszwecken. Sie ersetzen keine ärztliche Beratung. diamo übernimmt keine Haftung für Gesundheitsschäden, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+            <h3 data-i18n="agb.s8.h3b">8.2 Allgemeine Haftungsbeschränkung</h3>
+            <p data-i18n="agb.s8.p2">diamo haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit sowie für Vorsatz und grobe Fahrlässigkeit.</p>
+            <p data-i18n="agb.s8.p3">Für leichte Fahrlässigkeit haftet diamo nur bei Verletzung einer wesentlichen Vertragspflicht und nur in Höhe des vorhersehbaren, typischen Schadens.</p>
+            <p data-i18n="agb.s8.p4">Im Übrigen ist die Haftung ausgeschlossen, insbesondere für:</p>
             <ul>
-              <li>Datenverluste, die durch unsachgemäße Bedienung oder höhere Gewalt entstehen</li>
-              <li>Schäden durch Unterbrechungen der Appverfügbarkeit</li>
-              <li>Inhalte Dritter oder verlinkte Webseiten</li>
+              <li data-i18n="agb.s8.li1">Datenverluste durch unsachgemäße Bedienung oder höhere Gewalt</li>
+              <li data-i18n="agb.s8.li2">Schäden durch Unterbrechungen der Appverfügbarkeit</li>
+              <li data-i18n="agb.s8.li3">Inhalte Dritter oder verlinkte Webseiten</li>
             </ul>
-
-            <h3>8.3 Nutzergenerierte Inhalte</h3>
-            <p>
-              diamo übernimmt keine Haftung für nutzergenerierte Inhalte (Community-Beiträge,
-              Stories, Kommentare). Rechtswidrige Inhalte können uns unter
-              <a href="mailto:hello@diamo.club">hello@diamo.club</a> gemeldet werden.
-            </p>
+            <h3 data-i18n="agb.s8.h3c">8.3 Nutzergenerierte Inhalte</h3>
+            <p data-i18n="agb.s8.p5">diamo übernimmt keine Haftung für nutzergenerierte Inhalte. Rechtswidrige Inhalte können an <a href="mailto:hello@diamo.club">hello@diamo.club</a> gemeldet werden.</p>
           </div>
 
           <div class="legal-section">
-            <h2>9. Datenschutz</h2>
-            <p>
-              Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer
-              <a href="/datenschutz/">Datenschutzerklärung</a>, die Bestandteil dieser AGB ist.
-            </p>
+            <h2 data-i18n="agb.s9.h">9. Datenschutz</h2>
+            <p data-i18n="agb.s9.p">Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
           </div>
 
           <div class="legal-section">
-            <h2>10. Änderungen der AGB</h2>
-            <p>
-              Wir behalten uns vor, diese AGB mit angemessener Vorankündigungsfrist (mindestens
-              30 Tage) zu ändern. Nutzerinnen werden über wesentliche Änderungen in der App oder
-              per E-Mail informiert. Die fortgesetzte Nutzung der App nach Ablauf der
-              Ankündigungsfrist gilt als Zustimmung zu den geänderten AGB. Nutzerinnen, die den
-              Änderungen nicht zustimmen, können ihr Konto kostenfrei löschen.
-            </p>
+            <h2 data-i18n="agb.s10.h">10. Änderungen der AGB</h2>
+            <p data-i18n="agb.s10.p">Wir behalten uns vor, diese AGB mit mindestens 30 Tagen Vorankündigungsfrist zu ändern. Die fortgesetzte Nutzung gilt als Zustimmung.</p>
           </div>
 
           <div class="legal-section">
-            <h2>11. Laufzeit und Kündigung</h2>
-            <p>
-              Der Nutzungsvertrag wird auf unbestimmte Zeit geschlossen. Beide Parteien können
-              den Vertrag jederzeit ohne Angabe von Gründen kündigen. Die Kündigung durch die
-              Nutzerin erfolgt durch Löschung des Kontos. diamo kann das Konto bei schwerwiegenden
-              Verstößen gegen diese AGB fristlos sperren oder löschen.
-            </p>
+            <h2 data-i18n="agb.s11.h">11. Laufzeit und Kündigung</h2>
+            <p data-i18n="agb.s11.p">Der Nutzungsvertrag läuft auf unbestimmte Zeit. Beide Parteien können jederzeit kündigen. diamo kann bei schwerwiegenden Verstößen fristlos kündigen.</p>
           </div>
 
           <div class="legal-section">
-            <h2>12. Anwendbares Recht und Gerichtsstand</h2>
-            <p>
-              Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
-              UN-Kaufrechts (CISG). Gerichtsstand ist, soweit gesetzlich zulässig, Soltau.
-            </p>
-            <p>
-              Für Verbraucherinnen innerhalb der EU gelten ergänzend die zwingenden
-              Verbraucherschutzvorschriften des jeweiligen Wohnsitzlandes.
-            </p>
-            <p>
-              Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung bereit:
-              <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
-              Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer
-              Verbraucherschlichtungsstelle teilzunehmen.
-            </p>
+            <h2 data-i18n="agb.s12.h">12. Anwendbares Recht und Gerichtsstand</h2>
+            <p data-i18n="agb.s12.p1">Es gilt deutsches Recht. Gerichtsstand ist, soweit zulässig, Soltau.</p>
+            <p data-i18n="agb.s12.p2">Für Verbraucherinnen innerhalb der EU gelten ergänzend die zwingenden Verbraucherschutzvorschriften ihres Wohnsitzlandes.</p>
+            <p data-i18n="agb.s12.p3">EU-Streitschlichtungsplattform: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Wir nehmen nicht an Verbraucherschlichtungsverfahren teil.</p>
           </div>
 
           <div class="legal-section">
-            <h2>13. Salvatorische Klausel</h2>
-            <p>
-              Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die
-              Wirksamkeit der übrigen Bestimmungen unberührt. Anstelle der unwirksamen Bestimmung
-              gilt die gesetzliche Regelung.
-            </p>
+            <h2 data-i18n="agb.s13.h">13. Salvatorische Klausel</h2>
+            <p data-i18n="agb.s13.p">Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen unberührt.</p>
           </div>
 
           <div class="legal-section">
-            <h2>14. Kontakt</h2>
-            <p>
-              Bei Fragen zu diesen AGB:<br/>
-              E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a><br/>
-              Post: Lara Bullemer, Deimern 5, 29614 Soltau
-            </p>
+            <h2 data-i18n="agb.s14.h">14. Kontakt</h2>
+            <p data-i18n="agb.s14.p">Fragen zu diesen AGB:<br/>E-Mail: <a href="mailto:hello@diamo.club">hello@diamo.club</a><br/>Post: Lara Bullemer, Deimern 5, 29614 Soltau</p>
           </div>
 
         </div>
@@ -277,106 +142,25 @@ import WaitlistModal from '../components/WaitlistModal.astro';
 </Layout>
 
 <style>
-  .legal {
-    padding-top: calc(var(--nav-height) + var(--space-2xl));
-    min-height: 80vh;
-  }
-
-  .legal-date {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-lg);
-    margin-top: -0.5rem;
-  }
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    margin-bottom: var(--space-xl);
-    transition: color var(--transition-fast);
-  }
-
+  .legal { padding-top: calc(var(--nav-height) + var(--space-2xl)); min-height: 80vh; }
+  .legal-date { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: var(--space-lg); margin-top: -0.5rem; }
+  .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); margin-bottom: var(--space-xl); transition: color var(--transition-fast); }
   .back-link:hover { color: var(--navy); }
-
-  .legal-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: var(--space-sm);
-  }
-
+  .legal-title { font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--navy); margin-bottom: var(--space-sm); }
   .legal-content { max-width: 700px; }
-
-  .legal-lang-notice {
-    display: none;
-    align-items: center;
-    gap: 0.5rem;
-    background: #f0f4ff;
-    border: 1px solid #c7d4f8;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: var(--space-xl);
-    font-size: 0.875rem;
-    color: #3a5bd9;
-  }
-
   .legal-section { margin-bottom: var(--space-xl); }
-
-  .legal-section h2 {
-    font-family: var(--font-sans);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: var(--space-sm);
-  }
-
-  .legal-section h3 {
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-xs);
-  }
-
-  .legal-section p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: var(--space-sm);
-  }
-
-  .legal-section ul {
-    margin: var(--space-sm) 0 var(--space-sm) 1.5rem;
-  }
-
-  .legal-section ul li {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 0.25rem;
-  }
-
-  .legal-section a {
-    color: var(--lavender);
-    font-weight: 500;
-    transition: color var(--transition-fast);
-  }
-
+  .legal-section h2 { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: var(--space-sm); }
+  .legal-section h3 { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+  .legal-section p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: var(--space-sm); }
+  .legal-section ul { margin: var(--space-sm) 0 var(--space-sm) 1.5rem; }
+  .legal-section ul li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0.25rem; }
+  .legal-section a { color: var(--lavender); font-weight: 500; transition: color var(--transition-fast); }
   .legal-section a:hover { color: var(--navy); }
 </style>
 
+<script src="../scripts/i18n.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('diamo-lang') || 'de';
-    const notice = document.getElementById('legal-lang-notice');
-    if (notice && lang !== 'de') {
-      notice.style.display = 'flex';
-    }
+    if (window.initLanguage) window.initLanguage();
   });
 </script>

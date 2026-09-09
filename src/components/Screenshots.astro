@@ -2,78 +2,60 @@
 ---
 
 <section class="screenshots section" id="screenshots">
-  <div class="container">
-    <div class="screenshots-header">
-      <span class="section-label animate-in" data-i18n="screenshots.label">Die App</span>
-      <h2 class="section-title animate-in" data-i18n="screenshots.title">
-        Designt, um sich<br/>natürlich anzufühlen
-      </h2>
-      <p class="section-subtitle animate-in" data-i18n="screenshots.subtitle">
-        Ein klares, intuitives Interface, das dein Wohlbefinden in den Vordergrund stellt. 
-        Jeder Screen mit Intention gestaltet.
-      </p>
-    </div>
-    
-    <div class="screenshots-showcase animate-in">
-      <div class="screenshot-item">
-        <div class="phone-wrapper">
-          <img
-            src="/screenshots/home.png"
-            alt="diamo Home-Tab"
-            class="flat-mockup-img"
-            loading="lazy"
-          />
+  <div class="screenshots-header container">
+    <span class="section-label animate-in" data-i18n="screenshots.label">Die App</span>
+    <h2 class="section-title animate-in" data-i18n="screenshots.title">
+      Designt, um sich<br/>natürlich anzufühlen
+    </h2>
+    <p class="section-subtitle animate-in" data-i18n="screenshots.subtitle">
+      Ein klares, intuitives Interface, das dein Wohlbefinden in den Vordergrund stellt. 
+      Jeder Screen mit Intention gestaltet.
+    </p>
+  </div>
+
+  <div class="screenshots-stage animate-in">
+    <div class="phones-row">
+
+      <div class="phone-col side-col">
+        <div class="phone-wrap">
+          <img src="/screenshots/community.png" alt="diamo Community-Tab" class="phone-img" loading="lazy" />
         </div>
-        <div class="screenshot-info">
+        <div class="phone-label">
+          <h4 data-i18n="screenshots.community">Community</h4>
+          <p data-i18n="screenshots.community.desc">Finde lokale Laufgruppen, Studio-Events und vernetze dich mit Freundinnen</p>
+        </div>
+      </div>
+
+      <div class="phone-col left-col">
+        <div class="phone-wrap">
+          <img src="/screenshots/home.png" alt="diamo Home-Tab" class="phone-img" loading="lazy" />
+        </div>
+        <div class="phone-label">
           <h4 data-i18n="screenshots.home">Home</h4>
           <p data-i18n="screenshots.home.desc">Dein tägliches Dashboard mit Workouts, Zyklusrhythmus und Motivationssprüchen</p>
         </div>
       </div>
 
-      <div class="screenshot-item elevated">
-        <div class="phone-wrapper">
-          <img
-            src="/screenshots/calendar.png"
-            alt="diamo Kalender-Tab"
-            class="flat-mockup-img"
-            loading="lazy"
-          />
+      <div class="phone-col center-col">
+        <div class="phone-wrap">
+          <img src="/screenshots/calendar.png" alt="diamo Kalender-Tab" class="phone-img" loading="lazy" />
         </div>
-        <div class="screenshot-info">
+        <div class="phone-label">
           <h4 data-i18n="screenshots.calendar">Kalender</h4>
           <p data-i18n="screenshots.calendar.desc">Zyklusphase-Tracking mit farbcodierten Trainingstypen und Tagesplanung</p>
         </div>
       </div>
-      
-      <div class="screenshot-item">
-        <div class="phone-wrapper">
-          <img
-            src="/screenshots/community.png"
-            alt="diamo Community-Tab"
-            class="flat-mockup-img"
-            loading="lazy"
-          />
+
+      <div class="phone-col right-col">
+        <div class="phone-wrap">
+          <img src="/screenshots/personal.png" alt="diamo Persönliches Profil" class="phone-img" loading="lazy" />
         </div>
-        <div class="screenshot-info">
-          <h4 data-i18n="screenshots.community">Community</h4>
-          <p data-i18n="screenshots.community.desc">Finde lokale Laufgruppen, Studio-Events und vernetze dich mit Freundinnen</p>
-        </div>
-      </div>
-      
-      <div class="screenshot-item elevated">
-        <div class="phone-wrapper">
-          <img
-            src="/screenshots/personal.png"
-            alt="diamo Persönliches Profil"
-            class="flat-mockup-img"
-            loading="lazy"
-          />
-        </div>
-        <div class="screenshot-info">
+        <div class="phone-label">
           <h4 data-i18n="screenshots.personal">Persönlich</h4>
           <p data-i18n="screenshots.personal.desc">Dein Zyklusstatus, Aktivitätslevel und personalisierte Plan-Einstellungen</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -82,6 +64,9 @@
   .screenshots {
     background: var(--white);
     overflow: hidden;
+    padding-top: var(--space-2xl);
+    /* generous bottom padding so shadows breathe */
+    padding-bottom: 0;
   }
 
   .screenshots-header {
@@ -93,98 +78,175 @@
     margin: 0 auto;
   }
 
-  .screenshots-showcase {
-    display: grid;
-    grid-template-columns: repeat(4, 240px);
-    justify-content: center;
-    gap: var(--space-xl);
-    padding-bottom: var(--space-xl);
+  /* ── Stage ─────────────────────────────────────── */
+  /* Full-bleed container so phones can overflow freely */
+  .screenshots-stage {
+    width: 100%;
+    /* overflow-x clip lets vertical shadows breathe while hiding horizontal spill */
+    overflow-x: clip;
+    overflow-y: visible;
+    /* extra top + bottom room for drop-shadows */
+    padding: 2rem 0 5rem;
   }
 
-  .screenshot-item {
+  /* ── Phones row ─────────────────────────────────── */
+  .phones-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;   /* anchor to bottom so stagger reads upward */
+    gap: 0;                  /* overlap is controlled by negative margin on each col */
+    /* let the row be wider than viewport if needed */
+    min-width: min-content;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 0 2rem;
+  }
+
+  /* ── Shared column ─────────────────────────────── */
+  .phone-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-lg);
-    transition: transform 0.3s ease;
+    flex: 0 0 auto;
+    /* columns overlap for a cohesive cluster feel */
+    margin-left: -4%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .screenshot-item:hover .phone-wrapper {
-    transform: translateY(-8px);
+  .phone-col:first-child {
+    margin-left: 0;
   }
 
-  .screenshot-item.elevated .phone-wrapper {
-    transform: translateY(-16px);
+  /* ── Phone wrapper ─────────────────────────────── */
+  .phone-wrap {
+    position: relative;
+    /* drop-shadow instead of box-shadow so it follows the PNG outline exactly */
+    filter:
+      drop-shadow(0px 24px 48px rgba(0, 32, 96, 0.13))
+      drop-shadow(0px 4px 16px rgba(0, 32, 96, 0.08));
+    transition: filter 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* leave top/bottom padding so shadows aren't clipped at wrapper edge */
+    padding: 1rem 0.5rem;
   }
 
-  .screenshot-item.elevated:hover .phone-wrapper {
-    transform: translateY(-24px);
+  .phone-col:hover .phone-wrap {
+    filter:
+      drop-shadow(0px 36px 64px rgba(0, 32, 96, 0.18))
+      drop-shadow(0px 8px 24px rgba(155, 139, 203, 0.2));
+    transform: translateY(-12px);
   }
 
-  /* Neue Flat-Mockup-Bilder: haben eigenen Phone-Frame */
-  .flat-mockup-img {
+  /* ── Phone image ───────────────────────────────── */
+  .phone-img {
+    display: block;
     width: 100%;
     height: auto;
     object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    filter: drop-shadow(0 16px 40px rgba(0, 32, 96, 0.14)) drop-shadow(0 4px 12px rgba(0,0,0,0.06));
-    transition: filter var(--transition-base);
+    /* counteract the large transparent padding in the PNGs so phones read bigger */
+    /* PNG has roughly 8% padding on each side */
   }
 
-  .phone-wrapper:hover .flat-mockup-img {
-    filter: drop-shadow(0 24px 56px rgba(0, 32, 96, 0.2)) drop-shadow(0 8px 20px rgba(155, 139, 203, 0.15));
+  /* ── Per-column sizes & vertical alignment ─────── */
+
+  /* All phones: same size, same baseline */
+  .side-col {
+    width: 400px;
+    transform: translateY(0px);
+    z-index: 1;
   }
 
-  .screenshot-info {
+  .left-col,
+  .right-col {
+    width: 400px;
+    transform: translateY(0px);
+    z-index: 2;
+  }
+
+  .center-col {
+    width: 400px;
+    transform: translateY(0px);
+    z-index: 3;
+  }
+
+  /* uniform hover lift */
+  .side-col:hover,
+  .left-col:hover,
+  .right-col:hover,
+  .center-col:hover {
+    transform: translateY(-12px);
+  }
+
+  /* ── Labels ────────────────────────────────────── */
+  .phone-label {
     text-align: center;
-    max-width: 180px;
-    min-height: 90px;
+    padding: 1rem 0.75rem 0;
+    max-width: 280px;
+    /* labels are part of the stagger so keep them attached to each col */
   }
 
-  .screenshot-info h4 {
+  .phone-label h4 {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 
-  .screenshot-info p {
-    font-size: 0.78rem;
+  .phone-label p {
+    font-size: 0.9rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.55;
+    max-width: none;
   }
 
-  @media (max-width: 968px) {
-    .screenshots-showcase {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-md);
+  /* ── Tablet ─────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .phones-row {
+      gap: 0;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .screenshot-item.elevated {
-      transform: none;
+    .phone-col {
+      margin-left: 0;
     }
 
-    .screenshot-item.elevated:hover {
-      transform: translateY(-8px);
-    }
-
-    .phone-wrapper {
-      width: 100%;
-      max-width: 220px;
-      margin: 0 auto;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .screenshots-showcase {
-      grid-template-columns: 1fr;
-    }
-
-    .phone-wrapper {
+    /* show as 2×2 grid with subtle stagger */
+    .side-col,
+    .left-col,
+    .right-col,
+    .center-col {
+      width: 46%;
       max-width: 240px;
+      transform: translateY(0) !important;
+    }
+
+    .side-col:hover,
+    .left-col:hover,
+    .right-col:hover,
+    .center-col:hover {
+      transform: translateY(-8px) !important;
+    }
+
+    .screenshots-stage {
+      padding-bottom: 3rem;
+    }
+  }
+
+  /* ── Mobile ─────────────────────────────────────── */
+  @media (max-width: 540px) {
+    .phones-row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .side-col,
+    .left-col,
+    .right-col,
+    .center-col {
+      width: 80%;
+      max-width: 300px;
     }
   }
 </style>
