@@ -23,9 +23,9 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
     <SEO title={title} description={description} canonicalUrl={canonicalUrl} />
     <GoogleAnalytics />
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Favicon (versioned to bust Safari cache) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <link rel="icon" type="image/x-icon" href="/favicon-v2.ico" />
     <link rel="icon" type="image/png" sizes="512x512" href="/icon.png" />
     <link rel="apple-touch-icon" href="/icon.png" />
     <script is:inline>
