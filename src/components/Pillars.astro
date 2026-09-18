@@ -1,0 +1,145 @@
+---
+---
+
+<section class="pillars section" id="pillars">
+  <div class="container">
+    <div class="pillars-header">
+      <h2 class="section-title animate-in" data-i18n="pillars.headline">
+        You're not one kind of active.
+      </h2>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card animate-in" style="transition-delay: 0.1s">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11v11h-11z"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+          </svg>
+        </div>
+        <h3 class="pillar-name" data-i18n="pillars.strength">STRENGTH</h3>
+        <p class="pillar-sub" data-i18n="pillars.strength.sub">Build it.</p>
+      </div>
+
+      <div class="pillar-card animate-in" style="transition-delay: 0.2s">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="pillar-name" data-i18n="pillars.endurance">ENDURANCE</h3>
+        <p class="pillar-sub" data-i18n="pillars.endurance.sub">Keep going.</p>
+      </div>
+
+      <div class="pillar-card animate-in" style="transition-delay: 0.3s">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3 class="pillar-name" data-i18n="pillars.mobility">MOBILITY</h3>
+        <p class="pillar-sub" data-i18n="pillars.mobility.sub">Move freely.</p>
+      </div>
+
+      <div class="pillar-card animate-in" style="transition-delay: 0.4s">
+        <div class="pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 20V10M12 20V4M6 20v-6"/>
+          </svg>
+        </div>
+        <h3 class="pillar-name" data-i18n="pillars.recovery">RECOVERY</h3>
+        <p class="pillar-sub" data-i18n="pillars.recovery.sub">Come back stronger.</p>
+      </div>
+    </div>
+
+    <div class="pillars-cta animate-in">
+      <p class="pillars-closer" data-i18n="pillars.closer">You don't have to choose. Neither does diamo.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pillars {
+    background: var(--white);
+  }
+
+  .pillars-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .pillar-card {
+    text-align: center;
+    padding: var(--space-lg) var(--space-sm);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    background: var(--white);
+  }
+
+  .pillar-card:hover {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 0 1px var(--electric-blue), var(--shadow-electric);
+    transform: translateY(-4px);
+  }
+
+  .pillar-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--electric-blue-subtle);
+    color: var(--electric-blue);
+  }
+
+  .pillar-name {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .pillar-sub {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .pillars-cta {
+    text-align: center;
+    margin-top: var(--space-2xl);
+  }
+
+  .pillars-closer {
+    font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+    font-weight: 600;
+    color: var(--navy);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .pillars-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-sm);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pillars-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

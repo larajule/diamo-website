@@ -1,0 +1,191 @@
+---
+---
+
+<section class="first-move" id="beta">
+  <div class="fm-dark">
+    <div class="fm-grain"></div>
+    <div class="container">
+      <div class="fm-inner animate-in">
+        <div class="fm-badge">
+          <span class="fm-badge-line">DIAMO</span>
+          <span class="fm-badge-line fm-badge-accent">FIRST MOVE</span>
+          <span class="fm-badge-line">2026</span>
+        </div>
+
+        <h2 class="fm-title" data-i18n="fm.title">
+          Be part of the First Move.
+        </h2>
+        <p class="fm-sub" data-i18n="fm.desc">
+          Try diamo early. Shape what comes next.
+        </p>
+
+        <div class="fm-form-row">
+          <input 
+            type="email" 
+            class="fm-input" 
+            placeholder="Your email"
+            data-i18n-placeholder="fm.email"
+            id="fm-email-input"
+          />
+          <button type="button" class="fm-btn" data-open-beta id="fm-cta-btn">
+            <span data-i18n="fm.cta">I'M IN</span>
+          </button>
+        </div>
+
+        <p class="fm-note">Early access · Free · No spam</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .first-move {
+    padding: 0;
+  }
+
+  .fm-dark {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--navy) 50%, #1a2a4a 100%);
+    padding: var(--space-3xl) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fm-grain {
+    position: absolute; inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .fm-inner {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fm-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.6rem 1.4rem;
+    border: 1px solid rgba(44, 122, 255, 0.3);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-lg);
+    background: rgba(44, 122, 255, 0.06);
+  }
+
+  .fm-badge-line {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .fm-badge-accent {
+    font-size: 0.7rem;
+    color: var(--electric-blue);
+  }
+
+  .fm-title {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .fm-sub {
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+
+  .fm-form-row {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .fm-input {
+    flex: 1;
+    padding: 0.9rem 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--white);
+    outline: none;
+    transition: all var(--transition-fast);
+  }
+
+  .fm-input:focus {
+    border-color: var(--electric-blue);
+    background: rgba(44, 122, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(44, 122, 255, 0.15);
+  }
+
+  .fm-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .fm-btn {
+    padding: 0.9rem 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--white);
+    color: var(--navy);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+  }
+
+  .fm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .fm-note {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: var(--space-sm);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 520px) {
+    .fm-form-row {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script>
+  // The FM CTA button opens the existing waitlist modal via data-open-beta
+  // Additionally, clicking directly with email pre-filled
+  const fmBtn = document.getElementById('fm-cta-btn');
+  const fmInput = document.getElementById('fm-email-input') as HTMLInputElement | null;
+
+  fmBtn?.addEventListener('click', () => {
+    // If user already typed email, pre-fill the modal
+    if (fmInput?.value) {
+      const modalEmail = document.getElementById('waitlist-email') as HTMLInputElement | null;
+      if (modalEmail) {
+        modalEmail.value = fmInput.value;
+      }
+    }
+  });
+</script>

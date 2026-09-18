@@ -1,0 +1,171 @@
+---
+---
+
+<section class="adaptation section" id="adaptation">
+  <div class="container">
+    <div class="adapt-header">
+      <span class="section-label animate-in" data-i18n="adapt.label">ADAPTIVE TRAINING</span>
+      <h2 class="section-title animate-in" data-i18n="adapt.title">
+        Your body is more than<br/>one data point.
+      </h2>
+    </div>
+
+    <div class="adapt-layout animate-in">
+      <div class="adapt-signals">
+        <div class="signal-item" style="animation-delay: 0s">
+          <span class="signal-icon">☾</span>
+          <span class="signal-name" data-i18n="adapt.sleep">Sleep</span>
+        </div>
+        <div class="signal-item" style="animation-delay: 0.5s">
+          <span class="signal-icon">⚡</span>
+          <span class="signal-name" data-i18n="adapt.energy">Energy</span>
+        </div>
+        <div class="signal-item" style="animation-delay: 1s">
+          <span class="signal-icon">◈</span>
+          <span class="signal-name" data-i18n="adapt.stress">Stress</span>
+        </div>
+        <div class="signal-item" style="animation-delay: 1.5s">
+          <span class="signal-icon">◐</span>
+          <span class="signal-name" data-i18n="adapt.cycle">Cycle</span>
+        </div>
+        <div class="signal-item" style="animation-delay: 2s">
+          <span class="signal-icon">◷</span>
+          <span class="signal-name" data-i18n="adapt.time">Time</span>
+        </div>
+        <div class="signal-item" style="animation-delay: 2.5s">
+          <span class="signal-icon">◎</span>
+          <span class="signal-name" data-i18n="adapt.goals">Goals</span>
+        </div>
+      </div>
+
+      <div class="adapt-phone">
+        <img src="/screenshots/home.png" alt="diamo adaptive plan" class="adapt-phone-img" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="adapt-footer animate-in">
+      <p class="adapt-desc" data-i18n="adapt.desc">
+        diamo puts the pieces together. Every day, a plan that fits exactly where you are.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .adaptation {
+    background: linear-gradient(180deg, var(--white) 0%, var(--product-ice) 50%, var(--white) 100%);
+    overflow: hidden;
+  }
+
+  .adapt-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .adapt-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .adapt-signals {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    flex: 0 0 auto;
+  }
+
+  .signal-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: var(--white);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+    animation: signalPulse 4s ease-in-out infinite;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .signal-item:hover {
+    border-color: var(--electric-blue);
+    box-shadow: 0 2px 16px rgba(44, 122, 255, 0.1);
+  }
+
+  @keyframes signalPulse {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+  }
+
+  .signal-icon {
+    font-size: 1rem;
+    width: 24px;
+    text-align: center;
+    color: var(--electric-blue);
+  }
+
+  .signal-name {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+
+  .adapt-phone {
+    flex: 0 0 auto;
+    width: clamp(200px, 22vw, 260px);
+  }
+
+  .adapt-phone-img {
+    width: 100%;
+    height: auto;
+    border-radius: clamp(24px, 3.5vw, 40px);
+    box-shadow: var(--shadow-product);
+    transition: transform var(--transition-slow);
+  }
+
+  .adapt-phone:hover .adapt-phone-img {
+    transform: translateY(-6px);
+  }
+
+  .adapt-footer {
+    text-align: center;
+    margin-top: var(--space-2xl);
+  }
+
+  .adapt-desc {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .adapt-layout {
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .adapt-signals {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .signal-item {
+      padding: 0.5rem 0.8rem;
+    }
+
+    .adapt-phone {
+      width: 220px;
+    }
+  }
+</style>
