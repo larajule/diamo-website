@@ -22,80 +22,40 @@
     <!-- Scan line -->
     <div class="scan-line" id="scan-line"></div>
 
-    <!-- ═══ INNER: Body data points (ON the body) ═══ -->
+    <!-- ═══ INNER: Body data points (ON the body) — 5 key signals ═══ -->
     <div class="scan-point sp-inner" id="sp-mind" style="top: 18%; left: 47%;">
       <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Focus</span>
+      <span class="sp-label sp-right">Sleep · Deep</span>
     </div>
     <div class="scan-point sp-inner" id="sp-heart" style="top: 31%; left: 45%;">
       <span class="sp-dot"></span><span class="sp-ring"></span>
       <span class="sp-label sp-left">Heart Rate · 62 bpm</span>
     </div>
-    <div class="scan-point sp-inner" id="sp-hormones" style="top: 36%; left: 42%;">
+    <div class="scan-point sp-inner" id="sp-energy" style="top: 38%; left: 48%;">
       <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Estrogen ↑</span>
+      <span class="sp-label sp-right">Energy · Balanced</span>
     </div>
     <div class="scan-point sp-inner" id="sp-cycle" style="top: 42%; left: 46%;">
       <span class="sp-dot"></span><span class="sp-ring"></span>
       <span class="sp-label sp-left">Day 9 · Follicular</span>
     </div>
-    <div class="scan-point sp-inner" id="sp-core" style="top: 44%; left: 50%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Core Strength</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-energy" style="top: 38%; left: 48%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Energy · 82%</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-shoulder" style="top: 22%; left: 56%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-right">Mobility</span>
-    </div>
-    <div class="scan-point sp-inner" id="sp-knee" style="top: 62%; left: 40%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Stability</span>
-    </div>
     <div class="scan-point sp-inner" id="sp-recovery" style="top: 48%; left: 53%;">
       <span class="sp-dot"></span><span class="sp-ring"></span>
       <span class="sp-label sp-right">Recovery · 91%</span>
     </div>
-    <div class="scan-point sp-inner" id="sp-stress" style="top: 26%; left: 44%;">
-      <span class="sp-dot"></span><span class="sp-ring"></span>
-      <span class="sp-label sp-left">Cortisol · Low</span>
-    </div>
 
-    <!-- ═══ OUTER: Lifestyle data (OUTSIDE the body) ═══ -->
-    <div class="scan-card" id="sc-workout" style="top: 16%; right: 8%;">
-      <span class="sc-title">Today</span>
-      <span class="sc-value">Strength Training</span>
-    </div>
-    <div class="scan-card" id="sc-sleep" style="top: 30%; left: 6%;">
+    <!-- ═══ OUTER: 3 key lifestyle cards ═══ -->
+    <div class="scan-card" id="sc-sleep" style="top: 22%; left: 6%;">
       <span class="sc-title">Sleep</span>
       <span class="sc-value">7h 12min · Deep 1h 48min</span>
     </div>
-    <div class="scan-card" id="sc-steps" style="bottom: 30%; right: 6%;">
-      <span class="sc-title">Steps</span>
-      <span class="sc-value">4,230 today</span>
+    <div class="scan-card" id="sc-workout" style="top: 20%; right: 8%;">
+      <span class="sc-title">Today</span>
+      <span class="sc-value">Strength · 35 min</span>
     </div>
-    <div class="scan-card" id="sc-community" style="bottom: 18%; right: 10%;">
-      <span class="sc-title">Community</span>
-      <span class="sc-value">3 girls training near you</span>
-    </div>
-    <div class="scan-card" id="sc-group" style="bottom: 24%; left: 6%;">
-      <span class="sc-title">Group Run</span>
-      <span class="sc-value">Tomorrow · 18:00 · 4 joined</span>
-    </div>
-    <div class="scan-card" id="sc-mood" style="top: 44%; right: 6%;">
-      <span class="sc-title">Mood</span>
-      <span class="sc-value">Energized · Ready to go</span>
-    </div>
-    <div class="scan-card" id="sc-nutrition" style="top: 56%; left: 5%;">
-      <span class="sc-title">Nutrition</span>
-      <span class="sc-value">Protein · 48g / 96g</span>
-    </div>
-    <div class="scan-card" id="sc-hrv" style="top: 22%; right: 6%;">
-      <span class="sc-title">HRV</span>
-      <span class="sc-value">48ms · Above average</span>
+    <div class="scan-card" id="sc-community" style="bottom: 22%; right: 8%;">
+      <span class="sc-title">Your Circle</span>
+      <span class="sc-value">3 women training near you</span>
     </div>
 
     <!-- Connecting lines -->
@@ -122,23 +82,17 @@
     </svg>
   </div>
 
-  <!-- Countdown -->
-  <div class="hero-countdown" id="hero-countdown">
-    <span class="hc-num" id="hc-3">3</span>
-    <span class="hc-num" id="hc-2">2</span>
-    <span class="hc-num" id="hc-1">1</span>
-    <span class="hc-go" id="hc-go">GO</span>
-  </div>
+
 
   <!-- Hero content -->
   <div class="hero-split" id="hero-split">
     <div class="hero-text">
       <span class="hero-micro hero-reveal hero-reveal--1" data-i18n="hero.micro">body intelligence system</span>
       <h1 class="hero-headline hero-reveal hero-reveal--headline" data-i18n="hero.title">
-        Move now.<br/>Feel later.
+        Your body knows.<br/>We listen.
       </h1>
       <p class="hero-sub hero-reveal hero-reveal--2" data-i18n="hero.description">
-        Smart training that adapts to your body. Every single day.
+        Personalized longevity training that adapts to your sleep, energy, and cycle. For women who want to age powerfully — together.
       </p>
       <div class="hero-cta-row hero-reveal hero-reveal--2">
         <button type="button" class="hero-btn-primary" data-open-beta>
@@ -480,7 +434,6 @@
   const scanLine = document.getElementById('scan-line');
   const scanGrid = document.querySelector('.scan-grid');
   const scanConns = document.getElementById('scan-connections');
-  const steps = ['hc-3', 'hc-2', 'hc-1', 'hc-go'];
 
   // Check if animation already played this session
   const alreadyPlayed = sessionStorage.getItem('diamo-intro-played');
@@ -521,18 +474,13 @@
     // Phase 2: Scan line starts
     setTimeout(() => { scanLine?.classList.add('active'); }, baseDelay + 500);
 
-    // Phase 3: Inner body points appear as scan passes
+    // Phase 3: Inner body points appear as scan passes (5 points)
     const innerPoints = [
       { id: 'sp-mind', delay: 750 },
-      { id: 'sp-shoulder', delay: 950 },
-      { id: 'sp-stress', delay: 1100 },
-      { id: 'sp-heart', delay: 1350 },
-      { id: 'sp-hormones', delay: 1550 },
-      { id: 'sp-energy', delay: 1700 },
+      { id: 'sp-heart', delay: 1200 },
+      { id: 'sp-energy', delay: 1600 },
       { id: 'sp-cycle', delay: 1900 },
-      { id: 'sp-core', delay: 2000 },
       { id: 'sp-recovery', delay: 2300 },
-      { id: 'sp-knee', delay: 2800 },
     ];
     innerPoints.forEach(({ id, delay }) => {
       setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
@@ -544,34 +492,18 @@
       scanWoman?.classList.add('scanned');
     }, baseDelay + 1400);
 
-    // Phase 5: Outer cards appear staggered
+    // Phase 5: Outer cards appear staggered (3 cards)
     const outerCards = [
-      { id: 'sc-hrv', delay: 1200 },
-      { id: 'sc-sleep', delay: 1600 },
-      { id: 'sc-workout', delay: 1900 },
-      { id: 'sc-mood', delay: 2200 },
-      { id: 'sc-nutrition', delay: 2500 },
-      { id: 'sc-steps', delay: 2700 },
-      { id: 'sc-community', delay: 3000 },
-      { id: 'sc-group', delay: 3200 },
+      { id: 'sc-sleep', delay: 1400 },
+      { id: 'sc-workout', delay: 1800 },
+      { id: 'sc-community', delay: 2400 },
     ];
     outerCards.forEach(({ id, delay }) => {
       setTimeout(() => document.getElementById(id)?.classList.add('visible'), baseDelay + delay);
     });
 
-    // Phase 6: Countdown
-    let i = 0;
-    function runCountdown() {
-      if (i >= steps.length) { setTimeout(finishSequence, 400); return; }
-      const el = document.getElementById(steps[i]);
-      if (!el) return;
-      el.classList.add('active');
-      setTimeout(() => {
-        el.classList.remove('active'); el.classList.add('shrink');
-        i++; setTimeout(runCountdown, 250);
-      }, 800);
-    }
-    setTimeout(runCountdown, baseDelay + 600);
+    // Phase 6: Transition to hero (no countdown — cleaner reveal)
+    setTimeout(finishSequence, baseDelay + 3200);
   }
 
   // Phase 7: Fade out scan → reveal hero
