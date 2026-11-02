@@ -1,32 +1,31 @@
 /* ============================================
-   DIAMO — DESIGN SYSTEM v2
-   "Editorial movement culture meets 
-    intelligent digital product."
+   DIAMO — DESIGN SYSTEM v3
+   "Find your movement. Find your people."
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
 /* ─── Design Tokens ─── */
 :root {
-  /* Brand — Primary */
+  /* Brand */
   --navy: #002060;
   --navy-deep: #001540;
   --navy-surface: #0a1628;
   --ivory: #FAFAF7;
   --white: #FFFFFF;
 
-  /* Brand — Accent (use sparingly) */
+  /* Accent (use sparingly) */
   --electric: #2C7AFF;
-  --electric-subtle: rgba(44, 122, 255, 0.12);
-  --electric-glow: rgba(44, 122, 255, 0.25);
+  --electric-subtle: rgba(44, 122, 255, 0.08);
+  --electric-glow: rgba(44, 122, 255, 0.2);
 
   /* Neutrals */
   --text-primary: #1A1A1F;
-  --text-secondary: #5A5A65;
-  --text-muted: #8E8E96;
-  --text-inverse: rgba(255, 255, 255, 0.88);
-  --text-inverse-muted: rgba(255, 255, 255, 0.5);
-  --divider: #E5E5EA;
+  --text-secondary: #52525B;
+  --text-muted: #8C8C96;
+  --text-inverse: rgba(255, 255, 255, 0.92);
+  --text-inverse-muted: rgba(255, 255, 255, 0.55);
+  --divider: #E8E8EC;
   --surface-raised: rgba(255, 255, 255, 0.7);
 
   /* Pillar Colors */
@@ -39,7 +38,7 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
 
-  /* Spacing */
+  /* Spacing — deliberate scale */
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -57,25 +56,25 @@
   --radius-xl: 28px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 20, 60, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 20, 60, 0.08);
-  --shadow-lg: 0 8px 40px rgba(0, 20, 60, 0.10);
-  --shadow-phone: 0 8px 30px rgba(0, 20, 60, 0.12), 0 30px 80px rgba(0, 20, 60, 0.08);
+  /* Shadows — refined for depth without weight */
+  --shadow-sm: 0 1px 2px rgba(0, 20, 60, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 20, 60, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 20, 60, 0.08);
+  --shadow-phone: 0 8px 24px rgba(0, 20, 60, 0.1), 0 24px 64px rgba(0, 20, 60, 0.06);
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --duration-fast: 200ms;
-  --duration-base: 400ms;
-  --duration-slow: 700ms;
+  --duration-fast: 180ms;
+  --duration-base: 350ms;
+  --duration-slow: 600ms;
 
   /* Layout */
-  --max-width: 1200px;
-  --max-width-narrow: 800px;
+  --max-width: 1160px;
+  --max-width-narrow: 780px;
   --max-width-wide: 1400px;
-  --nav-height: 72px;
-  --section-gap: clamp(5rem, 10vw, 8rem);
+  --nav-height: 64px;
+  --section-gap: clamp(4.5rem, 9vw, 7rem);
 }
 
 /* ─── Reduced motion ─── */
@@ -113,7 +112,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 button { font-family: inherit; }
 
-/* ─── Typography ─── */
+/* ─── Typography — deliberate hierarchy ─── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 600;
@@ -122,15 +121,27 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; }
-h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
-h3 { font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
+h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.25;
+}
 
 p {
-  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
   color: var(--text-secondary);
   line-height: 1.7;
-  max-width: 60ch;
+  max-width: 58ch;
 }
 
 /* ─── Layout ─── */
@@ -151,9 +162,9 @@ p {
 /* ─── Section Labels ─── */
 .section-label {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--electric);
   margin-bottom: var(--space-sm);
@@ -162,19 +173,19 @@ p {
 
 .section-label--light {
   color: var(--electric);
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
-/* ─── Buttons ─── */
+/* ─── Buttons — refined ─── */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.9rem 2rem;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   border-radius: var(--radius-full);
   border: none;
   cursor: pointer;
@@ -183,24 +194,26 @@ p {
               background var(--duration-fast);
 }
 
+.btn:active { transform: translateY(0) scale(0.98); }
+
 .btn-primary {
   background: var(--navy);
   color: var(--white);
-  box-shadow: 0 4px 20px rgba(0, 32, 96, 0.25);
+  box-shadow: 0 2px 12px rgba(0, 32, 96, 0.2);
 }
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0, 32, 96, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(0, 32, 96, 0.3);
 }
 
 .btn-light {
   background: var(--white);
   color: var(--navy);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 .btn-light:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
 }
 
 .btn-outline {
@@ -210,22 +223,22 @@ p {
 }
 .btn-outline:hover {
   border-color: var(--navy);
-  background: rgba(0, 32, 96, 0.03);
+  background: rgba(0, 32, 96, 0.02);
 }
 
 .btn-outline--light {
   color: var(--white);
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .btn-outline--light:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* ─── Scroll Reveal ─── */
+/* ─── Scroll Reveal — refined timing ─── */
 .animate-in {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(20px);
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
 }
@@ -234,9 +247,6 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Stagger children */
-.animate-in[style*="delay"] { }
 
 /* ─── Phone Mockup ─── */
 .phone-frame {
@@ -251,18 +261,22 @@ p {
 @media (max-width: 768px) {
   .section { padding: var(--space-2xl) 0; }
   .container { padding: 0 var(--space-sm); }
-  h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
-  h2 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  h1 { font-size: clamp(2rem, 8vw, 2.6rem); }
+  h2 { font-size: clamp(1.5rem, 5.5vw, 2rem); }
 }
 
-/* ─── Legal Pages (preserve) ─── */
+@media (max-width: 480px) {
+  .container { padding: 0 1.25rem; }
+}
+
+/* ─── Legal Pages ─── */
 .legal-lang-notice {
   display: none;
   align-items: center;
   gap: 0.6rem;
   padding: 0.85rem 1.2rem;
   background: var(--electric-subtle);
-  border: 1px solid rgba(44, 122, 255, 0.15);
+  border: 1px solid rgba(44, 122, 255, 0.12);
   border-radius: var(--radius-md);
   font-size: 0.88rem;
   color: var(--text-secondary);
@@ -274,9 +288,3 @@ p {
   color: var(--electric);
   flex-shrink: 0;
 }
-
-/* Warm alternating section backgrounds (legacy compat) */
-.problem { background: var(--ivory); }
-.features { background: var(--ivory); }
-.screenshots { background: var(--ivory); }
-.community-section { background: var(--ivory); }
