@@ -27,9 +27,8 @@ const translations = {
     'tension.p1': 'It doesn\u2019t know you slept four hours. It doesn\u2019t know your energy crashed at 2pm. It doesn\u2019t know you\u2019d rather move with a friend today.',
     'tension.p2': 'It gives you a rigid plan and expects you to show up the same way every day. When you can\u2019t, it feels like failure.',
     'tension.p3': 'That\u2019s not how real life works.',
-    'tension.stat1': 'of women stop using fitness apps within 90 days',
-    'tension.stat2': 'say the plan didn\u2019t fit their daily life',
-    'tension.stat3': 'major apps adapt to sleep, energy, and cycle together',
+    'tension.diff1': 'One place for your kind of movement.',
+    'tension.diff2': 'Personalized training. Real-life flexibility. A community to move with.',
 
     // Solution (How it works)
     'solution.label': 'How diamo works',
@@ -239,9 +238,8 @@ const translations = {
     'tension.p1': 'Sie weiß nicht, dass du vier Stunden geschlafen hast. Sie weiß nicht, dass deine Energie um 14 Uhr eingebrochen ist. Sie weiß nicht, dass du heute lieber mit einer Freundin trainieren würdest.',
     'tension.p2': 'Sie gibt dir einen starren Plan und erwartet, dass du jeden Tag gleich funktionierst. Wenn du es nicht schaffst, fühlt es sich wie Versagen an.',
     'tension.p3': 'So funktioniert echtes Leben nicht.',
-    'tension.stat1': 'der Frauen hören innerhalb von 90 Tagen mit Fitness-Apps auf',
-    'tension.stat2': 'sagen, der Plan passte nicht in ihren Alltag',
-    'tension.stat3': 'große Apps passen sich an Schlaf, Energie und Zyklus gleichzeitig an',
+    'tension.diff1': 'Ein Ort für deine Art von Bewegung.',
+    'tension.diff2': 'Personalisiertes Training. Flexibel im Alltag. Eine Community, die mitgeht.',
 
     // Solution
     'solution.label': 'So funktioniert diamo',

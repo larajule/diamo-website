@@ -11,33 +11,23 @@
         </h2>
         <div class="tension-points animate-in">
           <p data-i18n="tension.p1">
-            It doesn't know you slept four hours. It doesn't know you're on day 22 of your cycle. It doesn't know your schedule just changed.
+            It doesn't know you slept four hours. It doesn't know your energy crashed at 2pm. It doesn't know you'd rather move with a friend today.
           </p>
           <p data-i18n="tension.p2">
-            It gives you a rigid plan and expects you to show up the same way every day. When you don't, it counts as failure.
+            It gives you a rigid plan and expects you to show up the same way every day. When you can't, it feels like failure.
           </p>
           <p class="tension-emphasis" data-i18n="tension.p3">
-            Real movement doesn't work like that.
+            That's not how real life works.
           </p>
         </div>
       </div>
 
       <div class="tension-visual animate-in">
-        <div class="tension-stats">
-          <div class="tension-stat">
-            <span class="tension-stat-number">73%</span>
-            <span class="tension-stat-label" data-i18n="tension.stat1">of women quit fitness apps within 3 months</span>
-          </div>
-          <div class="tension-stat-divider"></div>
-          <div class="tension-stat">
-            <span class="tension-stat-number">1 in 4</span>
-            <span class="tension-stat-label" data-i18n="tension.stat2">say the plan didn't fit their daily life</span>
-          </div>
-          <div class="tension-stat-divider"></div>
-          <div class="tension-stat">
-            <span class="tension-stat-number">0</span>
-            <span class="tension-stat-label" data-i18n="tension.stat3">major apps adapt to cycle, sleep, and energy together</span>
-          </div>
+        <div class="tension-statement">
+          <span class="tension-statement-eyebrow">diamo</span>
+          <p class="tension-statement-line" data-i18n="tension.diff1">One place for your kind of movement.</p>
+          <div class="tension-statement-divider"></div>
+          <p class="tension-statement-sub" data-i18n="tension.diff2">Personalized training. Real-life flexibility. A community to move with.</p>
         </div>
       </div>
     </div>
@@ -84,48 +74,53 @@
     margin-top: var(--space-xs);
   }
 
-  /* ─── Stats block ─── */
+  /* ─── Statement block (replaces unsubstantiated stats) ─── */
   .tension-visual {
     display: flex;
     justify-content: center;
   }
 
-  .tension-stats {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-    padding: var(--space-xl) var(--space-lg);
+  .tension-statement {
+    padding: clamp(2rem, 4vw, 3rem);
     background: var(--navy-deep);
     border-radius: var(--radius-xl);
-    max-width: 360px;
+    max-width: 380px;
     width: 100%;
   }
 
-  .tension-stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
-  .tension-stat-number {
-    font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  .tension-statement-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
     font-weight: 700;
-    color: var(--white);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--electric);
+    opacity: 0.8;
+    display: block;
+    margin-bottom: var(--space-md);
   }
 
-  .tension-stat-label {
-    font-size: 0.88rem;
-    color: var(--text-inverse-muted);
-    line-height: 1.5;
-    max-width: 260px;
+  .tension-statement-line {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    color: var(--white) !important;
+    line-height: 1.25;
+    max-width: none;
+    margin-bottom: var(--space-md);
   }
 
-  .tension-stat-divider {
+  .tension-statement-divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--space-md);
+  }
+
+  .tension-statement-sub {
+    font-size: 0.92rem;
+    color: var(--text-inverse-muted) !important;
+    line-height: 1.65;
+    max-width: none;
   }
 
   /* ─── Responsive ─── */
@@ -135,12 +130,7 @@
       gap: var(--space-xl);
     }
 
-    .tension-headline {
-      max-width: none;
-    }
-
-    .tension-stats {
-      max-width: none;
-    }
+    .tension-headline { max-width: none; }
+    .tension-statement { max-width: none; }
   }
 </style>
