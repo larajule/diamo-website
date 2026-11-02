@@ -1,23 +1,23 @@
 ---
 ---
 
-<nav class="navbar" id="navbar">
+<nav class="navbar navbar--transparent" id="navbar">
   <div class="nav-container">
     <a href="/" class="nav-logo">d.</a>
     
     <div class="nav-links" id="nav-links">
-      <a href="/#features" class="nav-link" data-i18n="nav.features">Features</a>
+      <a href="/#how-it-works" class="nav-link" data-i18n="nav.features">How it works</a>
+      <a href="/#pillars" class="nav-link" data-i18n="nav.pillars">Pillars</a>
       <a href="/#team" class="nav-link" data-i18n="nav.team">Team</a>
-      <a href="/ueber-uns" class="nav-link" data-i18n="nav.about">Über uns</a>
-      <a href="/zyklusbasiertes-training" class="nav-link" data-i18n="nav.guide">Guide</a>
+      <a href="/ueber-uns" class="nav-link" data-i18n="nav.about">About</a>
       <div class="lang-toggle lang-desktop">
         <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn active" data-lang="de">DE</button>
       </div>
-      <a href="#beta" class="btn btn-primary nav-cta" data-open-beta data-i18n="nav.cta">Beta-Testerin werden</a>
+      <button type="button" class="btn btn-primary nav-cta" data-open-beta data-i18n="nav.cta">Early Access</button>
     </div>
 
-    <!-- Mobile: lang toggle always visible -->
+    <!-- Mobile: lang toggle + hamburger -->
     <div class="nav-right-mobile">
       <div class="lang-toggle lang-mobile">
         <button class="lang-btn" data-lang="en">EN</button>
@@ -43,17 +43,41 @@
     height: var(--nav-height);
     display: flex;
     align-items: center;
-    background: rgba(252, 251, 247, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid transparent;
-    transition: all var(--transition-base);
+    transition: background var(--duration-base) var(--ease-smooth),
+                border-color var(--duration-base),
+                box-shadow var(--duration-base);
   }
 
+  /* ─── Transparent state (on dark hero) ─── */
+  .navbar--transparent {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+  }
+  .navbar--transparent .nav-logo { color: var(--white); }
+  .navbar--transparent .nav-link { color: rgba(255, 255, 255, 0.7); }
+  .navbar--transparent .nav-link:hover { color: var(--white); }
+  .navbar--transparent .nav-link::after { background: var(--white); }
+  .navbar--transparent .nav-toggle span { background: var(--white); }
+  .navbar--transparent .lang-btn { color: rgba(255, 255, 255, 0.5); }
+  .navbar--transparent .lang-btn.active { background: rgba(255,255,255,0.15); color: var(--white); }
+  .navbar--transparent .lang-toggle { background: rgba(255, 255, 255, 0.08); }
+
+  /* ─── Scrolled state (solid) ─── */
   .navbar.scrolled {
+    background: rgba(252, 251, 247, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom-color: var(--divider);
     box-shadow: var(--shadow-sm);
   }
+  .navbar.scrolled .nav-logo { color: var(--navy); }
+  .navbar.scrolled .nav-link { color: var(--text-secondary); }
+  .navbar.scrolled .nav-link:hover { color: var(--navy); }
+  .navbar.scrolled .nav-link::after { background: var(--navy); }
+  .navbar.scrolled .nav-toggle span { background: var(--navy); }
+  .navbar.scrolled .lang-btn { color: var(--text-muted); }
+  .navbar.scrolled .lang-btn.active { background: var(--navy); color: var(--white); }
+  .navbar.scrolled .lang-toggle { background: rgba(0, 32, 96, 0.04); }
 
   .nav-container {
     max-width: var(--max-width);
@@ -68,8 +92,8 @@
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--navy);
     letter-spacing: -0.02em;
+    transition: color var(--duration-base);
   }
 
   .nav-links {
@@ -79,10 +103,9 @@
   }
 
   .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    color: var(--text-secondary);
-    transition: color var(--transition-fast);
+    transition: color var(--duration-fast);
     position: relative;
   }
 
@@ -92,69 +115,48 @@
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 2px;
-    background: var(--navy);
+    height: 1.5px;
     border-radius: 1px;
-    transition: width var(--transition-base);
+    transition: width var(--duration-base);
   }
 
-  .nav-link:hover {
-    color: var(--navy);
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  .nav-link.active {
-    color: var(--navy);
-  }
-
-  .nav-link.active::after {
-    width: 100%;
-    background: var(--navy);
-  }
+  .nav-link:hover::after { width: 100%; }
+  .nav-link.active::after { width: 100%; }
 
   .nav-cta {
-    padding: 0.65rem 1.5rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
   }
 
   /* Language Toggle */
   .lang-toggle {
     display: flex;
     align-items: center;
-    background: rgba(0, 32, 96, 0.04);
     border-radius: var(--radius-full);
     padding: 2px;
     gap: 0;
+    transition: background var(--duration-base);
   }
 
   .lang-btn {
     font-family: var(--font-sans);
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.05em;
-    padding: 0.35rem 0.6rem;
+    padding: 0.3rem 0.55rem;
     border: none;
     border-radius: var(--radius-full);
     background: transparent;
-    color: var(--text-muted);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--duration-fast);
   }
 
   .lang-btn.active {
-    background: var(--navy);
-    color: var(--white);
-    box-shadow: 0 1px 4px rgba(0, 32, 96, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   }
 
-  .lang-btn:hover:not(.active) {
-    color: var(--navy);
-  }
-
-  /* Mobile right group */
+  /* Mobile */
   .nav-right-mobile {
     display: none;
     align-items: center;
@@ -176,22 +178,15 @@
   .nav-toggle span {
     width: 22px;
     height: 2px;
-    background: var(--navy);
     border-radius: 2px;
-    transition: all var(--transition-fast);
+    transition: all var(--duration-fast);
   }
 
   @media (max-width: 768px) {
-    .nav-right-mobile {
-      display: flex;
-    }
-
+    .nav-right-mobile { display: flex; }
     .lang-mobile { display: flex; }
     .lang-desktop { display: none; }
-
-    .nav-toggle {
-      display: flex;
-    }
+    .nav-toggle { display: flex; }
 
     .nav-links {
       display: none;
@@ -207,22 +202,27 @@
       border-bottom: 1px solid var(--divider);
     }
 
-    .nav-links.open {
-      display: flex;
-    }
+    .nav-links .nav-link { color: var(--text-secondary); }
+    .nav-links .nav-link:hover { color: var(--navy); }
+
+    .nav-links.open { display: flex; }
   }
 </style>
 
 <script>
-  // Navbar scroll effect
+  // Scroll: transparent → solid
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+  function updateNavbar() {
+    if (window.scrollY > 80) {
       navbar?.classList.add('scrolled');
+      navbar?.classList.remove('navbar--transparent');
     } else {
       navbar?.classList.remove('scrolled');
+      navbar?.classList.add('navbar--transparent');
     }
-  });
+  }
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
 
   // Mobile toggle
   const toggle = document.getElementById('nav-toggle');
@@ -231,78 +231,44 @@
     links?.classList.toggle('open');
   });
 
-  // Active nav link highlighting
+  // Active nav link
   function updateActiveNav() {
     const navLinks = document.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname;
-
-    // Clear all active states
     navLinks.forEach(link => link.classList.remove('active'));
 
-    // Check for standalone pages first (Über uns, Guide, etc.)
     const pageMatch = Array.from(navLinks).find(link => {
       const href = link.getAttribute('href');
       if (!href || href.startsWith('/#') || href === '/') return false;
       return currentPath.startsWith(href);
     });
 
-    if (pageMatch) {
-      pageMatch.classList.add('active');
-      return;
-    }
+    if (pageMatch) { pageMatch.classList.add('active'); return; }
 
-    // On the homepage, use scroll-based section detection
     if (currentPath === '/' || currentPath === '/index.html') {
-      const sections = ['features', 'how-it-works', 'team'];
-      const sectionElements = sections
-        .map(id => ({ id, el: document.getElementById(id) }))
-        .filter(s => s.el);
-
-      if (sectionElements.length === 0) return;
-
-      // Find which section is most visible
-      let activeSection = null;
+      const sections = ['how-it-works', 'pillars', 'team'];
       const scrollY = window.scrollY + window.innerHeight / 3;
-
-      for (const section of sectionElements) {
-        const top = section.el.offsetTop;
-        const bottom = top + section.el.offsetHeight;
-        if (scrollY >= top && scrollY < bottom) {
-          activeSection = section.id;
+      for (const id of sections) {
+        const el = document.getElementById(id);
+        if (el && scrollY >= el.offsetTop && scrollY < el.offsetTop + el.offsetHeight) {
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `/#${id}`) link.classList.add('active');
+          });
           break;
         }
       }
-
-      if (activeSection) {
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (href === `/#${activeSection}`) {
-            link.classList.add('active');
-          }
-        });
-      }
     }
   }
-
-  // Run on load and scroll
   updateActiveNav();
-  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-  // Also update when clicking nav links (for smooth scroll)
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      setTimeout(updateActiveNav, 100);
-    });
-  });
-  // Language toggle — attach event listeners to ALL lang buttons
+  // Language toggle
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
-      // Immediate visual feedback
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('active', b.getAttribute('data-lang') === lang);
       });
-      // Call setLanguage (retry if not loaded yet)
       function trySetLang() {
         if (typeof window.setLanguage === 'function') {
           window.setLanguage(lang);
@@ -314,16 +280,11 @@
     });
   });
 
-  // Sync toggle state on load — respect URL param > localStorage > browser
+  // Sync on load
   const urlLang = new URLSearchParams(window.location.search).get('lang');
   const savedLang = urlLang || localStorage.getItem('diamo-lang') ||
                     (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.getAttribute('data-lang') === savedLang);
-  });
-
-  // Clicking d. logo resets intro so animation plays again
-  document.querySelector('.nav-logo')?.addEventListener('click', () => {
-    sessionStorage.removeItem('diamo-intro-played');
   });
 </script>

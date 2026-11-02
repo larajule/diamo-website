@@ -1,0 +1,202 @@
+---
+---
+
+<section class="solution section" id="how-it-works">
+  <div class="container">
+    <div class="solution-header">
+      <span class="section-label animate-in" data-i18n="solution.label">The Answer</span>
+      <h2 class="animate-in" data-i18n="solution.title">
+        Movement that adapts<br/>to your life.
+      </h2>
+      <p class="solution-intro animate-in" data-i18n="solution.intro">
+        diamo learns how you feel, builds your day accordingly, and connects you with women who move in real life. Three principles. One system.
+      </p>
+    </div>
+
+    <!-- Principle 1: Personalized -->
+    <div class="solution-block animate-in" id="sol-personalized">
+      <div class="solution-block-text">
+        <div class="solution-num">01</div>
+        <h3 data-i18n="solution.s1.title">It starts with you.</h3>
+        <p data-i18n="solution.s1.desc">
+          30 seconds each morning: How did you sleep? How's your energy? diamo takes your body signals — sleep, heart rate, cycle phase, and daily energy — and builds a workout that fits right now. Not yesterday. Not a template. Today.
+        </p>
+      </div>
+      <div class="solution-block-visual">
+        <div class="solution-phone">
+          <img src="/screenshots/onboarding-1.png" alt="diamo daily check-in" loading="lazy" />
+        </div>
+        <div class="solution-phone solution-phone--back">
+          <img src="/screenshots/home-insights.png" alt="diamo body insights" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Principle 2: Adaptive -->
+    <div class="solution-block solution-block--reverse animate-in" id="sol-adaptive">
+      <div class="solution-block-text">
+        <div class="solution-num">02</div>
+        <h3 data-i18n="solution.s2.title">Your plan moves with you.</h3>
+        <p data-i18n="solution.s2.desc">
+          Strength, endurance, mobility, or recovery — diamo selects the right module for today based on your readiness. Missed a session? It adapts. Had a great night's sleep? Time to push. No guilt. No rigid schedules.
+        </p>
+      </div>
+      <div class="solution-block-visual">
+        <div class="solution-phone">
+          <img src="/screenshots/calendar-weekly.png" alt="diamo adaptive calendar" loading="lazy" />
+        </div>
+        <div class="solution-phone solution-phone--back">
+          <img src="/screenshots/home-training.png" alt="diamo training plan" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Principle 3: Community -->
+    <div class="solution-block animate-in" id="sol-community">
+      <div class="solution-block-text">
+        <div class="solution-num">03</div>
+        <h3 data-i18n="solution.s3.title">Off the screen, into real life.</h3>
+        <p data-i18n="solution.s3.desc">
+          Training alone lasts 3 months. Training together lasts a lifetime. Find running groups, local studios, and events near you. Join challenges with real women. No feed, no comparison — just showing up.
+        </p>
+      </div>
+      <div class="solution-block-visual">
+        <div class="solution-phone">
+          <img src="/screenshots/home-workout.png" alt="diamo community features" loading="lazy" />
+        </div>
+        <div class="solution-phone solution-phone--back">
+          <img src="/screenshots/community.png" alt="diamo local events" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .solution {
+    background: var(--white);
+  }
+
+  .solution-header {
+    max-width: 600px;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .solution-header h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .solution-intro {
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* ─── Block layout ─── */
+  .solution-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+    margin-bottom: var(--space-3xl);
+  }
+
+  .solution-block:last-child { margin-bottom: 0; }
+
+  .solution-block--reverse {
+    direction: rtl;
+  }
+  .solution-block--reverse > * {
+    direction: ltr;
+  }
+
+  .solution-num {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    color: var(--navy);
+    opacity: 0.08;
+    margin-bottom: var(--space-xs);
+  }
+
+  .solution-block-text h3 {
+    font-family: var(--font-sans);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: var(--space-sm);
+  }
+
+  .solution-block-text p {
+    font-size: clamp(0.95rem, 1.3vw, 1.05rem);
+    line-height: 1.75;
+    color: var(--text-secondary);
+    max-width: 440px;
+  }
+
+  /* ─── Phone duo ─── */
+  .solution-block-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: var(--space-lg) 0;
+  }
+
+  .solution-phone {
+    width: clamp(200px, 20vw, 260px);
+    border-radius: clamp(22px, 3.5vw, 36px);
+    overflow: hidden;
+    box-shadow: var(--shadow-phone);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.6s var(--ease-out);
+  }
+
+  .solution-phone img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .solution-phone--back {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 1;
+    opacity: 0.7;
+    transform: scale(0.92) translateX(30px);
+    width: clamp(180px, 18vw, 240px);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .solution-block,
+    .solution-block--reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      text-align: center;
+      gap: var(--space-lg);
+    }
+
+    .solution-block-text p {
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    .solution-block-visual {
+      justify-content: center;
+    }
+
+    .solution-phone { width: 220px; }
+    .solution-phone--back { display: none; }
+
+    .solution-header {
+      text-align: center;
+      max-width: none;
+    }
+    .solution-header p {
+      margin: 0 auto;
+    }
+  }
+</style>

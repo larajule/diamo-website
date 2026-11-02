@@ -1,0 +1,146 @@
+---
+---
+
+<section class="tension section" id="tension">
+  <div class="container">
+    <div class="tension-layout">
+      <div class="tension-text">
+        <span class="section-label animate-in" data-i18n="tension.label">The Problem</span>
+        <h2 class="tension-headline animate-in" data-i18n="tension.title">
+          Your fitness app doesn't know you.
+        </h2>
+        <div class="tension-points animate-in">
+          <p data-i18n="tension.p1">
+            It doesn't know you slept four hours. It doesn't know you're on day 22 of your cycle. It doesn't know your schedule just changed.
+          </p>
+          <p data-i18n="tension.p2">
+            It gives you a rigid plan and expects you to show up the same way every day. When you don't, it counts as failure.
+          </p>
+          <p class="tension-emphasis" data-i18n="tension.p3">
+            Real movement doesn't work like that.
+          </p>
+        </div>
+      </div>
+
+      <div class="tension-visual animate-in">
+        <div class="tension-stats">
+          <div class="tension-stat">
+            <span class="tension-stat-number">73%</span>
+            <span class="tension-stat-label" data-i18n="tension.stat1">of women quit fitness apps within 3 months</span>
+          </div>
+          <div class="tension-stat-divider"></div>
+          <div class="tension-stat">
+            <span class="tension-stat-number">1 in 4</span>
+            <span class="tension-stat-label" data-i18n="tension.stat2">say the plan didn't fit their daily life</span>
+          </div>
+          <div class="tension-stat-divider"></div>
+          <div class="tension-stat">
+            <span class="tension-stat-number">0</span>
+            <span class="tension-stat-label" data-i18n="tension.stat3">major apps adapt to cycle, sleep, and energy together</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tension {
+    background: var(--ivory);
+    position: relative;
+  }
+
+  .tension-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(3rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .tension-headline {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+    max-width: 480px;
+  }
+
+  .tension-points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .tension-points p {
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 440px;
+  }
+
+  .tension-emphasis {
+    font-weight: 600;
+    color: var(--navy) !important;
+    font-size: clamp(1.05rem, 1.4vw, 1.15rem) !important;
+    margin-top: var(--space-xs);
+  }
+
+  /* ─── Stats block ─── */
+  .tension-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tension-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--navy-deep);
+    border-radius: var(--radius-xl);
+    max-width: 360px;
+    width: 100%;
+  }
+
+  .tension-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .tension-stat-number {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .tension-stat-label {
+    font-size: 0.88rem;
+    color: var(--text-inverse-muted);
+    line-height: 1.5;
+    max-width: 260px;
+  }
+
+  .tension-stat-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .tension-layout {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .tension-headline {
+      max-width: none;
+    }
+
+    .tension-stats {
+      max-width: none;
+    }
+  }
+</style>
