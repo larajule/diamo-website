@@ -31,41 +31,98 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
   <body>
     <slot />
     
-    <script is:inline src="/scripts/i18n.js?v=1.8"></script>
+    <script is:inline src="/scripts/i18n.js?v=2.0"></script>
     <script is:inline>
-      // Intersection Observer for scroll animations
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
+      // ─── DIAMO MOTION SYSTEM ───
+      // Signature motion: staggered reveals, smooth counters, refined interactions
+
+      // 1. Staggered scroll reveal
+      (function() {
+        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var revealObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
+              // Stagger children with data-stagger attribute
+              var el = entry.target;
+              if (prefersReduced) {
+                el.classList.add('visible');
+                return;
+              }
+              // Add delay based on element index within parent
+              var siblings = el.parentElement ? el.parentElement.querySelectorAll('.animate-in') : [];
+              var idx = Array.from(siblings).indexOf(el);
+              var delay = idx * 80; // 80ms stagger
+              if (el.style.transitionDelay) delay = 0; // respect manual delay
+              
+              setTimeout(function() {
+                el.classList.add('visible');
+              }, delay);
             }
           });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-      );
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-      document.querySelectorAll('.animate-in').forEach((el) => {
-        observer.observe(el);
-      });
+        document.querySelectorAll('.animate-in').forEach(function(el) {
+          revealObserver.observe(el);
+        });
 
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          const href = this.getAttribute('href');
-          if (!href || this.hasAttribute('data-open-waitlist') || this.hasAttribute('data-open-beta')) return;
-          const targetId = href.replace('/', '');
+        // 2. Counter animation for stats
+        var counterObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (!entry.isIntersecting) return;
+            var el = entry.target;
+            if (el.dataset.counted) return;
+            el.dataset.counted = '1';
+
+            var text = el.textContent.trim();
+            // Handle "73%" pattern
+            var match = text.match(/^(\d+)(%?)$/);
+            if (match && !prefersReduced) {
+              var target = parseInt(match[1]);
+              var suffix = match[2] || '';
+              var duration = 1200;
+              var start = performance.now();
+
+              function tick(now) {
+                var elapsed = now - start;
+                var progress = Math.min(elapsed / duration, 1);
+                var eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                el.textContent = Math.round(target * eased) + suffix;
+                if (progress < 1) requestAnimationFrame(tick);
+              }
+              el.textContent = '0' + suffix;
+              requestAnimationFrame(tick);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.tension-stat-number').forEach(function(el) {
+          counterObserver.observe(el);
+        });
+      })();
+
+      // 3. Smooth scroll for anchor links (with nav offset)
+      document.querySelectorAll('a[href^="/#"], a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var href = this.getAttribute('href');
+          if (!href || href === '#' || this.hasAttribute('data-open-waitlist') || this.hasAttribute('data-open-beta') || this.hasAttribute('data-open-apply')) return;
+          var targetId = href.replace(/^\//, '');
           try {
-            const target = document.querySelector(targetId);
+            var target = document.querySelector(targetId);
             if (target) {
               e.preventDefault();
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              var offset = 80; // nav height
+              var top = target.getBoundingClientRect().top + window.scrollY - offset;
+              window.scrollTo({ top: top, behavior: 'smooth' });
+              // Close mobile nav if open
+              var navLinks = document.getElementById('nav-links');
+              if (navLinks) navLinks.classList.remove('open');
             }
           } catch (_) {}
         });
       });
 
-      // Initialize language
+      // 4. Initialize language
       if (typeof initLanguage === 'function') {
         initLanguage();
       }
