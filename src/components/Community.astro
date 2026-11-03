@@ -1,175 +1,161 @@
 ---
 ---
 
-<section class="community section" id="community">
+<section class="community-section section" id="community">
   <div class="container">
-    <div class="community-layout">
-      <div class="community-text">
-        <span class="section-label animate-in" data-i18n="community.label">Community</span>
-        <h2 class="animate-in" data-i18n="community.title">
-          Move on your terms.<br/>Together when you want.
-        </h2>
-        <p class="community-desc animate-in" data-i18n="community.desc">
-          From solo workouts to local run clubs and shared experiences. Find movement that fits your life — and people who make you want to show up.
-        </p>
-      </div>
-
-      <div class="community-features animate-in">
-        <div class="community-feature">
-          <div class="community-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div class="community-feature-text">
-            <h4 data-i18n="community.events">Local events</h4>
-            <p data-i18n="community.events.desc">Discover movement activities in your city</p>
-          </div>
-        </div>
-
-        <div class="community-feature">
-          <div class="community-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="community-feature-text">
-            <h4 data-i18n="community.groups">Run clubs</h4>
-            <p data-i18n="community.groups.desc">Find women who run near you</p>
-          </div>
-        </div>
-
-        <div class="community-feature">
-          <div class="community-feature-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <div class="community-feature-text">
-            <h4 data-i18n="community.connect">Real connections</h4>
-            <p data-i18n="community.connect.desc">Off the screen, into real life</p>
-          </div>
-        </div>
-      </div>
+    <div class="community-header animate-in">
+      <span class="section-label" data-i18n="community.label">Die Community</span>
+      <h2 class="section-title" data-i18n="community.title">
+        Finde deine Girls statt digitaler Isolation
+      </h2>
+      <p class="community-description" data-i18n="community.description">
+        Trainiere nicht mehr allein vor dem Screen. Wir nutzen digitale Daten, um echte, physische Begegnungen mit Girls direkt in deiner Stadt zu kuratieren.
+      </p>
     </div>
 
-    <div class="community-bottom animate-in">
-      <a href="https://www.instagram.com/diamo.app" target="_blank" rel="noopener noreferrer" class="community-instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-        <span data-i18n="community.cta">Follow us on Instagram</span>
-      </a>
-      <span class="community-note" data-i18n="community.coming">Community features coming soon</span>
+    <div class="community-showcase animate-in">
+      <div class="community-image-wrapper">
+        <img
+          src="/images/community-tribe.png"
+          alt="Frauen trainieren gemeinsam in einer lokalen diamo Girls-Gruppe"
+          class="community-hero-image"
+          loading="lazy"
+        />
+        <div class="community-image-overlay"></div>
+      </div>
+      
+      <div class="community-phone-float">
+        <img
+          src="/screenshots/community.png"
+          alt="diamo Community App-Ansicht"
+          class="community-mockup-img"
+          loading="lazy"
+        />
+        <div class="community-glow"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .community {
+  .community-section {
     background: var(--ivory);
+    overflow: hidden;
   }
 
-  .community-layout {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: clamp(3rem, 6vw, 6rem);
-    align-items: start;
+  .community-header {
+    text-align: center;
     margin-bottom: var(--space-2xl);
   }
 
-  .community-text h2 {
-    margin-bottom: var(--space-md);
-  }
-
-  .community-desc {
-    font-size: clamp(1rem, 1.4vw, 1.1rem);
-    line-height: 1.7;
+  .community-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: var(--text-secondary);
-    max-width: 460px;
+    max-width: 600px;
+    margin: var(--space-sm) auto 0;
   }
 
-  /* ─── Feature list ─── */
-  .community-features {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
+  /* Layered showcase: image as base, phone floating on top */
+  .community-showcase {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .community-feature {
-    display: flex;
-    gap: var(--space-sm);
-    align-items: flex-start;
-    padding: var(--space-md);
-    background: var(--white);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--divider);
-    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+  .community-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
   }
 
-  .community-feature:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+  .community-hero-image {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center 55%;
+    border-radius: var(--radius-xl);
+    display: block;
+    transition: transform var(--transition-slow);
   }
 
-  .community-feature-icon {
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-sm);
-    background: var(--electric-subtle);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--electric);
+  .community-image-wrapper:hover .community-hero-image {
+    transform: scale(1.02);
   }
 
-  .community-feature-text h4 {
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 0.15rem;
+  .community-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(135deg, transparent 50%, rgba(0, 32, 96, 0.12) 100%),
+      linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.06) 100%);
+    pointer-events: none;
   }
 
-  .community-feature-text p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.5;
+  /* Phone floating over the image */
+  .community-phone-float {
+    position: absolute;
+    bottom: -40px;
+    right: -20px;
+    z-index: 3;
+    animation: float 6s ease-in-out infinite;
   }
 
-  /* ─── Bottom link ─── */
-  .community-bottom {
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+  /* Neues Flat-Mockup mit eigenem Phone-Frame */
+  .community-mockup-img {
+    width: 220px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    filter:
+      drop-shadow(0 20px 50px rgba(0, 32, 96, 0.28))
+      drop-shadow(0 4px 16px rgba(155, 139, 203, 0.15));
+    transition: filter var(--transition-base);
   }
 
-  .community-instagram {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.75rem 1.5rem;
-    background: var(--navy);
-    color: var(--white);
-    border-radius: var(--radius-full);
-    font-size: 0.88rem;
-    font-weight: 600;
-    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
-    box-shadow: 0 4px 16px rgba(0, 32, 96, 0.2);
+  .community-mockup-img:hover {
+    filter:
+      drop-shadow(0 28px 64px rgba(0, 32, 96, 0.35))
+      drop-shadow(0 8px 24px rgba(155, 139, 203, 0.22));
   }
 
-  .community-instagram:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 32, 96, 0.3);
-  }
-
-  .community-note {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    letter-spacing: 0.02em;
+  .community-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(141, 198, 166, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(40px);
   }
 
   @media (max-width: 768px) {
-    .community-layout {
-      grid-template-columns: 1fr;
+    .community-hero-image {
+      height: auto;
     }
-    .community-bottom {
-      flex-direction: column;
-      align-items: flex-start;
+
+    .community-phone-float {
+      right: 10px;
+      bottom: -30px;
+    }
+
+    .community-mockup-img {
+      width: 160px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .community-phone-float {
+      right: 5px;
+      bottom: -20px;
+    }
+
+    .community-mockup-img {
+      width: 130px;
     }
   }
 </style>
