@@ -6,15 +6,15 @@ import WaitlistModal from '../components/WaitlistModal.astro';
 import BetaApplyModals from '../components/BetaApplyModals.astro';
 ---
 
-<Layout title="About | diamo" description="Personalized fitness for women. Training that adapts to your body, your energy, and your life.">
+<Layout title="Über uns | diamo" description="Erfahre mehr über die Idee und Vision hinter diamo. Zyklusbasiertes Training, unterstützt durch Forschung, Community und echte Verbindungen.">
   <Navbar />
   <main class="about-page">
     <div class="about-container">
       
       <div class="about-hero">
         <h1 class="about-title">
-          <span data-i18n="about.title">Movement should fit real life.</span><br/>
-          <span class="about-title-italic" data-i18n="about.title.italic">We’re building a way to make it happen.</span>
+          <span data-i18n="about.title">Dein Zyklus ist deine Superkraft.</span><br/>
+          <span class="about-title-italic" data-i18n="about.title.italic">Wir helfen dir, sie zu nutzen.</span>
         </h1>
         <div class="about-divider"></div>
       </div>
@@ -22,26 +22,26 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
       <section class="about-section">
         <h2 class="about-h2" data-i18n="about.story.title">Warum es diamo gibt</h2>
         <p data-i18n="about.story.p1">
-          Most fitness apps treat every day the same. Same plan, same intensity, same expectations. But your energy shifts. Your schedule changes. Your body has its own rhythm.
+          Viel zu lange hat Fitness den grundlegendsten Teil der weiblichen Biologie ignoriert: den Zyklus. Trainingspläne haben an Tag 5 und Tag 25 die gleiche Leistung erwartet. Sie haben Frauen das Gefühl gegeben zu versagen, wenn ihr Körper einfach etwas anderes brauchte.
         </p>
         <p data-i18n="about.story.p2">
-          We wanted something that adapts — that takes your sleep, your energy, and your daily reality into account. Something that connects you with real people, not just a screen.
+          Aber die Wissenschaft ist eindeutig: Jede Frau durchläuft vier verschiedene Zyklusphasen, die ihre Energie, Kraft und Erholung auf einzigartige Weise beeinflussen. Das ist keine Einschränkung, sondern ein Vorteil, wenn man ihn zu nutzen weiß.
         </p>
         <p data-i18n="about.story.p3">
-          That’s why we’re building diamo.
+          Deshalb wurde diamo gebaut. Die App, die endlich mit deinem Zyklus trainiert, nicht gegen ihn.
         </p>
       </section>
 
       <section class="about-section about-vision">
-        <h2 class="about-h2" data-i18n="about.vision.title">What we’re building</h2>
+        <h2 class="about-h2" data-i18n="about.vision.title">Training, das die Sprache deines Zyklus spricht</h2>
         <p data-i18n="about.vision.p1">
-          A platform that combines personalized movement guidance with real-world community. Training that flexes around your life, not the other way around.
+          In der Follikelphase ist dein Körper bereit, Grenzen zu verschieben. In der Lutealphase braucht er eine andere Art von Stärke. diamo kennt den Unterschied und passt dein Training entsprechend an.
         </p>
         <p data-i18n="about.vision.p2">
-          We connect health data from your phone with a daily check-in to suggest sessions that match how you actually feel. And we help you find women near you who want to move together.
+          Wir verbinden die Daten deiner Apple Watch, deines Oura Rings oder Garmin mit Echtzeit Zyklusbewusstsein, um einen Plan zu erstellen, der genau zu dir passt. Heute. Kein generischer Plan. Dein Plan.
         </p>
         <p data-i18n="about.vision.p3">
-          Solo when you want it. Together when it feels right. <strong>Real life first</strong>.
+          Und weil wir glauben, dass die besten Workouts gemeinsam passieren, verbindet diamo dich mit Frauen in deiner Nähe, die in einer ähnlichen Zyklusphase sind. Lokale Run Clubs, geteilte Energie, echte Connections. <strong>Offline first</strong>.
         </p>
       </section>
 
@@ -185,7 +185,7 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
     border: 1px solid rgba(11, 25, 46, 0.08);
     border-radius: var(--radius-md);
     text-align: center;
-    transition: border-color var(--duration-fast), box-shadow var(--duration-fast), transform var(--duration-fast);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   }
 
   .about-value-card:hover {
@@ -197,13 +197,13 @@ import BetaApplyModals from '../components/BetaApplyModals.astro';
   .about-value-icon {
     width: 56px;
     height: 56px;
-    background: var(--electric-subtle);
+    background: rgba(155, 139, 203, 0.08);
     border-radius: var(--radius-md);
     margin: 0 auto var(--space-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--electric);
+    color: var(--lavender);
   }
 
   .about-value-name {
