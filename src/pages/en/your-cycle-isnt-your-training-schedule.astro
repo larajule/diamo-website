@@ -1,0 +1,255 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import WaitlistModal from '../../components/WaitlistModal.astro';
+import BetaApplyModals from '../../components/BetaApplyModals.astro';
+import ArticleBanner from '../../components/ArticleBanner.astro';
+---
+
+<Layout
+  title="Your Cycle Isn't Your Training Schedule | diamo"
+  description="Hormones change. But there is no universal training calendar for every woman. What the research actually says."
+  lang="en"
+  hreflangDe="https://diamo.club/dein-zyklus-ist-kein-trainingsplan/"
+  hreflangEn="https://diamo.club/en/your-cycle-isnt-your-training-schedule/"
+  articleLangEn="/en/your-cycle-isnt-your-training-schedule/"
+  articleLangDe="/dein-zyklus-ist-kein-trainingsplan/"
+>
+  <Navbar />
+
+  <main class="art-page">
+    <div class="art-bg-layer" aria-hidden="true">
+      <img src="/images/kyb-strength-selfcare.jpg" alt="" class="art-bg-img" />
+    </div>
+
+    <div class="art-container">
+
+      <a href="/#knowledge" class="art-back">← know your body</a>
+
+      <header class="art-hero">
+        <span class="art-eyebrow">know your body</span>
+
+        <h1 class="art-h1">YOUR CYCLE ISN'T YOUR TRAINING SCHEDULE.</h1>
+
+        <p class="art-intro">Your hormones are real. So are the changes you may feel across your cycle. What science does not support: that every woman should train according to the same colour-coded four-week plan.</p>
+
+        <div class="art-divider"></div>
+      </header>
+
+      <section class="art-section art-section--intro">
+        <p>Follicular phase means go hard. Ovulation means PR. Luteal phase means back off. Period means deload.</p>
+        <p>Neat system.</p>
+        <p>Messy evidence base.</p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">the fact</span>
+        <h2 class="art-h2">Sex hormones fluctuate across the menstrual cycle.</h2>
+        <p>The effect of those fluctuations on athletic performance is, on average, relatively small, inconsistent, and highly individual.</p>
+        <p>Some studies find moderate differences on individual endurance, sprint or strength tests. Others find none.</p>
+        <p>When you summarise the research, one conclusion remains: the data are not currently strong enough to prescribe phase-based training plans to women as a universal standard.</p>
+      </section>
+
+      <!-- Early access campaign banner — mid-article -->
+      <ArticleBanner />
+
+      <section class="art-section">
+        <span class="art-label">why it matters</span>
+        <h2 class="art-h2">Rigid cycle-based training turns normal physiology into rules your body never agreed to.</h2>
+        <p>One woman feels strong during her period. Another has cramps severe enough to adjust her session. One reliably notices lower energy before menstruation. Another notices nothing at all.</p>
+        <p>A calendar cannot tell you which one you are.</p>
+        <p>Your own data can.</p>
+        <p>Tracking can therefore be useful — not because an app knows when you should train hard, but because repeated personal observations can reveal whether symptoms, sleep, energy or performance follow a pattern that is actually relevant for you.</p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">the nuance</span>
+        <h2 class="art-h2">Saying that cycle syncing is not well supported by science does not mean your cycle is irrelevant.</h2>
+        <p>Symptoms count.</p>
+        <p>Pain, heavy bleeding, migraines, digestive issues, sleep problems or pronounced premenstrual symptoms can very genuinely affect how training feels and what load you can sensibly tolerate.</p>
+        <p>There is also a research problem: cycle phases are surprisingly easy to misidentify. Ovulation does not happen on the same day for every woman, or even on the same day each cycle for the same woman. Studies that estimate phases by calendar day alone can therefore mix different hormonal states together.</p>
+        <p>That uncertainty matters once a small average effect is turned into a universal rule for millions of women.</p>
+      </section>
+
+      <section class="art-section art-section--takeaway">
+        <span class="art-label">the takeaway</span>
+        <h2 class="art-h2">Track your cycle if the information helps you.</h2>
+        <p>Adjust training when your symptoms or performance give you a good reason to.</p>
+        <p>But do not hand your training plan over to a generic hormone calendar.</p>
+        <p>Your cycle is context.</p>
+        <p><strong>Not your coach.</strong></p>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+<style>
+  .art-bg-layer {
+    position: fixed;
+    top: 0;
+    right: -3%;
+    width: 60%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .art-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.19;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  .art-page {
+    padding-top: calc(var(--nav-height, 72px) + 4rem);
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    background: var(--ivory, #FCFBF7);
+    position: relative;
+  }
+
+  .art-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .art-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 2.5rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .art-back:hover { opacity: 1; }
+
+  .art-hero { margin-bottom: 4rem; }
+
+  .art-eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1.25rem;
+  }
+
+  .art-h1 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-intro {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(12, 42, 110, 0.65);
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .art-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--navy, #0C2A6E);
+    opacity: 0.2;
+    margin: 2rem 0 0;
+  }
+
+  .art-section {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(12, 42, 110, 0.07);
+  }
+
+  .art-section:last-of-type { border-bottom: none; }
+
+  .art-section--intro {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.75);
+  }
+
+  .art-section--intro p { margin: 0 0 1rem; }
+  .art-section--intro p:last-child { margin-bottom: 0; }
+
+  .art-label {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1rem;
+  }
+
+  .art-h2 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-section p {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .art-section p:last-child { margin-bottom: 0; }
+
+  .art-section strong {
+    color: var(--navy, #0C2A6E);
+    font-weight: 700;
+  }
+
+  .art-section--takeaway .art-h2 {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    .art-page { padding-top: calc(var(--nav-height, 72px) + 2rem); }
+    .art-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
+    .art-bg-layer {
+      width: 100%;
+      right: 0;
+      height: 50vh;
+      top: 0;
+    }
+    .art-bg-img {
+      opacity: 0.10;
+      object-position: center top;
+    }
+  }
+</style>

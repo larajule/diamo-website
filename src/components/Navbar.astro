@@ -6,15 +6,17 @@
     <a href="/" class="nav-logo">d.</a>
     
     <div class="nav-links" id="nav-links">
-      <a href="/#features" class="nav-link" data-i18n="nav.features">Features</a>
-      <a href="/#team" class="nav-link" data-i18n="nav.team">Team</a>
-      <a href="/ueber-uns" class="nav-link" data-i18n="nav.about">Über uns</a>
-      <a href="/zyklusbasiertes-training" class="nav-link" data-i18n="nav.guide">Guide</a>
+      <a href="/#why" class="nav-link" data-i18n="nav.why">the why</a>
+      <a href="/#app" class="nav-link" data-i18n="nav.features">the app</a>
+      <a href="/#knowledge" class="nav-link" data-i18n="nav.knowledge">know your body</a>
+      <a href="/#club" class="nav-link" data-i18n="nav.club">the club</a>
+      <a href="/#team" class="nav-link" data-i18n="nav.founders">who's behind diamo?</a>
+      <a href="/#faq" class="nav-link" data-i18n="nav.faq">faq</a>
       <div class="lang-toggle lang-desktop">
         <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn active" data-lang="de">DE</button>
       </div>
-      <a href="#beta" class="btn btn-primary nav-cta" data-open-beta data-i18n="nav.cta">Beta-Testerin werden</a>
+      <a href="#beta" class="btn btn-primary nav-cta" data-open-beta data-i18n="nav.cta">get early access</a>
     </div>
 
     <!-- Mobile: lang toggle always visible -->
@@ -34,8 +36,8 @@
 
 <style>
   .navbar {
-    position: fixed;
-    top: 0;
+    position: sticky;
+    top: 36px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -75,11 +77,11 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
   }
 
   .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 500;
     color: var(--text-secondary);
     transition: color var(--transition-fast);
@@ -253,7 +255,7 @@
 
     // On the homepage, use scroll-based section detection
     if (currentPath === '/' || currentPath === '/index.html') {
-      const sections = ['features', 'how-it-works', 'team'];
+      const sections = ['app', 'why', 'knowledge', 'club', 'team'];
       const sectionElements = sections
         .map(id => ({ id, el: document.getElementById(id) }))
         .filter(s => s.el);
@@ -298,6 +300,20 @@
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
+      // Check if this is an article page with partner URLs
+      const enUrl = document.body.getAttribute('data-article-lang-en');
+      const deUrl = document.body.getAttribute('data-article-lang-de');
+      if (lang === 'en' && enUrl) {
+        localStorage.setItem('diamo-lang', 'en');
+        window.location.href = enUrl;
+        return;
+      }
+      if (lang === 'de' && deUrl) {
+        localStorage.setItem('diamo-lang', 'de');
+        window.location.href = deUrl;
+        return;
+      }
+      // Normal in-place language toggle
       // Immediate visual feedback
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('active', b.getAttribute('data-lang') === lang);

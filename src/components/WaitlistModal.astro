@@ -47,7 +47,9 @@
             </button>
           </div>
           <div id="waitlist-feedback" class="form-feedback"></div>
-          <p class="modal-privacy" data-i18n="modal.privacy">Begrenzte Plätze · Kein Spam, versprochen.</p>
+          <p class="modal-privacy">
+            <span data-i18n="modal.privacy.text">Deine E-Mail nutzen wir für deine Beta-Anmeldung. Mehr unter </span><a href="/datenschutz" class="modal-privacy-link" data-i18n="modal.privacy.link">Datenschutz</a><span data-i18n="modal.privacy.suffix">.</span>
+          </p>
         </form>
         
         <div class="modal-success" id="modal-success" style="display:none;">
@@ -265,6 +267,15 @@
     text-align: center;
   }
 
+  .modal-privacy-link {
+    color: var(--electric-blue, #2C7AFF);
+    text-decoration: underline;
+    transition: opacity 0.2s;
+  }
+  .modal-privacy-link:hover {
+    opacity: 0.75;
+  }
+
   .modal-success {
     text-align: center;
     padding: var(--space-md) 0;
@@ -347,8 +358,8 @@
   // Detect page language from the i18n system (html lang attribute)
   const userLanguage = (document.documentElement.lang === 'de' ? 'de' : 'en') as const;
 
-  // Open modal from any beta-trigger button
-  document.querySelectorAll('[data-open-beta]').forEach(el => {
+  // Open modal from any beta-trigger button (data-open-beta OR data-open-waitlist)
+  document.querySelectorAll('[data-open-beta],[data-open-waitlist]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
       modal?.classList.add('open');

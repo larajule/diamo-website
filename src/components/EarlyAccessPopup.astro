@@ -1,0 +1,166 @@
+---
+---
+<div class="eap-overlay" id="eap-overlay" aria-modal="true" role="dialog" aria-label="Early Access">
+  <div class="eap-backdrop" id="eap-backdrop"></div>
+  <div class="eap-card">
+    <button class="eap-close" id="eap-close" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <span class="eap-eyebrow">GET IN EARLY.</span>
+    <h2 class="eap-headline" data-i18n="popup.headline">DA KOMMT WAS GUTES.</h2>
+    <p class="eap-body" data-i18n="popup.body">Sichere dir deinen Platz auf der diamo-Warteliste.</p>
+    <button class="eap-cta" id="eap-cta" data-i18n="popup.cta">frühen zugang sichern</button>
+  </div>
+</div>
+
+<style>
+  .eap-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .eap-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .eap-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,32,96,0.35);
+    backdrop-filter: blur(6px);
+  }
+  .eap-card {
+    position: relative;
+    background: linear-gradient(135deg, #EBF3FF 0%, #D6EAFF 100%);
+    border: 1px solid rgba(21, 53, 168, 0.12);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 24px 60px rgba(12, 42, 110, 0.18), 0 0 0 1px rgba(200, 222, 245, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .eap-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    background: rgba(12, 42, 110, 0.06);
+    border: none;
+    cursor: pointer;
+    color: rgba(12, 42, 110, 0.4);
+    padding: 0.4rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .eap-close:hover {
+    color: var(--navy, #0C2A6E);
+    background: rgba(12, 42, 110, 0.1);
+  }
+  .eap-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+  }
+  .eap-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 5vw, 1.9rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .eap-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(12, 42, 110, 0.65);
+    margin: 0;
+    line-height: 1.5;
+  }
+  .eap-cta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 0.85rem 2.2rem;
+    border-radius: 100px;
+    border: none;
+    background: var(--navy, #0C2A6E);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s;
+    width: 100%;
+    max-width: 260px;
+  }
+  .eap-cta:hover {
+    background: var(--cobalt, #1535A8);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(21, 53, 168, 0.3);
+  }
+  @media (max-width: 480px) {
+    .eap-card { padding: 2.5rem 1.5rem; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var STORAGE_KEY = 'diamo-popup-dismissed';
+    // Don't show if already dismissed in this session
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+    
+    var overlay = document.getElementById('eap-overlay');
+    var closeBtn = document.getElementById('eap-close');
+    var backdrop = document.getElementById('eap-backdrop');
+    var cta = document.getElementById('eap-cta');
+    
+    function open() {
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+    }
+    function close() {
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      sessionStorage.setItem(STORAGE_KEY, '1');
+    }
+    
+    // Show after 5 seconds, but only if waitlist modal isn't already open
+    setTimeout(function() {
+      var waitlist = document.getElementById('waitlist-modal');
+      if (waitlist && waitlist.classList.contains('open')) return;
+      open();
+    }, 5000);
+    
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') close();
+    });
+    cta.addEventListener('click', function() {
+      close();
+      // Open the waitlist modal
+      var trigger = document.querySelector('[data-open-waitlist]');
+      if (trigger) trigger.click();
+    });
+    
+    overlay.setAttribute('aria-hidden', 'true');
+  })();
+</script>

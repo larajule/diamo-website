@@ -1,0 +1,365 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import WaitlistModal from '../../components/WaitlistModal.astro';
+import BetaApplyModals from '../../components/BetaApplyModals.astro';
+import ArticleBanner from '../../components/ArticleBanner.astro';
+---
+
+<Layout
+  title="Your Watch Isn't Your Boss | diamo"
+  description="HRV scores are useful. But your recovery score is not a verdict on you. Learn what wearable data can tell you — and what it cannot."
+  hreflangDe="https://diamo.club/blog/wearables-und-zyklus/"
+  hreflangEn="https://diamo.club/en/blog/wearables-and-cycle/"
+  articleLangEn="/en/blog/wearables-and-cycle/"
+  articleLangDe="/blog/wearables-und-zyklus/"
+>
+  <Navbar />
+
+  <main class="art-page">
+    <div class="art-bg-layer" aria-hidden="true">
+      <img src="/images/kyb-sneakers.jpg" alt="" class="art-bg-img" />
+    </div>
+
+    <div class="art-container">
+
+      <a href="/#knowledge" class="art-back" data-i18n="art.back">← know your body</a>
+
+      <header class="art-hero">
+        <span class="art-eyebrow">science or hype?</span>
+
+        <h1 class="art-h1">
+          <span data-lang-content="en">YOUR WATCH ISN'T YOUR BOSS.</span>
+          <span data-lang-content="de">DEINE UHR HAT NICHT DAS LETZTE WORT.</span>
+        </h1>
+
+        <p class="art-intro">
+          <span data-lang-content="en">You wake up feeling good. Your watch disagrees. Recovery: 48. HRV down. Readiness: low. And suddenly a body that felt completely fine five seconds ago looks like a problem.</span>
+          <span data-lang-content="de">Du wachst auf und fühlst dich gut. Deine Uhr sieht das anders. Recovery: 48. HRV runter. Readiness: schlecht. Und plötzlich wirkt ein Körper, der sich vor fünf Sekunden noch völlig okay angefühlt hat, wie ein Problem.</span>
+        </p>
+
+        <div class="art-divider"></div>
+      </header>
+
+      <section class="art-section art-section--intro">
+        <p>
+          <span data-lang-content="en">Wearables can be great.</span>
+          <span data-lang-content="de">Wearables können großartig sein.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">That does not make them the highest authority on your body.</span>
+          <span data-lang-content="de">Das macht sie noch lange nicht zur höchsten Instanz über deinen Körper.</span>
+        </p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">the fact</span>
+          <span data-lang-content="de">der fakt</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">HRV is a real physiological signal.</span>
+          <span data-lang-content="de">HRV ist eine reale physiologische Messgröße.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">Many modern wearables can capture it reasonably well under good conditions — particularly at rest or during sleep.</span>
+          <span data-lang-content="de">Viele moderne Wearables können sie unter guten Bedingungen – besonders in Ruhe oder im Schlaf – durchaus brauchbar erfassen.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">But HRV is not a direct measure of recovery.</span>
+          <span data-lang-content="de">Aber HRV ist kein direkter Messwert für Regeneration.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">And your recovery score is not your HRV. It is an algorithmic interpretation combining HRV with factors like resting heart rate, sleep, activity and other signals. The exact formula is typically proprietary.</span>
+          <span data-lang-content="de">Und dein Recovery Score ist nicht deine HRV. Er ist eine algorithmische Interpretation aus HRV plus Faktoren wie Ruhepuls, Schlaf, Aktivität und weiteren Signalen. Die genaue Formel bleibt häufig proprietär.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Your device can therefore measure useful data without objectively knowing whether you should train today.</span>
+          <span data-lang-content="de">Dein Gerät kann also nützliche Daten messen, ohne objektiv zu wissen, ob du heute trainieren solltest.</span>
+        </p>
+      </section>
+
+      <!-- Early access campaign banner — mid-article -->
+      <ArticleBanner />
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">why it matters</span>
+          <span data-lang-content="de">warum das wichtig ist</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Bodies are complex.</span>
+          <span data-lang-content="de">Körper sind komplex.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">HRV can shift in response to training, sleep, illness, alcohol, psychological stress, breathing patterns, fitness level, medication, and the physiology of the menstrual cycle.</span>
+          <span data-lang-content="de">HRV kann sich durch Training, Schlaf, Infekte, Alkohol, psychischen Stress, Atmung, Fitness, Medikamente und die Physiologie des Menstruationszyklus verändern.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">A single low reading can therefore have many causes.</span>
+          <span data-lang-content="de">Ein einzelner niedriger Wert kann deshalb viele Ursachen haben.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">For women, this is particularly relevant. Wearable data shows that HRV can fluctuate across the menstrual cycle even without any recovery problem. A lower reading in certain cycle phases can sometimes reflect normal physiology — not a signal that something is wrong.</span>
+          <span data-lang-content="de">Für Frauen ist das besonders relevant, weil Wearable-Daten zeigen, dass sich HRV im Laufe des Menstruationszyklus auch ohne problematische Regeneration verändern kann. Ein niedrigerer Wert in bestimmten Zyklusabschnitten kann manchmal normale Physiologie widerspiegeln – nicht automatisch ein Recovery-Problem.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">The key question is rarely: is my HRV good? It is: is this reading unusual for me under comparable conditions — and does it fit with everything else that is currently going on?</span>
+          <span data-lang-content="de">Die entscheidende Frage lautet deshalb selten: Ist meine HRV gut? Sondern: Ist dieser Wert für mich unter vergleichbaren Bedingungen ungewöhnlich – und passt er zu dem, was sonst gerade passiert?</span>
+        </p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">the nuance</span>
+          <span data-lang-content="de">was du wissen solltest</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Wearables are not useless. The opposite.</span>
+          <span data-lang-content="de">Wearables sind nicht nutzlos. Im Gegenteil.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">They give you an additional source of information. Trends can surface poor sleep, the beginning of illness, unusual physiological stress or changes you might otherwise miss.</span>
+          <span data-lang-content="de">Sie liefern dir eine zusätzliche Informationsquelle. Trends können schlechten Schlaf, beginnende Krankheit, ungewöhnliche physiologische Belastung oder Veränderungen sichtbar machen, die dir sonst vielleicht entgehen würden.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">The problem starts when information becomes obedience.</span>
+          <span data-lang-content="de">Der Fehler beginnt, wenn aus Information Gehorsam wird.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">A readiness score compresses several imperfect measurements into a single, impressively precise-looking number. Precision on a display is not the same as certainty in biology.</span>
+          <span data-lang-content="de">Ein Readiness Score presst mehrere unvollkommene Messungen in eine einzige, beeindruckend präzise wirkende Zahl. Präzision auf dem Display ist nicht dasselbe wie Sicherheit in der Biologie.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Use the watch as a data point. Then add the rest: how did you sleep? How do you feel? What symptoms do you have? What has your training looked like over the past few days? Are you getting sick? And what happens when you actually warm up?</span>
+          <span data-lang-content="de">Nutze die Uhr als Datenpunkt. Dann ergänze den Rest: Wie hast du geschlafen? Wie fühlst du dich? Welche Symptome hast du? Wie sah dein Training der letzten Tage aus? Wirst du krank? Und was passiert, wenn du dich tatsächlich aufwärmst?</span>
+        </p>
+      </section>
+
+      <section class="art-section art-section--takeaway">
+        <span class="art-label">
+          <span data-lang-content="en">the takeaway</span>
+          <span data-lang-content="de">dein takeaway</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Watch the trends.</span>
+          <span data-lang-content="de">Schau auf Trends.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">Know your personal baseline.</span>
+          <span data-lang-content="de">Kenne deinen persönlichen Normalbereich.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Take changes seriously when your data and your body are both signalling that something is different.</span>
+          <span data-lang-content="de">Nimm Veränderungen ernst, wenn deine Daten und dein Körper gleichzeitig sagen, dass etwas anders ist.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">But do not let a single red score cancel a good day.</span>
+          <span data-lang-content="de">Aber lass nicht einen einzigen roten Score einen guten Tag absagen.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Your watch has information.</span>
+          <span data-lang-content="de">Deine Uhr hat Informationen.</span>
+        </p>
+        <p>
+          <strong>
+            <span data-lang-content="en">You still have judgement.</span>
+            <span data-lang-content="de">Das Urteil bleibt bei dir.</span>
+          </strong>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+<style>
+  .art-bg-layer {
+    position: fixed;
+    top: 0;
+    right: -3%;
+    width: 60%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .art-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.19;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  .art-page {
+    padding-top: calc(var(--nav-height, 72px) + 4rem);
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    background: var(--ivory, #FCFBF7);
+    position: relative;
+  }
+
+  .art-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .art-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 2.5rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .art-back:hover { opacity: 1; }
+
+  .art-hero { margin-bottom: 4rem; }
+
+  .art-eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1.25rem;
+  }
+
+  .art-h1 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-intro {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(12, 42, 110, 0.65);
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .art-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--navy, #0C2A6E);
+    opacity: 0.2;
+    margin: 2rem 0 0;
+  }
+
+  .art-section {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(12, 42, 110, 0.07);
+  }
+
+  .art-section:last-of-type { border-bottom: none; }
+
+  .art-section--intro {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.75);
+  }
+
+  .art-section--intro p { margin: 0 0 1rem; }
+  .art-section--intro p:last-child { margin-bottom: 0; }
+
+  .art-label {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1rem;
+  }
+
+  .art-h2 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-section p {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .art-section p:last-child { margin-bottom: 0; }
+
+  .art-section strong {
+    color: var(--navy, #0C2A6E);
+    font-weight: 700;
+  }
+
+  .art-section--takeaway .art-h2 {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  [data-lang-content] { display: none; }
+  [data-lang-content="en"] { display: inline; }
+
+  @media (max-width: 768px) {
+    .art-page { padding-top: calc(var(--nav-height, 72px) + 2rem); }
+    .art-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
+    .art-bg-layer {
+      width: 100%;
+      right: 0;
+      height: 50vh;
+      top: 0;
+    }
+    .art-bg-img {
+      opacity: 0.10;
+      object-position: center top;
+    }
+  }
+</style>
+
+<script>
+  function applyLang(lang: string) {
+    document.querySelectorAll('.art-page [data-lang-content]').forEach(el => {
+      const elLang = el.getAttribute('data-lang-content');
+      (el as HTMLElement).style.display = elLang === lang ? 'inline' : 'none';
+    });
+  }
+
+  const savedLang = localStorage.getItem('diamo-lang') ||
+    new URLSearchParams(window.location.search).get('lang') ||
+    (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
+  applyLang(savedLang);
+
+  window.addEventListener('diamo:lang-changed', (e: any) => {
+    applyLang(e.detail.lang);
+  });
+</script>

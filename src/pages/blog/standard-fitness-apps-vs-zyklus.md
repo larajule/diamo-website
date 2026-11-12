@@ -59,7 +59,7 @@ Das nennt man *Auto-Regulation*, ein Prinzip, das im Spitzensport längst Standa
 
 In herkömmlichen Apps ist ein Ruhetag eine leere Seite. Kein Inhalt, kein Feedback, kein Wert. Das sendet eine klare Botschaft: *Heute hast du nichts geleistet.*
 
-Eine zyklusbewusste App versteht, dass [Regeneration ein aktiver Prozess ist](/zyklusbasiertes-training/), besonders in der Menstruations- und späten Lutealphase. Yoga, Mobility-Work, Atemübungen und leichte Spaziergänge sind nicht „nichts". Sie sind strategisch genauso wichtig wie das härteste HIIT-Workout.
+Eine zyklusbewusste App versteht, dass [Regeneration ein aktiver Prozess ist](/dein-zyklus-ist-kein-trainingsplan/), besonders in der Menstruations- und späten Lutealphase. Yoga, Mobility-Work, Atemübungen und leichte Spaziergänge sind nicht „nichts". Sie sind strategisch genauso wichtig wie das härteste HIIT-Workout.
 
 ### 3. Wearable-Integration mit Kontext
 

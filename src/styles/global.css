@@ -7,8 +7,8 @@
 /* --- Design Tokens --- */
 :root {
   /* Brand Colors */
-  --navy: #002060;
-  --navy-light: #003399;
+  --navy: #0C2A6E;
+  --navy-light: #1A44C0;
   --ivory: #FCFBF7;
   --burgundy: #6F0D0D;
   --soft-black: #101820;
@@ -17,6 +17,9 @@
   --white: #FFFFFF;
   --electric-blue: #2C7AFF;
   --electric-blue-glow: rgba(44, 122, 255, 0.3);
+  --cobalt: #1535A8;
+  --cobalt-dark: #0D2270;
+  --ice-blue: #C8DEF5;
 
   /* Accent Colors */
   --lavender: #9B8BCB;
@@ -157,12 +160,12 @@ p {
 
 .section-label {
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--lavender);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--cobalt, #1535A8);
   margin-bottom: var(--space-sm);
+  /* text-transform: none; — do NOT force uppercase */
 }
 
 .section-title {
@@ -290,6 +293,11 @@ p {
 
   h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
   h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+}
+
+/* Scroll offset fix for sticky nav */
+section[id] {
+  scroll-margin-top: 110px;
 }
 
 /* Legal page language notice */

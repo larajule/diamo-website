@@ -7,16 +7,20 @@ export interface Props {
   ogDescription?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  hreflangDe?: string;
+  hreflangEn?: string;
 }
 
 const {
-  title = "diamo | Workouts, die sich dir anpassen",
-  description = "Jeden Tag ein Workout, das zu deinem Körper passt. Smart, persönlich, gemeinsam. Jetzt Early Access sichern.",
-  keywords = "personalisiertes Training, Fitness App Frauen, Smart Workouts, Body Intelligence, Frauen Community",
-  ogTitle = "diamo | Smart workouts that adapt to your body",
-  ogDescription = "A workout that understands how you feel today. Smart, personal, together. Get early access now.",
-  ogImage = "https://diamo.club/diamo-preview.jpg",
-  canonicalUrl
+  title = "diamo | Female Health, Longevity & Personalized Movement",
+  description = "Meet diamo. A female health and longevity platform connecting personalized movement, body intelligence and real-life community. Join the club.",
+  keywords = "female health, longevity, personalized training, women fitness, female community Cologne, Frauengesundheit, personalisiertes Training",
+  ogTitle = "diamo | Female Health, Longevity & Personalized Movement",
+  ogDescription = "Meet diamo. A female health and longevity platform connecting personalized movement, body intelligence and real-life community. Join the club.",
+  ogImage = "https://diamo.club/images/diamo-og.jpg",
+  canonicalUrl,
+  hreflangDe,
+  hreflangEn
 } = Astro.props;
 ---
 
@@ -26,6 +30,13 @@ const {
 
 <!-- Canonical URL -->
 {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+{hreflangDe && hreflangEn && (
+  <>
+    <link rel="alternate" hreflang="de" href={hreflangDe} />
+    <link rel="alternate" hreflang="en" href={hreflangEn} />
+    <link rel="alternate" hreflang="x-default" href={hreflangDe} />
+  </>
+)}
 
 <!-- Open Graph -->
 <meta property="og:title" content={ogTitle || title} />
@@ -48,8 +59,8 @@ const {
   "@type": "Organization",
   "name": "diamo",
   "url": "https://diamo.club",
-  "logo": "https://diamo.club/icon.png",
-  "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
+  "logo": "https://diamo.club/images/diamo-og.jpg",
+  "description": "diamo is a Female Health & Longevity Platform. Personalized movement, body knowledge and real-life community — built for women.",
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "hello@diamo.club",
@@ -65,7 +76,7 @@ const {
   "name": "diamo",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS, Android",
-  "description": "Zyklusbasiertes, personalisiertes Fitness-Training für Frauen. Workouts im Einklang mit deiner Biologie und einer echten, lokalen Community.",
+  "description": "diamo is a Female Health & Longevity Platform. Personalized movement, body knowledge and real-life community — built for women.",
   "url": "https://diamo.club",
   "offers": {
     "@type": "Offer",

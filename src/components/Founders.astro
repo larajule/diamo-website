@@ -1,0 +1,133 @@
+---
+---
+<section class="founders" id="team">
+  <div class="container founders-inner">
+    <div class="founders-text">
+      <span class="section-label" data-i18n="founders.label">who's behind diamo?</span>
+      <h2 class="founders-headline" data-i18n="founders.headline">A SMALL TEAM.<br/>A BIG IDEA.</h2>
+      <p class="founders-body" data-i18n="founders.body">We're building the kind of health and movement experience we wish already existed.<br/><br/>Personalized. Science-aware. Built for real life.</p>
+    </div>
+    <div class="founders-visual">
+      <div class="founders-editorial">
+        <img src="/images/kyb-community-girls.jpg" alt="diamo team energy" class="founders-img" />
+        <div class="founders-img-overlay"></div>
+        <div class="founders-img-text">
+          <span class="founders-img-line">LIVE LONG.</span>
+          <span class="founders-img-line founders-img-line--italic">CAUSE TROUBLE.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founders {
+    background: #fff;
+    padding: 7rem 2rem;
+    overflow: hidden;
+  }
+
+  .founders-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .founders-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .founders-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin: 0;
+  }
+
+  .founders-body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(12,42,110,0.55);
+    max-width: 400px;
+    margin: 0;
+  }
+
+  /* Editorial visual */
+  .founders-visual {
+    position: relative;
+  }
+
+  .founders-editorial {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    box-shadow: 0 24px 72px rgba(12,42,110,0.12);
+  }
+
+  .founders-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: saturate(0.85);
+  }
+
+  .founders-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(12,42,110,0.0) 40%,
+      rgba(12,42,110,0.75) 100%
+    );
+  }
+
+  .founders-img-text {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+  }
+
+  .founders-img-line {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .founders-img-line--italic {
+    font-style: italic;
+    color: var(--ice-blue, #C8DEF5);
+  }
+
+  @media (max-width: 768px) {
+    .founders { padding: 5rem 1.5rem; }
+    .founders-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .founders-editorial {
+      aspect-ratio: 4/3;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .founders-img-line { font-size: 1.25rem; }
+  }
+</style>

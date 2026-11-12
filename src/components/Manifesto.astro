@@ -1,0 +1,131 @@
+---
+---
+<section class="manifesto" id="why">
+  <div class="manifesto-bg-wrap" aria-hidden="true">
+    <img src="/images/campaign-myth.jpg" alt="" class="manifesto-bg-img" />
+    <div class="manifesto-bg-overlay"></div>
+  </div>
+  <div class="manifesto-content">
+    <span class="manifesto-label" data-i18n="manifesto.label">THE WHY</span>
+    <h2 class="manifesto-headline">
+      <span class="mh-line" data-i18n="manifesto.headline1">PERFECT ROUTINES</span>
+      <span class="mh-line mh-line--mid">
+        <span data-i18n="manifesto.headline2">ARE A</span>
+        <em class="mh-italic" data-i18n="manifesto.headline3">MYTH.</em>
+      </span>
+    </h2>
+    <div class="manifesto-body">
+      <p data-i18n="manifesto.p1">Most health tools were built for a 24-hour biological clock. We built for a 28-day one.</p>
+      <p data-i18n="manifesto.p2">diamo adapts to your body. Not the other way around.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .manifesto {
+    position: relative;
+    background: #0C2A6E;
+    padding: 10rem 2rem;
+    overflow: hidden;
+  }
+
+  /* Background image treatment */
+  .manifesto-bg-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .manifesto-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.22;
+    mix-blend-mode: luminosity;
+  }
+
+  .manifesto-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(12, 42, 110, 0.85) 0%,
+      rgba(12, 42, 110, 0.65) 50%,
+      rgba(21, 53, 168, 0.75) 100%
+    );
+  }
+
+  .manifesto-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .manifesto-label {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(200, 222, 245, 0.7);
+    margin-bottom: 2rem;
+  }
+
+  .manifesto-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.05em;
+  }
+
+  .mh-line { display: block; }
+
+  .mh-line--mid {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25em;
+    flex-wrap: wrap;
+  }
+
+  .mh-italic {
+    font-style: italic;
+    color: var(--ice-blue, #C8DEF5);
+  }
+
+  .manifesto-body {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .manifesto-body p {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 0.75rem;
+  }
+
+  .manifesto-body p:last-child {
+    margin-bottom: 0;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .manifesto { padding: 7rem 1.5rem; }
+    .manifesto-headline { font-size: clamp(3rem, 12vw, 5rem); }
+    .mh-line--mid { flex-direction: column; align-items: center; gap: 0; }
+  }
+</style>

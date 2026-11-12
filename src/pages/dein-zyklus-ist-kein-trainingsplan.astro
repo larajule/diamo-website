@@ -1,0 +1,361 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WaitlistModal from '../components/WaitlistModal.astro';
+import BetaApplyModals from '../components/BetaApplyModals.astro';
+import ArticleBanner from '../components/ArticleBanner.astro';
+---
+
+<Layout
+  title="Your Cycle Isn't Your Training Schedule | diamo"
+  description="Hormones change. But there is no universal training calendar for every woman. What the research actually says."
+  hreflangDe="https://diamo.club/dein-zyklus-ist-kein-trainingsplan/"
+  hreflangEn="https://diamo.club/en/your-cycle-isnt-your-training-schedule/"
+  articleLangEn="/en/your-cycle-isnt-your-training-schedule/"
+  articleLangDe="/dein-zyklus-ist-kein-trainingsplan/"
+>
+  <Navbar />
+
+  <main class="art-page">
+    <div class="art-bg-layer" aria-hidden="true">
+      <img src="/images/kyb-strength-selfcare.jpg" alt="" class="art-bg-img" />
+    </div>
+
+    <div class="art-container">
+
+      <a href="/#knowledge" class="art-back" data-i18n="art.back">← know your body</a>
+
+      <header class="art-hero">
+        <span class="art-eyebrow">know your body</span>
+
+        <h1 class="art-h1">
+          <span data-lang-content="en">YOUR CYCLE ISN'T YOUR TRAINING SCHEDULE.</span>
+          <span data-lang-content="de">DEIN ZYKLUS IST KEIN TRAININGSPLAN.</span>
+        </h1>
+
+        <p class="art-intro">
+          <span data-lang-content="en">Your hormones are real. So are the changes you may feel across your cycle. What science does not support: that every woman should train according to the same colour-coded four-week plan.</span>
+          <span data-lang-content="de">Deine Hormone sind real. Und die Veränderungen, die du im Laufe deines Zyklus spürst, können es genauso sein. Was die Wissenschaft nicht hergibt: dass jede Frau nach demselben farbcodierten Vier-Wochen-Plan trainieren sollte.</span>
+        </p>
+
+        <div class="art-divider"></div>
+      </header>
+
+      <section class="art-section art-section--intro">
+        <p>
+          <span data-lang-content="en">Follicular phase means go hard. Ovulation means PR. Luteal phase means back off. Period means deload.</span>
+          <span data-lang-content="de">Follikelphase heißt Vollgas. Ovulation heißt PR. Lutealphase heißt runterfahren. Periode heißt Deload.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Neat system.</span>
+          <span data-lang-content="de">Schönes System.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Messy evidence base.</span>
+          <span data-lang-content="de">Unordentliche Datenlage.</span>
+        </p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">the fact</span>
+          <span data-lang-content="de">der fakt</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Sex hormones fluctuate across the menstrual cycle.</span>
+          <span data-lang-content="de">Die Sexualhormone verändern sich im Laufe des Menstruationszyklus.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">The effect of those fluctuations on athletic performance is, on average, relatively small, inconsistent, and highly individual.</span>
+          <span data-lang-content="de">Der Einfluss dieser Veränderungen auf die sportliche Leistung ist im Durchschnitt jedoch eher klein, uneinheitlich und stark individuell.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Some studies find moderate differences on individual endurance, sprint or strength tests. Others find none.</span>
+          <span data-lang-content="de">Einige Studien finden moderate Unterschiede bei einzelnen Ausdauer-, Sprint- oder Krafttests. Andere finden keine.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">When you summarise the research, one conclusion remains: the data are not currently strong enough to prescribe phase-based training plans to women as a universal standard.</span>
+          <span data-lang-content="de">Wenn man die Forschung zusammenfasst, bleibt deshalb vor allem eine Aussage übrig: Die Daten sind aktuell nicht stark genug, um Frauen pauschal Trainingspläne nach Zyklusphase zu verordnen.</span>
+        </p>
+      </section>
+
+      <!-- Early access campaign banner — mid-article -->
+      <ArticleBanner />
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">why it matters</span>
+          <span data-lang-content="de">warum das wichtig ist</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Rigid cycle-based training turns normal physiology into rules your body never agreed to.</span>
+          <span data-lang-content="de">Starres zyklusbasiertes Training macht aus normaler Physiologie schnell Regeln, denen dein Körper nie zugestimmt hat.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">One woman feels strong during her period. Another has cramps severe enough to adjust her session. One reliably notices lower energy before menstruation. Another notices nothing at all.</span>
+          <span data-lang-content="de">Eine Frau fühlt sich während ihrer Periode stark. Eine andere hat so starke Krämpfe, dass sie die Einheit anpasst. Die eine bemerkt vor der Menstruation wiederholt weniger Energie. Die andere merkt gar nichts.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">A calendar cannot tell you which one you are.</span>
+          <span data-lang-content="de">Ein Kalender kann dir nicht sagen, welche davon du bist.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Your own data can.</span>
+          <span data-lang-content="de">Deine eigenen Daten können es eher.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Tracking can therefore be useful — not because an app knows when you should train hard, but because repeated personal observations can reveal whether symptoms, sleep, energy or performance follow a pattern that is actually relevant for you.</span>
+          <span data-lang-content="de">Tracking kann deshalb sinnvoll sein – nicht weil eine App weiß, wann du schwer trainieren solltest, sondern weil wiederholte persönliche Beobachtungen zeigen können, ob Symptome, Schlaf, Energie oder Leistung bei dir einem Muster folgen, das tatsächlich relevant ist.</span>
+        </p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">
+          <span data-lang-content="en">the nuance</span>
+          <span data-lang-content="de">was du wissen solltest</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Saying that cycle syncing is not well supported by science does not mean your cycle is irrelevant.</span>
+          <span data-lang-content="de">Zu sagen, dass Cycle Syncing wissenschaftlich nicht stark abgesichert ist, bedeutet nicht, dass dein Zyklus egal ist.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">Symptoms count.</span>
+          <span data-lang-content="de">Symptome zählen.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Pain, heavy bleeding, migraines, digestive issues, sleep problems or pronounced premenstrual symptoms can very genuinely affect how training feels and what load you can sensibly tolerate.</span>
+          <span data-lang-content="de">Schmerzen, starke Blutungen, Migräne, Verdauungsbeschwerden, Schlafprobleme oder ausgeprägte prämenstruelle Symptome können sehr real beeinflussen, wie sich Training anfühlt und welche Belastung du sinnvoll tolerierst.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">There is also a research problem: cycle phases are surprisingly easy to misidentify. Ovulation does not happen on the same day for every woman, or even on the same day each cycle for the same woman. Studies that estimate phases by calendar day alone can therefore mix different hormonal states together.</span>
+          <span data-lang-content="de">Dazu kommt ein Forschungsproblem: Zyklusphasen lassen sich erstaunlich leicht falsch einordnen. Der Eisprung findet nicht bei jeder Frau am selben Zyklustag statt – und auch bei derselben Frau nicht zwingend jeden Monat exakt gleich. Studien, die Phasen nur anhand von Kalendertagen schätzen, können deshalb unterschiedliche hormonelle Zustände miteinander vermischen.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">That uncertainty matters once a small average effect is turned into a universal rule for millions of women.</span>
+          <span data-lang-content="de">Diese Unsicherheit wird wichtig, sobald aus einem kleinen durchschnittlichen Effekt eine allgemeine Regel für Millionen Frauen gemacht wird.</span>
+        </p>
+      </section>
+
+      <section class="art-section art-section--takeaway">
+        <span class="art-label">
+          <span data-lang-content="en">the takeaway</span>
+          <span data-lang-content="de">dein takeaway</span>
+        </span>
+        <h2 class="art-h2">
+          <span data-lang-content="en">Track your cycle if the information helps you.</span>
+          <span data-lang-content="de">Tracke deinen Zyklus, wenn dir die Information hilft.</span>
+        </h2>
+        <p>
+          <span data-lang-content="en">Adjust training when your symptoms or performance give you a good reason to.</span>
+          <span data-lang-content="de">Passe Training an, wenn deine Symptome oder deine Leistung dir einen guten Grund dafür geben.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">But do not hand your training plan over to a generic hormone calendar.</span>
+          <span data-lang-content="de">Aber überlasse deinen Trainingsplan nicht einem generischen Hormonkalender.</span>
+        </p>
+        <p>
+          <span data-lang-content="en">Your cycle is context.</span>
+          <span data-lang-content="de">Dein Zyklus ist Kontext.</span>
+        </p>
+        <p>
+          <strong>
+            <span data-lang-content="en">Not your coach.</span>
+            <span data-lang-content="de">Nicht dein Coach.</span>
+          </strong>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+<style>
+  .art-bg-layer {
+    position: fixed;
+    top: 0;
+    right: -3%;
+    width: 60%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .art-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.19;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  .art-page {
+    padding-top: calc(var(--nav-height, 72px) + 4rem);
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    background: var(--ivory, #FCFBF7);
+    position: relative;
+  }
+
+  .art-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .art-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 2.5rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .art-back:hover { opacity: 1; }
+
+  .art-hero { margin-bottom: 4rem; }
+
+  .art-eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1.25rem;
+  }
+
+  .art-h1 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-intro {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(12, 42, 110, 0.65);
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .art-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--navy, #0C2A6E);
+    opacity: 0.2;
+    margin: 2rem 0 0;
+  }
+
+  .art-section {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(12, 42, 110, 0.07);
+  }
+
+  .art-section:last-of-type { border-bottom: none; }
+
+  .art-section--intro {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.75);
+  }
+
+  .art-section--intro p { margin: 0 0 1rem; }
+  .art-section--intro p:last-child { margin-bottom: 0; }
+
+  .art-label {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1rem;
+  }
+
+  .art-h2 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-section p {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .art-section p:last-child { margin-bottom: 0; }
+
+  .art-section strong {
+    color: var(--navy, #0C2A6E);
+    font-weight: 700;
+  }
+
+  .art-section--takeaway .art-h2 {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  [data-lang-content] { display: none; }
+  [data-lang-content="en"] { display: inline; }
+
+  @media (max-width: 768px) {
+    .art-page { padding-top: calc(var(--nav-height, 72px) + 2rem); }
+    .art-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
+    .art-bg-layer {
+      width: 100%;
+      right: 0;
+      height: 50vh;
+      top: 0;
+    }
+    .art-bg-img {
+      opacity: 0.10;
+      object-position: center top;
+    }
+  }
+</style>
+
+<script>
+  function applyLang(lang: string) {
+    document.querySelectorAll('.art-page [data-lang-content]').forEach(el => {
+      const elLang = el.getAttribute('data-lang-content');
+      (el as HTMLElement).style.display = elLang === lang ? 'inline' : 'none';
+    });
+  }
+
+  const savedLang = localStorage.getItem('diamo-lang') ||
+    new URLSearchParams(window.location.search).get('lang') ||
+    (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
+  applyLang(savedLang);
+
+  window.addEventListener('diamo:lang-changed', (e: any) => {
+    applyLang(e.detail.lang);
+  });
+</script>

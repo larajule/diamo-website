@@ -1,38 +1,38 @@
 ---
 const faqData = [
   {
-    question: "Was ist diamo?",
-    questionEn: "What is diamo?",
-    answer: "diamo ist eine Fitness-App, die dein Training automatisch an deinen Menstruationszyklus anpasst. Sie analysiert deine Zyklusphase und erstellt dir täglich einen personalisierten Trainingsplan. Dafür nutzt diamo Gesundheitsdaten aus Apple Health oder Google Fit. Zusätzlich verbindet dich diamo mit lokalen Fitness-Communities (Girls) in deiner Stadt.",
-    answerEn: "diamo is a fitness app that automatically adapts your training to your menstrual cycle. It analyzes your cycle phase and creates a personalized daily workout plan using health data from Apple Health or Google Fit. Additionally, diamo connects you with local fitness communities (Girls) in your city."
+    question: "was ist diamo?",
+    questionEn: "what is diamo?",
+    answer: "diamo ist eine Female Health & Longevity Plattform, die personalisierte Bewegung, Körperwissen und echte Community verbindet. Die App hilft Frauen, nachhaltige Bewegungsroutinen aufzubauen — abgestimmt auf ihre Ziele, Zeit und individuellen Bedürfnisse.",
+    answerEn: "diamo is a Female Health & Longevity Platform connecting personalized movement, body knowledge and real-life community. The app helps women build sustainable movement routines around their goals, time and individual needs."
   },
   {
-    question: "Was ist zyklusbasiertes Training?",
-    questionEn: "What is cycle-based training?",
-    answer: "Zyklusbasiertes Training bedeutet, deine Workouts an die vier Phasen deines Menstruationszyklus anzupassen. In der Follikelphase und rund um den Eisprung bist du leistungsfähiger und kannst intensiver trainieren. In der Lutealphase und während der Menstruation profitierst du von moderateren Einheiten und Regeneration. Mehr dazu erfährst du in unserem ausführlichen Guide.",
-    answerEn: "Cycle-based training means adapting your workouts to the four phases of your menstrual cycle. During the follicular phase and around ovulation, you're more capable and can train more intensely. During the luteal phase and menstruation, you benefit from moderate sessions and recovery. Learn more in our detailed guide."
+    question: "wie hilft diamo beim training?",
+    questionEn: "how does diamo help with training?",
+    answer: "Zyklusbasiertes Training bedeutet, Workouts und Belastung an die eigenen Körpersignale anzupassen. Hormone verändern sich im Zyklus und können Energie, Schlaf und Wohlbefinden beeinflussen — wie stark, ist individuell verschieden. diamo hilft dir, Muster in deinen eigenen Daten zu erkennen.",
+    answerEn: "Cycle-aware training means adapting your workouts to your own body signals. Hormones shift across your cycle and can influence energy, sleep and how you feel — but the effect varies a lot between individuals. diamo helps you spot patterns in your own data."
   },
   {
-    question: "Brauche ich spezielle Hardware oder eine Smartwatch?",
-    questionEn: "Do I need special hardware or a smartwatch?",
+    question: "brauche ich spezielle hardware oder eine smartwatch?",
+    questionEn: "do i need special hardware or a smartwatch?",
     answer: "Nein! diamo funktioniert komplett ohne zusätzliche Hardware. Die App liest deine Gesundheitsdaten direkt aus der Health App deines Smartphones (Apple Health oder Google Fit). Wenn du zusätzlich eine Smartwatch oder einen Fitness-Tracker besitzt, kann diamo diese Daten ebenfalls nutzen, um dein Training noch genauer anzupassen.",
     answerEn: "No! diamo works completely without any additional hardware. The app reads your health data directly from your phone's built-in health app (Apple Health or Google Fit). If you also own a smartwatch or fitness tracker, diamo can use that data too to fine-tune your training even further."
   },
   {
-    question: "Ist diamo kostenlos?",
-    questionEn: "Is diamo free?",
+    question: "ist diamo kostenlos?",
+    questionEn: "is diamo free?",
     answer: "Ja, während der Beta-Phase ist diamo komplett kostenlos. Als Early-Access-Nutzerin bekommst du vollen Zugang zu allen Features ohne Kosten. Nach dem offiziellen Launch wird es ein Freemium-Modell geben. Founding Members erhalten besondere Vorteile.",
     answerEn: "Yes, during the beta phase diamo is completely free. As an early access user, you get full access to all features at no cost. After the official launch, there will be a freemium model. Founding members receive special benefits."
   },
   {
-    question: "Wann ist die App verfügbar?",
-    questionEn: "When will the app be available?",
+    question: "wann ist die app verfügbar?",
+    questionEn: "when will the app be available?",
     answer: "Die Beta-Version startet bald für eine kleine Gruppe von Testerinnen. Trag dich in die Warteliste ein, um als Erste informiert zu werden und dir deinen Platz zu sichern.",
     answerEn: "The beta version launches soon for a small group of testers. Join the waitlist to be the first to know and secure your spot."
   },
   {
-    question: "Für welche Geräte wird diamo verfügbar sein?",
-    questionEn: "Which devices will diamo be available on?",
+    question: "für welche geräte wird diamo verfügbar sein?",
+    questionEn: "which devices will diamo be available on?",
     answer: "diamo wird zum Start für iOS und Android verfügbar sein. Die App integriert sich nahtlos mit Apple Health und Google Fit, sodass deine vorhandenen Gesundheitsdaten direkt genutzt werden können.",
     answerEn: "diamo will be available for iOS and Android at launch. The app integrates seamlessly with Apple Health and Google Fit, so your existing health data can be used right away."
   }
@@ -43,7 +43,7 @@ const faqData = [
   <div class="container">
     <div class="faq-header animate-in">
       <span class="section-label" data-i18n="faq.label">FAQ</span>
-      <h2 class="section-title" data-i18n="faq.title">Häufig gestellte Fragen</h2>
+      <h2 class="faq-title" data-i18n="faq.title">Frequently Asked Questions.</h2>
     </div>
 
     <div class="faq-list animate-in">
@@ -55,7 +55,7 @@ const faqData = [
           </summary>
           <div class="faq-answer">
             <p data-i18n={`faq.a${i}`}>{faq.answer}</p>
-            {i === 1 && <p><a href="/zyklusbasiertes-training/" class="faq-link" data-i18n="faq.guide-link">→ Zum ausführlichen Guide: Zyklusbasiertes Training</a></p>}
+            {i === 1 && <p><a href="/dein-zyklus-ist-kein-trainingsplan/" class="faq-link" data-i18n="faq.guide-link">→ lesen: dein zyklus ist kein trainingsplan</a></p>}
           </div>
         </details>
       ))}
@@ -80,6 +80,16 @@ const faqData = [
 <style>
   .faq-section {
     background: linear-gradient(180deg, var(--ivory) 0%, var(--white) 100%);
+  }
+
+  .faq-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0.75rem 0 0;
   }
 
   .faq-header {

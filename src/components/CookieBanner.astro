@@ -53,11 +53,7 @@
       banner.style.display = 'none';
 
       // Fire gtag consent update safely
-      if (typeof window.gtag === 'function') {
-        window.gtag('consent', 'update', {
-          'analytics_storage': 'granted'
-        });
-      }
+      if (typeof window.__diamoLoadGA === 'function') { window.__diamoLoadGA(); }
     });
 
     // Decline logic

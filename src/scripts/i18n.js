@@ -2,12 +2,15 @@
 const translations = {
   en: {
     // Navbar
-    'nav.features': 'Features',
-    'nav.how': 'How It Works',
-    'nav.team': 'Team',
-    'nav.about': 'About Us',
-    'nav.guide': 'Guide',
-    'nav.cta': 'Become a Beta Tester',
+    'nav.features': 'the app',
+    'nav.how': 'how it works',
+    'nav.team': 'the founders',
+    'nav.founders': 'who\'s behind diamo?',
+    'nav.faq': 'faq',
+    'nav.about': 'about',
+    'nav.guide': 'guide',
+    'footer.nav': 'diamo',
+    'nav.cta': 'get early access',
 
     // Cookie Banner
     'cookie.text': 'We use cookies to improve our website and give you the best experience. Help us make diamo even better!',
@@ -90,9 +93,9 @@ const translations = {
 
     // Hero
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Move now.<br/>Feel later.',
-    'hero.description': 'Smart training that adapts to your body. Every single day.',
-    'hero.cta.beta': 'Get early access',
+    'hero.title': 'A platform built for',
+    'hero.description': 'A female health &amp; longevity platform connecting personalized movement, body intelligence and women in real life.',
+    'hero.cta.beta': 'Get Early Access',
     'hero.discover': 'Discover',
 
     // Problem
@@ -177,17 +180,17 @@ const translations = {
 
     // Footer
     'footer.tagline': 'Train with your body,<br/>not against it.',
-    'footer.product': 'Product',
-    'footer.product.features': 'Features',
-    'footer.product.how': 'How It Works',
-    'footer.product.app': 'The App',
-    'footer.product.guide': 'Cycle-Based Training Guide',
-    'footer.company': 'Company',
-    'footer.company.team': 'Team',
-    'footer.company.careers': 'Careers',
-    'footer.company.press': 'Press',
-    'footer.company.about': 'About Us',
-    'footer.contact': 'Get in Touch',
+    'footer.product': 'product',
+    'footer.product.features': 'the app',
+    'footer.product.how': 'know your body',
+    'footer.product.app': 'the club',
+    'footer.product.guide': 'cycle-based training',
+    'footer.company': 'company',
+    'footer.company.team': 'the founders',
+    'footer.company.careers': 'careers',
+    'footer.company.press': 'press',
+    'footer.company.about': 'about us',
+    'footer.contact': 'contact',
     'footer.legal': '© 2026 diamo. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
@@ -386,28 +389,28 @@ const translations = {
     'disclaimer.s8.h': '8. Contact',
     'disclaimer.s8.p': 'Questions about this disclaimer:<br/>Email: <a href="mailto:hello@diamo.club">hello@diamo.club</a><br/>Post: Lara Bullemer, diamo, Deimern 5, 29614 Soltau, Germany',
 
-    'footer.blog': 'Blog',
-    'footer.blog.article1': 'Fitness Apps vs. Cycle',
-    'footer.blog.article2': 'Wearables & Cycle',
-    'footer.geo': 'diamo is a cycle-based fitness app for women that dynamically adapts training plans and recovery to the hormonal phases of the female cycle.',
+    'footer.blog': 'articles',
+    'footer.blog.article1': 'muscle is more than a look.',
+    'footer.blog.article2': 'wearables & cycle',
+    'footer.geo': 'diamo is a female health and longevity platform connecting personalized movement, body knowledge and real-life community for women.',
     'footer.disclaimer': 'diamo is not a medical device or medical service. The app does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before starting any fitness program, especially during pregnancy or with existing conditions. Use at your own risk. diamo assumes no liability for health effects.',
 
     // FAQ
-    'faq.label': 'FAQ',
-    'faq.title': 'Frequently Asked Questions',
-    'faq.guide-link': '→ Read the full guide: Cycle-Based Training',
-    'faq.q0': 'What is diamo?',
-    'faq.a0': 'diamo is a fitness app that automatically adapts your training to your menstrual cycle. It analyzes your cycle phase and creates a personalized daily workout plan using health data from Apple Health or Google Fit. Additionally, diamo connects you with local fitness communities in your city.',
-    'faq.q1': 'What is cycle-based training?',
-    'faq.a1': 'Cycle-based training means adapting your workouts to the four phases of your menstrual cycle. During the follicular phase and around ovulation, you can train more intensely. During the luteal phase and menstruation, you benefit from moderate sessions and recovery. Learn more in our detailed guide.',
-    'faq.q2': 'Do I need special hardware or a smartwatch?',
-    'faq.a2': 'No! diamo works completely without any additional hardware. The app reads your health data directly from your phone\'s built-in health app (Apple Health or Google Fit). If you also own a smartwatch or fitness tracker, diamo can use that data too to fine-tune your training even further.',
-    'faq.q3': 'Is diamo free?',
-    'faq.a3': 'Yes, during the beta phase diamo is completely free. As an early access user, you get full access to all features at no cost. After the official launch, there will be a freemium model. Founding members receive special benefits.',
-    'faq.q4': 'When will the app be available?',
-    'faq.a4': 'The beta version launches soon for a small group of testers. Join the waitlist to be the first to know and secure your spot.',
-    'faq.q5': 'Which devices will diamo be available on?',
-    'faq.a5': 'diamo will be available for iOS and Android at launch. The app integrates seamlessly with Apple Health and Google Fit, so your existing health data can be used right away.',
+    'faq.label': 'faq',
+    'faq.title': 'frequently asked questions.',
+    'faq.guide-link': '→ Full guide: cycle-based training',
+    'faq.q0': 'what is diamo?',
+    'faq.a0': 'diamo is a Female Health & Longevity Platform connecting personalized movement, body knowledge and real-life community. The app helps women build sustainable movement routines around their goals, time and individual needs.',
+    'faq.q1': 'what is cycle-based training?',
+    'faq.a1': 'Cycle-based training adapts your workouts to the four phases of your menstrual cycle. During the follicular phase and ovulation, you can train more intensely. During the luteal phase and menstruation, moderate sessions and recovery tend to work better.',
+    'faq.q2': 'do i need a smartwatch?',
+    'faq.a2': 'No. diamo works without any additional hardware. It reads health data directly from Apple Health or Google Fit on your phone. If you have a smartwatch, it can use that data too.',
+    'faq.q3': 'is diamo free?',
+    'faq.a3': 'Yes. During the beta phase diamo is completely free. After launch there will be a freemium model. Founding members receive special benefits.',
+    'faq.q4': 'when will the app be available?',
+    'faq.a4': 'The beta launches soon for a small group of testers. Join the waitlist to be the first to know.',
+    'faq.q5': 'which devices will diamo support?',
+    'faq.a5': 'diamo will be available for iOS and Android. It integrates with Apple Health and Google Fit.',
 
     // About Page
     'about.title': 'Your cycle is your superpower.',
@@ -430,7 +433,110 @@ const translations = {
     'about.cta.text': 'We\'re just getting started and that\'s what makes it special. Be there from the beginning.',
     'about.cta.btn': 'Become a Beta Tester',
 
-    // Beta Modal
+    // Modal privacy (Fix 3)
+    'modal.privacy.text': 'We use your email for your beta signup. Learn more in our ',
+    'modal.privacy.link': 'Privacy Policy',
+    'modal.privacy.suffix': '.',
+
+    // Announcement Ticker
+    'ticker.text': 'HOT GIRLS GET OLDER. ✦ LIVE LONG. CAUSE TROUBLE. ✦ MAKE A MOVE. ✦ JOIN US OR MISS US.',
+
+    // Editorial Pause — removed from homepage
+    'pause.statement': 'THE LONG GAME STARTS HERE.',
+
+    // Manifesto Section
+    'manifesto.label': 'THE WHY',
+    'manifesto.headline1': 'PERFECT ROUTINES',
+    'manifesto.headline2': 'ARE A',
+    'manifesto.headline3': 'MYTH.',
+    'manifesto.p1': 'Most health tools were built for a 24-hour biological clock. We built for a 28-day one.',
+    'manifesto.p2': 'diamo adapts to your body. Not the other way around.',
+    'manifesto.pullquote': '"Most health tools were built for a 24-hour clock. We built for a 28-day one."',
+
+    // App Teaser
+    'appteaser.label': 'THE APP',
+    'appteaser.headline': 'SAME GIRL. DIFFERENT DAY.',
+    'appteaser.sub': 'Four parts of your life. One app that listens.',
+    'appteaser.tab.home': 'Home',
+    'appteaser.tab.calendar': 'Calendar',
+    'appteaser.tab.community': 'Community',
+    'appteaser.tab.personal': 'Personal',
+    'appteaser.home.label': 'HOME',
+    'appteaser.home.headline': 'YOUR DAY. YOUR MOVE.',
+    'appteaser.home.desc': 'Personalized movement that responds to your goals, schedule and recovery needs.',
+    'appteaser.calendar.label': 'CALENDAR',
+    'appteaser.calendar.headline': 'YOUR PLAN. YOUR PACE.',
+    'appteaser.calendar.desc': 'Your movement plan, organized around your week.',
+    'appteaser.community.label': 'COMMUNITY',
+    'appteaser.community.headline': 'FIND YOUR PEOPLE.',
+    'appteaser.community.desc': 'Movement and real-life connections with other women.',
+    'appteaser.community.badge': 'coming soon',
+    'appteaser.personal.label': 'PERSONAL',
+    'appteaser.personal.headline': 'MORE THAN A NUMBER.',
+    'appteaser.personal.desc': 'Understand your progress and discover your personal patterns.',
+    'appteaser.cta': 'Get Early Access',
+    'appteaser.pillars.label': 'movement pillars',
+    'appteaser.pillars.headline': 'ONE PLAN. FOUR DIMENSIONS.',
+    'appteaser.pillar1.name': 'STRENGTH',
+    'appteaser.pillar1.desc': 'Build strength for the long game.',
+    'appteaser.pillar2.name': 'ENDURANCE',
+    'appteaser.pillar2.desc': 'Move for your heart and your future.',
+    'appteaser.pillar3.name': 'MOBILITY',
+    'appteaser.pillar3.desc': 'Keep moving freely.',
+    'appteaser.pillar4.name': 'RECOVERY',
+    'appteaser.pillar4.desc': 'Rest is part of the plan.',
+    'appteaser.pillars.note': 'Different goals. Different schedules. Different energy. One approach that adapts to you.',
+
+    // Know Your Body
+    'kyb.label': 'know your body',
+    'kyb.headline': 'KNOW YOUR BODY.\nQUESTION EVERYTHING.',
+    'kyb.sub': 'The things most health apps never explain.',
+    'kyb.card1.label': 'move for the long game',
+    'kyb.card1.title': 'MUSCLE IS MORE THAN A LOOK.',
+    'kyb.card1.desc': 'Strength is about more than appearance. Resistance training builds strength and supports physical function throughout life.',
+    'kyb.card1.time': '2 min read',
+    'kyb.card2.label': 'know your body',
+    'kyb.card2.title': 'YOUR CYCLE ISN\'T YOUR TRAINING SCHEDULE.',
+     'kyb.card2.desc': 'Your hormones change. But there is no universal training calendar for every woman. Individual patterns matter.',
+    'kyb.card2.time': '2 min read',
+    'kyb.card3.label': 'science or hype?',
+    'kyb.card3.title': 'YOUR WATCH ISN\'T YOUR BOSS.',
+    'kyb.card3.desc': 'Your recovery score is one piece of the puzzle. Learn what HRV can tell you and what it cannot.',
+    'kyb.card3.time': '2 min read',
+    'kyb.cta': 'Read →',
+
+    // Walking Club
+    'club.label': 'MAKE A MOVE.',
+    'club.headline': 'GOOD WALKS. BETTER COMPANY.',
+    'club.sub': 'First Sunday of every month. Cologne. Free.',
+    'club.perk1': 'First Sunday of every month',
+    'club.perk2': '11:00 AM · Cologne',
+    'club.perk3': 'Everyone welcome',
+    'club.cta.whatsapp': 'JOIN THE GROUP',
+    'club.cta.beta': 'Join the App Beta',
+    'club.card.disclaimer': 'Walk registration is separate from app beta access.',
+    'club.qr.copy': 'only scan if you\'re one of the girls.',
+
+    // Founders
+    'founders.label': 'THE FOUNDERS',
+    'founders.headline': 'Built by women who trained through the gaps.',
+    'founders.marie.name': 'Marie Westermann',
+    'founders.marie.role': 'Co-Founder & CEO',
+    'founders.marie.quote': '"I trained hard for years and still felt like I was missing something. The data was there — just never interpreted for my body."',
+    'founders.marie.bio': 'Marie built diamo because she kept asking why fitness technology assumed a 24-hour biological clock. She brings product, strategy and a real obsession with female health research.',
+    'founders.lara.name': 'Lara Bullemer',
+    'founders.lara.role': 'Co-Founder',
+    'founders.lara.quote': '"We\'re not building a pink version of a men\'s app. We\'re building something that never existed before."',
+    'founders.lara.bio': 'Lara brings the user perspective and community vision. She believes the most powerful health tool is one that listens first.',
+
+    // Early Access
+    'earlyaccess.label': 'EARLY ACCESS',
+    'earlyaccess.headline': 'GET IN EARLY.',
+    'earlyaccess.sub': 'Stay for the long game.',
+    'earlyaccess.desc': 'diamo is in beta. A small group of women is shaping what it becomes. Join now — no credit card, no spam.',
+    'earlyaccess.cta': 'Get Early Access',
+    'earlyaccess.privacy': 'No spam. We handle your data carefully. See our ',
+    'earlyaccess.privacy.link': 'Privacy Policy',
     'modal.label': 'Beta Program',
     'modal.title': 'Become a Beta Tester.',
     'modal.description': 'Secure your exclusive spot and shape diamo from the very start. Your feedback flows directly into development.',
@@ -463,16 +569,138 @@ const translations = {
     'apply-modal.privacy': 'We\'ll get back to you within a few days.',
     'apply-modal.success.title': 'Application sent!',
     'apply-modal.success.desc': 'We\'ll review it and reach out to you soon.',
+
+    // Nav additions
+    'nav.features': 'the app',
+    'nav.cta': 'get early access',
+    'art.back': '← know your body',
+    'nav.why': 'the why',
+    'nav.knowledge': 'know your body',
+    'nav.club': 'the club',
+    'nav.team': 'the founders',
+    'nav.founders': 'who\'s behind diamo?',
+    'nav.faq': 'faq',
+    'nav.about': 'about',
+    'nav.guide': 'guide',
+    'footer.nav': 'diamo',
+
+    // Hero (updated)
+    'hero.title': 'HEY GIRL. LET\'S PLAY THE LONG GAME.',
+    'hero.title2': '',
+    'hero.description': 'Your female health and longevity platform for personalized movement, body intelligence and real-life connection.',
+    'hero.sub': '',
+    'hero.cta.beta': 'Get Early Access',
+    'hero.cta.app': 'Explore the App ↓',
+
+    // Pause
+    'pause.eyebrow': 'FEMALE HEALTH & LONGEVITY',
+    'pause.statement': 'THE LONG GAME STARTS HERE.',
+
+    // App teaser (updated)
+    'appteaser.headline': 'SAME GIRL. DIFFERENT DAY.',
+    'appteaser.home.desc': 'Personalized movement that responds to your goals, schedule and recovery needs.',
+    'appteaser.calendar.desc': 'Your movement plan, organized around your week.',
+    'appteaser.community.desc': 'Movement and real-life connections with other women.',
+    'appteaser.community.badge': 'coming soon',
+    'appteaser.personal.desc': 'Understand your progress and discover personal patterns.',
+
+    // Manifesto (updated)
+    'manifesto.p1': 'Most health tools were built for a 24-hour biological clock. We built for a 28-day one.',
+    'manifesto.p2': 'diamo adapts to your body. Not the other way around.',
+
+    // Walking Club (updated)
+    'club.headline': 'GOOD WALKS. BETTER COMPANY.',
+    'club.sub': 'First Sunday of every month. Cologne. Free.',
+    'club.perk1': 'First Sunday of every month',
+    'club.perk2': '11 AM · Cologne',
+    'club.perk3': 'Scan to join — it\'s free',
+    'club.cta.whatsapp': 'JOIN THE GROUP',
+
+    // Founders (updated)
+    'founders.label': "who's behind diamo?",
+    'founders.headline': 'A SMALL TEAM.\nA BIG IDEA.',
+    'founders.body': 'We\'re building the kind of health and movement experience we wish already existed.\n\nPersonalized. Science-aware. Built for real life.',
+    'founders.note': 'More to come.',
+
+    // Early Access (updated)
+    'earlyaccess.label': 'early access',
+    'earlyaccess.headline': 'GET IN BEFORE EVERYONE ELSE.',
+    'earlyaccess.sub': 'Be first to experience diamo.',
+    'earlyaccess.desc': 'Personalized movement. A different kind of club.',
+    'earlyaccess.cta': 'GET EARLY ACCESS.',
+    'earlyaccess.privacy': 'No spam. We handle your data carefully. See our ',
+    'earlyaccess.privacy.link': 'Privacy Policy',
+
+    // Popup
+    'popup.headline': 'DON\'T BE LATE TO YOUR OWN LONG GAME.',
+    'popup.body': 'We\'re building something for women who want more.',
+    'popup.cta': 'Get Early Access',
+
+    // Modal (updated)
+    'modal.label': 'Beta Program',
+    'modal.title': 'Become a Beta Tester',
+    'modal.description': 'Secure your exclusive spot and help shape diamo from the start. Your feedback goes directly into development.',
+    'modal.placeholder': 'Your email address',
+    'modal.submit': 'Secure Beta Access',
+    'modal.privacy.text': 'We use your email for your beta signup. Learn more in our ',
+    'modal.privacy.link': 'Privacy Policy',
+    'modal.privacy.suffix': '.',
+    'modal.success.title': 'You\'re in!',
+    'modal.success.desc': 'We\'ll be in touch as soon as we\'re ready.',
+
+    // KYB — consolidated above
+
+    // FAQ (updated)
+    'faq.label': 'faq',
+    'faq.title': 'frequently asked questions.',
+    'faq.q0': 'what is diamo?',
+    'faq.a0': 'diamo is a Female Health & Longevity Platform connecting personalized movement, body knowledge and real-life community. The app helps women build sustainable movement routines around their goals, time and individual needs.',
+    'faq.q1': 'what is cycle-based training?',
+    'faq.a1': 'Cycle-based training adapts your workouts to the four phases of your menstrual cycle. During the follicular phase and ovulation, you can train more intensely. During the luteal phase and menstruation, moderate sessions and recovery tend to work better. Learn more in our guide.',
+    'faq.q2': 'do i need a smartwatch?',
+    'faq.a2': 'No. diamo works without any additional hardware. It reads health data directly from Apple Health or Google Fit on your phone. If you have a smartwatch, it can use that data too.',
+    'faq.q3': 'is diamo free?',
+    'faq.a3': 'Yes. During the beta phase diamo is completely free. After launch there will be a freemium model. Founding members receive special benefits.',
+    'faq.q4': 'when will the app be available?',
+    'faq.a4': 'The beta launches soon for a small group of testers. Join the waitlist to be the first to know.',
+    'faq.q5': 'which devices will diamo support?',
+    'faq.a5': 'diamo will be available for iOS and Android. It integrates with Apple Health and Google Fit.',
+    'faq.guide-link': '→ Full guide: Cycle-based training',
+
+    // Footer (updated)
+    'footer.tagline': 'A new era of\nwomen\'s health',
+    'footer.product': 'product',
+    'footer.product.features': 'the app',
+    'footer.product.how': 'know your body',
+    'footer.product.app': 'the club',
+    'footer.product.guide': 'cycle-based training',
+    'footer.blog': 'articles',
+    'footer.blog.article1': 'muscle is more than a look.',
+    'footer.blog.article2': 'your cycle isn\'t your training schedule.',
+    'footer.blog.article3': 'your watch isn\'t your boss.',
+    'footer.company': 'company',
+    'footer.company.about': 'about us',
+    'footer.contact': 'contact',
+    'footer.geo': 'diamo is a female health and longevity platform connecting personalized movement, body knowledge and real-life community for women.',
+    'footer.disclaimer': 'diamo is not a medical app. Our content is for general information only and does not replace professional medical advice. Always consult a qualified healthcare professional before starting a fitness programme, especially during pregnancy or with existing health conditions.',
+    'footer.legal': '© 2026 diamo. All rights reserved.',
+    'footer.privacy': 'data policy',
+    'footer.terms': 'terms',
+    'footer.imprint': 'impressum',
+    'footer.disclaimer-link': 'health disclaimer',
   },
 
   de: {
     // Navbar
-    'nav.features': 'Features',
-    'nav.how': 'So funktioniert\'s',
-    'nav.team': 'Team',
-    'nav.about': 'Über uns',
-    'nav.guide': 'Guide',
-    'nav.cta': 'Beta-Testerin werden',
+    'nav.features': 'the app',
+    'nav.how': 'so funktioniert\'s',
+    'nav.team': 'the founders',
+    'nav.founders': 'wer steckt hinter diamo?',
+    'nav.faq': 'faq',
+    'nav.about': 'über uns',
+    'nav.guide': 'guide',
+    'footer.nav': 'diamo',
+    'nav.cta': 'frühen zugang sichern',
 
     // Cookie Banner
     'cookie.text': 'Wir nutzen Cookies, um unsere Website zu verbessern und dir das beste Erlebnis zu bieten. Hilf uns dabei, diamo noch besser zu machen!',
@@ -554,8 +782,8 @@ const translations = {
     'guide.final.note': 'Kostenlos · Begrenzte Plätze · Jederzeit kündbar',
 
     'hero.micro': 'body intelligence system',
-    'hero.title': 'Move now.<br/>Feel later.',
-    'hero.description': 'Smartes Training, das sich deinem Körper anpasst. Jeden einzelnen Tag.',
+    'hero.title': 'Eine Plattform, gebaut für',
+    'hero.description': 'Eine Female Health &amp; Longevity Plattform, die personalisierte Bewegung, Körperintelligenz und Frauen im echten Leben verbindet.',
     'hero.cta.beta': 'Early Access sichern',
     'hero.discover': 'Entdecken',
 
@@ -642,9 +870,9 @@ const translations = {
     // Footer
     'footer.tagline': 'Trainiere mit deinem Körper,<br/>nicht gegen ihn.',
     'footer.product': 'Produkt',
-    'footer.product.features': 'Features',
-    'footer.product.how': 'So funktioniert\'s',
-    'footer.product.app': 'Die App',
+    'footer.product.features': 'Die App',
+    'footer.product.how': 'Know Your Body',
+    'footer.product.app': 'Walking Club',
     'footer.product.guide': 'Zyklusbasiertes Training',
     'footer.company': 'Unternehmen',
     'footer.company.team': 'Team',
@@ -927,6 +1155,240 @@ const translations = {
     'about.cta.title': 'Klingt nach etwas, das du erleben willst?',
     'about.cta.text': 'Wir sind noch ganz am Anfang und genau das macht es besonders. Sei von Anfang an dabei.',
     'about.cta.btn': 'Beta-Testerin werden',
+
+    // Modal privacy (Fix 3)
+    'modal.privacy.text': 'Deine E-Mail nutzen wir für deine Beta-Anmeldung. Mehr unter ',
+    'modal.privacy.link': 'Datenschutz',
+    'modal.privacy.suffix': '.',
+
+    // Announcement Ticker
+    'ticker.text': 'HOT GIRLS GET OLDER. ✦ LIVE LONG. CAUSE TROUBLE. ✦ MAKE A MOVE. ✦ JOIN US OR MISS US.',
+
+    // Editorial Pause
+    'pause.statement': 'THE LONG GAME STARTS HERE.',
+
+    // Manifesto Section
+    'manifesto.label': 'THE WHY',
+    'manifesto.headline1': 'PERFEKTE ROUTINEN?',
+    'manifesto.headline2': '',
+    'manifesto.headline3': 'GIBT\'S NICHT.',
+    'manifesto.p1': 'Die meisten Health-Tools wurden für eine 24-Stunden-Uhr gebaut. Wir haben für einen 28-Tage-Rhythmus entwickelt.',
+    'manifesto.p2': 'diamo passt sich deinem Körper an. Nicht umgekehrt.',
+    'manifesto.pullquote': '"Die meisten Health-Tools wurden für eine 24-Stunden-Uhr gebaut. Wir haben für 28 Tage entwickelt."',
+
+    // App Teaser
+    'appteaser.label': 'THE APP',
+    'appteaser.headline': 'SAME GIRL. DIFFERENT DAY.',
+    'appteaser.sub': 'Vier Teile deines Lebens. Eine App, die zuhört.',
+    'appteaser.tab.home': 'Home',
+    'appteaser.tab.calendar': 'Kalender',
+    'appteaser.tab.community': 'Community',
+    'appteaser.tab.personal': 'Profil',
+    'appteaser.home.label': 'HOME',
+    'appteaser.home.headline': 'DEIN TAG. DEIN MOVE.',
+    'appteaser.home.desc': 'Bewegung, die zu deinem Alltag, deinen Zielen und deiner Erholung passt.',
+    'appteaser.calendar.label': 'KALENDER',
+    'appteaser.calendar.headline': 'DEIN PLAN. DEIN TEMPO.',
+    'appteaser.calendar.desc': 'Dein Training. Deine Woche.',
+    'appteaser.community.label': 'COMMUNITY',
+    'appteaser.community.headline': 'FIND DEINE GIRLS.',
+    'appteaser.community.desc': 'Gemeinsam bewegen. Gemeinsam mehr erleben.',
+    'appteaser.community.badge': 'in Entwicklung',
+    'appteaser.personal.label': 'PROFIL',
+    'appteaser.personal.headline': 'DU BIST MEHR ALS EINE ZAHL.',
+    'appteaser.personal.desc': 'Erkenne deinen Fortschritt und deine persönlichen Muster.',
+    'appteaser.cta': 'Frühen Zugang sichern',
+
+    // Know Your Body
+    'kyb.label': 'know your body',
+    'kyb.headline': 'KENN DEINEN KÖRPER.\nFRAG ALLES.',
+    'kyb.sub': 'Was die meisten Health-Apps nie erklären.',
+    'kyb.card1.label': 'für das lange spiel',
+    'kyb.card1.title': 'STARK SEIN IST MEHR ALS EIN LOOK.',
+    'kyb.card1.desc': 'Kraft ist mehr als Optik. Krafttraining stärkt deine Muskulatur und unterstützt deine körperliche Leistungsfähigkeit. Ein Leben lang.',
+    'kyb.card1.time': '2 Min. Lesezeit',
+    'kyb.card2.label': 'kenn deinen körper',
+    'kyb.card2.title': 'DEIN ZYKLUS IST KEIN TRAININGSPLAN.',
+    'kyb.card2.desc': 'Deine Hormone verändern sich. Trotzdem gibt es keinen Trainingskalender, der für alle Frauen funktioniert. Deine Muster zählen.',
+    'kyb.card2.time': '2 Min. Lesezeit',
+    'kyb.card3.label': 'science or hype?',
+    'kyb.card3.title': 'DEINE UHR HAT NICHT DAS LETZTE WORT.',
+    'kyb.card3.desc': 'Dein Recovery Score zeigt nur einen Teil des Ganzen. Erfahre, was HRV aussagen kann und wo ihre Grenzen liegen.',
+    'kyb.card3.time': '2 Min. Lesezeit',
+    'kyb.cta': 'Lesen →',
+
+    // Walking Club
+    'club.label': 'MAKE A MOVE.',
+    'club.headline': 'GUTE WALKS. NOCH BESSERE GIRLS.',
+    'club.sub': 'Jeden ersten Sonntag. Köln. Kostenlos.',
+    'club.perk1': 'Jeden ersten Sonntag im Monat',
+    'club.perk2': '11:00 Uhr · Köln',
+    'club.perk3': 'Alle willkommen',
+    'club.cta.whatsapp': 'ZUR GRUPPE',
+    'club.cta.beta': 'Für die App-Beta anmelden',
+    'club.card.disclaimer': 'Walk-Anmeldung und App-Beta sind getrennt.',
+    'club.qr.copy': 'nur für girls. du weißt schon.',
+
+    // Founders
+    'founders.label': 'THE FOUNDERS',
+    'founders.headline': 'Gebaut von Frauen, die die Lücken selbst erlebt haben.',
+    'founders.marie.name': 'Marie Westermann',
+    'founders.marie.role': 'Co-Founderin & CEO',
+    'founders.marie.quote': '"Ich habe jahrelang hart trainiert und trotzdem das Gefühl gehabt, dass mir etwas fehlt. Die Daten waren da — nur nie für meinen Körper interpretiert."',
+    'founders.marie.bio': 'Marie hat diamo gebaut, weil sie immer wieder gefragt hat, warum Fitness-Technologie eine 24-Stunden-Biologie voraussetzt. Sie bringt Produkt, Strategie und echte Leidenschaft für Frauengesundheitsforschung.',
+    'founders.lara.name': 'Lara Bullemer',
+    'founders.lara.role': 'Co-Founderin',
+    'founders.lara.quote': '"Wir bauen keine rosa Version einer Männer-App. Wir bauen etwas, das es noch nie gab."',
+    'founders.lara.bio': 'Lara bringt die Nutzerperspektive und Community-Vision. Sie glaubt, dass das stärkste Health-Tool eines ist, das zuerst zuhört.',
+
+    // Early Access
+    'earlyaccess.label': 'EARLY ACCESS',
+    'earlyaccess.headline': 'GET IN EARLY.',
+    'earlyaccess.sub': 'Bleib für das Langzeitspiel.',
+    'earlyaccess.desc': 'diamo ist in der Beta. Eine kleine Gruppe von Frauen gestaltet, was es wird. Jetzt mitmachen — keine Kreditkarte, kein Spam.',
+    'earlyaccess.cta': 'Early Access sichern',
+    'earlyaccess.privacy': 'Kein Spam. Wir gehen sorgfältig mit deinen Daten um. Mehr unter ',
+    'earlyaccess.privacy.link': 'Datenschutz',
+
+    // Nav additions (DE)
+    'nav.features': 'the app',
+    'nav.cta': 'frühen zugang sichern',
+    'art.back': '← know your body',
+    'nav.why': 'das warum',
+    'nav.knowledge': 'kenn deinen körper',
+    'nav.club': 'der club',
+    'nav.team': 'the founders',
+    'nav.founders': 'wer steckt hinter diamo?',
+    'nav.faq': 'faq',
+    'nav.about': 'über uns',
+    'nav.guide': 'guide',
+    'footer.nav': 'diamo',
+
+    // Hero (updated DE)
+    'hero.title': 'HEY GIRL. LET\'S PLAY THE LONG GAME.',
+    'hero.title2': '',
+    'hero.description': 'Deine Plattform für personalisierte Bewegung, Körperwissen und echte Community.',
+    'hero.sub': 'diamo verbindet personalisierte Bewegung, Körperwissen und echte Community — für Frauen.',
+    'hero.cta.beta': 'Frühen Zugang sichern',
+    'hero.cta.app': 'Die App entdecken ↓',
+
+    // Pause (DE)
+    'pause.eyebrow': 'FEMALE HEALTH & LONGEVITY',
+    'pause.statement': 'THE LONG GAME STARTS HERE.',
+
+    // App teaser (updated DE)
+    'appteaser.headline': 'SAME GIRL. DIFFERENT DAY.',
+    'appteaser.home.headline': 'DEIN TAG. DEIN MOVE.',
+    'appteaser.home.desc': 'Bewegung, die zu deinem Alltag, deinen Zielen und deiner Erholung passt.',
+    'appteaser.calendar.headline': 'DEIN PLAN. DEIN TEMPO.',
+    'appteaser.calendar.desc': 'Dein Training. Deine Woche.',
+    'appteaser.community.headline': 'FIND DEINE GIRLS.',
+    'appteaser.community.desc': 'Gemeinsam bewegen. Gemeinsam mehr erleben.',
+    'appteaser.community.badge': 'in Entwicklung',
+    'appteaser.personal.headline': 'DU BIST MEHR ALS EINE ZAHL.',
+    'appteaser.personal.desc': 'Erkenne deinen Fortschritt und deine persönlichen Muster.',
+    'appteaser.cta': 'Frühen Zugang sichern',
+    'appteaser.pillars.label': 'bewegungspillars',
+    'appteaser.pillars.headline': 'EIN PLAN. VIER DIMENSIONEN.',
+    'appteaser.pillar1.name': 'KRAFT',
+    'appteaser.pillar1.desc': 'Stärke für das lange Spiel.',
+    'appteaser.pillar2.name': 'AUSDAUER',
+    'appteaser.pillar2.desc': 'Für dein Herz und deine Zukunft.',
+    'appteaser.pillar3.name': 'MOBILITÄT',
+    'appteaser.pillar3.desc': 'Bleib in Bewegung.',
+    'appteaser.pillar4.name': 'RECOVERY',
+    'appteaser.pillar4.desc': 'Erholung ist Teil des Plans.',
+    'appteaser.pillars.note': 'Verschiedene Ziele. Verschiedene Zeitpläne. Verschiedene Energie. Ein Ansatz, der sich dir anpasst.',
+
+    // Manifesto (updated DE)
+    'manifesto.headline1': 'PERFEKTE ROUTINEN',
+    'manifesto.headline2': 'SIND EIN',
+    'manifesto.headline3': 'MYTHOS.',
+    'manifesto.p1': 'Die meisten Health-Tools wurden für eine 24-Stunden-Uhr gebaut. Wir haben für einen 28-Tage-Rhythmus entwickelt.',
+    'manifesto.p2': 'diamo passt sich deinem Körper an. Nicht andersherum.',
+
+    // Walking Club (updated DE)
+    'club.headline': 'GUTE WALKS. NOCH BESSERE GIRLS.',
+    'club.sub': 'Jeden ersten Sonntag. Köln. Kostenlos.',
+    'club.perk1': 'Jeden ersten Sonntag im Monat',
+    'club.perk2': '11 Uhr · Köln',
+    'club.perk3': 'SCAN TO JOIN.',
+    'club.cta.whatsapp': 'ZUR GRUPPE',
+    'club.cta.beta': 'Für die App-Beta anmelden',
+    'club.card.disclaimer': 'Walk-Anmeldung ist getrennt vom App-Beta-Zugang.',
+
+    // Founders (updated DE)
+    'founders.label': "wer steckt hinter diamo?",
+    'founders.headline': 'EIN KLEINES TEAM.\nEINE GROSSE IDEE.',
+    'founders.body': 'Wir bauen die Gesundheits- und Bewegungserfahrung, die wir uns selbst gewünscht hätten.\n\nPersonalisiert. Wissenschaftlich fundiert. Für das echte Leben gebaut.',
+    'founders.note': 'Mehr folgt.',
+
+    // Early Access (updated DE)
+    'earlyaccess.label': 'early access',
+    'earlyaccess.headline': 'GET IN BEFORE EVERYONE ELSE.',
+    'earlyaccess.sub': 'Sei von Anfang an dabei.',
+    'earlyaccess.desc': 'Personalisierte Bewegung. Ein besonderer Club.',
+    'earlyaccess.cta': 'SEI VON ANFANG AN DABEI.',
+    'earlyaccess.privacy': 'Kein Spam. Wir behandeln deine Daten sorgfältig. Siehe unsere ',
+    'earlyaccess.privacy.link': 'Datenschutzerklärung',
+
+    // Popup (DE)
+    'popup.headline': 'NICHT ZU SPÄT ZU DEINEM EIGENEN LONG GAME.',
+    'popup.body': 'Wir bauen etwas für Frauen, die mehr wollen.',
+    'popup.cta': 'Frühen Zugang sichern',
+
+    // Modal (updated DE)
+    'modal.label': 'Beta-Programm',
+    'modal.title': 'Beta-Testerin werden',
+    'modal.description': 'Sichere dir deinen exklusiven Platz und gestalte diamo von Anfang an mit. Dein Feedback fließt direkt in die Entwicklung ein.',
+    'modal.placeholder': 'Deine E-Mail-Adresse',
+    'modal.submit': 'Beta-Zugang sichern',
+    'modal.privacy.text': 'Deine E-Mail nutzen wir für deine Beta-Anmeldung. Mehr unter ',
+    'modal.privacy.link': 'Datenschutz',
+    'modal.privacy.suffix': '.',
+    'modal.success.title': 'Du bist dabei!',
+    'modal.success.desc': 'Wir melden uns, sobald es losgeht.',
+
+    // KYB — consolidated above
+
+    // FAQ (updated DE)
+    'faq.label': 'faq',
+    'faq.title': 'häufig gestellte fragen.',
+    'faq.q0': 'was ist diamo?',
+    'faq.a0': 'diamo ist eine Female Health & Longevity Plattform, die personalisierte Bewegung, Körperwissen und echte Community verbindet. Die App hilft Frauen, nachhaltige Bewegungsroutinen aufzubauen — abgestimmt auf ihre Ziele, Zeit und individuellen Bedürfnisse.',
+    'faq.q1': 'was ist zyklusbasiertes training?',
+    'faq.a1': 'Zyklusbasiertes Training bedeutet, Workouts an die Phasen deines Menstruationszyklus anzupassen. In der Follikelphase und rund um den Eisprung kannst du intensiver trainieren. In der Lutealphase und während der Menstruation profitierst du eher von moderateren Einheiten und Erholung. Mehr dazu in unserem Guide.',
+    'faq.q2': 'brauche ich eine smartwatch?',
+    'faq.a2': 'Nein. diamo funktioniert ohne zusätzliche Hardware — die App liest Gesundheitsdaten direkt aus Apple Health oder Google Fit. Wenn du eine Smartwatch hast, kann diamo diese Daten ebenfalls nutzen.',
+    'faq.q3': 'ist diamo kostenlos?',
+    'faq.a3': 'Ja. Während der Beta-Phase ist diamo komplett kostenlos. Nach dem offiziellen Launch wird es ein Freemium-Modell geben. Founding Members erhalten besondere Vorteile.',
+    'faq.q4': 'wann ist die app verfügbar?',
+    'faq.a4': 'Die Beta startet bald für eine kleine Gruppe von Testerinnen. Trag dich in die Warteliste ein, um als Erste informiert zu werden.',
+    'faq.q5': 'für welche geräte gibt es diamo?',
+    'faq.a5': 'diamo wird für iOS und Android verfügbar sein, mit nahtloser Integration für Apple Health und Google Fit.',
+    'faq.guide-link': '→ Zum ausführlichen Guide: Zyklusbasiertes Training',
+
+    // Footer (updated DE)
+    'footer.tagline': 'Eine neue Ära der\nFrauengesundheit',
+    'footer.product': 'produkt',
+    'footer.product.features': 'die app',
+    'footer.product.how': 'know your body',
+    'footer.product.app': 'the club',
+    'footer.product.guide': 'zyklusbasiertes training',
+    'footer.blog': 'artikel',
+    'footer.blog.article1': 'muskel ist mehr als ein look.',
+    'footer.blog.article2': 'dein zyklus ist kein trainingsplan.',
+    'footer.blog.article3': 'deine uhr ist nicht dein boss.',
+    'footer.company': 'unternehmen',
+    'footer.company.about': 'über uns',
+    'footer.contact': 'kontakt',
+    'footer.geo': 'diamo ist eine Female Health & Longevity Plattform, die personalisierte Bewegung, Körperwissen und echte Community für Frauen verbindet.',
+    'footer.disclaimer': 'diamo ist kein Medizinprodukt. Unsere Inhalte dienen allgemeinen Informationszwecken und ersetzen keine medizinische Beratung. Konsultiere bei gesundheitlichen Fragen immer eine qualifizierte Fachkraft.',
+    'footer.legal': '© 2026 diamo. Alle Rechte vorbehalten.',
+    'footer.privacy': 'datenschutz',
+    'footer.terms': 'agb',
+    'footer.imprint': 'impressum',
+    'footer.disclaimer-link': 'health disclaimer',
   }
 };
 
@@ -971,6 +1433,9 @@ function setLanguage(lang) {
 
   // Persist
   localStorage.setItem('diamo-lang', lang);
+
+  // Notify other components (e.g. ArticleBanner)
+  window.dispatchEvent(new CustomEvent('diamo:lang-changed', { detail: { lang } }));
 }
 
 function initLanguage() {

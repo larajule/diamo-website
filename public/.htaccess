@@ -3,6 +3,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# 301 redirect: legacy cycle URL → canonical cycle article
+RewriteRule ^zyklusbasiertes-training/?$ /dein-zyklus-ist-kein-trainingsplan/ [R=301,L]
+
 # Security headers
 Header set X-Content-Type-Options "nosniff"
 Header set X-Frame-Options "SAMEORIGIN"

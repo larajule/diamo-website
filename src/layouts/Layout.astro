@@ -6,28 +6,36 @@ import CookieBanner from '../components/CookieBanner.astro';
 export interface Props {
   title?: string;
   description?: string;
+  canonicalOverride?: string;
+  noIndex?: boolean;
+  lang?: string;
+  hreflangDe?: string;
+  hreflangEn?: string;
+  articleLangEn?: string;
+  articleLangDe?: string;
 }
 
-const { title, description } = Astro.props;
-const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
+const { title, description, canonicalOverride, noIndex, lang, hreflangDe, hreflangEn, articleLangEn, articleLangDe } = Astro.props;
+const canonicalUrl = canonicalOverride ?? new URL(Astro.url.pathname, 'https://diamo.club').href;
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={lang ?? 'de'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#002060" />
     <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID_HERE" />
     
-    <SEO title={title} description={description} canonicalUrl={canonicalUrl} />
+    <SEO title={title} description={description} canonicalUrl={canonicalUrl} hreflangDe={hreflangDe} hreflangEn={hreflangEn} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
     <GoogleAnalytics />
     
-    <!-- Favicon (versioned to bust Safari cache) -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-diamo-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-diamo-192.png" />
+    <link rel="apple-touch-icon" href="/favicon-diamo-192.png" />
     <link rel="icon" type="image/x-icon" href="/favicon-v2.ico" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon.png" />
-    <link rel="apple-touch-icon" href="/icon.png" />
     <script is:inline>
       if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -46,10 +54,10 @@ const canonicalUrl = new URL(Astro.url.pathname, 'https://diamo.club').href;
       });
     </script>
   </head>
-  <body>
+  <body data-article-lang-en={articleLangEn ?? ''} data-article-lang-de={articleLangDe ?? ''}>
     <slot />
     
-    <script is:inline src="/scripts/i18n.js?v=1.8"></script>
+    <script is:inline src="/scripts/i18n.js?v=2.7"></script>
     <script is:inline>
       // Intersection Observer for scroll animations
       const observer = new IntersectionObserver(

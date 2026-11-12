@@ -1,11 +1,20 @@
 ---
 ---
-
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-ER67QEVHC2"></script>
 <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ER67QEVHC2');
+  window.__diamoLoadGA = function() {
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ER67QEVHC2';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-ER67QEVHC2');
+  };
+  if (localStorage.getItem('cookieConsent') === 'granted') {
+    window.__diamoLoadGA();
+  }
 </script>

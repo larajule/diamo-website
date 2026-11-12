@@ -1,0 +1,256 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import WaitlistModal from '../../../components/WaitlistModal.astro';
+import BetaApplyModals from '../../../components/BetaApplyModals.astro';
+import ArticleBanner from '../../../components/ArticleBanner.astro';
+---
+
+<Layout
+  title="Your Watch Isn't Your Boss | diamo"
+  description="HRV scores are useful. But your recovery score is not a verdict on you. Learn what wearable data can tell you — and what it cannot."
+  lang="en"
+  hreflangDe="https://diamo.club/blog/wearables-und-zyklus/"
+  hreflangEn="https://diamo.club/en/blog/wearables-and-cycle/"
+  articleLangEn="/en/blog/wearables-and-cycle/"
+  articleLangDe="/blog/wearables-und-zyklus/"
+>
+  <Navbar />
+
+  <main class="art-page">
+    <div class="art-bg-layer" aria-hidden="true">
+      <img src="/images/kyb-sneakers.jpg" alt="" class="art-bg-img" />
+    </div>
+
+    <div class="art-container">
+
+      <a href="/#knowledge" class="art-back">← know your body</a>
+
+      <header class="art-hero">
+        <span class="art-eyebrow">science or hype?</span>
+
+        <h1 class="art-h1">YOUR WATCH ISN'T YOUR BOSS.</h1>
+
+        <p class="art-intro">You wake up feeling good. Your watch disagrees. Recovery: 48. HRV down. Readiness: low. And suddenly a body that felt completely fine five seconds ago looks like a problem.</p>
+
+        <div class="art-divider"></div>
+      </header>
+
+      <section class="art-section art-section--intro">
+        <p>Wearables can be great.</p>
+        <p>That does not make them the highest authority on your body.</p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">the fact</span>
+        <h2 class="art-h2">HRV is a real physiological signal.</h2>
+        <p>Many modern wearables can capture it reasonably well under good conditions — particularly at rest or during sleep.</p>
+        <p>But HRV is not a direct measure of recovery.</p>
+        <p>And your recovery score is not your HRV. It is an algorithmic interpretation combining HRV with factors like resting heart rate, sleep, activity and other signals. The exact formula is typically proprietary.</p>
+        <p>Your device can therefore measure useful data without objectively knowing whether you should train today.</p>
+      </section>
+
+      <!-- Early access campaign banner — mid-article -->
+      <ArticleBanner />
+
+      <section class="art-section">
+        <span class="art-label">why it matters</span>
+        <h2 class="art-h2">Bodies are complex.</h2>
+        <p>HRV can shift in response to training, sleep, illness, alcohol, psychological stress, breathing patterns, fitness level, medication, and the physiology of the menstrual cycle.</p>
+        <p>A single low reading can therefore have many causes.</p>
+        <p>For women, this is particularly relevant. Wearable data shows that HRV can fluctuate across the menstrual cycle even without any recovery problem. A lower reading in certain cycle phases can sometimes reflect normal physiology — not a signal that something is wrong.</p>
+        <p>The key question is rarely: is my HRV good? It is: is this reading unusual for me under comparable conditions — and does it fit with everything else that is currently going on?</p>
+      </section>
+
+      <section class="art-section">
+        <span class="art-label">the nuance</span>
+        <h2 class="art-h2">Wearables are not useless. The opposite.</h2>
+        <p>They give you an additional source of information. Trends can surface poor sleep, the beginning of illness, unusual physiological stress or changes you might otherwise miss.</p>
+        <p>The problem starts when information becomes obedience.</p>
+        <p>A readiness score compresses several imperfect measurements into a single, impressively precise-looking number. Precision on a display is not the same as certainty in biology.</p>
+        <p>Use the watch as a data point. Then add the rest: how did you sleep? How do you feel? What symptoms do you have? What has your training looked like over the past few days? Are you getting sick? And what happens when you actually warm up?</p>
+      </section>
+
+      <section class="art-section art-section--takeaway">
+        <span class="art-label">the takeaway</span>
+        <h2 class="art-h2">Watch the trends.</h2>
+        <p>Know your personal baseline.</p>
+        <p>Take changes seriously when your data and your body are both signalling that something is different.</p>
+        <p>But do not let a single red score cancel a good day.</p>
+        <p>Your watch has information.</p>
+        <p><strong>You still have judgement.</strong></p>
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+  <WaitlistModal />
+  <BetaApplyModals />
+</Layout>
+
+<style>
+  .art-bg-layer {
+    position: fixed;
+    top: 0;
+    right: -3%;
+    width: 60%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .art-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.19;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+  }
+
+  .art-page {
+    padding-top: calc(var(--nav-height, 72px) + 4rem);
+    padding-bottom: 6rem;
+    min-height: 100vh;
+    background: var(--ivory, #FCFBF7);
+    position: relative;
+  }
+
+  .art-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .art-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 2.5rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .art-back:hover { opacity: 1; }
+
+  .art-hero { margin-bottom: 4rem; }
+
+  .art-eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1.25rem;
+  }
+
+  .art-h1 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-intro {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(12, 42, 110, 0.65);
+    margin: 0;
+    max-width: 600px;
+  }
+
+  .art-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--navy, #0C2A6E);
+    opacity: 0.2;
+    margin: 2rem 0 0;
+  }
+
+  .art-section {
+    margin-bottom: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(12, 42, 110, 0.07);
+  }
+
+  .art-section:last-of-type { border-bottom: none; }
+
+  .art-section--intro {
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.75);
+  }
+
+  .art-section--intro p { margin: 0 0 1rem; }
+  .art-section--intro p:last-child { margin-bottom: 0; }
+
+  .art-label {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+    margin-bottom: 1rem;
+  }
+
+  .art-h2 {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+  }
+
+  .art-section p {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: rgba(12, 42, 110, 0.7);
+    margin: 0 0 1rem;
+  }
+
+  .art-section p:last-child { margin-bottom: 0; }
+
+  .art-section strong {
+    color: var(--navy, #0C2A6E);
+    font-weight: 700;
+  }
+
+  .art-section--takeaway .art-h2 {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    .art-page { padding-top: calc(var(--nav-height, 72px) + 2rem); }
+    .art-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
+    .art-bg-layer {
+      width: 100%;
+      right: 0;
+      height: 50vh;
+      top: 0;
+    }
+    .art-bg-img {
+      opacity: 0.10;
+      object-position: center top;
+    }
+  }
+</style>

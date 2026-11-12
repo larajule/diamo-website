@@ -1,0 +1,166 @@
+---
+---
+
+<!-- In-article Early Access Campaign Banner -->
+<div class="art-banner" aria-label="Join diamo early access">
+  <div class="art-banner-inner">
+    <span class="art-banner-eyebrow">THE LONG GAME STARTS HERE.</span>
+    <h2 class="art-banner-headline">
+      <span class="art-banner-headline-en" data-lang-content="en">YOUR BODY. YOUR RULES. YOUR MOVE.</span>
+      <span class="art-banner-headline-de" data-lang-content="de">DEIN KÖRPER. DEINE REGELN. DEIN MOVE.</span>
+    </h2>
+    <p class="art-banner-sub">
+      <span class="art-banner-sub-en" data-lang-content="en">Meet diamo. Personalized movement, body knowledge and a community that moves with you.</span>
+      <span class="art-banner-sub-de" data-lang-content="de">Entdecke diamo. Personalisiertes Training, Wissen über deinen Körper und eine Community, die mit dir in Bewegung bleibt.</span>
+    </p>
+    <button type="button" class="art-banner-cta" data-open-waitlist>
+      <span class="art-banner-cta-en" data-lang-content="en">get early access</span>
+      <span class="art-banner-cta-de" data-lang-content="de">frühen zugang sichern</span>
+    </button>
+  </div>
+</div>
+
+<style>
+  .art-banner {
+    background: var(--electric-blue, #2C7AFF);
+    margin: 4rem calc(-1.5rem - 2px);
+    padding: 0;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Scrolling ticker strip at top — matches homepage AnnouncementTicker */
+  .art-banner::before {
+    content: 'THE LONG GAME. ✦ FEMALE HEALTH & LONGEVITY. ✦ BUILD DIFFERENT. ✦ THE LONG GAME. ✦ FEMALE HEALTH & LONGEVITY. ✦ BUILD DIFFERENT. ✦ ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: rgba(255, 255, 255, 0.25);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: banner-scroll 28s linear infinite;
+    text-transform: uppercase;
+  }
+
+  @keyframes banner-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .art-banner::before { animation: none; }
+  }
+
+  .art-banner-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 2.5rem;
+  }
+
+  .art-banner-eyebrow {
+    display: inline-block;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .art-banner-headline {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+
+  .art-banner-sub {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 1.75rem;
+  }
+
+  .art-banner-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 0.85rem 2.2rem;
+    border-radius: 100px;
+    background: #fff;
+    border: none;
+    color: var(--electric-blue, #2C7AFF);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .art-banner-cta:hover {
+    background: rgba(255, 255, 255, 0.92);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Lang content toggling — hidden by default, shown by JS */
+  [data-lang-content] { display: none; }
+
+  /* Fallback: show EN if JS hasn't run yet */
+  .art-banner-headline-en,
+  .art-banner-sub-en,
+  .art-banner-cta-en {
+    display: inline;
+  }
+
+  @media (max-width: 768px) {
+    .art-banner {
+      margin: 3rem -1rem;
+      border-radius: 0;
+    }
+    .art-banner-inner {
+      padding: 2.5rem 1.5rem 2rem;
+    }
+    .art-banner-headline { font-size: 1.3rem; }
+  }
+</style>
+
+<script>
+  // Apply correct language immediately when this component is in the DOM
+  function applyBannerLang(lang) {
+    document.querySelectorAll('.art-banner [data-lang-content]').forEach(el => {
+      const elLang = el.getAttribute('data-lang-content');
+      (el as HTMLElement).style.display = elLang === lang ? 'inline' : 'none';
+    });
+  }
+
+  // Run on mount
+  const savedLang = localStorage.getItem('diamo-lang') ||
+    (new URLSearchParams(window.location.search).get('lang')) ||
+    (navigator.language?.slice(0, 2) === 'de' ? 'de' : 'en');
+  applyBannerLang(savedLang);
+
+  // Listen for language changes from the global i18n system
+  window.addEventListener('diamo:lang-changed', (e: any) => {
+    applyBannerLang(e.detail.lang);
+  });
+</script>

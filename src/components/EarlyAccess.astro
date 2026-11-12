@@ -1,0 +1,139 @@
+---
+---
+<section class="earlyaccess" id="early-access">
+  <div class="earlyaccess-bg" aria-hidden="true">
+    <img src="/images/campaign-long-game.jpg" alt="" class="earlyaccess-img" />
+    <div class="earlyaccess-overlay"></div>
+  </div>
+  <div class="container earlyaccess-content">
+    <span class="section-label" data-i18n="earlyaccess.label">EARLY ACCESS</span>
+    <h2 class="earlyaccess-headline" data-i18n="earlyaccess.headline">GET IN BEFORE EVERYONE ELSE.</h2>
+    <p class="earlyaccess-sub" data-i18n="earlyaccess.sub">Be first to experience diamo.</p>
+    <p class="earlyaccess-desc" data-i18n="earlyaccess.desc">Personalized movement. A different kind of club.</p>
+    <button class="earlyaccess-btn" data-open-beta data-i18n="earlyaccess.cta">GET EARLY ACCESS.</button>
+    <p class="earlyaccess-privacy">
+      <span data-i18n="earlyaccess.privacy">No spam. We handle your data carefully. See our </span><a href="/datenschutz" class="earlyaccess-privacy-link" data-i18n="earlyaccess.privacy.link">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .earlyaccess {
+    position: relative;
+    background: #0C2A6E;
+    padding: 10rem 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Background photo */
+  .earlyaccess-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .earlyaccess-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    opacity: 0.35;
+    mix-blend-mode: luminosity;
+  }
+
+  .earlyaccess-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(12, 42, 110, 0.6) 0%,
+      rgba(12, 42, 110, 0.5) 40%,
+      rgba(12, 42, 110, 0.75) 100%
+    );
+  }
+
+  .earlyaccess-content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .earlyaccess-content .section-label {
+    color: rgba(200, 222, 245, 0.65);
+  }
+
+  .earlyaccess-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .earlyaccess-sub {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+
+  .earlyaccess-desc {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+    max-width: 400px;
+    margin: 0;
+    font-family: var(--font-sans);
+  }
+
+  .earlyaccess-btn {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 1.1rem 3rem;
+    border-radius: 100px;
+    border: none;
+    background: #fff;
+    color: var(--navy, #0C2A6E);
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    margin-top: 0.75rem;
+  }
+
+  .earlyaccess-btn:hover {
+    background: var(--ice-blue, #C8DEF5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+
+  .earlyaccess-privacy {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    margin: 0;
+  }
+
+  .earlyaccess-privacy-link {
+    color: rgba(200,222,245,0.6);
+    text-decoration: underline;
+    transition: opacity 0.2s;
+  }
+
+  .earlyaccess-privacy-link:hover { opacity: 0.75; }
+
+  @media (max-width: 768px) {
+    .earlyaccess { padding: 7rem 1.5rem; }
+  }
+</style>

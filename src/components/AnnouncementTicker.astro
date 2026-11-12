@@ -1,0 +1,46 @@
+---
+---
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-text" data-i18n="ticker.text">HOT GIRLS GET OLDER. ✦ LIVE LONG. CAUSE TROUBLE. ✦ MAKE A MOVE. ✦ JOIN US OR MISS US.</span>
+    <span class="ticker-text" aria-hidden="true" data-i18n="ticker.text">HOT GIRLS GET OLDER. ✦ LIVE LONG. CAUSE TROUBLE. ✦ MAKE A MOVE. ✦ JOIN US OR MISS US.</span>
+    <span class="ticker-text" aria-hidden="true" data-i18n="ticker.text">HOT GIRLS GET OLDER. ✦ LIVE LONG. CAUSE TROUBLE. ✦ MAKE A MOVE. ✦ JOIN US OR MISS US.</span>
+  </div>
+</div>
+
+<style>
+  .ticker-wrap {
+    background: var(--electric-blue, #2C7AFF);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0.6rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+
+  .ticker-track {
+    display: inline-flex;
+    animation: ticker-scroll 30s linear infinite;
+  }
+
+  .ticker-text {
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-transform: uppercase;
+    padding-right: 4rem;
+    white-space: nowrap;
+  }
+
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+  }
+</style>

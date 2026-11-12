@@ -59,7 +59,7 @@ This is called *auto-regulation*, a principle that has long been standard in eli
 
 In conventional apps, a rest day is a blank page. No content, no feedback, no value. This sends a clear message: *Today you accomplished nothing.*
 
-A cycle-aware app understands that [recovery is an active process](/zyklusbasiertes-training/), especially during menstruation and the late luteal phase. Yoga, mobility work, breathing exercises, and light walks aren't "nothing." They're strategically just as important as the hardest HIIT workout.
+A cycle-aware app understands that [recovery is an active process](/dein-zyklus-ist-kein-trainingsplan/), especially during menstruation and the late luteal phase. Yoga, mobility work, breathing exercises, and light walks aren't "nothing." They're strategically just as important as the hardest HIIT workout.
 
 ### 3. Wearable Integration with Context
 

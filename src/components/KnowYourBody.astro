@@ -1,0 +1,289 @@
+---
+---
+<section class="kyb" id="knowledge">
+  <div class="kyb-inner">
+
+    <div class="kyb-header container">
+      <div class="kyb-header-left">
+        <span class="section-label" data-i18n="kyb.label">know your body</span>
+        <h2 class="kyb-headline" data-i18n="kyb.headline">KNOW YOUR BODY.<br/>QUESTION EVERYTHING.</h2>
+      </div>
+      <div class="kyb-header-right">
+        <p class="kyb-sub" data-i18n="kyb.sub">Real science. No wellness BS.</p>
+      </div>
+    </div>
+
+    <!-- Three featured editorial cards -->
+    <div class="kyb-featured-grid container">
+
+      <!-- Card 01 — Muscle / Strength -->
+      <article class="kyb-card kyb-card--featured">
+        <div class="kyb-card-img">
+          <img src="/images/kyb-dumbbell-gift.jpg" alt="Strength editorial — chrome dumbbells with bow" loading="lazy" />
+          <div class="kyb-card-img-overlay"></div>
+        </div>
+        <div class="kyb-card-body">
+          <span class="kyb-card-label" data-i18n="kyb.card1.label">move for the long game</span>
+          <h3 class="kyb-card-title" data-i18n="kyb.card1.title">MUSCLE IS MORE THAN A LOOK.</h3>
+          <p class="kyb-card-desc" data-i18n="kyb.card1.desc">Strength is about more than appearance. Resistance training builds strength and supports physical function throughout life.</p>
+          <div class="kyb-card-footer">
+            <span class="kyb-card-time" data-i18n="kyb.card1.time">2 min read</span>
+            <a href="/krafttraining/" class="kyb-card-cta" data-i18n="kyb.cta">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 02 — Cycle -->
+      <article class="kyb-card">
+        <div class="kyb-card-img">
+          <img src="/images/kyb-strength-selfcare.jpg" alt="Cycle and training — editorial still life" loading="lazy" />
+          <div class="kyb-card-img-overlay"></div>
+        </div>
+        <div class="kyb-card-body">
+          <span class="kyb-card-label" data-i18n="kyb.card2.label">know your body</span>
+          <h3 class="kyb-card-title" data-i18n="kyb.card2.title">YOUR CYCLE ISN'T YOUR TRAINING SCHEDULE.</h3>
+          <p class="kyb-card-desc" data-i18n="kyb.card2.desc">Your hormones change. But there is no universal training calendar for every woman. Individual patterns matter.</p>
+          <div class="kyb-card-footer">
+            <span class="kyb-card-time" data-i18n="kyb.card2.time">2 min read</span>
+            <a href="/dein-zyklus-ist-kein-trainingsplan/"
+               class="kyb-card-cta"
+               data-i18n="kyb.cta">Read →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 03 — Wearables -->
+      <article class="kyb-card">
+        <div class="kyb-card-img">
+          <img src="/images/kyb-sneakers.jpg" alt="Wearables and technology — editorial photography" loading="lazy" />
+          <div class="kyb-card-img-overlay"></div>
+        </div>
+        <div class="kyb-card-body">
+          <span class="kyb-card-label" data-i18n="kyb.card3.label">science or hype?</span>
+          <h3 class="kyb-card-title" data-i18n="kyb.card3.title">YOUR WATCH ISN'T YOUR BOSS.</h3>
+          <p class="kyb-card-desc" data-i18n="kyb.card3.desc">Your recovery score is one piece of the puzzle. Learn what HRV can tell you and what it cannot.</p>
+          <div class="kyb-card-footer">
+            <span class="kyb-card-time" data-i18n="kyb.card3.time">2 min read</span>
+            <a href="/blog/wearables-und-zyklus"
+               class="kyb-card-cta"
+               data-i18n="kyb.cta">Read →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .kyb {
+    background: #fff;
+    padding: 7rem 0;
+  }
+
+  /* ── Header ── */
+  .kyb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+  }
+
+  .kyb-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .kyb-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .kyb-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .kyb-sub {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: rgba(0,32,96,0.45);
+    text-align: right;
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* ── Featured grid (3 cards, equal height) ── */
+  .kyb-featured-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  /* ── Shared card base ── */
+  .kyb-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #F5F8FD;
+    border: 1px solid rgba(0,32,96,0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+  }
+
+  .kyb-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 56px rgba(0,32,96,0.12);
+  }
+
+  /* Featured card — dark navy */
+  .kyb-card--featured {
+    background: #0F2A6E;
+  }
+
+  .kyb-card--featured .kyb-card-label { color: var(--ice-blue, #C8DEF5); opacity: 0.75; }
+  .kyb-card--featured .kyb-card-title { color: #fff; }
+  .kyb-card--featured .kyb-card-desc  { color: rgba(255,255,255,0.65); }
+  .kyb-card--featured .kyb-card-time  { color: rgba(255,255,255,0.35); }
+  .kyb-card--featured .kyb-card-cta   { color: var(--ice-blue, #C8DEF5); }
+
+  /* Card image */
+  .kyb-card-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .kyb-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: saturate(0.75);
+  }
+
+  .kyb-card:hover .kyb-card-img img {
+    transform: scale(1.04);
+  }
+
+  /* Dark blue overlay */
+  .kyb-card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 80, 0.55);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .kyb-card--featured .kyb-card-img-overlay {
+    background: rgba(10, 25, 80, 0.45);
+  }
+
+  /* Card body */
+  .kyb-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+  }
+
+  .kyb-card-label {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cobalt, #1535A8);
+  }
+
+  .kyb-card-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy, #0C2A6E);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .kyb-card-desc {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(0,32,96,0.6);
+    flex: 1;
+    margin: 0;
+  }
+
+  .kyb-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0,32,96,0.06);
+  }
+
+  .kyb-card--featured .kyb-card-footer {
+    border-top-color: rgba(255,255,255,0.1);
+  }
+
+  .kyb-card-time {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    color: rgba(0,32,96,0.35);
+    letter-spacing: 0.04em;
+  }
+
+  .kyb-card-cta {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--cobalt, #1535A8);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+  }
+  .kyb-card-cta:hover { opacity: 0.7; }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .kyb-featured-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .kyb-featured-grid .kyb-card:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .kyb { padding: 5rem 0; }
+    .kyb-header { padding: 0 1.5rem; flex-direction: column; align-items: flex-start; }
+    .kyb-header-right { align-items: flex-start; }
+    .kyb-sub { text-align: left; }
+    .kyb-featured-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1.5rem;
+      gap: 1rem;
+    }
+    .kyb-featured-grid .kyb-card:first-child { grid-column: auto; }
+  }
+</style>
